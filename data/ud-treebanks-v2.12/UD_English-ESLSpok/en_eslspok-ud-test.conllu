@@ -1,0 +1,2962 @@
+# sent_id = file00321.txt_41
+# text = And there are a big amusement park
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	there	_	PRON	EX	_	3	expl	_	_
+3	are	_	VERB	VBP	_	0	root	_	_
+4	a	_	DET	DT	_	7	det	_	_
+5	big	_	ADJ	JJ	_	7	amod	_	_
+6	amusement	_	NOUN	NN	_	7	compound	_	_
+7	park	_	NOUN	NN	_	3	nsubj	_	_
+
+# sent_id = file01141.txt_26
+# text = I have a little audio set .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	have	_	VERB	VBP	_	0	root	_	_
+3	a	_	DET	DT	_	6	det	_	_
+4	little	_	ADJ	JJ	_	6	amod	_	_
+5	audio	_	NOUN	NN	_	6	compound	_	_
+6	set	_	NOUN	NN	_	2	obj	_	_
+7	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00134.txt_46
+# text = Do you have a cheaper one ?
+1	Do	_	AUX	VBP	_	3	aux	_	_
+2	you	_	PRON	PRP	_	3	nsubj	_	_
+3	have	_	VERB	VB	_	0	root	_	_
+4	a	_	DET	DT	_	6	det	_	_
+5	cheaper	_	ADJ	JJR	_	6	amod	_	_
+6	one	_	NOUN	NN	_	3	obj	_	_
+7	?	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00683.txt_1
+# text = My name is Charlie .
+1	My	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	name	_	NOUN	NN	_	4	nsubj	_	_
+3	is	_	AUX	VBZ	_	4	cop	_	_
+4	Charlie	_	PROPN	NNP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01271.txt_148
+# text = so we decided that we should not stay there any more .
+1	so	_	ADV	RB	_	3	advmod	_	_
+2	we	_	PRON	PRP	_	3	nsubj	_	_
+3	decided	_	VERB	VBD	_	0	root	_	_
+4	that	_	SCONJ	IN	_	8	mark	_	_
+5	we	_	PRON	PRP	_	8	nsubj	_	_
+6	should	_	AUX	MD	_	8	aux	_	_
+7	not	_	PART	RB	_	8	advmod	_	_
+8	stay	_	VERB	VB	_	3	ccomp	_	_
+9	there	_	ADV	RB	_	8	advmod	_	_
+10	any	_	DET	RB	_	11	advmod	_	_
+11	more	_	ADV	RBR	_	8	advmod	_	_
+12	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00403.txt_28
+# text = I like to play soccer with children .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	to	_	PART	TO	_	4	mark	_	_
+4	play	_	VERB	VB	_	2	xcomp	_	_
+5	soccer	_	NOUN	NN	_	4	obj	_	_
+6	with	_	ADP	IN	_	7	case	_	_
+7	children	_	NOUN	NNS	_	4	obl	_	_
+8	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00966.txt_24
+# text = And we 're living in Okinawa .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	we	_	PRON	PRP	_	4	nsubj	_	_
+3	're	_	AUX	VBP	_	4	aux	_	_
+4	living	_	VERB	VBG	_	0	root	_	_
+5	in	_	ADP	IN	_	6	case	_	_
+6	Okinawa	_	PROPN	NNP	_	4	obl	_	_
+7	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01168.txt_90
+# text = I cooked very delicious cook .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	cooked	_	VERB	VBD	_	0	root	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	delicious	_	ADJ	JJ	_	5	amod	_	_
+5	cook	_	NOUN	NN	_	2	obj	_	_
+6	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01269.txt_183
+# text = All right .
+1	All	_	ADV	RB	_	2	advmod	_	_
+2	right	_	ADJ	JJ	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01184.txt_19
+# text = And I like him .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	like	_	VERB	VBP	_	0	root	_	_
+4	him	_	PRON	PRP	_	3	obj	_	_
+5	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00738.txt_4
+# text = So busy .
+1	So	_	ADV	RB	_	2	advmod	_	_
+2	busy	_	ADJ	JJ	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00630.txt_73
+# text = Yeah , , no , no , no , this shoes was insured by the company , but I believed that but this is not good .
+1	Yeah	_	INTJ	UH	_	13	discourse	_	_
+2	,	_	PUNCT	,	_	13	punct	_	_
+3	,	_	PUNCT	,	_	13	punct	_	_
+4	no	_	INTJ	UH	_	13	discourse	_	_
+5	,	_	PUNCT	,	_	13	punct	_	_
+6	no	_	INTJ	UH	_	13	discourse	_	_
+7	,	_	PUNCT	,	_	13	punct	_	_
+8	no	_	INTJ	UH	_	13	discourse	_	_
+9	,	_	PUNCT	,	_	13	punct	_	_
+10	this	_	DET	DT	_	11	det	_	_
+11	shoes	_	NOUN	NNS	_	13	nsubj	_	_
+12	was	_	AUX	VBD	_	13	aux	_	_
+13	insured	_	VERB	VBN	_	0	root	_	_
+14	by	_	ADP	IN	_	16	case	_	_
+15	the	_	DET	DT	_	16	det	_	_
+16	company	_	NOUN	NN	_	13	obl	_	_
+17	,	_	PUNCT	,	_	20	punct	_	_
+18	but	_	CCONJ	CC	_	20	cc	_	_
+19	I	_	PRON	PRP	_	20	nsubj	_	_
+20	believed	_	VERB	VBD	_	13	conj	_	_
+21	that	_	PRON	DT	_	20	obj	_	_
+22	but	_	CCONJ	CC	_	26	cc	_	_
+23	this	_	PRON	DT	_	26	nsubj	_	_
+24	is	_	AUX	VBZ	_	26	cop	_	_
+25	not	_	PART	RB	_	26	advmod	_	_
+26	good	_	ADJ	JJ	_	13	conj	_	_
+27	.	_	PUNCT	.	_	13	punct	_	_
+
+# sent_id = file01243.txt_208
+# text = So I said it was n't yuck at that time .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	said	_	VERB	VBD	_	0	root	_	_
+4	it	_	PRON	PRP	_	7	nsubj	_	_
+5	was	_	AUX	VBD	_	7	cop	_	_
+6	n't	_	PART	RB	_	7	advmod	_	_
+7	yuck	_	ADJ	JJ	_	3	ccomp	_	_
+8	at	_	ADP	IN	_	10	case	_	_
+9	that	_	DET	DT	_	10	det	_	_
+10	time	_	NOUN	NN	_	3	obl	_	_
+11	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01278.txt_85
+# text = I 'm so sorry .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	'm	_	AUX	VBP	_	4	cop	_	_
+3	so	_	ADV	RB	_	4	advmod	_	_
+4	sorry	_	ADJ	JJ	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00628.txt_123
+# text = And some his friends and I made a present for him , expensive pen .
+1	And	_	CCONJ	CC	_	7	cc	_	_
+2	some	_	DET	DT	_	4	det	_	_
+3	his	_	PRON	PRP$	_	4	nmod:poss	_	_
+4	friends	_	NOUN	NNS	_	7	nsubj	_	_
+5	and	_	CCONJ	CC	_	6	cc	_	_
+6	I	_	PRON	PRP	_	4	conj	_	_
+7	made	_	VERB	VBD	_	0	root	_	_
+8	a	_	DET	DT	_	9	det	_	_
+9	present	_	NOUN	NN	_	7	obj	_	_
+10	for	_	ADP	IN	_	11	case	_	_
+11	him	_	PRON	PRP	_	7	obl	_	_
+12	,	_	PUNCT	,	_	14	punct	_	_
+13	expensive	_	ADJ	JJ	_	14	amod	_	_
+14	pen	_	NOUN	NN	_	9	appos	_	_
+15	.	_	PUNCT	.	_	7	punct	_	_
+
+# sent_id = file00833.txt_30
+# text = She nawatobi
+1	She	_	PRON	PRP	_	0	root	_	_
+2	nawatobi	_	X	FW	_	1	dep	_	_
+
+# sent_id = file00109.txt_130
+# text = I explained about the total stories ?
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	explained	_	VERB	VBD	_	0	root	_	_
+3	about	_	ADP	IN	_	6	case	_	_
+4	the	_	DET	DT	_	6	det	_	_
+5	total	_	ADJ	JJ	_	6	amod	_	_
+6	stories	_	NOUN	NNS	_	2	obl	_	_
+7	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00764.txt_38
+# text = I want to buy is very sharp style and blue colors , and it cost me about two thousand yen .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	want	_	VERB	VBP	_	8	csubj	_	_
+3	to	_	PART	TO	_	4	mark	_	_
+4	buy	_	VERB	VB	_	2	xcomp	_	_
+5	is	_	AUX	VBZ	_	8	cop	_	_
+6	very	_	ADV	RB	_	7	advmod	_	_
+7	sharp	_	ADJ	JJ	_	8	amod	_	_
+8	style	_	NOUN	NN	_	0	root	_	_
+9	and	_	CCONJ	CC	_	11	cc	_	_
+10	blue	_	ADJ	JJ	_	11	amod	_	_
+11	colors	_	NOUN	NNS	_	8	conj	_	_
+12	,	_	PUNCT	,	_	15	punct	_	_
+13	and	_	CCONJ	CC	_	15	cc	_	_
+14	it	_	PRON	PRP	_	15	nsubj	_	_
+15	cost	_	VERB	VBD	_	8	conj	_	_
+16	me	_	PRON	PRP	_	15	iobj	_	_
+17	about	_	ADV	RB	_	18	advmod	_	_
+18	two	_	NUM	CD	_	19	compound	_	_
+19	thousand	_	NUM	CD	_	20	nummod	_	_
+20	yen	_	NOUN	NNS	_	15	obj	_	_
+21	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file00894.txt_39
+# text = They only sat down but when I went then teach and doing some activities , they are changing .
+1	They	_	PRON	PRP	_	3	nsubj	_	_
+2	only	_	ADV	RB	_	3	advmod	_	_
+3	sat	_	VERB	VBD	_	0	root	_	_
+4	down	_	ADV	RB	_	3	advmod	_	_
+5	but	_	CCONJ	CC	_	18	cc	_	_
+6	when	_	SCONJ	WRB	_	8	mark	_	_
+7	I	_	PRON	PRP	_	8	nsubj	_	_
+8	went	_	VERB	VBD	_	18	advcl	_	_
+9	then	_	ADV	RB	_	10	advmod	_	_
+10	teach	_	VERB	VB	_	8	xcomp	_	_
+11	and	_	CCONJ	CC	_	12	cc	_	_
+12	doing	_	VERB	VBG	_	10	conj	_	_
+13	some	_	DET	DT	_	14	det	_	_
+14	activities	_	NOUN	NNS	_	12	obj	_	_
+15	,	_	PUNCT	,	_	18	punct	_	_
+16	they	_	PRON	PRP	_	18	nsubj	_	_
+17	are	_	AUX	VBP	_	18	aux	_	_
+18	changing	_	VERB	VBG	_	3	conj	_	_
+19	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00253.txt_20
+# text = of course , the scenery and the atmosphere is different .
+1	of	_	ADV	RB	_	10	advmod	_	_
+2	course	_	ADV	RB	_	1	fixed	_	_
+3	,	_	PUNCT	,	_	10	punct	_	_
+4	the	_	DET	DT	_	5	det	_	_
+5	scenery	_	NOUN	NN	_	10	nsubj	_	_
+6	and	_	CCONJ	CC	_	8	cc	_	_
+7	the	_	DET	DT	_	8	det	_	_
+8	atmosphere	_	NOUN	NN	_	5	conj	_	_
+9	is	_	AUX	VBZ	_	10	cop	_	_
+10	different	_	ADJ	JJ	_	0	root	_	_
+11	.	_	PUNCT	.	_	10	punct	_	_
+
+# sent_id = file00305.txt_111
+# text = last week , I went for shopping at the department store in Saitama .
+1	last	_	ADJ	JJ	_	2	amod	_	_
+2	week	_	NOUN	NN	_	5	obl:tmod	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	went	_	VERB	VBD	_	0	root	_	_
+6	for	_	SCONJ	IN	_	7	mark	_	_
+7	shopping	_	VERB	VBG	_	5	advcl	_	_
+8	at	_	ADP	IN	_	11	case	_	_
+9	the	_	DET	DT	_	11	det	_	_
+10	department	_	NOUN	NN	_	11	compound	_	_
+11	store	_	NOUN	NN	_	7	obl	_	_
+12	in	_	ADP	IN	_	13	case	_	_
+13	Saitama	_	PROPN	NNP	_	11	nmod	_	_
+14	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00542.txt_52
+# text = And then , piano turned just my hobby .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	then	_	ADV	RB	_	5	advmod	_	_
+3	,	_	PUNCT	,	_	5	punct	_	_
+4	piano	_	NOUN	NN	_	5	nsubj	_	_
+5	turned	_	VERB	VBD	_	0	root	_	_
+6	just	_	ADV	RB	_	5	advmod	_	_
+7	my	_	PRON	PRP$	_	8	nmod:poss	_	_
+8	hobby	_	NOUN	NN	_	5	obj	_	_
+9	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01139.txt_30
+# text = The same .
+1	The	_	DET	DT	_	2	det	_	_
+2	same	_	ADJ	JJ	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01245.txt_145
+# text = But fortunately , his briefcase , yeah , stays just as it is .
+1	But	_	CCONJ	CC	_	9	cc	_	_
+2	fortunately	_	ADV	RB	_	9	advmod	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	his	_	PRON	PRP$	_	5	nmod:poss	_	_
+5	briefcase	_	NOUN	NN	_	9	nsubj	_	_
+6	,	_	PUNCT	,	_	9	punct	_	_
+7	yeah	_	INTJ	UH	_	9	discourse	_	_
+8	,	_	PUNCT	,	_	9	punct	_	_
+9	stays	_	VERB	VBZ	_	0	root	_	_
+10	just	_	ADV	RB	_	9	advmod	_	_
+11	as	_	SCONJ	IN	_	13	mark	_	_
+12	it	_	PRON	PRP	_	13	nsubj	_	_
+13	is	_	VERB	VBZ	_	9	advcl	_	_
+14	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file01243.txt_305
+# text = I think so .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	think	_	VERB	VBP	_	0	root	_	_
+3	so	_	ADV	RB	_	2	advmod	_	_
+4	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01274.txt_120
+# text = I think Hokkaido is a kind of suburb .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	think	_	VERB	VBP	_	0	root	_	_
+3	Hokkaido	_	PROPN	NNP	_	6	nsubj	_	_
+4	is	_	AUX	VBZ	_	6	cop	_	_
+5	a	_	DET	DT	_	6	det	_	_
+6	kind	_	NOUN	NN	_	2	ccomp	_	_
+7	of	_	ADP	IN	_	8	case	_	_
+8	suburb	_	NOUN	NN	_	6	nmod	_	_
+9	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01113.txt_65
+# text = I 'm taking test in five minutes so I ca n't go .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	'm	_	AUX	VBP	_	3	aux	_	_
+3	taking	_	VERB	VBG	_	0	root	_	_
+4	test	_	NOUN	NN	_	3	obj	_	_
+5	in	_	ADP	IN	_	7	case	_	_
+6	five	_	NUM	CD	_	7	nummod	_	_
+7	minutes	_	NOUN	NNS	_	3	obl	_	_
+8	so	_	CCONJ	CC	_	12	cc	_	_
+9	I	_	PRON	PRP	_	12	nsubj	_	_
+10	ca	_	AUX	MD	_	12	aux	_	_
+11	n't	_	PART	RB	_	12	advmod	_	_
+12	go	_	VERB	VB	_	3	conj	_	_
+13	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00682.txt_31
+# text = on weekend , I have a rich spare time .
+1	on	_	ADP	IN	_	2	case	_	_
+2	weekend	_	NOUN	NN	_	5	obl:tmod	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	have	_	VERB	VBP	_	0	root	_	_
+6	a	_	DET	DT	_	9	det	_	_
+7	rich	_	ADJ	JJ	_	9	amod	_	_
+8	spare	_	ADJ	JJ	_	9	amod	_	_
+9	time	_	NOUN	NN	_	5	obj	_	_
+10	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00676.txt_59
+# text = She 's not teaching mathematics interesting .
+1	She	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	aux	_	_
+3	not	_	PART	RB	_	4	advmod	_	_
+4	teaching	_	VERB	VBG	_	0	root	_	_
+5	mathematics	_	NOUN	NN	_	4	obj	_	_
+6	interesting	_	ADJ	JJ	_	5	amod	_	_
+7	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01122.txt_27
+# text = And man wear a yellow jacket and blue tie , and a woman wear pink dress .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	man	_	NOUN	NN	_	3	nsubj	_	_
+3	wear	_	VERB	VB	_	0	root	_	_
+4	a	_	DET	DT	_	6	det	_	_
+5	yellow	_	ADJ	JJ	_	6	amod	_	_
+6	jacket	_	NOUN	NN	_	3	obj	_	_
+7	and	_	CCONJ	CC	_	9	cc	_	_
+8	blue	_	ADJ	JJ	_	9	amod	_	_
+9	tie	_	NOUN	NN	_	6	conj	_	_
+10	,	_	PUNCT	,	_	14	punct	_	_
+11	and	_	CCONJ	CC	_	14	cc	_	_
+12	a	_	DET	DT	_	13	det	_	_
+13	woman	_	NOUN	NN	_	14	nsubj	_	_
+14	wear	_	VERB	VB	_	3	conj	_	_
+15	pink	_	ADJ	JJ	_	16	amod	_	_
+16	dress	_	NOUN	NN	_	14	obj	_	_
+17	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00411.txt_93
+# text = Thank you very much .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	much	_	ADV	RB	_	1	advmod	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00962.txt_119
+# text = I do n't like to drive in the city .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	do	_	AUX	VBP	_	4	aux	_	_
+3	n't	_	PART	RB	_	4	advmod	_	_
+4	like	_	VERB	VB	_	0	root	_	_
+5	to	_	PART	TO	_	6	mark	_	_
+6	drive	_	VERB	VB	_	4	xcomp	_	_
+7	in	_	ADP	IN	_	9	case	_	_
+8	the	_	DET	DT	_	9	det	_	_
+9	city	_	NOUN	NN	_	6	obl	_	_
+10	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01094.txt_39
+# text = Yes , I have my own room .
+1	Yes	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	have	_	VERB	VBP	_	0	root	_	_
+5	my	_	PRON	PRP$	_	7	nmod:poss	_	_
+6	own	_	ADJ	JJ	_	7	amod	_	_
+7	room	_	NOUN	NN	_	4	obj	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00326.txt_16
+# text = But recently , I started snowboard .
+1	But	_	CCONJ	CC	_	5	cc	_	_
+2	recently	_	ADV	RB	_	5	advmod	_	_
+3	,	_	PUNCT	,	_	5	punct	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	started	_	VERB	VBD	_	0	root	_	_
+6	snowboard	_	NOUN	NN	_	5	obj	_	_
+7	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00958.txt_45
+# text = I do n't know .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	do	_	AUX	VBP	_	4	aux	_	_
+3	n't	_	PART	RB	_	4	advmod	_	_
+4	know	_	VERB	VB	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00878.txt_120
+# text = but you know ,
+1	but	_	CCONJ	CC	_	3	cc	_	_
+2	you	_	PRON	PRP	_	3	nsubj	_	_
+3	know	_	VERB	VBP	_	0	root	_	_
+4	,	_	PUNCT	,	_	3	punct	_	_
+
+# sent_id = file01207.txt_89
+# text = Thank you for your help .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	for	_	ADP	IN	_	5	case	_	_
+4	your	_	PRON	PRP$	_	5	nmod:poss	_	_
+5	help	_	NOUN	NN	_	1	obl	_	_
+6	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00688.txt_27
+# text = I live in Gifu .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	live	_	VERB	VBP	_	0	root	_	_
+3	in	_	ADP	IN	_	4	case	_	_
+4	Gifu	_	PROPN	NNP	_	2	obl	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01211.txt_103
+# text = And before another train could come , the station master went down to the tracks and got the bag for him .
+1	And	_	CCONJ	CC	_	11	cc	_	_
+2	before	_	SCONJ	IN	_	6	mark	_	_
+3	another	_	DET	DT	_	4	det	_	_
+4	train	_	NOUN	NN	_	6	nsubj	_	_
+5	could	_	AUX	MD	_	6	aux	_	_
+6	come	_	VERB	VB	_	11	advcl	_	_
+7	,	_	PUNCT	,	_	6	punct	_	_
+8	the	_	DET	DT	_	10	det	_	_
+9	station	_	NOUN	NN	_	10	compound	_	_
+10	master	_	NOUN	NN	_	11	nsubj	_	_
+11	went	_	VERB	VBD	_	0	root	_	_
+12	down	_	ADP	IN	_	11	compound:prt	_	_
+13	to	_	PART	TO	_	15	case	_	_
+14	the	_	DET	DT	_	15	det	_	_
+15	tracks	_	NOUN	NNS	_	11	obl	_	_
+16	and	_	CCONJ	CC	_	17	cc	_	_
+17	got	_	VERB	VBD	_	11	conj	_	_
+18	the	_	DET	DT	_	19	det	_	_
+19	bag	_	NOUN	NN	_	17	obj	_	_
+20	for	_	ADP	IN	_	21	case	_	_
+21	him	_	PRON	PRP	_	17	obl	_	_
+22	.	_	PUNCT	.	_	11	punct	_	_
+
+# sent_id = file00674.txt_65
+# text = what time will you come at the Osaka station ?
+1	what	_	DET	WDT	_	2	det	_	_
+2	time	_	NOUN	NN	_	5	obl	_	_
+3	will	_	AUX	MD	_	5	aux	_	_
+4	you	_	PRON	PRP	_	5	nsubj	_	_
+5	come	_	VERB	VB	_	0	root	_	_
+6	at	_	ADP	IN	_	9	case	_	_
+7	the	_	DET	DT	_	9	det	_	_
+8	Osaka	_	PROPN	NNP	_	9	compound	_	_
+9	station	_	NOUN	NN	_	5	obl	_	_
+10	?	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00380.txt_63
+# text = Which one to take ?
+1	Which	_	DET	WDT	_	2	det	_	_
+2	one	_	NUM	CD	_	0	root	_	_
+3	to	_	PART	TO	_	4	mark	_	_
+4	take	_	VERB	VB	_	2	acl	_	_
+5	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00319.txt_193
+# text = I live there for two years without a car .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	live	_	VERB	VBP	_	0	root	_	_
+3	there	_	ADV	RB	_	2	advmod	_	_
+4	for	_	ADP	IN	_	6	case	_	_
+5	two	_	NUM	CD	_	6	nummod	_	_
+6	years	_	NOUN	NNS	_	2	obl	_	_
+7	without	_	ADP	IN	_	9	case	_	_
+8	a	_	DET	DT	_	9	det	_	_
+9	car	_	NOUN	NN	_	2	obl	_	_
+10	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00559.txt_140
+# text = All right ?
+1	All	_	ADV	RB	_	2	advmod	_	_
+2	right	_	ADJ	JJ	_	0	root	_	_
+3	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00351.txt_116
+# text = So I thought that some of the American men are like Japanese men , I think .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	thought	_	VERB	VBD	_	0	root	_	_
+4	that	_	SCONJ	IN	_	13	mark	_	_
+5	some	_	DET	DT	_	13	nsubj	_	_
+6	of	_	ADP	IN	_	9	case	_	_
+7	the	_	DET	DT	_	9	det	_	_
+8	American	_	ADJ	JJ	_	9	amod	_	_
+9	men	_	NOUN	NNS	_	5	nmod	_	_
+10	are	_	AUX	VBP	_	13	cop	_	_
+11	like	_	ADP	IN	_	13	case	_	_
+12	Japanese	_	ADJ	JJ	_	13	amod	_	_
+13	men	_	NOUN	NNS	_	3	advcl	_	_
+14	,	_	PUNCT	,	_	16	punct	_	_
+15	I	_	PRON	PRP	_	16	nsubj	_	_
+16	think	_	VERB	VBP	_	3	parataxis	_	_
+17	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00375.txt_92
+# text = So I wanted to see that things .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	wanted	_	VERB	VBD	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	see	_	VERB	VB	_	3	xcomp	_	_
+6	that	_	DET	DT	_	7	det	_	_
+7	things	_	NOUN	NNS	_	5	obj	_	_
+8	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00651.txt_29
+# text = I like music very much .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	music	_	NOUN	NN	_	2	obj	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	much	_	ADV	RB	_	2	advmod	_	_
+6	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00966.txt_65
+# text = Could you talk to him and give me a call ?
+1	Could	_	AUX	MD	_	3	aux	_	_
+2	you	_	PRON	PRP	_	3	nsubj	_	_
+3	talk	_	VERB	VB	_	0	root	_	_
+4	to	_	PART	TO	_	5	case	_	_
+5	him	_	PRON	PRP	_	3	obl	_	_
+6	and	_	CCONJ	CC	_	7	cc	_	_
+7	give	_	VERB	VB	_	3	conj	_	_
+8	me	_	PRON	PRP	_	7	iobj	_	_
+9	a	_	DET	DT	_	10	det	_	_
+10	call	_	NOUN	NN	_	7	obj	_	_
+11	?	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01280.txt_149
+# text = So one day last week , my boyfriend was driving a car to go to his office .
+1	So	_	ADV	RB	_	10	advmod	_	_
+2	one	_	NUM	CD	_	3	nummod	_	_
+3	day	_	NOUN	NN	_	10	obl:tmod	_	_
+4	last	_	ADJ	JJ	_	5	amod	_	_
+5	week	_	NOUN	NN	_	3	nmod:tmod	_	_
+6	,	_	PUNCT	,	_	3	punct	_	_
+7	my	_	PRON	PRP$	_	8	nmod:poss	_	_
+8	boyfriend	_	NOUN	NN	_	10	nsubj	_	_
+9	was	_	AUX	VBD	_	10	aux	_	_
+10	driving	_	VERB	VBG	_	0	root	_	_
+11	a	_	DET	DT	_	12	det	_	_
+12	car	_	NOUN	NN	_	10	obj	_	_
+13	to	_	PART	TO	_	14	mark	_	_
+14	go	_	VERB	VB	_	10	xcomp	_	_
+15	to	_	PART	TO	_	17	case	_	_
+16	his	_	PRON	PRP$	_	17	nmod:poss	_	_
+17	office	_	NOUN	NN	_	14	obl	_	_
+18	.	_	PUNCT	.	_	10	punct	_	_
+
+# sent_id = file00873.txt_15
+# text = After that , I do my normal work at my desk .
+1	After	_	ADP	IN	_	2	case	_	_
+2	that	_	PRON	DT	_	5	obl	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	do	_	VERB	VBP	_	0	root	_	_
+6	my	_	PRON	PRP$	_	8	nmod:poss	_	_
+7	normal	_	ADJ	JJ	_	8	amod	_	_
+8	work	_	NOUN	NN	_	5	obj	_	_
+9	at	_	ADP	IN	_	11	case	_	_
+10	my	_	PRON	PRP$	_	11	nmod:poss	_	_
+11	desk	_	NOUN	NN	_	5	obl	_	_
+12	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01191.txt_128
+# text = Yes , I do .
+1	Yes	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	do	_	VERB	VBP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01221.txt_121
+# text = And we just relax and had a cup of coffee .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	we	_	PRON	PRP	_	4	nsubj	_	_
+3	just	_	ADV	RB	_	4	advmod	_	_
+4	relax	_	VERB	VBP	_	0	root	_	_
+5	and	_	CCONJ	CC	_	6	cc	_	_
+6	had	_	VERB	VBD	_	4	conj	_	_
+7	a	_	DET	DT	_	8	det	_	_
+8	cup	_	NOUN	NN	_	6	obj	_	_
+9	of	_	ADP	IN	_	10	case	_	_
+10	coffee	_	NOUN	NN	_	8	nmod	_	_
+11	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00491.txt_32
+# text = And it makes me feel so good .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	it	_	PRON	PRP	_	3	nsubj	_	_
+3	makes	_	VERB	VBZ	_	0	root	_	_
+4	me	_	PRON	PRP	_	3	obj	_	_
+5	feel	_	VERB	VB	_	3	xcomp	_	_
+6	so	_	ADV	RB	_	7	advmod	_	_
+7	good	_	ADJ	JJ	_	5	xcomp	_	_
+8	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00567.txt_30
+# text = The door is opening .
+1	The	_	DET	DT	_	2	det	_	_
+2	door	_	NOUN	NN	_	4	nsubj	_	_
+3	is	_	AUX	VBZ	_	4	aux	_	_
+4	opening	_	VERB	VBG	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00873.txt_69
+# text = I see .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	see	_	VERB	VBP	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00463.txt_143
+# text = Thank you very much .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	much	_	ADV	RB	_	1	advmod	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00990.txt_114
+# text = Just in the building so - called Shibuya Higashiguchi Building .
+1	Just	_	ADV	RB	_	4	advmod	_	_
+2	in	_	ADP	IN	_	4	case	_	_
+3	the	_	DET	DT	_	4	det	_	_
+4	building	_	NOUN	NN	_	0	root	_	_
+5	so	_	ADV	RB	_	7	compound	_	_
+6	-	_	PUNCT	:	_	7	punct	_	_
+7	called	_	VERB	VBN	_	10	amod	_	_
+8	Shibuya	_	PROPN	NNP	_	10	compound	_	_
+9	Higashiguchi	_	PROPN	NNP	_	8	flat	_	_
+10	Building	_	PROPN	NNP	_	4	dislocated	_	_
+11	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00774.txt_45
+# text = because sorry . ...
+1	because	_	SCONJ	IN	_	2	mark	_	_
+2	sorry	_	ADJ	JJ	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+4	...	_	PUNCT	:	_	2	punct	_	_
+
+# sent_id = file00796.txt_58
+# text = would you just tell me why our hotel rooms were not ready at that time ?
+1	would	_	AUX	MD	_	4	aux	_	_
+2	you	_	PRON	PRP	_	4	nsubj	_	_
+3	just	_	ADV	RB	_	4	advmod	_	_
+4	tell	_	VERB	VB	_	0	root	_	_
+5	me	_	PRON	PRP	_	4	obj	_	_
+6	why	_	ADV	WRB	_	12	advmod	_	_
+7	our	_	PRON	PRP$	_	9	nmod:poss	_	_
+8	hotel	_	NOUN	NN	_	9	compound	_	_
+9	rooms	_	NOUN	NNS	_	12	nsubj	_	_
+10	were	_	AUX	VBD	_	12	cop	_	_
+11	not	_	PART	RB	_	12	advmod	_	_
+12	ready	_	ADJ	JJ	_	4	ccomp	_	_
+13	at	_	ADP	IN	_	15	case	_	_
+14	that	_	DET	DT	_	15	det	_	_
+15	time	_	NOUN	NN	_	12	obl	_	_
+16	?	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00593.txt_85
+# text = One boy
+1	One	_	NUM	CD	_	2	nummod	_	_
+2	boy	_	NOUN	NN	_	0	root	_	_
+
+# sent_id = file01273.txt_92
+# text = you 're welcome
+1	you	_	PRON	PRP	_	3	nsubj	_	_
+2	're	_	AUX	VBP	_	3	cop	_	_
+3	welcome	_	ADJ	JJ	_	0	root	_	_
+
+# sent_id = file01251.txt_74
+# text = Yes , all right .
+1	Yes	_	INTJ	UH	_	0	root	_	_
+2	,	_	PUNCT	,	_	1	punct	_	_
+3	all	_	ADV	RB	_	1	advmod	_	_
+4	right	_	ADJ	JJ	_	3	fixed	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file01224.txt_93
+# text = After all , her own gift was much bigger than her husband 's gift .
+1	After	_	ADV	RB	_	9	advmod	_	_
+2	all	_	ADV	RB	_	1	fixed	_	_
+3	,	_	PUNCT	,	_	9	punct	_	_
+4	her	_	PRON	PRP$	_	6	nmod:poss	_	_
+5	own	_	ADJ	JJ	_	6	amod	_	_
+6	gift	_	NOUN	NN	_	9	nsubj	_	_
+7	was	_	AUX	VBD	_	9	cop	_	_
+8	much	_	ADV	RB	_	9	advmod	_	_
+9	bigger	_	ADJ	JJR	_	0	root	_	_
+10	than	_	ADP	IN	_	14	case	_	_
+11	her	_	PRON	PRP$	_	12	nmod:poss	_	_
+12	husband	_	NOUN	NN	_	14	nmod:poss	_	_
+13	's	_	PART	POS	_	12	case	_	_
+14	gift	_	NOUN	NN	_	9	obl	_	_
+15	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file01243.txt_275
+# text = But I do n't like them and when I 'm eating them , that means I 'm killing more animals , you know , to provide because they provide .
+1	But	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	like	_	VERB	VB	_	0	root	_	_
+6	them	_	PRON	PRP	_	5	obj	_	_
+7	and	_	CCONJ	CC	_	15	cc	_	_
+8	when	_	SCONJ	WRB	_	11	mark	_	_
+9	I	_	PRON	PRP	_	11	nsubj	_	_
+10	'm	_	AUX	VBP	_	11	aux	_	_
+11	eating	_	VERB	VBG	_	15	advcl	_	_
+12	them	_	PRON	PRP	_	11	obj	_	_
+13	,	_	PUNCT	,	_	15	punct	_	_
+14	that	_	PRON	DT	_	15	nsubj	_	_
+15	means	_	VERB	VBZ	_	5	conj	_	_
+16	I	_	PRON	PRP	_	18	nsubj	_	_
+17	'm	_	AUX	VBP	_	18	aux	_	_
+18	killing	_	VERB	VBG	_	15	ccomp	_	_
+19	more	_	ADJ	JJR	_	20	amod	_	_
+20	animals	_	NOUN	NNS	_	18	obj	_	_
+21	,	_	PUNCT	,	_	23	punct	_	_
+22	you	_	PRON	PRP	_	23	nsubj	_	_
+23	know	_	VERB	VBP	_	18	parataxis	_	_
+24	,	_	PUNCT	,	_	23	punct	_	_
+25	to	_	PART	TO	_	26	mark	_	_
+26	provide	_	VERB	VB	_	18	xcomp	_	_
+27	because	_	SCONJ	IN	_	29	mark	_	_
+28	they	_	PRON	PRP	_	29	nsubj	_	_
+29	provide	_	VERB	VBP	_	18	advcl	_	_
+30	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01063.txt_43
+# text = And I can look another two tables .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	I	_	PRON	PRP	_	4	nsubj	_	_
+3	can	_	AUX	MD	_	4	aux	_	_
+4	look	_	VERB	VB	_	0	root	_	_
+5	another	_	DET	DT	_	7	det	_	_
+6	two	_	NUM	CD	_	7	nummod	_	_
+7	tables	_	NOUN	NNS	_	4	obj	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00185.txt_165
+# text = Yeah , because , only one my friend .
+1	Yeah	_	INTJ	UH	_	8	discourse	_	_
+2	,	_	PUNCT	,	_	8	punct	_	_
+3	because	_	SCONJ	IN	_	8	mark	_	_
+4	,	_	PUNCT	,	_	8	punct	_	_
+5	only	_	ADV	RB	_	6	advmod	_	_
+6	one	_	NUM	CD	_	8	nummod	_	_
+7	my	_	PRON	PRP$	_	8	nmod:poss	_	_
+8	friend	_	NOUN	NN	_	0	root	_	_
+9	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file00397.txt_57
+# text = because my commute pass expired yesterday .
+1	because	_	SCONJ	IN	_	5	mark	_	_
+2	my	_	PRON	PRP$	_	4	nmod:poss	_	_
+3	commute	_	NOUN	NN	_	4	compound	_	_
+4	pass	_	NOUN	NN	_	5	nsubj	_	_
+5	expired	_	VERB	VBD	_	0	root	_	_
+6	yesterday	_	NOUN	NN	_	5	obl:tmod	_	_
+7	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00978.txt_75
+# text = And the relationship between teacher and students , I 'd say in a way , has been destroyed .
+1	And	_	CCONJ	CC	_	18	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	relationship	_	NOUN	NN	_	18	nsubj:pass	_	_
+4	between	_	ADP	IN	_	5	case	_	_
+5	teacher	_	NOUN	NN	_	3	nmod	_	_
+6	and	_	CCONJ	CC	_	7	cc	_	_
+7	students	_	NOUN	NNS	_	5	conj	_	_
+8	,	_	PUNCT	,	_	11	punct	_	_
+9	I	_	PRON	PRP	_	11	nsubj	_	_
+10	'd	_	AUX	MD	_	11	aux	_	_
+11	say	_	VERB	VB	_	18	parataxis	_	_
+12	in	_	ADP	IN	_	14	case	_	_
+13	a	_	DET	DT	_	14	det	_	_
+14	way	_	NOUN	NN	_	11	obl	_	_
+15	,	_	PUNCT	,	_	11	punct	_	_
+16	has	_	AUX	VBZ	_	18	aux	_	_
+17	been	_	AUX	VBN	_	18	aux:pass	_	_
+18	destroyed	_	VERB	VBN	_	0	root	_	_
+19	.	_	PUNCT	.	_	18	punct	_	_
+
+# sent_id = file01213.txt_108
+# text = Personally I 'll make a phone call to everybody and apologize .
+1	Personally	_	ADV	RB	_	4	advmod	_	_
+2	I	_	PRON	PRP	_	4	nsubj	_	_
+3	'll	_	AUX	MD	_	4	aux	_	_
+4	make	_	VERB	VB	_	0	root	_	_
+5	a	_	DET	DT	_	7	det	_	_
+6	phone	_	NOUN	NN	_	7	compound	_	_
+7	call	_	NOUN	NN	_	4	obj	_	_
+8	to	_	PART	TO	_	9	case	_	_
+9	everybody	_	NOUN	NN	_	4	obl	_	_
+10	and	_	CCONJ	CC	_	11	cc	_	_
+11	apologize	_	VERB	VB	_	4	conj	_	_
+12	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01210.txt_10
+# text = Favorite professessor ?
+1	Favorite	_	ADJ	JJ	_	2	amod	_	_
+2	professessor	_	NOUN	NN	_	0	root	_	_
+3	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00967.txt_85
+# text = But , you know , I expected a lot about , you know , eating sushi but I could n't .
+1	But	_	CCONJ	CC	_	7	cc	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	you	_	PRON	PRP	_	4	nsubj	_	_
+4	know	_	VERB	VBP	_	7	parataxis	_	_
+5	,	_	PUNCT	,	_	4	punct	_	_
+6	I	_	PRON	PRP	_	7	nsubj	_	_
+7	expected	_	VERB	VBD	_	0	root	_	_
+8	a	_	DET	DT	_	9	det	_	_
+9	lot	_	NOUN	NN	_	7	obj	_	_
+10	about	_	ADP	IN	_	15	case	_	_
+11	,	_	PUNCT	,	_	13	punct	_	_
+12	you	_	PRON	PRP	_	13	nsubj	_	_
+13	know	_	VERB	VBP	_	15	parataxis	_	_
+14	,	_	PUNCT	,	_	13	punct	_	_
+15	eating	_	VERB	VBG	_	7	advcl	_	_
+16	sushi	_	NOUN	NN	_	15	obj	_	_
+17	but	_	CCONJ	CC	_	19	cc	_	_
+18	I	_	PRON	PRP	_	19	nsubj	_	_
+19	could	_	AUX	MD	_	15	conj	_	_
+20	n't	_	PART	RB	_	19	advmod	_	_
+21	.	_	PUNCT	.	_	7	punct	_	_
+
+# sent_id = file00988.txt_170
+# text = So it 's looks like a just a seasonal sale .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	it	_	PRON	PRP	_	4	nsubj	_	_
+3	's	_	AUX	VBZ	_	4	reparandum	_	_
+4	looks	_	VERB	VBZ	_	0	root	_	_
+5	like	_	ADP	IN	_	10	case	_	_
+6	a	_	DET	DT	_	8	reparandum	_	_
+7	just	_	ADV	RB	_	10	advmod	_	_
+8	a	_	DET	DT	_	10	det	_	_
+9	seasonal	_	ADJ	JJ	_	10	amod	_	_
+10	sale	_	NOUN	NN	_	4	obl	_	_
+11	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00778.txt_26
+# text = But we are friendly
+1	But	_	CCONJ	CC	_	4	cc	_	_
+2	we	_	PRON	PRP	_	4	nsubj	_	_
+3	are	_	AUX	VBP	_	4	cop	_	_
+4	friendly	_	ADJ	JJ	_	0	root	_	_
+
+# sent_id = file01220.txt_121
+# text = But I really did n't know that .
+1	But	_	CCONJ	CC	_	6	cc	_	_
+2	I	_	PRON	PRP	_	6	nsubj	_	_
+3	really	_	ADV	RB	_	6	advmod	_	_
+4	did	_	AUX	VBD	_	6	aux	_	_
+5	n't	_	PART	RB	_	6	advmod	_	_
+6	know	_	VERB	VB	_	0	root	_	_
+7	that	_	PRON	DT	_	6	obj	_	_
+8	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00852.txt_20
+# text = I like roses and some herbs .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	roses	_	NOUN	NNS	_	2	obj	_	_
+4	and	_	CCONJ	CC	_	6	cc	_	_
+5	some	_	DET	DT	_	6	det	_	_
+6	herbs	_	NOUN	NNS	_	3	conj	_	_
+7	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00262.txt_35
+# text = So , I started with playing golf .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	started	_	VERB	VBD	_	0	root	_	_
+5	with	_	SCONJ	IN	_	6	mark	_	_
+6	playing	_	VERB	VBG	_	4	advcl	_	_
+7	golf	_	NOUN	NN	_	6	obj	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00433.txt_55
+# text = So I have to go home right now .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	have	_	VERB	VBP	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	go	_	VERB	VB	_	3	xcomp	_	_
+6	home	_	ADV	RB	_	5	advmod	_	_
+7	right	_	ADV	RB	_	8	advmod	_	_
+8	now	_	ADV	RB	_	5	advmod	_	_
+9	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00030.txt_75
+# text = so I decided to take some food to the party
+1	so	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	decided	_	VERB	VBD	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	take	_	VERB	VB	_	3	xcomp	_	_
+6	some	_	DET	DT	_	7	det	_	_
+7	food	_	NOUN	NN	_	5	obj	_	_
+8	to	_	PART	TO	_	10	case	_	_
+9	the	_	DET	DT	_	10	det	_	_
+10	party	_	NOUN	NN	_	5	obl	_	_
+
+# sent_id = file01039.txt_95
+# text = it 's a very interesting experience for me .
+1	it	_	PRON	PRP	_	6	nsubj	_	_
+2	's	_	AUX	VBZ	_	6	cop	_	_
+3	a	_	DET	DT	_	6	det	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	interesting	_	ADJ	JJ	_	6	amod	_	_
+6	experience	_	NOUN	NN	_	0	root	_	_
+7	for	_	ADP	IN	_	8	case	_	_
+8	me	_	PRON	PRP	_	6	obl	_	_
+9	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00073.txt_91
+# text = recently , I go to driving school .
+1	recently	_	ADV	RB	_	4	advmod	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	go	_	VERB	VBP	_	0	root	_	_
+5	to	_	PART	TO	_	7	case	_	_
+6	driving	_	NOUN	NN	_	7	compound	_	_
+7	school	_	NOUN	NN	_	4	obl	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01104.txt_27
+# text = And when I snowboard , I can try to jump , and like go really fast .
+1	And	_	CCONJ	CC	_	8	cc	_	_
+2	when	_	SCONJ	WRB	_	4	mark	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	snowboard	_	VERB	VBP	_	8	advcl	_	_
+5	,	_	PUNCT	,	_	4	punct	_	_
+6	I	_	PRON	PRP	_	8	nsubj	_	_
+7	can	_	AUX	MD	_	8	aux	_	_
+8	try	_	VERB	VB	_	0	root	_	_
+9	to	_	PART	TO	_	10	mark	_	_
+10	jump	_	VERB	VB	_	8	xcomp	_	_
+11	,	_	PUNCT	,	_	14	punct	_	_
+12	and	_	CCONJ	CC	_	14	cc	_	_
+13	like	_	INTJ	UH	_	14	discourse	_	_
+14	go	_	VERB	VB	_	10	conj	_	_
+15	really	_	ADV	RB	_	16	advmod	_	_
+16	fast	_	ADV	RB	_	14	advmod	_	_
+17	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file01049.txt_82
+# text = and and she said " Bye . "
+1	and	_	CCONJ	CC	_	4	cc	_	_
+2	and	_	CCONJ	CC	_	4	cc	_	_
+3	she	_	PRON	PRP	_	4	nsubj	_	_
+4	said	_	VERB	VBD	_	0	root	_	_
+5	"	_	PUNCT	"	_	6	punct	_	_
+6	Bye	_	INTJ	UH	_	4	obj	_	_
+7	.	_	PUNCT	.	_	6	punct	_	_
+8	"	_	PUNCT	"	_	6	punct	_	_
+
+# sent_id = file00527.txt_10
+# text = My father is work .
+1	My	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	father	_	NOUN	NN	_	4	nsubj	_	_
+3	is	_	AUX	VBZ	_	4	cop	_	_
+4	work	_	NOUN	NN	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00641.txt_31
+# text = But the beginning of this year , I went to the United States to study English for short for about a month .
+1	But	_	CCONJ	CC	_	9	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	beginning	_	NOUN	NN	_	9	obl	_	_
+4	of	_	ADP	IN	_	6	case	_	_
+5	this	_	DET	DT	_	6	det	_	_
+6	year	_	NOUN	NN	_	3	nmod	_	_
+7	,	_	PUNCT	,	_	3	punct	_	_
+8	I	_	PRON	PRP	_	9	nsubj	_	_
+9	went	_	VERB	VBD	_	0	root	_	_
+10	to	_	PART	TO	_	13	case	_	_
+11	the	_	DET	DT	_	13	det	_	_
+12	United	_	PROPN	NNP	_	13	compound	_	_
+13	States	_	PROPN	NNPS	_	9	obl	_	_
+14	to	_	PART	TO	_	15	mark	_	_
+15	study	_	VERB	VB	_	9	xcomp	_	_
+16	English	_	PROPN	NNP	_	15	obj	_	_
+17	for	_	ADP	IN	_	18	case	_	_
+18	short	_	ADJ	JJ	_	15	obl	_	_
+19	for	_	ADP	IN	_	22	case	_	_
+20	about	_	ADV	RB	_	22	advmod	_	_
+21	a	_	DET	DT	_	22	det	_	_
+22	month	_	NOUN	NN	_	15	obl	_	_
+23	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file01262.txt_126
+# text = Yeah , for lunch .
+1	Yeah	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	for	_	ADP	IN	_	4	case	_	_
+4	lunch	_	NOUN	NN	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00380.txt_21
+# text = And also , I have to clean the room .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	also	_	ADV	RB	_	5	advmod	_	_
+3	,	_	PUNCT	,	_	5	punct	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	have	_	VERB	VBP	_	0	root	_	_
+6	to	_	PART	TO	_	7	mark	_	_
+7	clean	_	VERB	VB	_	5	xcomp	_	_
+8	the	_	DET	DT	_	9	det	_	_
+9	room	_	NOUN	NN	_	7	obj	_	_
+10	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00656.txt_19
+# text = And her name is Shinjuku .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	her	_	PRON	PRP$	_	3	nmod:poss	_	_
+3	name	_	NOUN	NN	_	5	nsubj	_	_
+4	is	_	AUX	VBZ	_	5	cop	_	_
+5	Shinjuku	_	PROPN	NNP	_	0	root	_	_
+6	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01254.txt_108
+# text = one day last week , I went to the station as normal to go to my work .
+1	one	_	NUM	CD	_	2	nummod	_	_
+2	day	_	NOUN	NN	_	7	obl:tmod	_	_
+3	last	_	ADJ	JJ	_	4	amod	_	_
+4	week	_	NOUN	NN	_	2	nmod:tmod	_	_
+5	,	_	PUNCT	,	_	2	punct	_	_
+6	I	_	PRON	PRP	_	7	nsubj	_	_
+7	went	_	VERB	VBD	_	0	root	_	_
+8	to	_	PART	TO	_	10	case	_	_
+9	the	_	DET	DT	_	10	det	_	_
+10	station	_	NOUN	NN	_	7	obl	_	_
+11	as	_	ADP	IN	_	12	case	_	_
+12	normal	_	ADJ	JJ	_	7	obl	_	_
+13	to	_	PART	TO	_	14	mark	_	_
+14	go	_	VERB	VB	_	7	xcomp	_	_
+15	to	_	PART	TO	_	17	case	_	_
+16	my	_	PRON	PRP$	_	17	nmod:poss	_	_
+17	work	_	NOUN	NN	_	14	obl	_	_
+18	.	_	PUNCT	.	_	7	punct	_	_
+
+# sent_id = file01225.txt_44
+# text = He 's a fifth grader in primary school .
+1	He	_	PRON	PRP	_	5	nsubj	_	_
+2	's	_	AUX	VBZ	_	5	cop	_	_
+3	a	_	DET	DT	_	5	det	_	_
+4	fifth	_	ADJ	JJ	_	5	amod	_	_
+5	grader	_	NOUN	NN	_	0	root	_	_
+6	in	_	ADP	IN	_	8	case	_	_
+7	primary	_	ADJ	JJ	_	8	amod	_	_
+8	school	_	NOUN	NN	_	5	nmod	_	_
+9	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01270.txt_201
+# text = Let 's see .
+1	Let	_	VERB	VB	_	0	root	_	_
+2	's	_	PRON	PRP	_	1	obj	_	_
+3	see	_	VERB	VB	_	1	xcomp	_	_
+4	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00207.txt_192
+# text = and I dropped my bag on the rail .
+1	and	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	dropped	_	VERB	VBD	_	0	root	_	_
+4	my	_	PRON	PRP$	_	5	nmod:poss	_	_
+5	bag	_	NOUN	NN	_	3	obj	_	_
+6	on	_	ADP	IN	_	8	case	_	_
+7	the	_	DET	DT	_	8	det	_	_
+8	rail	_	NOUN	NN	_	3	obl	_	_
+9	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01186.txt_18
+# text = But you know , it 's little bit boring .
+1	But	_	CCONJ	CC	_	9	cc	_	_
+2	you	_	PRON	PRP	_	3	nsubj	_	_
+3	know	_	VERB	VBP	_	9	parataxis	_	_
+4	,	_	PUNCT	,	_	3	punct	_	_
+5	it	_	PRON	PRP	_	9	nsubj	_	_
+6	's	_	AUX	VBZ	_	9	cop	_	_
+7	little	_	ADJ	JJ	_	8	amod	_	_
+8	bit	_	NOUN	NN	_	9	obl:npmod	_	_
+9	boring	_	ADJ	JJ	_	0	root	_	_
+10	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file00976.txt_12
+# text = I work in honsha .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	work	_	VERB	VBP	_	0	root	_	_
+3	in	_	ADP	IN	_	4	case	_	_
+4	honsha	_	NOUN	FW	_	2	obl	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01220.txt_130
+# text = And the design was a little bit too hot .
+1	And	_	CCONJ	CC	_	9	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	design	_	NOUN	NN	_	9	nsubj	_	_
+4	was	_	AUX	VBD	_	9	cop	_	_
+5	a	_	DET	DT	_	7	det	_	_
+6	little	_	ADJ	JJ	_	7	amod	_	_
+7	bit	_	NOUN	NN	_	9	obl:npmod	_	_
+8	too	_	ADV	RB	_	9	advmod	_	_
+9	hot	_	ADJ	JJ	_	0	root	_	_
+10	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file00285.txt_99
+# text = Basically , I 'm not good at cooking , so potluck party is fine to me .
+1	Basically	_	ADV	RB	_	6	advmod	_	_
+2	,	_	PUNCT	,	_	6	punct	_	_
+3	I	_	PRON	PRP	_	6	nsubj	_	_
+4	'm	_	AUX	VBP	_	6	cop	_	_
+5	not	_	PART	RB	_	6	advmod	_	_
+6	good	_	ADJ	JJ	_	0	root	_	_
+7	at	_	SCONJ	IN	_	8	mark	_	_
+8	cooking	_	NOUN	NN	_	6	advcl	_	_
+9	,	_	PUNCT	,	_	14	punct	_	_
+10	so	_	CCONJ	CC	_	14	cc	_	_
+11	potluck	_	NOUN	NN	_	12	compound	_	_
+12	party	_	NOUN	NN	_	14	nsubj	_	_
+13	is	_	AUX	VBZ	_	14	cop	_	_
+14	fine	_	ADJ	JJ	_	6	conj	_	_
+15	to	_	PART	TO	_	16	case	_	_
+16	me	_	PRON	PRP	_	14	obl	_	_
+17	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00586.txt_40
+# text = I usually surf internet .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	usually	_	ADV	RB	_	3	advmod	_	_
+3	surf	_	VERB	VBP	_	0	root	_	_
+4	internet	_	NOUN	NN	_	3	obj	_	_
+5	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01149.txt_68
+# text = Maybe eleven .
+1	Maybe	_	ADV	RB	_	2	advmod	_	_
+2	eleven	_	NUM	CD	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00294.txt_75
+# text = And there 's a box and , some sound is coming from box .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	there	_	PRON	EX	_	3	expl	_	_
+3	's	_	VERB	VBZ	_	0	root	_	_
+4	a	_	DET	DT	_	5	det	_	_
+5	box	_	NOUN	NN	_	3	nsubj	_	_
+6	and	_	CCONJ	CC	_	11	cc	_	_
+7	,	_	PUNCT	,	_	11	punct	_	_
+8	some	_	DET	DT	_	9	det	_	_
+9	sound	_	NOUN	NN	_	11	nsubj	_	_
+10	is	_	AUX	VBZ	_	11	aux	_	_
+11	coming	_	VERB	VBG	_	3	conj	_	_
+12	from	_	ADP	IN	_	13	case	_	_
+13	box	_	NOUN	NN	_	11	obl	_	_
+14	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01042.txt_49
+# text = Yeah , she has her own room .
+1	Yeah	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	she	_	PRON	PRP	_	4	nsubj	_	_
+4	has	_	VERB	VBZ	_	0	root	_	_
+5	her	_	PRON	PRP$	_	7	nmod:poss	_	_
+6	own	_	ADJ	JJ	_	7	amod	_	_
+7	room	_	NOUN	NN	_	4	obj	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01233.txt_151
+# text = So I asked him to just go down and pick up my bag .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	asked	_	VERB	VBD	_	0	root	_	_
+4	him	_	PRON	PRP	_	3	obj	_	_
+5	to	_	PART	TO	_	7	mark	_	_
+6	just	_	ADV	RB	_	7	advmod	_	_
+7	go	_	VERB	VB	_	3	xcomp	_	_
+8	down	_	ADV	RB	_	7	advmod	_	_
+9	and	_	CCONJ	CC	_	10	cc	_	_
+10	pick	_	VERB	VB	_	7	conj	_	_
+11	up	_	ADP	RP	_	10	compound:prt	_	_
+12	my	_	PRON	PRP$	_	13	nmod:poss	_	_
+13	bag	_	NOUN	NN	_	10	obj	_	_
+14	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00318.txt_48
+# text = So that atmosphere makes people very comfortable .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	that	_	DET	DT	_	3	det	_	_
+3	atmosphere	_	NOUN	NN	_	4	nsubj	_	_
+4	makes	_	VERB	VBZ	_	0	root	_	_
+5	people	_	NOUN	NNS	_	4	obj	_	_
+6	very	_	ADV	RB	_	7	advmod	_	_
+7	comfortable	_	ADJ	JJ	_	4	xcomp	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00766.txt_87
+# text = so please give me up .
+1	so	_	ADV	RB	_	3	advmod	_	_
+2	please	_	INTJ	UH	_	3	discourse	_	_
+3	give	_	VERB	VB	_	0	root	_	_
+4	me	_	PRON	PRP	_	3	obj	_	_
+5	up	_	ADP	RP	_	3	compound:prt	_	_
+6	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00666.txt_1
+# text = My name is Charlie .
+1	My	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	name	_	NOUN	NN	_	4	nsubj	_	_
+3	is	_	AUX	VBZ	_	4	cop	_	_
+4	Charlie	_	PROPN	NNP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00648.txt_79
+# text = And so where can I get the ticket ?
+1	And	_	CCONJ	CC	_	6	cc	_	_
+2	so	_	CCONJ	CC	_	6	advmod	_	_
+3	where	_	ADV	WRB	_	6	advmod	_	_
+4	can	_	AUX	MD	_	6	aux	_	_
+5	I	_	PRON	PRP	_	6	nsubj	_	_
+6	get	_	VERB	VB	_	0	root	_	_
+7	the	_	DET	DT	_	8	det	_	_
+8	ticket	_	NOUN	NN	_	6	obj	_	_
+9	?	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file01268.txt_123
+# text = Some of the concert halls do weld a led inside their wall which does not allow any reception of cellphones so might be a good idea if you seriously want to stop the passenger using cellphones .
+1	Some	_	DET	DT	_	7	nsubj	_	_
+2	of	_	ADP	IN	_	5	case	_	_
+3	the	_	DET	DT	_	5	det	_	_
+4	concert	_	NOUN	NN	_	5	compound	_	_
+5	halls	_	NOUN	NNS	_	1	nmod	_	_
+6	do	_	AUX	VBP	_	7	aux	_	_
+7	weld	_	VERB	VB	_	0	root	_	_
+8	a	_	DET	DT	_	9	det	_	_
+9	led	_	NOUN	NN	_	7	obj	_	_
+10	inside	_	ADP	IN	_	12	case	_	_
+11	their	_	PRON	PRP$	_	12	nmod:poss	_	_
+12	wall	_	NOUN	NN	_	7	obl	_	_
+13	which	_	PRON	WDT	_	16	nsubj	_	_
+14	does	_	AUX	VBZ	_	16	aux	_	_
+15	not	_	PART	RB	_	16	advmod	_	_
+16	allow	_	VERB	VB	_	12	acl:relcl	_	_
+17	any	_	DET	DT	_	18	det	_	_
+18	reception	_	NOUN	NN	_	16	obj	_	_
+19	of	_	ADP	IN	_	20	case	_	_
+20	cellphones	_	NOUN	NNS	_	18	nmod	_	_
+21	so	_	CCONJ	CC	_	26	cc	_	_
+22	might	_	AUX	MD	_	26	aux	_	_
+23	be	_	AUX	VB	_	26	cop	_	_
+24	a	_	DET	DT	_	26	det	_	_
+25	good	_	ADJ	JJ	_	26	amod	_	_
+26	idea	_	NOUN	NN	_	7	conj	_	_
+27	if	_	SCONJ	IN	_	30	mark	_	_
+28	you	_	PRON	PRP	_	30	nsubj	_	_
+29	seriously	_	ADV	RB	_	30	advmod	_	_
+30	want	_	VERB	VBP	_	26	advcl	_	_
+31	to	_	PART	TO	_	32	mark	_	_
+32	stop	_	VERB	VB	_	30	xcomp	_	_
+33	the	_	DET	DT	_	34	det	_	_
+34	passenger	_	NOUN	NN	_	32	obj	_	_
+35	using	_	VERB	VBG	_	34	acl	_	_
+36	cellphones	_	NOUN	NNS	_	35	obj	_	_
+37	.	_	PUNCT	.	_	7	punct	_	_
+
+# sent_id = file00355.txt_64
+# text = And I had to take care of her .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	had	_	VERB	VBD	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	take	_	VERB	VB	_	3	xcomp	_	_
+6	care	_	NOUN	NN	_	5	obj	_	_
+7	of	_	ADP	IN	_	8	case	_	_
+8	her	_	PRON	PRP	_	6	nmod	_	_
+9	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00883.txt_86
+# text = the movie was very boring for me .
+1	the	_	DET	DT	_	2	det	_	_
+2	movie	_	NOUN	NN	_	5	nsubj	_	_
+3	was	_	AUX	VBD	_	5	cop	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	boring	_	ADJ	JJ	_	0	root	_	_
+6	for	_	ADP	IN	_	7	case	_	_
+7	me	_	PRON	PRP	_	5	obl	_	_
+8	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00120.txt_39
+# text = I like bread and some meat foods .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	bread	_	NOUN	NN	_	2	obj	_	_
+4	and	_	CCONJ	CC	_	7	cc	_	_
+5	some	_	DET	DT	_	7	det	_	_
+6	meat	_	NOUN	NN	_	7	compound	_	_
+7	foods	_	NOUN	NNS	_	3	conj	_	_
+8	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01230.txt_29
+# text = And she 's really nice to me and like nice to all the people around her .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	she	_	PRON	PRP	_	5	nsubj	_	_
+3	's	_	AUX	VBZ	_	5	cop	_	_
+4	really	_	ADV	RB	_	5	advmod	_	_
+5	nice	_	ADJ	JJ	_	0	root	_	_
+6	to	_	PART	TO	_	7	case	_	_
+7	me	_	PRON	PRP	_	5	obl	_	_
+8	and	_	CCONJ	CC	_	10	cc	_	_
+9	like	_	INTJ	UH	_	10	discourse	_	_
+10	nice	_	ADJ	JJ	_	5	conj	_	_
+11	to	_	PART	TO	_	14	case	_	_
+12	all	_	DET	PDT	_	14	det:predet	_	_
+13	the	_	DET	DT	_	14	det	_	_
+14	people	_	NOUN	NNS	_	10	obl	_	_
+15	around	_	ADP	IN	_	16	case	_	_
+16	her	_	PRON	PRP	_	14	nmod	_	_
+17	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00749.txt_38
+# text = all jazz .
+1	all	_	DET	DT	_	2	det	_	_
+2	jazz	_	NOUN	NN	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00254.txt_56
+# text = So , I like .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	like	_	VERB	VBP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00800.txt_81
+# text = but someone says actually I do n't know so much about the accident so much , but someone said so .
+1	but	_	CCONJ	CC	_	3	cc	_	_
+2	someone	_	NOUN	NN	_	3	nsubj	_	_
+3	says	_	VERB	VBZ	_	0	root	_	_
+4	actually	_	ADV	RB	_	8	advmod	_	_
+5	I	_	PRON	PRP	_	8	nsubj	_	_
+6	do	_	AUX	VBP	_	8	aux	_	_
+7	n't	_	PART	RB	_	8	advmod	_	_
+8	know	_	VERB	VB	_	3	ccomp	_	_
+9	so	_	ADV	RB	_	10	advmod	_	_
+10	much	_	ADV	RB	_	8	advmod	_	_
+11	about	_	ADP	IN	_	13	case	_	_
+12	the	_	DET	DT	_	13	det	_	_
+13	accident	_	NOUN	NN	_	8	obl	_	_
+14	so	_	ADV	RB	_	15	advmod	_	_
+15	much	_	ADV	RB	_	8	advmod	_	_
+16	,	_	PUNCT	,	_	19	punct	_	_
+17	but	_	CCONJ	CC	_	19	cc	_	_
+18	someone	_	NOUN	NN	_	19	nsubj	_	_
+19	said	_	VERB	VBD	_	3	conj	_	_
+20	so	_	ADV	RB	_	19	advmod	_	_
+21	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01222.txt_90
+# text = I will take the ticket or something that it says it was late for these accidents , so
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	will	_	AUX	MD	_	3	aux	_	_
+3	take	_	VERB	VB	_	0	root	_	_
+4	the	_	DET	DT	_	5	det	_	_
+5	ticket	_	NOUN	NN	_	3	obj	_	_
+6	or	_	CCONJ	CC	_	7	cc	_	_
+7	something	_	NOUN	NN	_	5	conj	_	_
+8	that	_	SCONJ	IN	_	10	mark	_	_
+9	it	_	PRON	PRP	_	10	nsubj	_	_
+10	says	_	VERB	VBZ	_	7	acl:relcl	_	_
+11	it	_	PRON	PRP	_	13	nsubj	_	_
+12	was	_	AUX	VBD	_	13	cop	_	_
+13	late	_	ADJ	JJ	_	10	ccomp	_	_
+14	for	_	ADP	IN	_	16	case	_	_
+15	these	_	DET	DT	_	16	det	_	_
+16	accidents	_	NOUN	NNS	_	13	obl	_	_
+17	,	_	PUNCT	,	_	3	punct	_	_
+18	so	_	CCONJ	CC	_	3	cc	_	_
+
+# sent_id = file01104.txt_120
+# text = he was new to our house at that time
+1	he	_	PRON	PRP	_	3	nsubj	_	_
+2	was	_	AUX	VBD	_	3	cop	_	_
+3	new	_	ADJ	JJ	_	0	root	_	_
+4	to	_	PART	TO	_	6	case	_	_
+5	our	_	PRON	PRP$	_	6	nmod:poss	_	_
+6	house	_	NOUN	NN	_	3	obl	_	_
+7	at	_	ADP	IN	_	9	case	_	_
+8	that	_	DET	DT	_	9	det	_	_
+9	time	_	NOUN	NN	_	3	obl	_	_
+
+# sent_id = file00217.txt_109
+# text = I 'll take this .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	'll	_	AUX	MD	_	3	aux	_	_
+3	take	_	VERB	VB	_	0	root	_	_
+4	this	_	PRON	DT	_	3	obj	_	_
+5	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00518.txt_54
+# text = usually , I use for business .
+1	usually	_	ADV	RB	_	4	advmod	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	use	_	VERB	VBP	_	0	root	_	_
+5	for	_	ADP	IN	_	6	case	_	_
+6	business	_	NOUN	NN	_	4	obl	_	_
+7	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00671.txt_108
+# text = But yeah .
+1	But	_	CCONJ	CC	_	2	cc	_	_
+2	yeah	_	INTJ	UH	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01001.txt_93
+# text = this movie is very interesting .
+1	this	_	DET	DT	_	2	det	_	_
+2	movie	_	NOUN	NN	_	5	nsubj	_	_
+3	is	_	AUX	VBZ	_	5	cop	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	interesting	_	ADJ	JJ	_	0	root	_	_
+6	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01120.txt_44
+# text = for example , the man close to the window is chewing gum , and he looks out of the class , and behind him , there are two girls , who are chatting with each other , and in the center of this class , there is one guy who is drinking and who is listening to the C D.
+1	for	_	ADP	IN	_	2	case	_	_
+2	example	_	NOUN	NN	_	11	obl	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	the	_	DET	DT	_	5	det	_	_
+5	man	_	NOUN	NN	_	11	nsubj	_	_
+6	close	_	ADJ	JJ	_	5	amod	_	_
+7	to	_	PART	TO	_	9	case	_	_
+8	the	_	DET	DT	_	9	det	_	_
+9	window	_	NOUN	NN	_	6	obl	_	_
+10	is	_	AUX	VBZ	_	11	aux	_	_
+11	chewing	_	VERB	VBG	_	0	root	_	_
+12	gum	_	NOUN	NN	_	11	obj	_	_
+13	,	_	PUNCT	,	_	16	punct	_	_
+14	and	_	CCONJ	CC	_	16	cc	_	_
+15	he	_	PRON	PRP	_	16	nsubj	_	_
+16	looks	_	VERB	VBZ	_	11	conj	_	_
+17	out	_	ADP	IN	_	20	case	_	_
+18	of	_	ADP	IN	_	20	case	_	_
+19	the	_	DET	DT	_	20	det	_	_
+20	class	_	NOUN	NN	_	16	obl	_	_
+21	,	_	PUNCT	,	_	27	punct	_	_
+22	and	_	CCONJ	CC	_	27	cc	_	_
+23	behind	_	ADP	IN	_	24	case	_	_
+24	him	_	PRON	PRP	_	27	obl	_	_
+25	,	_	PUNCT	,	_	24	punct	_	_
+26	there	_	PRON	EX	_	27	expl	_	_
+27	are	_	VERB	VBP	_	11	conj	_	_
+28	two	_	NUM	CD	_	29	nummod	_	_
+29	girls	_	NOUN	NNS	_	27	nsubj	_	_
+30	,	_	PUNCT	,	_	33	punct	_	_
+31	who	_	PRON	WP	_	33	nsubj	_	_
+32	are	_	AUX	VBP	_	33	aux	_	_
+33	chatting	_	VERB	VBG	_	29	acl:relcl	_	_
+34	with	_	ADP	IN	_	36	case	_	_
+35	each	_	DET	DT	_	36	det	_	_
+36	other	_	ADJ	JJ	_	33	obl	_	_
+37	,	_	PUNCT	,	_	47	punct	_	_
+38	and	_	CCONJ	CC	_	47	cc	_	_
+39	in	_	ADP	IN	_	41	case	_	_
+40	the	_	DET	DT	_	41	det	_	_
+41	center	_	NOUN	NN	_	47	obl	_	_
+42	of	_	ADP	IN	_	44	case	_	_
+43	this	_	DET	DT	_	44	det	_	_
+44	class	_	NOUN	NN	_	41	nmod	_	_
+45	,	_	PUNCT	,	_	41	punct	_	_
+46	there	_	PRON	EX	_	47	expl	_	_
+47	is	_	VERB	VBZ	_	11	conj	_	_
+48	one	_	NUM	CD	_	49	nummod	_	_
+49	guy	_	NOUN	NN	_	47	nsubj	_	_
+50	who	_	PRON	WP	_	52	nsubj	_	_
+51	is	_	AUX	VBZ	_	52	aux	_	_
+52	drinking	_	VERB	VBG	_	49	acl:relcl	_	_
+53	and	_	CCONJ	CC	_	56	cc	_	_
+54	who	_	PRON	WP	_	56	nsubj	_	_
+55	is	_	AUX	VBZ	_	56	aux	_	_
+56	listening	_	VERB	VBG	_	52	conj	_	_
+57	to	_	PART	TO	_	60	case	_	_
+58	the	_	DET	DT	_	60	det	_	_
+59	C	_	NOUN	NN	_	60	compound	_	_
+60	D.	_	NOUN	NN	_	56	obl	_	_
+
+# sent_id = file00978.txt_134
+# text = And the police came .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	police	_	NOUN	NNS	_	4	nsubj	_	_
+4	came	_	VERB	VBD	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00126.txt_101
+# text = And maybe German people like to enjoy Japanese food . " .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	maybe	_	ADV	RB	_	5	advmod	_	_
+3	German	_	ADJ	JJ	_	4	amod	_	_
+4	people	_	NOUN	NNS	_	5	nsubj	_	_
+5	like	_	VERB	VBP	_	0	root	_	_
+6	to	_	PART	TO	_	7	mark	_	_
+7	enjoy	_	VERB	VB	_	5	xcomp	_	_
+8	Japanese	_	ADJ	JJ	_	9	amod	_	_
+9	food	_	NOUN	NN	_	7	obj	_	_
+10	.	_	PUNCT	.	_	5	punct	_	_
+11	"	_	PUNCT	"	_	5	punct	_	_
+12	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01123.txt_43
+# text = he explain her about lion .
+1	he	_	PRON	PRP	_	2	nsubj	_	_
+2	explain	_	VERB	VB	_	0	root	_	_
+3	her	_	PRON	PRP	_	2	obj	_	_
+4	about	_	ADP	IN	_	5	case	_	_
+5	lion	_	NOUN	NN	_	2	obl	_	_
+6	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00589.txt_63
+# text = color is dark .
+1	color	_	NOUN	NN	_	3	nsubj	_	_
+2	is	_	AUX	VBZ	_	3	cop	_	_
+3	dark	_	ADJ	JJ	_	0	root	_	_
+4	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00968.txt_184
+# text = For fun ?
+1	For	_	ADP	IN	_	2	case	_	_
+2	fun	_	NOUN	NN	_	0	root	_	_
+3	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01190.txt_64
+# text = And I do n't know if they 're grown - ups or not , but a boy is just listening to the music by headphone and drinking something .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	know	_	VERB	VB	_	0	root	_	_
+6	if	_	SCONJ	IN	_	11	mark	_	_
+7	they	_	PRON	PRP	_	11	nsubj	_	_
+8	're	_	AUX	VBP	_	11	cop	_	_
+9	grown	_	ADJ	JJ	_	11	amod	_	_
+10	-	_	PUNCT	:	_	11	punct	_	_
+11	ups	_	NOUN	NNS	_	5	advcl	_	_
+12	or	_	CCONJ	CC	_	13	cc	_	_
+13	not	_	PART	RB	_	11	conj	_	_
+14	,	_	PUNCT	,	_	20	punct	_	_
+15	but	_	CCONJ	CC	_	20	cc	_	_
+16	a	_	DET	DT	_	17	det	_	_
+17	boy	_	NOUN	NN	_	20	nsubj	_	_
+18	is	_	AUX	VBZ	_	20	aux	_	_
+19	just	_	ADV	RB	_	20	advmod	_	_
+20	listening	_	VERB	VBG	_	5	conj	_	_
+21	to	_	PART	TO	_	23	case	_	_
+22	the	_	DET	DT	_	23	det	_	_
+23	music	_	NOUN	NN	_	20	obl	_	_
+24	by	_	ADP	IN	_	25	case	_	_
+25	headphone	_	NOUN	NN	_	20	obl	_	_
+26	and	_	CCONJ	CC	_	27	cc	_	_
+27	drinking	_	VERB	VBG	_	20	conj	_	_
+28	something	_	NOUN	NN	_	27	obj	_	_
+29	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00552.txt_64
+# text = I 'm also free at that time .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	'm	_	AUX	VBP	_	4	cop	_	_
+3	also	_	ADV	RB	_	4	advmod	_	_
+4	free	_	ADJ	JJ	_	0	root	_	_
+5	at	_	ADP	IN	_	7	case	_	_
+6	that	_	DET	DT	_	7	det	_	_
+7	time	_	NOUN	NN	_	4	obl	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01260.txt_126
+# text = Then the train came and ran over my luggage .
+1	Then	_	ADV	RB	_	4	advmod	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	train	_	NOUN	NN	_	4	nsubj	_	_
+4	came	_	VERB	VBD	_	0	root	_	_
+5	and	_	CCONJ	CC	_	6	cc	_	_
+6	ran	_	VERB	VBD	_	4	conj	_	_
+7	over	_	ADP	RP	_	6	compound:prt	_	_
+8	my	_	PRON	PRP$	_	9	nmod:poss	_	_
+9	luggage	_	NOUN	NN	_	6	obj	_	_
+10	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00954.txt_25
+# text = it 's sunny day .
+1	it	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	cop	_	_
+3	sunny	_	ADJ	JJ	_	4	amod	_	_
+4	day	_	NOUN	NN	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00676.txt_149
+# text = However , he was n't concentrating on driving .
+1	However	_	ADV	RB	_	6	advmod	_	_
+2	,	_	PUNCT	,	_	6	punct	_	_
+3	he	_	PRON	PRP	_	6	nsubj	_	_
+4	was	_	AUX	VBD	_	6	aux	_	_
+5	n't	_	PART	RB	_	6	advmod	_	_
+6	concentrating	_	VERB	VBG	_	0	root	_	_
+7	on	_	SCONJ	IN	_	8	mark	_	_
+8	driving	_	VERB	VBG	_	6	advcl	_	_
+9	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00760.txt_153
+# text = if I am the victim , how I am going to pay , I 'm going to use my money
+1	if	_	SCONJ	IN	_	5	mark	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	am	_	AUX	VBP	_	5	cop	_	_
+4	the	_	DET	DT	_	5	det	_	_
+5	victim	_	NOUN	NN	_	10	advcl	_	_
+6	,	_	PUNCT	,	_	5	punct	_	_
+7	how	_	ADV	WRB	_	10	advmod	_	_
+8	I	_	PRON	PRP	_	10	nsubj	_	_
+9	am	_	AUX	VBP	_	10	aux	_	_
+10	going	_	VERB	VBG	_	0	root	_	_
+11	to	_	PART	TO	_	12	mark	_	_
+12	pay	_	VERB	VB	_	10	xcomp	_	_
+13	,	_	PUNCT	,	_	16	punct	_	_
+14	I	_	PRON	PRP	_	16	nsubj	_	_
+15	'm	_	AUX	VBP	_	16	aux	_	_
+16	going	_	VERB	VBG	_	10	parataxis	_	_
+17	to	_	PART	TO	_	18	mark	_	_
+18	use	_	VERB	VB	_	16	xcomp	_	_
+19	my	_	PRON	PRP$	_	20	nmod:poss	_	_
+20	money	_	NOUN	NN	_	18	obj	_	_
+
+# sent_id = file00034.txt_25
+# text = We do n't have to study so much .
+1	We	_	PRON	PRP	_	4	nsubj	_	_
+2	do	_	AUX	VBP	_	4	aux	_	_
+3	n't	_	PART	RB	_	4	advmod	_	_
+4	have	_	VERB	VB	_	0	root	_	_
+5	to	_	PART	TO	_	6	mark	_	_
+6	study	_	VERB	VB	_	4	xcomp	_	_
+7	so	_	ADV	RB	_	8	advmod	_	_
+8	much	_	ADV	RB	_	6	advmod	_	_
+9	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00720.txt_23
+# text = My hobby is to watch movies .
+1	My	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	hobby	_	NOUN	NN	_	3	nsubj	_	_
+3	is	_	VERB	VBZ	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	watch	_	VERB	VB	_	3	xcomp	_	_
+6	movies	_	NOUN	NNS	_	5	obj	_	_
+7	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00278.txt_146
+# text = she asked him to bring the cat to the hospital .
+1	she	_	PRON	PRP	_	2	nsubj	_	_
+2	asked	_	VERB	VBD	_	0	root	_	_
+3	him	_	PRON	PRP	_	2	obj	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	bring	_	VERB	VB	_	2	xcomp	_	_
+6	the	_	DET	DT	_	7	det	_	_
+7	cat	_	NOUN	NN	_	5	obj	_	_
+8	to	_	PART	TO	_	10	case	_	_
+9	the	_	DET	DT	_	10	det	_	_
+10	hospital	_	NOUN	NN	_	5	obl	_	_
+11	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00161.txt_122
+# text = and we came back last Thursday .
+1	and	_	CCONJ	CC	_	3	cc	_	_
+2	we	_	PRON	PRP	_	3	nsubj	_	_
+3	came	_	VERB	VBD	_	0	root	_	_
+4	back	_	ADV	RB	_	3	advmod	_	_
+5	last	_	ADJ	JJ	_	6	amod	_	_
+6	Thursday	_	PROPN	NNP	_	3	obl:tmod	_	_
+7	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00981.txt_23
+# text = You know , this company sells many shampoo and conditioner and ... products , So for their marketing development , I contribute to the market research .
+1	You	_	PRON	PRP	_	2	nsubj	_	_
+2	know	_	VERB	VBP	_	6	parataxis	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	this	_	DET	DT	_	5	det	_	_
+5	company	_	NOUN	NN	_	6	nsubj	_	_
+6	sells	_	VERB	VBZ	_	0	root	_	_
+7	many	_	ADJ	JJ	_	8	amod	_	_
+8	shampoo	_	NOUN	NN	_	6	obj	_	_
+9	and	_	CCONJ	CC	_	10	cc	_	_
+10	conditioner	_	NOUN	NN	_	8	conj	_	_
+11	and	_	CCONJ	CC	_	13	cc	_	_
+12	...	_	PUNCT	:	_	13	punct	_	_
+13	products	_	NOUN	NNS	_	8	conj	_	_
+14	,	_	PUNCT	,	_	22	punct	_	_
+15	So	_	CCONJ	CC	_	22	cc	_	_
+16	for	_	ADP	IN	_	19	case	_	_
+17	their	_	PRON	PRP$	_	19	nmod:poss	_	_
+18	marketing	_	NOUN	NN	_	19	compound	_	_
+19	development	_	NOUN	NN	_	22	obl	_	_
+20	,	_	PUNCT	,	_	19	punct	_	_
+21	I	_	PRON	PRP	_	22	nsubj	_	_
+22	contribute	_	VERB	VBP	_	6	conj	_	_
+23	to	_	PART	TO	_	26	case	_	_
+24	the	_	DET	DT	_	26	det	_	_
+25	market	_	NOUN	NN	_	26	compound	_	_
+26	research	_	NOUN	NN	_	22	obl	_	_
+27	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file01229.txt_50
+# text = yeah , she likes flowers .
+1	yeah	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	she	_	PRON	PRP	_	4	nsubj	_	_
+4	likes	_	VERB	VBZ	_	0	root	_	_
+5	flowers	_	NOUN	NNS	_	4	obj	_	_
+6	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00254.txt_41
+# text = before that , I was a little bit like childish , but he taught me lots of things .
+1	before	_	ADP	IN	_	2	case	_	_
+2	that	_	PRON	DT	_	10	obl	_	_
+3	,	_	PUNCT	,	_	2	punct	_	_
+4	I	_	PRON	PRP	_	10	nsubj	_	_
+5	was	_	AUX	VBD	_	10	cop	_	_
+6	a	_	DET	DT	_	8	det	_	_
+7	little	_	ADJ	JJ	_	8	amod	_	_
+8	bit	_	NOUN	NN	_	10	obl:npmod	_	_
+9	like	_	INTJ	UH	_	10	discourse	_	_
+10	childish	_	ADJ	JJ	_	0	root	_	_
+11	,	_	PUNCT	,	_	14	punct	_	_
+12	but	_	CCONJ	CC	_	14	cc	_	_
+13	he	_	PRON	PRP	_	14	nsubj	_	_
+14	taught	_	VERB	VBD	_	10	conj	_	_
+15	me	_	PRON	PRP	_	14	iobj	_	_
+16	lots	_	NOUN	NNS	_	14	obj	_	_
+17	of	_	ADP	IN	_	18	case	_	_
+18	things	_	NOUN	NNS	_	16	nmod	_	_
+19	.	_	PUNCT	.	_	10	punct	_	_
+
+# sent_id = file00983.txt_95
+# text = Actually , I 've tried very hard to catch that train but in the morning , my baby just cried out .
+1	Actually	_	ADV	RB	_	5	advmod	_	_
+2	,	_	PUNCT	,	_	5	punct	_	_
+3	I	_	PRON	PRP	_	5	nsubj	_	_
+4	've	_	AUX	VBP	_	5	aux	_	_
+5	tried	_	VERB	VBN	_	0	root	_	_
+6	very	_	ADV	RB	_	7	advmod	_	_
+7	hard	_	ADV	RB	_	5	advmod	_	_
+8	to	_	PART	TO	_	9	mark	_	_
+9	catch	_	VERB	VB	_	5	xcomp	_	_
+10	that	_	DET	DT	_	11	det	_	_
+11	train	_	NOUN	NN	_	9	obj	_	_
+12	but	_	CCONJ	CC	_	20	cc	_	_
+13	in	_	ADP	IN	_	15	case	_	_
+14	the	_	DET	DT	_	15	det	_	_
+15	morning	_	NOUN	NN	_	20	obl	_	_
+16	,	_	PUNCT	,	_	15	punct	_	_
+17	my	_	PRON	PRP$	_	18	nmod:poss	_	_
+18	baby	_	NOUN	NN	_	20	nsubj	_	_
+19	just	_	ADV	RB	_	20	advmod	_	_
+20	cried	_	VERB	VBD	_	5	conj	_	_
+21	out	_	ADP	RP	_	20	compound:prt	_	_
+22	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00374.txt_109
+# text = I ca n't leave him alone at home .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	ca	_	AUX	MD	_	4	aux	_	_
+3	n't	_	PART	RB	_	4	advmod	_	_
+4	leave	_	VERB	VB	_	0	root	_	_
+5	him	_	PRON	PRP	_	4	obj	_	_
+6	alone	_	ADV	RB	_	4	advmod	_	_
+7	at	_	ADP	IN	_	8	case	_	_
+8	home	_	NOUN	NN	_	4	obl	_	_
+9	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01239.txt_131
+# text = but I do n't think I 'll be able to make it within the hour .
+1	but	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	think	_	VERB	VB	_	0	root	_	_
+6	I	_	PRON	PRP	_	9	nsubj	_	_
+7	'll	_	AUX	MD	_	9	aux	_	_
+8	be	_	AUX	VB	_	9	cop	_	_
+9	able	_	ADJ	JJ	_	5	ccomp	_	_
+10	to	_	PART	TO	_	11	mark	_	_
+11	make	_	VERB	VB	_	9	xcomp	_	_
+12	it	_	PRON	PRP	_	11	obj	_	_
+13	within	_	ADP	IN	_	15	case	_	_
+14	the	_	DET	DT	_	15	det	_	_
+15	hour	_	NOUN	NN	_	11	obl	_	_
+16	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01258.txt_72
+# text = And you need more balance to do skiing much more than tennis , I think .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	you	_	PRON	PRP	_	3	nsubj	_	_
+3	need	_	VERB	VBP	_	0	root	_	_
+4	more	_	ADJ	JJR	_	5	amod	_	_
+5	balance	_	NOUN	NN	_	3	obj	_	_
+6	to	_	PART	TO	_	7	mark	_	_
+7	do	_	VERB	VB	_	5	acl	_	_
+8	skiing	_	NOUN	NN	_	7	obj	_	_
+9	much	_	ADV	RB	_	10	advmod	_	_
+10	more	_	ADJ	JJR	_	15	advmod	_	_
+11	than	_	ADP	IN	_	12	case	_	_
+12	tennis	_	NOUN	NN	_	10	obl	_	_
+13	,	_	PUNCT	,	_	15	punct	_	_
+14	I	_	PRON	PRP	_	15	nsubj	_	_
+15	think	_	VERB	VBP	_	3	parataxis	_	_
+16	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00653.txt_146
+# text = So it 's interesting .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	it	_	PRON	PRP	_	4	nsubj	_	_
+3	's	_	AUX	VBZ	_	4	cop	_	_
+4	interesting	_	ADJ	JJ	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00869.txt_180
+# text = But boy do n't like of the animal due to the
+1	But	_	CCONJ	CC	_	5	cc	_	_
+2	boy	_	NOUN	NN	_	5	nsubj	_	_
+3	do	_	AUX	VB	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	like	_	VERB	VB	_	0	root	_	_
+6	of	_	ADP	IN	_	8	case	_	_
+7	the	_	DET	DT	_	8	det	_	_
+8	animal	_	NOUN	NN	_	5	obl	_	_
+9	due	_	ADP	IN	_	11	case	_	_
+10	to	_	PART	TO	_	9	fixed	_	_
+11	the	_	DET	DT	_	5	obl	_	_
+
+# sent_id = file00601.txt_30
+# text = and very big and very comfort is not good for study .
+1	and	_	CCONJ	CC	_	3	cc	_	_
+2	very	_	ADV	RB	_	3	advmod	_	_
+3	big	_	ADJ	JJ	_	9	nsubj	_	_
+4	and	_	CCONJ	CC	_	6	cc	_	_
+5	very	_	ADV	RB	_	6	advmod	_	_
+6	comfort	_	NOUN	NN	_	3	conj	_	_
+7	is	_	AUX	VBZ	_	9	cop	_	_
+8	not	_	PART	RB	_	9	advmod	_	_
+9	good	_	ADJ	JJ	_	0	root	_	_
+10	for	_	ADP	IN	_	11	case	_	_
+11	study	_	NOUN	NN	_	9	obl	_	_
+12	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file01224.txt_88
+# text = And she was looking for her husband 's birthday present .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	she	_	PRON	PRP	_	4	nsubj	_	_
+3	was	_	AUX	VBD	_	4	aux	_	_
+4	looking	_	VERB	VBG	_	0	root	_	_
+5	for	_	ADP	IN	_	10	case	_	_
+6	her	_	PRON	PRP$	_	7	nmod:poss	_	_
+7	husband	_	NOUN	NN	_	10	nmod:poss	_	_
+8	's	_	PART	POS	_	7	case	_	_
+9	birthday	_	NOUN	NN	_	10	compound	_	_
+10	present	_	NOUN	NN	_	4	obl	_	_
+11	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01243.txt_304
+# text = All right .
+1	All	_	ADV	RB	_	2	advmod	_	_
+2	right	_	ADJ	JJ	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00603.txt_74
+# text = the father pay for the lunch .
+1	the	_	DET	DT	_	2	det	_	_
+2	father	_	NOUN	NN	_	3	nsubj	_	_
+3	pay	_	VERB	VB	_	0	root	_	_
+4	for	_	ADP	IN	_	6	case	_	_
+5	the	_	DET	DT	_	6	det	_	_
+6	lunch	_	NOUN	NN	_	3	obl	_	_
+7	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00197.txt_19
+# text = because there is the car in my house .
+1	because	_	SCONJ	IN	_	3	mark	_	_
+2	there	_	PRON	EX	_	3	expl	_	_
+3	is	_	VERB	VBZ	_	0	root	_	_
+4	the	_	DET	DT	_	5	det	_	_
+5	car	_	NOUN	NN	_	3	nsubj	_	_
+6	in	_	ADP	IN	_	8	case	_	_
+7	my	_	PRON	PRP$	_	8	nmod:poss	_	_
+8	house	_	NOUN	NN	_	5	nmod	_	_
+9	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00084.txt_27
+# text = Hokkaido city , for six years .
+1	Hokkaido	_	PROPN	NNP	_	2	compound	_	_
+2	city	_	NOUN	NN	_	0	root	_	_
+3	,	_	PUNCT	,	_	6	punct	_	_
+4	for	_	ADP	IN	_	6	case	_	_
+5	six	_	NUM	CD	_	6	nummod	_	_
+6	years	_	NOUN	NNS	_	2	obl	_	_
+7	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00307.txt_47
+# text = That 's all .
+1	That	_	PRON	DT	_	3	nsubj	_	_
+2	's	_	AUX	VBZ	_	3	cop	_	_
+3	all	_	DET	DT	_	0	root	_	_
+4	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00117.txt_67
+# text = Korea is very cold in the March .
+1	Korea	_	PROPN	NNP	_	4	nsubj	_	_
+2	is	_	AUX	VBZ	_	4	cop	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	cold	_	ADJ	JJ	_	0	root	_	_
+5	in	_	ADP	IN	_	7	case	_	_
+6	the	_	DET	DT	_	7	det	_	_
+7	March	_	PROPN	NNP	_	4	obl	_	_
+8	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01281.txt_124
+# text = Most of the people are related to my son 's friends .
+1	Most	_	ADJ	JJS	_	4	amod	_	_
+2	of	_	ADP	IN	_	4	case	_	_
+3	the	_	DET	DT	_	4	det	_	_
+4	people	_	NOUN	NNS	_	6	nsubj	_	_
+5	are	_	AUX	VBP	_	6	cop	_	_
+6	related	_	ADJ	JJ	_	0	root	_	_
+7	to	_	PART	TO	_	11	case	_	_
+8	my	_	PRON	PRP$	_	9	nmod:poss	_	_
+9	son	_	NOUN	NN	_	11	nmod:poss	_	_
+10	's	_	PART	POS	_	9	case	_	_
+11	friends	_	NOUN	NNS	_	6	obl	_	_
+12	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00333.txt_116
+# text = Thank you very much .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	much	_	ADV	RB	_	1	advmod	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00978.txt_130
+# text = And the driver was making a phone call with his mobile phone .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	driver	_	NOUN	NN	_	5	nsubj	_	_
+4	was	_	AUX	VBD	_	5	aux	_	_
+5	making	_	VERB	VBG	_	0	root	_	_
+6	a	_	DET	DT	_	8	det	_	_
+7	phone	_	NOUN	NN	_	8	compound	_	_
+8	call	_	NOUN	NN	_	5	obj	_	_
+9	with	_	ADP	IN	_	12	case	_	_
+10	his	_	PRON	PRP$	_	12	nmod:poss	_	_
+11	mobile	_	ADJ	JJ	_	12	amod	_	_
+12	phone	_	NOUN	NN	_	5	obl	_	_
+13	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01275.txt_79
+# text = I can wait yes , OK .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	can	_	AUX	MD	_	3	aux	_	_
+3	wait	_	VERB	VB	_	0	root	_	_
+4	yes	_	INTJ	UH	_	3	discourse	_	_
+5	,	_	PUNCT	,	_	3	punct	_	_
+6	OK	_	INTJ	UH	_	3	discourse	_	_
+7	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00958.txt_43
+# text = old architect . ?
+1	old	_	ADJ	JJ	_	2	amod	_	_
+2	architect	_	NOUN	NN	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+4	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00160.txt_158
+# text = Thank you very much .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	much	_	ADV	RB	_	1	advmod	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00519.txt_53
+# text = I have two children .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	have	_	VERB	VBP	_	0	root	_	_
+3	two	_	NUM	CD	_	4	nummod	_	_
+4	children	_	NOUN	NNS	_	2	obj	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00319.txt_82
+# text = So , you can even ski at night .
+1	So	_	ADV	RB	_	6	advmod	_	_
+2	,	_	PUNCT	,	_	6	punct	_	_
+3	you	_	PRON	PRP	_	6	nsubj	_	_
+4	can	_	AUX	MD	_	6	aux	_	_
+5	even	_	ADV	RB	_	6	advmod	_	_
+6	ski	_	VERB	VB	_	0	root	_	_
+7	at	_	ADP	IN	_	8	case	_	_
+8	night	_	NOUN	NN	_	6	obl	_	_
+9	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file01251.txt_62
+# text = No rules .
+1	No	_	DET	DT	_	2	det	_	_
+2	rules	_	NOUN	NNS	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01258.txt_95
+# text = And I do n't think I can go to the party this time .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	think	_	VERB	VB	_	0	root	_	_
+6	I	_	PRON	PRP	_	8	nsubj	_	_
+7	can	_	AUX	MD	_	8	aux	_	_
+8	go	_	VERB	VB	_	5	ccomp	_	_
+9	to	_	PART	TO	_	11	case	_	_
+10	the	_	DET	DT	_	11	det	_	_
+11	party	_	NOUN	NN	_	8	obl	_	_
+12	this	_	DET	DT	_	13	det	_	_
+13	time	_	NOUN	NN	_	5	obl:tmod	_	_
+14	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00978.txt_144
+# text = Sometimes they do n't come to us .
+1	Sometimes	_	ADV	RB	_	5	advmod	_	_
+2	they	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	come	_	VERB	VB	_	0	root	_	_
+6	to	_	PART	TO	_	7	case	_	_
+7	us	_	PRON	PRP	_	5	obl	_	_
+8	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00969.txt_117
+# text = however was empty .
+1	however	_	ADV	RB	_	3	advmod	_	_
+2	was	_	AUX	VBD	_	3	cop	_	_
+3	empty	_	ADJ	JJ	_	0	root	_	_
+4	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00007.txt_8
+# text = and I got off at a Saitama Station
+1	and	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	got	_	VERB	VBD	_	0	root	_	_
+4	off	_	ADP	RP	_	3	compound:prt	_	_
+5	at	_	ADP	IN	_	8	case	_	_
+6	a	_	DET	DT	_	8	det	_	_
+7	Saitama	_	PROPN	NNP	_	8	compound	_	_
+8	Station	_	PROPN	NNP	_	3	obl	_	_
+
+# sent_id = file00396.txt_35
+# text = This is a town .
+1	This	_	DET	DT	_	4	det	_	_
+2	is	_	AUX	VBZ	_	4	cop	_	_
+3	a	_	DET	DT	_	4	det	_	_
+4	town	_	NOUN	NN	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01096.txt_35
+# text = The girl talking each other .
+1	The	_	DET	DT	_	2	det	_	_
+2	girl	_	NOUN	NN	_	3	nsubj	_	_
+3	talking	_	VERB	VBG	_	0	root	_	_
+4	each	_	DET	DT	_	5	det	_	_
+5	other	_	ADJ	JJ	_	3	obj	_	_
+6	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00987.txt_129
+# text = And I started watching it together .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	started	_	VERB	VBD	_	0	root	_	_
+4	watching	_	VERB	VBG	_	3	xcomp	_	_
+5	it	_	PRON	PRP	_	4	obj	_	_
+6	together	_	ADV	RB	_	4	advmod	_	_
+7	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00527.txt_37
+# text = I do n't have pasokon .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	do	_	AUX	VBP	_	4	aux	_	_
+3	n't	_	PART	RB	_	4	advmod	_	_
+4	have	_	VERB	VB	_	0	root	_	_
+5	pasokon	_	NOUN	FW	_	4	obj	_	_
+6	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00306.txt_82
+# text = The movie ? "
+1	The	_	DET	DT	_	2	det	_	_
+2	movie	_	NOUN	NN	_	0	root	_	_
+3	?	_	PUNCT	.	_	2	punct	_	_
+4	"	_	PUNCT	"	_	2	punct	_	_
+
+# sent_id = file00527.txt_55
+# text = I went to Fuji jukai .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	went	_	VERB	VBD	_	0	root	_	_
+3	to	_	PART	TO	_	4	case	_	_
+4	Fuji	_	PROPN	NNP	_	2	obl	_	_
+5	jukai	_	X	FW	_	4	flat:foreign	_	_
+6	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00493.txt_62
+# text = And the movie starts from one P M to three P M. And three people , two boys and girls buy three coke and , maybe , two popcorns .
+1	And	_	CCONJ	CC	_	4	cc	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	movie	_	NOUN	NN	_	4	nsubj	_	_
+4	starts	_	VERB	VBZ	_	0	root	_	_
+5	from	_	ADP	IN	_	7	case	_	_
+6	one	_	NUM	CD	_	7	nummod	_	_
+7	P	_	NOUN	NN	_	4	obl	_	_
+8	M	_	X	NN	_	7	goeswith	_	_
+9	to	_	PART	TO	_	11	case	_	_
+10	three	_	NUM	CD	_	11	nummod	_	_
+11	P	_	NOUN	NN	_	4	obl	_	_
+12	M.	_	X	NN	_	11	goeswith	_	_
+13	And	_	CCONJ	CC	_	21	cc	_	_
+14	three	_	NUM	CD	_	15	nummod	_	_
+15	people	_	NOUN	NNS	_	21	nsubj	_	_
+16	,	_	PUNCT	,	_	18	punct	_	_
+17	two	_	NUM	CD	_	18	nummod	_	_
+18	boys	_	NOUN	NNS	_	15	appos	_	_
+19	and	_	CCONJ	CC	_	20	cc	_	_
+20	girls	_	NOUN	NNS	_	18	conj	_	_
+21	buy	_	VERB	VB	_	4	conj	_	_
+22	three	_	NUM	CD	_	23	nummod	_	_
+23	coke	_	NOUN	NN	_	21	obj	_	_
+24	and	_	CCONJ	CC	_	29	cc	_	_
+25	,	_	PUNCT	,	_	29	punct	_	_
+26	maybe	_	ADV	RB	_	29	advmod	_	_
+27	,	_	PUNCT	,	_	29	punct	_	_
+28	two	_	NUM	CD	_	29	nummod	_	_
+29	popcorns	_	NOUN	NNS	_	23	conj	_	_
+30	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00307.txt_32
+# text = It 's very huge and it looks like a remains of old temples .
+1	It	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	cop	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	huge	_	ADJ	JJ	_	0	root	_	_
+5	and	_	CCONJ	CC	_	7	cc	_	_
+6	it	_	PRON	PRP	_	7	nsubj	_	_
+7	looks	_	VERB	VBZ	_	4	conj	_	_
+8	like	_	ADP	IN	_	10	case	_	_
+9	a	_	DET	DT	_	10	det	_	_
+10	remains	_	NOUN	NNS	_	7	obl	_	_
+11	of	_	ADP	IN	_	13	case	_	_
+12	old	_	ADJ	JJ	_	13	amod	_	_
+13	temples	_	NOUN	NNS	_	10	nmod	_	_
+14	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01261.txt_72
+# text = I 'm sorry .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	'm	_	AUX	VBP	_	3	cop	_	_
+3	sorry	_	ADJ	JJ	_	0	root	_	_
+4	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00197.txt_49
+# text = they stopped to talk front of lion .
+1	they	_	PRON	PRP	_	2	nsubj	_	_
+2	stopped	_	VERB	VBD	_	0	root	_	_
+3	to	_	PART	TO	_	4	mark	_	_
+4	talk	_	VERB	VB	_	2	xcomp	_	_
+5	front	_	NOUN	NN	_	4	obj	_	_
+6	of	_	ADP	IN	_	7	case	_	_
+7	lion	_	NOUN	NN	_	5	nmod	_	_
+8	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00676.txt_133
+# text = And I could n't drive in so my mom drove me to his house .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	could	_	AUX	MD	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	drive	_	VERB	VB	_	0	root	_	_
+6	in	_	ADP	IN	_	5	obl	_	_
+7	so	_	CCONJ	CC	_	10	cc	_	_
+8	my	_	PRON	PRP$	_	9	nmod:poss	_	_
+9	mom	_	NOUN	NN	_	10	nsubj	_	_
+10	drove	_	VERB	VBD	_	5	conj	_	_
+11	me	_	PRON	PRP	_	10	obj	_	_
+12	to	_	PART	TO	_	14	case	_	_
+13	his	_	PRON	PRP$	_	14	nmod:poss	_	_
+14	house	_	NOUN	NN	_	10	obl	_	_
+15	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01215.txt_116
+# text = But in Harvard University , you can see many , many kinds of people .
+1	But	_	CCONJ	CC	_	8	cc	_	_
+2	in	_	ADP	IN	_	4	case	_	_
+3	Harvard	_	PROPN	NNP	_	4	compound	_	_
+4	University	_	PROPN	NNP	_	8	obl	_	_
+5	,	_	PUNCT	,	_	4	punct	_	_
+6	you	_	PRON	PRP	_	8	nsubj	_	_
+7	can	_	AUX	MD	_	8	aux	_	_
+8	see	_	VERB	VB	_	0	root	_	_
+9	many	_	ADJ	JJ	_	12	amod	_	_
+10	,	_	PUNCT	,	_	12	punct	_	_
+11	many	_	ADJ	JJ	_	12	amod	_	_
+12	kinds	_	NOUN	NNS	_	8	obj	_	_
+13	of	_	ADP	IN	_	14	case	_	_
+14	people	_	NOUN	NNS	_	12	nmod	_	_
+15	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file00867.txt_30
+# text = So it was good time ,
+1	So	_	ADV	RB	_	5	advmod	_	_
+2	it	_	PRON	PRP	_	5	nsubj	_	_
+3	was	_	AUX	VBD	_	5	cop	_	_
+4	good	_	ADJ	JJ	_	5	amod	_	_
+5	time	_	NOUN	NN	_	0	root	_	_
+6	,	_	PUNCT	,	_	5	punct	_	_
+
+# sent_id = file00275.txt_75
+# text = What are you doing now ?
+1	What	_	PRON	WP	_	4	obj	_	_
+2	are	_	AUX	VBP	_	4	aux	_	_
+3	you	_	PRON	PRP	_	4	nsubj	_	_
+4	doing	_	VERB	VBG	_	0	root	_	_
+5	now	_	ADV	RB	_	4	advmod	_	_
+6	?	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01280.txt_27
+# text = I was born in January .
+1	I	_	PRON	PRP	_	3	nsubj:pass	_	_
+2	was	_	AUX	VBD	_	3	aux:pass	_	_
+3	born	_	VERB	VBN	_	0	root	_	_
+4	in	_	ADP	IN	_	5	case	_	_
+5	January	_	PROPN	NNP	_	3	obl	_	_
+6	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01144.txt_88
+# text = And I do n't have lunch yet .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	have	_	VERB	VB	_	0	root	_	_
+6	lunch	_	NOUN	NN	_	5	obj	_	_
+7	yet	_	ADV	RB	_	5	advmod	_	_
+8	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00287.txt_11
+# text = And also , when I talked to my friends , they would say , " Oh " .
+1	And	_	CCONJ	CC	_	13	cc	_	_
+2	also	_	ADV	RB	_	13	advmod	_	_
+3	,	_	PUNCT	,	_	6	punct	_	_
+4	when	_	SCONJ	WRB	_	6	mark	_	_
+5	I	_	PRON	PRP	_	6	nsubj	_	_
+6	talked	_	VERB	VBD	_	13	advcl	_	_
+7	to	_	PART	TO	_	9	case	_	_
+8	my	_	PRON	PRP$	_	9	nmod:poss	_	_
+9	friends	_	NOUN	NNS	_	6	obl	_	_
+10	,	_	PUNCT	,	_	6	punct	_	_
+11	they	_	PRON	PRP	_	13	nsubj	_	_
+12	would	_	AUX	MD	_	13	aux	_	_
+13	say	_	VERB	VB	_	0	root	_	_
+14	,	_	PUNCT	,	_	13	punct	_	_
+15	"	_	PUNCT	"	_	16	punct	_	_
+16	Oh	_	INTJ	UH	_	13	obj	_	_
+17	"	_	PUNCT	"	_	16	punct	_	_
+18	.	_	PUNCT	.	_	13	punct	_	_
+
+# sent_id = file01133.txt_34
+# text = I like curry , Hamburg , and ramen .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	curry	_	NOUN	NN	_	2	obj	_	_
+4	,	_	PUNCT	,	_	5	punct	_	_
+5	Hamburg	_	PROPN	NNP	_	3	conj	_	_
+6	,	_	PUNCT	,	_	8	punct	_	_
+7	and	_	CCONJ	CC	_	8	cc	_	_
+8	ramen	_	NOUN	NN	_	3	conj	_	_
+9	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00877.txt_125
+# text = And , suddenly , the clouds were changing to the black , and it happen to rain .
+1	And	_	CCONJ	CC	_	8	cc	_	_
+2	,	_	PUNCT	,	_	8	punct	_	_
+3	suddenly	_	ADV	RB	_	8	advmod	_	_
+4	,	_	PUNCT	,	_	8	punct	_	_
+5	the	_	DET	DT	_	6	det	_	_
+6	clouds	_	NOUN	NNS	_	8	nsubj	_	_
+7	were	_	AUX	VBD	_	8	aux	_	_
+8	changing	_	VERB	VBG	_	0	root	_	_
+9	to	_	PART	TO	_	11	case	_	_
+10	the	_	DET	DT	_	11	det	_	_
+11	black	_	NOUN	NN	_	8	obl	_	_
+12	,	_	PUNCT	,	_	15	punct	_	_
+13	and	_	CCONJ	CC	_	15	cc	_	_
+14	it	_	PRON	PRP	_	15	nsubj	_	_
+15	happen	_	VERB	VB	_	8	conj	_	_
+16	to	_	PART	TO	_	17	mark	_	_
+17	rain	_	VERB	VB	_	15	xcomp	_	_
+18	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file01131.txt_64
+# text = " Thank you very much . " .
+1	"	_	PUNCT	"	_	2	punct	_	_
+2	Thank	_	VERB	VBP	_	0	root	_	_
+3	you	_	PRON	PRP	_	2	obj	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	much	_	ADV	RB	_	2	advmod	_	_
+6	.	_	PUNCT	.	_	2	punct	_	_
+7	"	_	PUNCT	"	_	2	punct	_	_
+8	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01268.txt_23
+# text = I 'm from Ishikawa .
+1	I	_	PRON	PRP	_	4	nsubj	_	_
+2	'm	_	AUX	VBP	_	4	cop	_	_
+3	from	_	ADP	IN	_	4	case	_	_
+4	Ishikawa	_	PROPN	NNP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00354.txt_98
+# text = They sleep .
+1	They	_	PRON	PRP	_	2	nsubj	_	_
+2	sleep	_	VERB	VBP	_	0	root	_	_
+3	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00662.txt_171
+# text = But in a department store , we can see and buy almost everything .
+1	But	_	CCONJ	CC	_	9	cc	_	_
+2	in	_	ADP	IN	_	5	case	_	_
+3	a	_	DET	DT	_	5	det	_	_
+4	department	_	NOUN	NN	_	5	compound	_	_
+5	store	_	NOUN	NN	_	9	obl	_	_
+6	,	_	PUNCT	,	_	5	punct	_	_
+7	we	_	PRON	PRP	_	9	nsubj	_	_
+8	can	_	AUX	MD	_	9	aux	_	_
+9	see	_	VERB	VB	_	0	root	_	_
+10	and	_	CCONJ	CC	_	11	cc	_	_
+11	buy	_	VERB	VB	_	9	conj	_	_
+12	almost	_	ADV	RB	_	13	advmod	_	_
+13	everything	_	NOUN	NN	_	11	obj	_	_
+14	.	_	PUNCT	.	_	9	punct	_	_
+
+# sent_id = file01222.txt_23
+# text = she really likes to work house work .
+1	she	_	PRON	PRP	_	3	nsubj	_	_
+2	really	_	ADV	RB	_	3	advmod	_	_
+3	likes	_	VERB	VBZ	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	work	_	VERB	VB	_	3	xcomp	_	_
+6	house	_	NOUN	NN	_	7	compound	_	_
+7	work	_	NOUN	NN	_	5	obj	_	_
+8	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00054.txt_42
+# text = Many people are relaxed and the kids are playing the volleyball on the garden .
+1	Many	_	ADJ	JJ	_	2	amod	_	_
+2	people	_	NOUN	NNS	_	4	nsubj	_	_
+3	are	_	AUX	VBP	_	4	cop	_	_
+4	relaxed	_	ADJ	JJ	_	0	root	_	_
+5	and	_	CCONJ	CC	_	9	cc	_	_
+6	the	_	DET	DT	_	7	det	_	_
+7	kids	_	NOUN	NNS	_	9	nsubj	_	_
+8	are	_	AUX	VBP	_	9	aux	_	_
+9	playing	_	VERB	VBG	_	4	conj	_	_
+10	the	_	DET	DT	_	11	det	_	_
+11	volleyball	_	NOUN	NN	_	9	obj	_	_
+12	on	_	ADP	IN	_	14	case	_	_
+13	the	_	DET	DT	_	14	det	_	_
+14	garden	_	NOUN	NN	_	9	obl	_	_
+15	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00884.txt_30
+# text = But now I 'm not sure what kind of job she has .
+1	But	_	CCONJ	CC	_	6	cc	_	_
+2	now	_	ADV	RB	_	6	advmod	_	_
+3	I	_	PRON	PRP	_	6	nsubj	_	_
+4	'm	_	AUX	VBP	_	6	cop	_	_
+5	not	_	PART	RB	_	6	advmod	_	_
+6	sure	_	ADJ	JJ	_	0	root	_	_
+7	what	_	DET	WDT	_	8	det	_	_
+8	kind	_	NOUN	NN	_	6	obl	_	_
+9	of	_	ADP	IN	_	10	case	_	_
+10	job	_	NOUN	NN	_	8	nmod	_	_
+11	she	_	PRON	PRP	_	12	nsubj	_	_
+12	has	_	VERB	VBZ	_	8	acl:relcl	_	_
+13	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file01130.txt_104
+# text = So it 's poor .
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	it	_	PRON	PRP	_	4	nsubj	_	_
+3	's	_	AUX	VBZ	_	4	cop	_	_
+4	poor	_	ADJ	JJ	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01277.txt_127
+# text = But in Japan , they try to attend you and try to help you out when you do n't need any help .
+1	But	_	CCONJ	CC	_	6	cc	_	_
+2	in	_	ADP	IN	_	3	case	_	_
+3	Japan	_	PROPN	NNP	_	6	obl	_	_
+4	,	_	PUNCT	,	_	3	punct	_	_
+5	they	_	PRON	PRP	_	6	nsubj	_	_
+6	try	_	VERB	VBP	_	0	root	_	_
+7	to	_	PART	TO	_	8	mark	_	_
+8	attend	_	VERB	VB	_	6	xcomp	_	_
+9	you	_	PRON	PRP	_	8	obj	_	_
+10	and	_	CCONJ	CC	_	11	cc	_	_
+11	try	_	VERB	VB	_	6	conj	_	_
+12	to	_	PART	TO	_	13	mark	_	_
+13	help	_	VERB	VB	_	11	xcomp	_	_
+14	you	_	PRON	PRP	_	13	obj	_	_
+15	out	_	ADP	RP	_	13	compound:prt	_	_
+16	when	_	SCONJ	WRB	_	20	mark	_	_
+17	you	_	PRON	PRP	_	20	nsubj	_	_
+18	do	_	AUX	VBP	_	20	aux	_	_
+19	n't	_	PART	RB	_	20	advmod	_	_
+20	need	_	VERB	VB	_	6	advcl	_	_
+21	any	_	DET	DT	_	22	det	_	_
+22	help	_	NOUN	NN	_	20	obj	_	_
+23	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file01280.txt_101
+# text = I 'm sorry that I could n't attend the party last night , actually .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	'm	_	AUX	VBP	_	3	cop	_	_
+3	sorry	_	ADJ	JJ	_	0	root	_	_
+4	that	_	SCONJ	IN	_	8	mark	_	_
+5	I	_	PRON	PRP	_	8	nsubj	_	_
+6	could	_	AUX	MD	_	8	aux	_	_
+7	n't	_	PART	RB	_	8	advmod	_	_
+8	attend	_	VERB	VB	_	3	ccomp	_	_
+9	the	_	DET	DT	_	10	det	_	_
+10	party	_	NOUN	NN	_	8	obj	_	_
+11	last	_	ADJ	JJ	_	12	amod	_	_
+12	night	_	NOUN	NN	_	8	obl:tmod	_	_
+13	,	_	PUNCT	,	_	3	punct	_	_
+14	actually	_	ADV	RB	_	3	advmod	_	_
+15	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00316.txt_104
+# text = I think it 's a little exaggeration in the situation in the United States .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	think	_	VERB	VBP	_	0	root	_	_
+3	it	_	PRON	PRP	_	7	nsubj	_	_
+4	's	_	AUX	VBZ	_	7	cop	_	_
+5	a	_	DET	DT	_	7	det	_	_
+6	little	_	ADJ	JJ	_	7	amod	_	_
+7	exaggeration	_	NOUN	NN	_	2	ccomp	_	_
+8	in	_	ADP	IN	_	10	case	_	_
+9	the	_	DET	DT	_	10	det	_	_
+10	situation	_	NOUN	NN	_	7	nmod	_	_
+11	in	_	ADP	IN	_	14	case	_	_
+12	the	_	DET	DT	_	14	det	_	_
+13	United	_	PROPN	NNP	_	14	compound	_	_
+14	States	_	PROPN	NNP	_	10	nmod	_	_
+15	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00803.txt_146
+# text = So when she went out from the department store ,
+1	So	_	ADV	RB	_	4	advmod	_	_
+2	when	_	ADV	WRB	_	4	advmod	_	_
+3	she	_	PRON	PRP	_	4	nsubj	_	_
+4	went	_	VERB	VBD	_	0	root	_	_
+5	out	_	ADP	IN	_	9	case	_	_
+6	from	_	ADP	IN	_	9	case	_	_
+7	the	_	DET	DT	_	9	det	_	_
+8	department	_	NOUN	NN	_	9	compound	_	_
+9	store	_	NOUN	NN	_	4	obl	_	_
+10	,	_	PUNCT	,	_	4	punct	_	_
+
+# sent_id = file01242.txt_134
+# text = Seattle is State ?
+1	Seattle	_	PROPN	NNP	_	3	nsubj	_	_
+2	is	_	AUX	VBZ	_	3	cop	_	_
+3	State	_	NOUN	NN	_	0	root	_	_
+4	?	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01209.txt_39
+# text = after the marriage , we have n't gone yet .
+1	after	_	ADP	IN	_	3	case	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	marriage	_	NOUN	NN	_	8	obl	_	_
+4	,	_	PUNCT	,	_	3	punct	_	_
+5	we	_	PRON	PRP	_	8	nsubj	_	_
+6	have	_	AUX	VBP	_	8	aux	_	_
+7	n't	_	PART	RB	_	8	advmod	_	_
+8	gone	_	VERB	VBN	_	0	root	_	_
+9	yet	_	ADV	RB	_	8	advmod	_	_
+10	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file00260.txt_24
+# text = my hobby is watching movies and walking around .
+1	my	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	hobby	_	NOUN	NN	_	3	nsubj	_	_
+3	is	_	VERB	VBZ	_	0	root	_	_
+4	watching	_	VERB	VBG	_	3	ccomp	_	_
+5	movies	_	NOUN	NNS	_	4	obj	_	_
+6	and	_	CCONJ	CC	_	7	cc	_	_
+7	walking	_	VERB	VBG	_	4	conj	_	_
+8	around	_	ADV	RB	_	7	advmod	_	_
+9	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01137.txt_31
+# text = I like curry rice .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	curry	_	NOUN	NN	_	4	compound	_	_
+4	rice	_	NOUN	NN	_	2	obj	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00577.txt_35
+# text = I like powder snow .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	like	_	VERB	VBP	_	0	root	_	_
+3	powder	_	NOUN	NN	_	4	compound	_	_
+4	snow	_	NOUN	NN	_	2	obj	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00383.txt_93
+# text = Thank you .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00162.txt_52
+# text = Lots of family restaurants .
+1	Lots	_	NOUN	NNS	_	0	root	_	_
+2	of	_	ADP	IN	_	4	case	_	_
+3	family	_	NOUN	NN	_	4	compound	_	_
+4	restaurants	_	NOUN	NNS	_	1	nmod	_	_
+5	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file00231.txt_23
+# text = Yeah , I am a graduate school student , so , I do n't have to take a lot of lesson .
+1	Yeah	_	INTJ	UH	_	8	discourse	_	_
+2	,	_	PUNCT	,	_	8	punct	_	_
+3	I	_	PRON	PRP	_	8	nsubj	_	_
+4	am	_	AUX	VBP	_	8	cop	_	_
+5	a	_	DET	DT	_	8	det	_	_
+6	graduate	_	NOUN	NN	_	7	compound	_	_
+7	school	_	NOUN	NN	_	8	compound	_	_
+8	student	_	NOUN	NN	_	0	root	_	_
+9	,	_	PUNCT	,	_	15	punct	_	_
+10	so	_	CCONJ	CC	_	15	cc	_	_
+11	,	_	PUNCT	,	_	15	punct	_	_
+12	I	_	PRON	PRP	_	15	nsubj	_	_
+13	do	_	AUX	VBP	_	15	aux	_	_
+14	n't	_	PART	RB	_	15	advmod	_	_
+15	have	_	VERB	VB	_	8	conj	_	_
+16	to	_	PART	TO	_	17	mark	_	_
+17	take	_	VERB	VB	_	15	xcomp	_	_
+18	a	_	DET	DT	_	19	det	_	_
+19	lot	_	NOUN	NN	_	17	obj	_	_
+20	of	_	ADP	IN	_	21	case	_	_
+21	lesson	_	NOUN	NN	_	19	nmod	_	_
+22	.	_	PUNCT	.	_	8	punct	_	_
+
+# sent_id = file01279.txt_177
+# text = it looked really fun .
+1	it	_	PRON	PRP	_	2	nsubj	_	_
+2	looked	_	VERB	VBD	_	0	root	_	_
+3	really	_	ADV	RB	_	4	advmod	_	_
+4	fun	_	ADJ	JJ	_	2	xcomp	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00847.txt_116
+# text = Yes , yes .
+1	Yes	_	INTJ	UH	_	0	root	_	_
+2	,	_	PUNCT	,	_	1	punct	_	_
+3	yes	_	INTJ	UH	_	1	discourse	_	_
+4	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file01256.txt_110
+# text = And ended up in the hotel drinking coffee and looking at the mountains from there .
+1	And	_	CCONJ	CC	_	2	cc	_	_
+2	ended	_	VERB	VBD	_	0	root	_	_
+3	up	_	ADP	RP	_	2	compound:prt	_	_
+4	in	_	ADP	IN	_	6	case	_	_
+5	the	_	DET	DT	_	6	det	_	_
+6	hotel	_	NOUN	NN	_	2	obl	_	_
+7	drinking	_	VERB	VBG	_	2	xcomp	_	_
+8	coffee	_	NOUN	NN	_	7	obj	_	_
+9	and	_	CCONJ	CC	_	10	cc	_	_
+10	looking	_	VERB	VBG	_	7	conj	_	_
+11	at	_	ADP	IN	_	13	case	_	_
+12	the	_	DET	DT	_	13	det	_	_
+13	mountains	_	NOUN	NNS	_	10	obl	_	_
+14	from	_	ADP	IN	_	15	case	_	_
+15	there	_	ADV	RB	_	10	obl	_	_
+16	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00973.txt_55
+# text = how much is this necklace ?
+1	how	_	ADV	WRB	_	2	advmod	_	_
+2	much	_	ADJ	JJ	_	0	root	_	_
+3	is	_	AUX	VBZ	_	2	cop	_	_
+4	this	_	DET	DT	_	5	det	_	_
+5	necklace	_	NOUN	NN	_	2	nsubj	_	_
+6	?	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00993.txt_32
+# text = She likes use computer .
+1	She	_	PRON	PRP	_	2	nsubj	_	_
+2	likes	_	VERB	VBZ	_	0	root	_	_
+3	use	_	VERB	VB	_	2	xcomp	_	_
+4	computer	_	NOUN	NN	_	3	obj	_	_
+5	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00874.txt_101
+# text = Two girls are planning to have a camp .
+1	Two	_	NUM	CD	_	2	nummod	_	_
+2	girls	_	NOUN	NNS	_	4	nsubj	_	_
+3	are	_	AUX	VBP	_	4	aux	_	_
+4	planning	_	VERB	VBG	_	0	root	_	_
+5	to	_	PART	TO	_	6	mark	_	_
+6	have	_	VERB	VB	_	4	xcomp	_	_
+7	a	_	DET	DT	_	8	det	_	_
+8	camp	_	NOUN	NN	_	6	obj	_	_
+9	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00285.txt_101
+# text = , I tell them it 's a potluck party .
+1	,	_	PUNCT	,	_	3	punct	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	tell	_	VERB	VBP	_	0	root	_	_
+4	them	_	PRON	PRP	_	3	iobj	_	_
+5	it	_	PRON	PRP	_	9	nsubj	_	_
+6	's	_	AUX	VBZ	_	9	cop	_	_
+7	a	_	DET	DT	_	9	det	_	_
+8	potluck	_	NOUN	NN	_	9	compound	_	_
+9	party	_	NOUN	NN	_	3	ccomp	_	_
+10	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00862.txt_123
+# text = That 's the only line .
+1	That	_	PRON	DT	_	5	nsubj	_	_
+2	's	_	AUX	VBZ	_	5	cop	_	_
+3	the	_	DET	DT	_	5	det	_	_
+4	only	_	ADJ	JJ	_	5	amod	_	_
+5	line	_	NOUN	NN	_	0	root	_	_
+6	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00800.txt_59
+# text = because I do n't clean so .
+1	because	_	SCONJ	IN	_	5	mark	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	do	_	AUX	VBP	_	5	aux	_	_
+4	n't	_	PART	RB	_	5	advmod	_	_
+5	clean	_	VERB	VB	_	0	root	_	_
+6	so	_	ADV	RB	_	5	advmod	_	_
+7	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file00342.txt_72
+# text = It 's very nice .
+1	It	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	cop	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	nice	_	ADJ	JJ	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00439.txt_89
+# text = she 's very glad to get ice cream .
+1	she	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	cop	_	_
+3	very	_	ADV	RB	_	4	advmod	_	_
+4	glad	_	ADJ	JJ	_	0	root	_	_
+5	to	_	PART	TO	_	6	mark	_	_
+6	get	_	VERB	VB	_	4	xcomp	_	_
+7	ice	_	NOUN	NN	_	8	compound	_	_
+8	cream	_	NOUN	NN	_	6	obj	_	_
+9	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00657.txt_79
+# text = Or the bright color ,
+1	Or	_	CCONJ	CC	_	4	cc	_	_
+2	the	_	DET	DT	_	4	det	_	_
+3	bright	_	ADJ	JJ	_	4	amod	_	_
+4	color	_	NOUN	NN	_	0	root	_	_
+5	,	_	PUNCT	,	_	4	punct	_	_
+
+# sent_id = file01266.txt_150
+# text = So I think I buy a nice cake at Osaka .
+1	So	_	ADV	RB	_	3	advmod	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	think	_	VERB	VBP	_	0	root	_	_
+4	I	_	PRON	PRP	_	5	nsubj	_	_
+5	buy	_	VERB	VBP	_	3	ccomp	_	_
+6	a	_	DET	DT	_	8	det	_	_
+7	nice	_	ADJ	JJ	_	8	amod	_	_
+8	cake	_	NOUN	NN	_	5	obj	_	_
+9	at	_	ADP	IN	_	10	case	_	_
+10	Osaka	_	PROPN	NNP	_	5	obl	_	_
+11	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00677.txt_126
+# text = So it 's very natural thing .
+1	So	_	ADV	RB	_	6	advmod	_	_
+2	it	_	PRON	PRP	_	6	nsubj	_	_
+3	's	_	AUX	VBZ	_	6	cop	_	_
+4	very	_	ADV	RB	_	5	advmod	_	_
+5	natural	_	ADJ	JJ	_	6	amod	_	_
+6	thing	_	NOUN	NN	_	0	root	_	_
+7	.	_	PUNCT	.	_	6	punct	_	_
+
+# sent_id = file00319.txt_178
+# text = It 's not great like Japan , or it 's a small city .
+1	It	_	PRON	PRP	_	4	nsubj	_	_
+2	's	_	AUX	VBZ	_	4	cop	_	_
+3	not	_	PART	RB	_	4	advmod	_	_
+4	great	_	ADJ	JJ	_	0	root	_	_
+5	like	_	ADP	IN	_	6	case	_	_
+6	Japan	_	PROPN	NNP	_	4	obl	_	_
+7	,	_	PUNCT	,	_	13	punct	_	_
+8	or	_	CCONJ	CC	_	13	cc	_	_
+9	it	_	PRON	PRP	_	13	nsubj	_	_
+10	's	_	AUX	VBZ	_	13	cop	_	_
+11	a	_	DET	DT	_	13	det	_	_
+12	small	_	ADJ	JJ	_	13	amod	_	_
+13	city	_	NOUN	NN	_	4	conj	_	_
+14	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00128.txt_64
+# text = at the morning one day last week , my girlfriend phoned me .
+1	at	_	ADP	IN	_	3	case	_	_
+2	the	_	DET	DT	_	3	det	_	_
+3	morning	_	NOUN	NN	_	11	obl	_	_
+4	one	_	NUM	CD	_	5	nummod	_	_
+5	day	_	NOUN	NN	_	11	obl:tmod	_	_
+6	last	_	ADJ	JJ	_	7	amod	_	_
+7	week	_	NOUN	NN	_	5	nmod:tmod	_	_
+8	,	_	PUNCT	,	_	5	punct	_	_
+9	my	_	PRON	PRP$	_	10	nmod:poss	_	_
+10	girlfriend	_	NOUN	NN	_	11	nsubj	_	_
+11	phoned	_	VERB	VBD	_	0	root	_	_
+12	me	_	PRON	PRP	_	11	obj	_	_
+13	.	_	PUNCT	.	_	11	punct	_	_
+
+# sent_id = file00240.txt_51
+# text = very big restaurant .
+1	very	_	ADV	RB	_	2	advmod	_	_
+2	big	_	ADJ	JJ	_	3	amod	_	_
+3	restaurant	_	NOUN	NN	_	0	root	_	_
+4	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00255.txt_45
+# text = And it was really exciting , you know , as a child .
+1	And	_	CCONJ	CC	_	5	cc	_	_
+2	it	_	PRON	PRP	_	5	nsubj	_	_
+3	was	_	AUX	VBD	_	5	cop	_	_
+4	really	_	ADV	RB	_	5	advmod	_	_
+5	exciting	_	ADJ	JJ	_	0	root	_	_
+6	,	_	PUNCT	,	_	8	punct	_	_
+7	you	_	PRON	PRP	_	8	nsubj	_	_
+8	know	_	VERB	VBP	_	5	parataxis	_	_
+9	,	_	PUNCT	,	_	12	punct	_	_
+10	as	_	ADP	IN	_	12	case	_	_
+11	a	_	DET	DT	_	12	det	_	_
+12	child	_	NOUN	NN	_	5	obl	_	_
+13	.	_	PUNCT	.	_	5	punct	_	_
+
+# sent_id = file01271.txt_179
+# text = OK , thank you .
+1	OK	_	INTJ	UH	_	3	discourse	_	_
+2	,	_	PUNCT	,	_	3	punct	_	_
+3	thank	_	VERB	VBP	_	0	root	_	_
+4	you	_	PRON	PRP	_	3	obj	_	_
+5	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00272.txt_18
+# text = But not my boy .
+1	But	_	CCONJ	CC	_	4	cc	_	_
+2	not	_	PART	RB	_	4	advmod	_	_
+3	my	_	PRON	PRP$	_	4	nmod:poss	_	_
+4	boy	_	NOUN	NN	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file01198.txt_65
+# text = Thank you .
+1	Thank	_	VERB	VBP	_	0	root	_	_
+2	you	_	PRON	PRP	_	1	obj	_	_
+3	.	_	PUNCT	.	_	1	punct	_	_
+
+# sent_id = file01258.txt_160
+# text = I 'm gon na wait for him and then go home with him .
+1	I	_	PRON	PRP	_	3	nsubj	_	_
+2	'm	_	AUX	VBP	_	3	aux	_	_
+3	gon	_	VERB	VBG	_	0	root	_	_
+4	na	_	PART	TO	_	5	mark	_	_
+5	wait	_	VERB	VB	_	3	xcomp	_	_
+6	for	_	ADP	IN	_	7	case	_	_
+7	him	_	PRON	PRP	_	5	obl	_	_
+8	and	_	CCONJ	CC	_	10	cc	_	_
+9	then	_	ADV	RB	_	10	advmod	_	_
+10	go	_	VERB	VB	_	5	conj	_	_
+11	home	_	ADV	RB	_	10	advmod	_	_
+12	with	_	ADP	IN	_	13	case	_	_
+13	him	_	PRON	PRP	_	10	obl	_	_
+14	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00791.txt_51
+# text = I mean a mental kind of handicap , not physical only , I mean mental handicapped children can enjoy those sound , color .
+1	I	_	PRON	PRP	_	2	nsubj	_	_
+2	mean	_	VERB	VBP	_	0	root	_	_
+3	a	_	DET	DT	_	5	det	_	_
+4	mental	_	ADJ	JJ	_	5	amod	_	_
+5	kind	_	NOUN	NN	_	2	obj	_	_
+6	of	_	ADP	IN	_	7	case	_	_
+7	handicap	_	NOUN	NN	_	5	nmod	_	_
+8	,	_	PUNCT	,	_	10	punct	_	_
+9	not	_	PART	RB	_	10	advmod	_	_
+10	physical	_	ADJ	JJ	_	5	amod	_	_
+11	only	_	ADV	RB	_	10	advmod	_	_
+12	,	_	PUNCT	,	_	14	punct	_	_
+13	I	_	PRON	PRP	_	14	nsubj	_	_
+14	mean	_	VERB	VBP	_	2	parataxis	_	_
+15	mental	_	ADJ	JJ	_	16	advmod	_	_
+16	handicapped	_	ADJ	JJ	_	17	amod	_	_
+17	children	_	NOUN	NNS	_	19	nsubj	_	_
+18	can	_	AUX	MD	_	19	aux	_	_
+19	enjoy	_	VERB	VB	_	14	ccomp	_	_
+20	those	_	DET	DT	_	21	det	_	_
+21	sound	_	NOUN	NN	_	19	obj	_	_
+22	,	_	PUNCT	,	_	23	punct	_	_
+23	color	_	NOUN	NN	_	21	conj	_	_
+24	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file00647.txt_177
+# text = , I have never took part in , ...
+1	,	_	PUNCT	,	_	5	punct	_	_
+2	I	_	PRON	PRP	_	5	nsubj	_	_
+3	have	_	AUX	VBP	_	5	aux	_	_
+4	never	_	ADV	RB	_	5	advmod	_	_
+5	took	_	VERB	VBN	_	0	root	_	_
+6	part	_	NOUN	NN	_	5	obj	_	_
+7	in	_	ADP	IN	_	5	dep	_	_
+8	,	_	PUNCT	,	_	5	punct	_	_
+9	...	_	PUNCT	:	_	5	punct	_	_
+
+# sent_id = file00346.txt_81
+# text = And I know like it 's not possible , but like I ca n't wear this .
+1	And	_	CCONJ	CC	_	3	cc	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	know	_	VERB	VBP	_	0	root	_	_
+4	like	_	INTJ	UH	_	3	discourse	_	_
+5	it	_	PRON	PRP	_	8	nsubj	_	_
+6	's	_	AUX	VBZ	_	8	cop	_	_
+7	not	_	PART	RB	_	8	advmod	_	_
+8	possible	_	ADJ	JJ	_	3	ccomp	_	_
+9	,	_	PUNCT	,	_	15	punct	_	_
+10	but	_	CCONJ	CC	_	15	cc	_	_
+11	like	_	INTJ	UH	_	15	discourse	_	_
+12	I	_	PRON	PRP	_	15	nsubj	_	_
+13	ca	_	AUX	MD	_	15	aux	_	_
+14	n't	_	PART	RB	_	15	advmod	_	_
+15	wear	_	VERB	VB	_	3	conj	_	_
+16	this	_	PRON	DT	_	15	obj	_	_
+17	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01204.txt_103
+# text = yes , I did .
+1	yes	_	INTJ	UH	_	4	discourse	_	_
+2	,	_	PUNCT	,	_	4	punct	_	_
+3	I	_	PRON	PRP	_	4	nsubj	_	_
+4	did	_	VERB	VBD	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
+# sent_id = file00358.txt_28
+# text = because I want to eat .
+1	because	_	SCONJ	IN	_	3	mark	_	_
+2	I	_	PRON	PRP	_	3	nsubj	_	_
+3	want	_	VERB	VBP	_	0	root	_	_
+4	to	_	PART	TO	_	5	mark	_	_
+5	eat	_	VERB	VB	_	3	xcomp	_	_
+6	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file01252.txt_149
+# text = He was driving his car to work .
+1	He	_	PRON	PRP	_	3	nsubj	_	_
+2	was	_	AUX	VBD	_	3	aux	_	_
+3	driving	_	VERB	VBG	_	0	root	_	_
+4	his	_	PRON	PRP$	_	5	nmod:poss	_	_
+5	car	_	NOUN	NN	_	3	obj	_	_
+6	to	_	PART	TO	_	7	case	_	_
+7	work	_	NOUN	NN	_	3	obl	_	_
+8	.	_	PUNCT	.	_	3	punct	_	_
+
+# sent_id = file00382.txt_33
+# text = There is a house , and there is some women and some children .
+1	There	_	PRON	EX	_	2	expl	_	_
+2	is	_	VERB	VBZ	_	0	root	_	_
+3	a	_	DET	DT	_	4	det	_	_
+4	house	_	NOUN	NN	_	2	nsubj	_	_
+5	,	_	PUNCT	,	_	8	punct	_	_
+6	and	_	CCONJ	CC	_	8	cc	_	_
+7	there	_	PRON	EX	_	8	expl	_	_
+8	is	_	VERB	VBZ	_	2	conj	_	_
+9	some	_	DET	DT	_	10	det	_	_
+10	women	_	NOUN	NNS	_	8	nsubj	_	_
+11	and	_	CCONJ	CC	_	13	cc	_	_
+12	some	_	DET	DT	_	13	det	_	_
+13	children	_	NOUN	NNS	_	10	conj	_	_
+14	.	_	PUNCT	.	_	2	punct	_	_
+
+# sent_id = file01032.txt_2
+# text = My name is Charlie .
+1	My	_	PRON	PRP$	_	2	nmod:poss	_	_
+2	name	_	NOUN	NN	_	4	nsubj	_	_
+3	is	_	AUX	VBZ	_	4	cop	_	_
+4	Charlie	_	PROPN	NNP	_	0	root	_	_
+5	.	_	PUNCT	.	_	4	punct	_	_
+
