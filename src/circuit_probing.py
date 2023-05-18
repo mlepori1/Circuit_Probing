@@ -53,7 +53,7 @@ class L0MetricsCallback(TrainerCallback):
 def main():
 
     config = utils.get_config()
-    tokenizer = AutoTokenizer(config["tokenizer_path"])
+    tokenizer = AutoTokenizer.from_pretrained(config["tokenizer_path"])
     trainset, valset, testset = utils.load_dataset(config, tokenizer)
 
     df = pd.DataFrame()

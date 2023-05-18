@@ -1,0 +1,27 @@
+L0: true
+ablate_mask: null
+batch_size_list:
+- 64
+early_stopping: 0
+es_patience: -1
+experiment_type: circuit_probing
+freeze_base: true
+task: pos
+lambda: 1.0e-08
+load_best_model_at_end: false
+lr_list:
+- 0.001
+mask_init_list:
+- 0.0
+max_epochs: 90
+max_temp: 200
+model_dir: ../Models/test
+pretrained_weights: bert-base-uncased
+probe_component: mlp
+results_dir: ../Results/test
+save_models: true
+seed_list:
+- 0
+target_stage_list:
+- 1
+tokenizer_path: bert-base-uncased

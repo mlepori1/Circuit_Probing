@@ -27,7 +27,7 @@ import torch
 import torch.utils.checkpoint
 from torch import nn
 from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss, MSELoss, L1Loss
-from torchmetrics.functional import pairwise_cosine_similarity
+import torchmetrics
 
 from ...activations import ACT2FN
 from ...modeling_outputs import (
@@ -394,7 +394,6 @@ class BertSelfOutput(nn.Module):
         else:
             linear = functools.partial(L0Linear, l0=False)
 
-        self.return_updates = config.return_updates
         self.dense = linear(config.hidden_size, config.hidden_size)
         self.LayerNorm = nn.LayerNorm(config.hidden_size, eps=config.layer_norm_eps)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
@@ -512,10 +511,11 @@ class BertLayer(nn.Module):
         self.circuit_probing = config.circuit_probing
             
         if config.circuit_probing and self.isL0:
+            self.probe_component = config.probe_component
+
             # Circuit probing only support mlp or attention right now
             assert self.probe_component == "mlp" or self.probe_component == "attention"
 
-            self.probe_component = config.probe_component
             if config.probe_component == "mlp":
                 attn_l0 = False
                 mlp_l0 = True  
@@ -1739,10 +1739,9 @@ class BertForCircuitProbing(BertPreTrainedModel):
     This model was added to implement circuit probing on a model structured like a 
     BertModel. Representation Matching loss is computed in the forward pass
     """
-    def __init__(self, config, tokenizer):
+    def __init__(self, config):
         super().__init__(config)
         self.config = config
-        self.tokenizer = tokenizer
 
         # Continuous Sparsification additions
         if not hasattr(self.config, "l0"):
@@ -1767,6 +1766,9 @@ class BertForCircuitProbing(BertPreTrainedModel):
 
         # Initialize weights and apply final processing
         self.post_init()
+
+    def set_tokenizer(self, tokenizer):
+        self.tokenizer = tokenizer
 
     def get_temp(self):
         # Added for continuous sparsification
@@ -1826,7 +1828,7 @@ class BertForCircuitProbing(BertPreTrainedModel):
         # Extract those update vectors for representation matching
 
         # Compute a mask over subwords (which start with ## for BERT)
-        not_subword = torch.stack[torch.tensor([not tok.startswith("##") for tok in self.tokenizer.convert_ids_to_tokens(ids)])  for ids in input_ids]
+        not_subword = torch.stack([torch.tensor( [ not tok.startswith("##") for tok in self.tokenizer.convert_ids_to_tokens(ids) ] ) for ids in input_ids])
         # Compute mask over special tokens
         not_special = torch.stack([~torch.Tensor(self.tokenizer.get_special_tokens_mask(ids))  for ids in input_ids])
         # Elementwise multiplication of masks is what we want
@@ -1839,14 +1841,14 @@ class BertForCircuitProbing(BertPreTrainedModel):
         outputs = outputs[token_mask] 
 
         labels = labels.reshape(-1)
-        assert len(outputs) = len(labels) # Ensure that there is only one update per label
+        assert len(outputs) == len(labels) # Ensure that there is only one update per label
 
         loss = None
 
         if self.config.rm_loss == "soft_NN":
 
             # 1. Create representational similarity matrix between update vectors using cosine sim
-            rsm = pairwise_cosine_similarity(outputs)
+            rsm = torchmetrics.functional.pairwise_cosine_similarity(outputs)
 
             # 2. Create ideal representational similarity matrix using labels
             labels_row = torch.repeat_interleave(labels, len(labels), dim=0)
