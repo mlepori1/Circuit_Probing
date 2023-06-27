@@ -1,8 +1,9 @@
 # Model
-model_type: "bert"
-model_path: "bert-base-uncased"
-random_init: False
-target_layer_list: [0]
+model_type: "gpt2"
+model_path: "gpt2"
+random_init: True
+reinit_embeddings: False
+target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 mask_bias: False
 mask_init_list: [0.0]
 max_temp: 200
@@ -17,14 +18,14 @@ test_size: 1000
 lm_size: 100
 
 # Training
-num_epochs: 1
+num_epochs: 90
 lr_list: [0.001]
-batch_size_list: [16]
+batch_size_list: [12]
 seed: 0
 l0_lambda: 0.0000001
 lm_eval: True
 
 # Output
-model_dir: "../Models/test"
-results_dir: "../Results/test"
+model_dir: "../Models/rand-embeds-tag"
+results_dir: "../Results/GPT2/Tag/rand-embeds-tag"
 save_models: False

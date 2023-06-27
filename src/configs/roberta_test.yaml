@@ -1,6 +1,6 @@
 # Model
-model_type: "bert"
-model_path: "bert-base-uncased"
+model_type: "roberta"
+model_path: "roberta-base"
 random_init: False
 target_layer_list: [0]
 mask_bias: False
@@ -9,22 +9,22 @@ max_temp: 200
 
 # Data
 train_data_path: "../data/ud-treebanks-conll2017/UD_English/en-ud-train.conllu"
-lm_data_path: "../data/ud-treebanks-conll2017/UD_English/en-ud-dev.conllu"
+lm_data_path: "../data/ud-treebanks-conll2017/UD_English/en-ud-train.conllu"
 label: "tag"
-train_size: 1000
-dev_size: 100
-test_size: 1000
-lm_size: 100
+train_size: 100
+dev_size: 64
+test_size: 64
+lm_size: 64
 
 # Training
 num_epochs: 1
 lr_list: [0.001]
-batch_size_list: [16]
+batch_size_list: [4]
 seed: 0
 l0_lambda: 0.0000001
 lm_eval: True
 
 # Output
-model_dir: "../Models/test"
-results_dir: "../Results/test"
+model_dir: "../Models/roberta-test"
+results_dir: "../Results/RoBERTa/roberta-test"
 save_models: False
