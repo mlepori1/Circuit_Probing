@@ -11,6 +11,8 @@ def get_lm_eval_data(config, tokenizer):
     mlm_dataset = MLMEvalDataset(config["lm_data_path"], tokenizer, seed=config["seed"])
 
     remainder = len(lm_dataset) - config["lm_size"]
+
+    torch.manual_seed(config["seed"])
     lm_dataset, _ = random_split(lm_dataset, [config["lm_size"], remainder])
     mlm_dataset, _ = random_split(mlm_dataset, [config["lm_size"], remainder])
 
@@ -41,6 +43,7 @@ def lm_eval(config, model, tokenizer, dataloader):
         not_special_tokens = ~torch.tensor(
             tokenizer.get_special_tokens_mask(labels, already_has_special_tokens=True)
         ).bool()
+        print(not_special_tokens)
 
         if config["model_type"] == "gpt2":
             # Shift labels right one place

@@ -112,6 +112,11 @@ def main():
                     config["mask_init_value"] = mask_init
 
                     model, tokenizer = utils.get_model_and_tokenizer(config)
+
+                    # Flag for setting tokenizer length on multiberts models
+                    if "multiberts" in tokenizer.name_or_path:
+                        tokenizer.model_max_length = 512
+
                     trainloader, devloader, testloader = utils.create_datasets(
                         config, tokenizer
                     )
@@ -171,27 +176,29 @@ def main():
                             config, model, tokenizer, mlm_loader
                         )
 
-                        model.set_ablate_mode("randomly_sampled")
-                        random_ablate_lm_results = lm_eval(config, model, tokenizer, lm_loader)
-                        random_ablate_mlm_results = masked_lm_eval(
-                            config, model, tokenizer, mlm_loader
-                        )
-                        model.set_ablate_mode("none")
-
                         output_dict["vanilla acc"] = [lm_results["vanilla_acc"]]
                         output_dict["ablated acc"] = [lm_results["ablated_acc"]]
-                        output_dict["random ablate acc"] = [random_ablate_lm_results["ablated_acc"]]
                         output_dict["kl"] = [lm_results["kl"]]
-                        output_dict["random ablate kl"] = random_ablate_lm_results["kl"]
                         output_dict["mlm vanilla acc"] = [
                             mlm_results["mlm_vanilla_acc"]
                         ]
                         output_dict["mlm ablated acc"] = [
                             mlm_results["mlm_ablated_acc"]
                         ]
-                        output_dict["random ablate mlm acc"] = random_ablate_mlm_results["mlm_ablated_acc"]
                         output_dict["mlm kl"] = [mlm_results["mlm_kl"]]
-                        output_dict["random ablate mlm kl"] = random_ablate_mlm_results["mlm_kl"]
+
+                        if config["num_epochs"] != 0:
+                            model.set_ablate_mode("randomly_sampled")
+                            random_ablate_lm_results = lm_eval(config, model, tokenizer, lm_loader)
+                            random_ablate_mlm_results = masked_lm_eval(
+                                config, model, tokenizer, mlm_loader
+                            )
+                            output_dict["random ablate acc"] = [random_ablate_lm_results["ablated_acc"]]
+                            output_dict["random ablate kl"] = random_ablate_lm_results["kl"]
+                            output_dict["random ablate mlm acc"] = random_ablate_mlm_results["mlm_ablated_acc"]
+                            output_dict["random ablate mlm kl"] = random_ablate_mlm_results["mlm_kl"]
+
+                        model.set_ablate_mode("none")
 
 
                     df = pd.concat(

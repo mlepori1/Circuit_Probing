@@ -1,2 +1,0 @@
-,model_id,label,train length,dev length,test length,batch_size,lr,seed,target_layer,mask_init,model,model path,train loss,dev loss,knn dev acc,dev majority acc,knn test acc,test majority acc,L0 Norm,L0 Max,vanilla acc,ablated acc,kl,mlm vanilla acc,mlm ablated acc,mlm kl
-0,955893dc-e9d4-45c2-ac9f-e8bab9c1e99e,dep,16793,1824,16571,12,0.001,0,0,0.0,gpt2,gpt2,2.77280180425529,2.789469838142395,0.6136251844564683,0.11301032956222332,0.5638163055941102,0.11514090881660732,257848.0,4718592,0.19363762102351315,0.14937759336099585,0.790578923944286,-1,-1,-1

@@ -1,7 +1,7 @@
 import random
 import torch
 from torch.utils.data import Dataset
-from transformers import BertTokenizerFast, RobertaTokenizerFast, GPT2TokenizerFast
+from transformers import BertTokenizerFast, RobertaTokenizerFast, GPT2TokenizerFast, XLMRobertaTokenizerFast
 from file_readers import read_conll_format
 
 
