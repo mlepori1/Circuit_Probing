@@ -1,7 +1,7 @@
 import random
 import torch
 from torch.utils.data import Dataset
-from transformers import BertTokenizerFast, RobertaTokenizerFast, GPT2TokenizerFast, XLMRobertaTokenizerFast
+from transformers import BertTokenizerFast, RobertaTokenizerFast, GPT2TokenizerFast, GPTNeoXTokenizerFast
 from file_readers import read_conll_format
 
 
@@ -62,7 +62,7 @@ class ProbeDataset(Dataset):
 
         # BPE Tokenization sometimes acts funky on pretokenized data, giving tokens that are just comprised of one unicode character (i.e. just the prepended space token)
         # Ignore these as well
-        if type(self.tokenizer) == RobertaTokenizerFast or type(self.tokenizer) == GPT2TokenizerFast:
+        if type(self.tokenizer) == RobertaTokenizerFast or type(self.tokenizer) == GPT2TokenizerFast or type(self.tokenizer) == GPTNeoXTokenizerFast:
             not_prepended_space = torch.tensor([len(el) > 1 for el in self.tokenizer.convert_ids_to_tokens(x["input_ids"][0])])
             token_mask = (token_mask * not_prepended_space).bool()
 

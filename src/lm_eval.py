@@ -45,7 +45,7 @@ def lm_eval(config, model, tokenizer, dataloader):
         ).bool()
         print(not_special_tokens)
 
-        if config["model_type"] == "gpt2":
+        if config["model_type"] == "gpt2" or config["model_type"] == "gpt_neox":
             # Shift labels right one place
             label_mask = (
                 torch.cat((torch.tensor([0]), not_special_tokens[:-1]))
@@ -88,7 +88,7 @@ def lm_eval(config, model, tokenizer, dataloader):
 
 def masked_lm_eval(config, model, tokenizer, dataloader):
     # Runs LM eval for mlm with 1 masked token per datapoint
-    if config["model_type"] == "gpt2":
+    if config["model_type"] == "gpt2" or config["model_type"] == "gpt_neox":
         return {"mlm_vanilla_acc": -1, "mlm_ablated_acc": -1, "mlm_kl": -1}
 
     kl_divs = []

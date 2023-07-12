@@ -187,7 +187,7 @@ def main():
                         ]
                         output_dict["mlm kl"] = [mlm_results["mlm_kl"]]
 
-                        if config["num_epochs"] != 0:
+                        if config["num_epochs"] != 0 and False:
                             model.set_ablate_mode("randomly_sampled")
                             random_ablate_lm_results = lm_eval(config, model, tokenizer, lm_loader)
                             random_ablate_mlm_results = masked_lm_eval(

@@ -1,5 +1,5 @@
 export PROJECT_DIR=/users/mlepori/data/mlepori/projects/Circuit_Probing/
-export CONFIG_DIR=configs/BERT-seed0-1000k/Tag
+export CONFIG_DIR=configs/Weight/BERT-High-Init/Dep
 for file in ${CONFIG_DIR}/*;
 do
     echo "$file"

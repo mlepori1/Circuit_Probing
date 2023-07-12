@@ -5,6 +5,8 @@ from transformers import (
     GPT2LMHeadModel,
     GPT2TokenizerFast,
     GPT2Config,
+    GPTNeoXForCausalLM,
+    GPTNeoXConfig,
     RobertaForMaskedLM,
     RobertaTokenizerFast,
     RobertaConfig,
@@ -27,11 +29,10 @@ from transformers import (
 
 from ProbeDataset import ProbeDataset
 from NeuroSurgeon.src.Models.model_configs import (
-    CircuitConfig,
-    ResidualUpdateModelConfig,
-)
+    CircuitConfig
+    )
 from NeuroSurgeon.src.Probing.circuit_probe import CircuitProbe
-from NeuroSurgeon.src.Probing.probe_configs import CircuitProbeConfig
+from NeuroSurgeon.src.Probing.probe_configs import CircuitProbeConfig, ResidualUpdateModelConfig
 import torch
 from torch.utils.data import random_split, DataLoader
 
@@ -236,6 +237,34 @@ def get_model_and_tokenizer(config):
             return model, GPT2TokenizerFast.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
+        
+    elif config["model_type"] == "gpt_neox" and config["random_init"] == False:
+        conf = GPTNeoXConfig.from_pretrained(config["model_path"])
+        conf.is_decoder = True
+        return GPTNeoXForCausalLM.from_pretrained(
+            config["model_path"], config=conf
+        ), AutoTokenizer.from_pretrained(
+                config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+        )
+    elif config["model_type"] == "gpt_neox" and config["random_init"] == True:
+        if config["reinit_embeddings"] == True:
+            conf = GPTNeoXConfig.from_pretrained(config["model_path"])
+            conf.is_decoder = True
+            return GPTNeoXForCausalLM(
+                conf
+            ), AutoTokenizer.from_pretrained(
+                config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+            )
+        else:
+            conf = GPTNeoXConfig.from_pretrained(config["model_path"])
+            model = GPTNeoXForCausalLM.from_pretrained(config["model_path"], config=conf)
+            # Reinitialize everything but the embeddings
+            model.gpt_neox.layers.apply(model._init_weights)
+            model.gpt_neox.final_layer_norm.apply(model._init_weights)
+            model.embed_out.apply(model._init_weights)
+            return model, AutoTokenizer.from_pretrained(
+                config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+            )
     else:
         raise ValueError(f'{config["model_type"]} is not supported')
 
@@ -277,11 +306,17 @@ def create_circuit_probe(config, model, tokenizer):
             f'transformer.h.{config["target_layer"]}.mlp.c_fc',
             f'transformer.h.{config["target_layer"]}.mlp.c_proj',
         ]
+    elif config["model_type"] == "gpt_neox":
+        target_layers = [
+            f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_h_to_4h',
+            f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_4h_to_h',
+        ]
 
     circuit_config = CircuitConfig(
         mask_method="continuous_sparsification",
         mask_hparams={
             "ablation": "none",
+            "mask_unit": config["mask_unit"],
             "mask_bias": config["mask_bias"],
             "mask_init_value": config["mask_init_value"],
         },
@@ -295,6 +330,8 @@ def create_circuit_probe(config, model, tokenizer):
         res_type = "bert"
     elif config["model_type"] == "gpt2":
         res_type = "gpt"
+    elif config["model_type"] == "gpt_neox":
+        res_type = "gpt_neox"
 
     resid_config = ResidualUpdateModelConfig(
         res_type,

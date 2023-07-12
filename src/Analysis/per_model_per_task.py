@@ -6,41 +6,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats
 
-def load_results():
-    # Load results file from command line arg
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        "-d",
-        "--dir",
-        default=None,
-        help="where to load results csv",
-        metavar="FILE",
-    )
-
-    argv = sys.argv[1:]
-
-    args, _ = parser.parse_known_args(argv)
-
-    if not hasattr(args, "dir"):
-        raise ValueError("Must include path to results file")
-    suffix = os.path.split(args.dir)[-1].lower()
-    
-    probe_results = pd.read_csv(os.path.join(args.dir, suffix, 'results.csv'))
-    froze_model_results = pd.read_csv(os.path.join(args.dir, f'froz-{suffix}', 'results.csv'))
-    trained_random_results = pd.read_csv(os.path.join(args.dir, f'rand-{suffix}', 'results.csv'))
-    embeds_results = pd.read_csv(os.path.join(args.dir, f'rand-embeds-{suffix}', 'results.csv'))
-    froze_random_results = pd.read_csv(os.path.join(args.dir, f'rand-froz-{suffix}', 'results.csv'))
-
-    results_dir = {
-        "probe": probe_results,
-        "frozen": froze_model_results,
-        "trained_random": trained_random_results,
-        "embeddings": embeds_results,
-        "frozen_random": froze_random_results
-    }
-    return results_dir
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
