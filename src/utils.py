@@ -400,13 +400,13 @@ def create_circuit_probe(config, model, tokenizer):
 
 def create_datasets(config, tokenizer):
     dataset = ProbeDataset(
-        config["train_data_path"], config["label"], tokenizer, seed=config["seed"]
+        config["train_data_path"], config["label"], tokenizer, seed=config["data_seed"]
     )
     remainder = len(dataset) - (
         config["train_size"] + config["dev_size"] + config["test_size"]
     )
 
-    torch.manual_seed(config["seed"])
+    torch.manual_seed(config["data_seed"])
     train_data, dev_data, test_data, _ = random_split(
         dataset,
         [config["train_size"], config["dev_size"], config["test_size"], remainder],

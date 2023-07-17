@@ -7,12 +7,12 @@ from torch.utils.data import random_split, DataLoader
 
 def get_lm_eval_data(config, tokenizer):
     # Gets data for running behavioral lm evals
-    lm_dataset = LMEvalDataset(config["lm_data_path"], tokenizer, seed=config["seed"])
-    mlm_dataset = MLMEvalDataset(config["lm_data_path"], tokenizer, seed=config["seed"])
+    lm_dataset = LMEvalDataset(config["lm_data_path"], tokenizer, seed=config["data_seed"])
+    mlm_dataset = MLMEvalDataset(config["lm_data_path"], tokenizer, seed=config["data_seed"])
 
     remainder = len(lm_dataset) - config["lm_size"]
 
-    torch.manual_seed(config["seed"])
+    torch.manual_seed(config["data_seed"])
     lm_dataset, _ = random_split(lm_dataset, [config["lm_size"], remainder])
     mlm_dataset, _ = random_split(mlm_dataset, [config["lm_size"], remainder])
 
