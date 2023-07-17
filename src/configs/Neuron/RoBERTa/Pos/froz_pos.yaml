@@ -2,8 +2,9 @@
 model_type: "roberta"
 model_path: "roberta-base"
 random_init: False
+layer_reinit: False
 target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-mask_unit: "neuron"
+mask_unit: "weight"
 mask_bias: False
 mask_init_list: [1.0]
 max_temp: 200
@@ -27,5 +28,5 @@ lm_eval: True
 
 # Output
 model_dir: "../Models/froz-pos"
-results_dir: "../Results/Neuron/RoBERTa/Pos/froz-pos"
+results_dir: "../Results/RoBERTa/Pos/froz-pos"
 save_models: False

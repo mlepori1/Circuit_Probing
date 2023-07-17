@@ -40,6 +40,7 @@ class ProbeDataset(Dataset):
         return len(self.x)
 
     def __getitem__(self, idx):
+            
         x = self.tokenizer(
             [self.x[idx]],
             is_split_into_words=True,
@@ -51,7 +52,11 @@ class ProbeDataset(Dataset):
 
         # Compute token mask for probing
         offset_map = x["offset_mapping"]
-        not_subword = offset_map[:, :, 0] == 0
+        if type(self.tokenizer) == GPTNeoXTokenizerFast:
+            # GPTNeoXTokenizer offset maps are inconsistent with the standard
+            not_subword = torch.tensor([el[0] == "Ġ" for el in self.tokenizer.convert_ids_to_tokens(x["input_ids"][0])])
+        else:
+            not_subword = offset_map[:, :, 0] == 0
 
         # Compute mask to get rid of special tokens
         not_special = ~x["special_tokens_mask"].bool()
@@ -62,12 +67,11 @@ class ProbeDataset(Dataset):
 
         # BPE Tokenization sometimes acts funky on pretokenized data, giving tokens that are just comprised of one unicode character (i.e. just the prepended space token)
         # Ignore these as well
-        if type(self.tokenizer) == RobertaTokenizerFast or type(self.tokenizer) == GPT2TokenizerFast or type(self.tokenizer) == GPTNeoXTokenizerFast:
+        if type(self.tokenizer) == RobertaTokenizerFast or type(self.tokenizer) == GPT2TokenizerFast:
             not_prepended_space = torch.tensor([len(el) > 1 for el in self.tokenizer.convert_ids_to_tokens(x["input_ids"][0])])
             token_mask = (token_mask * not_prepended_space).bool()
 
         y = self.y[idx]
-
         sample = {
             "input_ids": x["input_ids"][0],
             "attention_mask": x["attention_mask"][0],

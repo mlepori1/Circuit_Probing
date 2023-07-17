@@ -65,7 +65,7 @@ def get_config():
 
 
 def get_model_and_tokenizer(config):
-    if config["model_type"] == "bert" and config["random_init"] == False:
+    if config["model_type"] == "bert" and config["random_init"] == False and config["layer_reinit"] == False:
         return BertForMaskedLM.from_pretrained(
             config["model_path"]
         ), BertTokenizerFast.from_pretrained(config["model_path"])
@@ -84,90 +84,23 @@ def get_model_and_tokenizer(config):
                 model.bert.pooler.apply(model._init_weights)
             model.cls.apply(model._init_weights)
             return model, BertTokenizerFast.from_pretrained(config["model_path"])
-        
-    if config["model_type"] == "mpnet" and config["random_init"] == False:
-        return MPNetForMaskedLM.from_pretrained(
+    elif config["model_type"] == "bert" and config["layer_reinit"] == True:
+        model = BertForMaskedLM.from_pretrained(
             config["model_path"]
-        ), MPNetTokenizerFast.from_pretrained(config["model_path"])
-    elif config["model_type"] == "mpnet" and config["random_init"] == True:
-        if config["reinit_embeddings"] == True:
-            return MPNetForMaskedLM(
-                MPNetConfig.from_pretrained(config["model_path"])
-            ), MPNetTokenizerFast.from_pretrained(config["model_path"])
-        else:
-            model = MPNetForMaskedLM.from_pretrained(
-                config["model_path"]
-            )
-            # Reinitialize everything but the embeddings
-            model.mpnet.encoder.apply(model._init_weights)
-            if model.mpnet.pooler is not None:
-                model.mpnet.pooler.apply(model._init_weights)
-            model.lm_head.apply(model._init_weights)
-            return model, MPNetTokenizerFast.from_pretrained(config["model_path"])
-        
-    if config["model_type"] == "ernie" and config["random_init"] == False:
-        tokenizer = AutoTokenizer.from_pretrained(config["model_path"])
-        tokenizer.model_max_length=512
-        return ErnieForMaskedLM.from_pretrained(
-            config["model_path"]
-        ), tokenizer
-    elif config["model_type"] == "ernie" and config["random_init"] == True:
-        tokenizer = AutoTokenizer.from_pretrained(config["model_path"])
-        tokenizer.model_max_length=512
-        if config["reinit_embeddings"] == True:
-            return ErnieForMaskedLM(
-                ErnieConfig.from_pretrained(config["model_path"])
-            ), tokenizer
-        else:
-            model = ErnieForMaskedLM.from_pretrained(
-                config["model_path"]
-            )
-            # Reinitialize everything but the embeddings
-            model.ernie.encoder.apply(model._init_weights)
-            if model.ernie.pooler is not None:
-                model.ernie.pooler.apply(model._init_weights)
-            model.cls.apply(model._init_weights)
-            return model, tokenizer
+        )
+        if config["operation"] == "mlp":
+            # Reinitialize just the target layer mlps
+            model.bert.encoder.layer[config["target_layer"]].intermediate.dense.apply(model._init_weights)
+            model.bert.encoder.layer[config["target_layer"]].output.dense.apply(model._init_weights)
+        elif config["operation"] == "attn":
+            # Reinit attention linear layers
+            model.bert.encoder.layer[config["target_layer"]].attention.self.query.apply(model._init_weights)
+            model.bert.encoder.layer[config["target_layer"]].attention.self.key.apply(model._init_weights)
+            model.bert.encoder.layer[config["target_layer"]].attention.self.value.apply(model._init_weights)
+            model.bert.encoder.layer[config["target_layer"]].attention.output.dense.appply(model._init_weights)
+        return model, BertTokenizerFast.from_pretrained(config["model_path"])
 
-    if config["model_type"] == "electra" and config["random_init"] == False:
-        return ElectraForMaskedLM.from_pretrained(
-            config["model_path"]
-        ), ElectraTokenizerFast.from_pretrained(config["model_path"])
-    elif config["model_type"] == "electra" and config["random_init"] == True:
-        if config["reinit_embeddings"] == True:
-            return ElectraForMaskedLM(
-                ElectraConfig.from_pretrained(config["model_path"])
-            ), ElectraTokenizerFast.from_pretrained(config["model_path"])
-        else:
-            model = ElectraForMaskedLM.from_pretrained(
-                config["model_path"]
-            )
-            # Reinitialize everything but the embeddings
-            model.electra.encoder.apply(model._init_weights)
-            model.generator_predictions.apply(model._init_weights)
-            model.generator_lm_head.apply(model._init_weights)
-            return model, ElectraTokenizerFast.from_pretrained(config["model_path"])
-        
-    if config["model_type"] == "convbert" and config["random_init"] == False:
-        return ConvBertForMaskedLM.from_pretrained(
-            config["model_path"]
-        ), ConvBertTokenizerFast.from_pretrained(config["model_path"])
-    elif config["model_type"] == "convbert" and config["random_init"] == True:
-        if config["reinit_embeddings"] == True:
-            return ConvBertForMaskedLM(
-                ConvBertConfig.from_pretrained(config["model_path"])
-            ), ConvBertTokenizerFast.from_pretrained(config["model_path"])
-        else:
-            model = ConvBertForMaskedLM.from_pretrained(
-                config["model_path"]
-            )
-            # Reinitialize everything but the embeddings
-            model.convbert.encoder.apply(model._init_weights)
-            model.generator_predictions.apply(model._init_weights)
-            model.generator_lm_head.apply(model._init_weights)
-            return model, ConvBertTokenizerFast.from_pretrained(config["model_path"])
-        
-    elif config["model_type"] == "roberta" and config["random_init"] == False:
+    elif config["model_type"] == "roberta" and config["random_init"] == False and config["layer_reinit"] == False:
         return RobertaForMaskedLM.from_pretrained(
             config["model_path"]
         ), RobertaTokenizerFast.from_pretrained(
@@ -190,32 +123,25 @@ def get_model_and_tokenizer(config):
             return model, RobertaTokenizerFast.from_pretrained(
                 config["model_path"], add_prefix_space=True
             )
-        
-    elif config["model_type"] == "xlm-roberta" and config["random_init"] == False:
-        return XLMRobertaForMaskedLM.from_pretrained(
-            config["model_path"]
-        ), XLMRobertaTokenizerFast.from_pretrained(
+    elif config["model_type"] == "roberta" and config["layer_reinit"] == True:
+        model = RobertaForMaskedLM.from_pretrained(config["model_path"])
+        if config["operation"] == "mlp":
+            # Reinitialize target layer mlps
+            model.roberta.encoder.layer[config["target_layer"]].intermediate.dense.apply(model._init_weights)
+            model.roberta.encoder.layer[config["target_layer"]].output.dense.apply(model._init_weights)
+            return model, RobertaTokenizerFast.from_pretrained(
+                config["model_path"], add_prefix_space=True
+            )
+        elif config["operation"] == "attn":
+            # Reinit attn layer
+            model.roberta.encoder.layer[config["target_layer"]].attention.self.query.apply(model._init_weights)
+            model.roberta.encoder.layer[config["target_layer"]].attention.self.key.apply(model._init_weights)
+            model.roberta.encoder.layer[config["target_layer"]].attention.self.value.apply(model._init_weights)
+            model.roberta.encoder.layer[config["target_layer"]].attention.output.dense.apply(model._init_weights)
+        return model, RobertaTokenizerFast.from_pretrained(
             config["model_path"], add_prefix_space=True
         )
-    elif config["model_type"] == "xlm-roberta" and config["random_init"] == True:
-        if config["reinit_embeddings"] == True:
-            return XLMRobertaForMaskedLM(
-                XLMRobertaConfig.from_pretrained(config["model_path"])
-            ), XLMRobertaTokenizerFast.from_pretrained(
-                config["model_path"], add_prefix_space=True
-            )
-        else:
-            model = XLMRobertaForMaskedLM.from_pretrained(config["model_path"])
-            # Reinitialize everything but the embeddings
-            model.roberta.encoder.apply(model._init_weights)
-            if model.roberta.pooler is not None:
-                model.roberta.pooler.apply(model._init_weights)
-            model.lm_head.apply(model._init_weights)
-            return model, XLMRobertaTokenizerFast.from_pretrained(
-                config["model_path"], add_prefix_space=True
-            )
-        
-    elif config["model_type"] == "gpt2" and config["random_init"] == False:
+    elif config["model_type"] == "gpt2" and config["random_init"] == False and config["layer_reinit"] == False:
         return GPT2LMHeadModel.from_pretrained(
             config["model_path"]
         ), GPT2TokenizerFast.from_pretrained(
@@ -237,24 +163,44 @@ def get_model_and_tokenizer(config):
             return model, GPT2TokenizerFast.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
-        
-    elif config["model_type"] == "gpt_neox" and config["random_init"] == False:
+    elif config["model_type"] == "gpt2" and config["layer_reinit"] == True:
+            model = GPT2LMHeadModel.from_pretrained(config["model_path"])
+            if config["operation"] == "mlp":
+                # Reinitialize target layer mlps
+                model.transformer.h[config["target_layer"]].mlp.c_fc.apply(model._init_weights)
+                model.transformer.h[config["target_layer"]].mlp.c_proj.apply(model._init_weights)
+                return model, GPT2TokenizerFast.from_pretrained(
+                    config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+                )
+            elif config["operation"] == "attn":
+                # Reinit attn linear layers
+                model.transformer.h[config["target_layer"]].attn.c_attn.apply(model._init_weights)
+                model.transformer.h[config["target_layer"]].attn.c_proj.apply(model._init_weights)
+            return model, GPT2TokenizerFast.from_pretrained(
+                config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+            )
+    elif config["model_type"] == "gpt_neox" and config["random_init"] == False and config["layer_reinit"] == False:
         conf = GPTNeoXConfig.from_pretrained(config["model_path"])
         conf.is_decoder = True
-        return GPTNeoXForCausalLM.from_pretrained(
-            config["model_path"], config=conf
-        ), AutoTokenizer.from_pretrained(
+        tokenizer = AutoTokenizer.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
         )
+        tokenizer.model_max_length=512
+
+        return GPTNeoXForCausalLM.from_pretrained(
+            config["model_path"], config=conf
+        ), tokenizer
     elif config["model_type"] == "gpt_neox" and config["random_init"] == True:
         if config["reinit_embeddings"] == True:
             conf = GPTNeoXConfig.from_pretrained(config["model_path"])
             conf.is_decoder = True
-            return GPTNeoXForCausalLM(
-                conf
-            ), AutoTokenizer.from_pretrained(
+            tokenizer = AutoTokenizer.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
+            tokenizer.model_max_length=512
+            return GPTNeoXForCausalLM(
+                conf
+            ), tokenizer
         else:
             conf = GPTNeoXConfig.from_pretrained(config["model_path"])
             model = GPTNeoXForCausalLM.from_pretrained(config["model_path"], config=conf)
@@ -262,55 +208,79 @@ def get_model_and_tokenizer(config):
             model.gpt_neox.layers.apply(model._init_weights)
             model.gpt_neox.final_layer_norm.apply(model._init_weights)
             model.embed_out.apply(model._init_weights)
-            return model, AutoTokenizer.from_pretrained(
+            tokenizer = AutoTokenizer.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
+            tokenizer.model_max_length = 512
+            return model, tokenizer
+    elif config["model_type"] == "gpt_neox" and config["layer_reinit"] == True:
+            conf = GPTNeoXConfig.from_pretrained(config["model_path"])
+            model = GPTNeoXForCausalLM.from_pretrained(config["model_path"], config=conf)
+            if config["operation"] == "mlp":
+                # Reinitialize target layer mlps
+                model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h.apply(model._init_weights)
+                model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h.apply(model._init_weights)
+            elif config["operation"] == "attn":
+                model.gpt_neox.layers[config["target_layer"]].attention.query_key_value.apply(model._init_weights)
+                model.gpt_neox.layers[config["target_layer"]].attention.dense.apply(model._init_weights)
+            tokenizer = AutoTokenizer.from_pretrained(
+                config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
+            )
+            tokenizer.model_max_length = 512
+            return model, tokenizer
     else:
         raise ValueError(f'{config["model_type"]} is not supported')
 
 
 def create_circuit_probe(config, model, tokenizer):
     if config["model_type"] == "bert":
-        target_layers = [
-            f'bert.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'bert.encoder.layer.{config["target_layer"]}.output.dense',
-        ]
-    elif config["model_type"] == "mpnet":
-        target_layers = [
-            f'mpnet.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'mpnet.encoder.layer.{config["target_layer"]}.output.dense',
-        ]
-    elif config["model_type"] == "ernie":
-        target_layers = [
-            f'ernie.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'ernie.encoder.layer.{config["target_layer"]}.output.dense',
-        ]    
-    elif config["model_type"] == "electra":
-        target_layers = [
-            f'electra.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'electra.encoder.layer.{config["target_layer"]}.output.dense',
-        ]  
-    elif config["model_type"] == "convbert":
-        # Note, this only works if num_groups=1
-        target_layers = [
-            f'convbert.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'convbert.encoder.layer.{config["target_layer"]}.output.dense',
-        ]  
+        if config["operation"] == "mlp":
+            target_layers = [
+                f'bert.encoder.layer.{config["target_layer"]}.intermediate.dense',
+                f'bert.encoder.layer.{config["target_layer"]}.output.dense',
+            ]
+        if config["operation"] == "attn":
+            target_layers = [
+                f'bert.encoder.layer.{config["target_layer"]}.attention.self.query',
+                f'bert.encoder.layer.{config["target_layer"]}.attention.self.key',
+                f'bert.encoder.layer.{config["target_layer"]}.attention.self.value',
+                f'bert.encoder.layer.{config["target_layer"]}.attention.output.dense',
+            ]
     elif config["model_type"] == "roberta" or config["model_type"] == "xlm-roberta":
-        target_layers = [
-            f'roberta.encoder.layer.{config["target_layer"]}.intermediate.dense',
-            f'roberta.encoder.layer.{config["target_layer"]}.output.dense',
-        ]
+        if config["operation"] == "mlp":
+            target_layers = [
+                f'roberta.encoder.layer.{config["target_layer"]}.intermediate.dense',
+                f'roberta.encoder.layer.{config["target_layer"]}.output.dense',
+            ]
+        if config["operation"] == "attn":
+            target_layers = [
+                f'roberta.encoder.layer.{config["target_layer"]}.attention.self.query',
+                f'roberta.encoder.layer.{config["target_layer"]}.attention.self.key',
+                f'roberta.encoder.layer.{config["target_layer"]}.attention.self.value',
+                f'roberta.encoder.layer.{config["target_layer"]}.attention.output.dense',
+            ]
     elif config["model_type"] == "gpt2":
-        target_layers = [
-            f'transformer.h.{config["target_layer"]}.mlp.c_fc',
-            f'transformer.h.{config["target_layer"]}.mlp.c_proj',
-        ]
+        if config["operation"] == "mlp":
+            target_layers = [
+                f'transformer.h.{config["target_layer"]}.mlp.c_fc',
+                f'transformer.h.{config["target_layer"]}.mlp.c_proj',
+            ]
+        if config["operation"] == "attn":
+            target_layers = [
+                f'transformer.h.{config["target_layer"]}.attn.c_attn',
+                f'transformer.h.{config["target_layer"]}.attn.c_proj',
+            ]
     elif config["model_type"] == "gpt_neox":
-        target_layers = [
-            f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_h_to_4h',
-            f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_4h_to_h',
-        ]
+        if config["operation"] == "mlp":
+            target_layers = [
+                f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_h_to_4h',
+                f'gpt_neox.layers.{config["target_layer"]}.mlp.dense_4h_to_h',
+            ]
+        if config["operation"] == "attn":
+            target_layers = [
+                f'gpt_neox.layers.{config["target_layer"]}.attention.query_key_value',
+                f'gpt_neox.layers.{config["target_layer"]}.attention.dense',
+            ]
 
     circuit_config = CircuitConfig(
         mask_method="continuous_sparsification",
@@ -326,27 +296,43 @@ def create_circuit_probe(config, model, tokenizer):
         l0_lambda=config["l0_lambda"],
     )
 
-    if config["model_type"] in ["bert", "ernie", "electra", "roberta", "xlm-roberta", "mpnet", "convbert"]:
+    if config["model_type"] in ["bert",  "roberta"]:
         res_type = "bert"
     elif config["model_type"] == "gpt2":
         res_type = "gpt"
     elif config["model_type"] == "gpt_neox":
         res_type = "gpt_neox"
 
-    resid_config = ResidualUpdateModelConfig(
-        res_type,
-        target_layers=[config["target_layer"]],
-        mlp=True,
-        attn=False,
-        circuit=True,
-        base=False,
-    )
-
-    circuit_probe_config = CircuitProbeConfig(
-        probe_updates=f'mlp_{config["target_layer"]}',
-        circuit_config=circuit_config,
-        resid_config=resid_config,
-    )
+    if config["operation"] == "mlp":
+        resid_config = ResidualUpdateModelConfig(
+            res_type,
+            target_layers=[config["target_layer"]],
+            mlp=True,
+            attn=False,
+            circuit=True,
+            base=False,
+        )
+        circuit_probe_config = CircuitProbeConfig(
+            probe_updates=f'mlp_{config["target_layer"]}',
+            circuit_config=circuit_config,
+            resid_config=resid_config,
+        )
+    elif config["operation"] == "attn":
+        resid_config = ResidualUpdateModelConfig(
+            res_type,
+            target_layers=[config["target_layer"]],
+            mlp=False,
+            attn=True,
+            circuit=True,
+            base=False,
+        )
+        circuit_probe_config = CircuitProbeConfig(
+            probe_updates=f'attn_{config["target_layer"]}',
+            circuit_config=circuit_config,
+            resid_config=resid_config,
+        )
+    else:
+        raise ValueError("operation must be either mlp or attn")
 
     return CircuitProbe(circuit_probe_config, model, tokenizer)
 
