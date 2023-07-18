@@ -6,7 +6,6 @@ layer_reinit: False
 target_layer_list: [0, 1, 2, 3, 4, 5]
 operation_list: ["attn", "mlp"]
 mask_unit: "weight"
-mask_bias: False
 mask_init_list: [0.0]
 max_temp: 200
 

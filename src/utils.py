@@ -91,32 +91,38 @@ def get_model_and_tokenizer(config):
         )
         if config["operation"] == "mlp":
             # Reinitialize just the target layer mlps
-            model.bert.encoder.layer[config["target_layer"]].intermediate.dense.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].intermediate.dense), 
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].intermediate.dense)
-                ))
-            model.bert.encoder.layer[config["target_layer"]].output.dense.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].output.dense), 
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].output.dense)  
-            ))
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].intermediate.dense.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].intermediate.dense.weight).detach().item(), 
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].intermediate.dense.weight).detach().item()
+                )
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].output.dense.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].output.dense.weight).detach().item(), 
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].output.dense.weight).detach().item()  
+            )
         elif config["operation"] == "attn":
             # Reinit attention linear layers
-            model.bert.encoder.layer[config["target_layer"]].attention.self.query.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.query),
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.query)
-            ))
-            model.bert.encoder.layer[config["target_layer"]].attention.self.key.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.key),
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.key)
-            ))
-            model.bert.encoder.layer[config["target_layer"]].attention.self.value.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.value),
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.value)
-            ))
-            model.bert.encoder.layer[config["target_layer"]].attention.output.dense.apply(init.normal_(
-                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.output.dense),
-                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.output.dense)
-            ))
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].attention.self.query.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.query.weight).detach().item(),
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.query.weight).detach().item()
+            )
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].attention.self.key.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.key.weight).detach().item(),
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.key.weight).detach().item()
+            )
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].attention.self.value.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.self.value.weight).detach().item(),
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.self.value.weight).detach().item()
+            )
+            init.normal_(
+                model.bert.encoder.layer[config["target_layer"]].attention.output.dense.weight,
+                mean=torch.mean(model.bert.encoder.layer[config["target_layer"]].attention.output.dense.weight).detach().item(),
+                std=torch.std(model.bert.encoder.layer[config["target_layer"]].attention.output.dense.weight).detach().item()
+            )
         return model, BertTokenizerFast.from_pretrained(config["model_path"])
 
     elif config["model_type"] == "roberta" and config["random_init"] == False and config["layer_reinit"] == False:
@@ -146,35 +152,41 @@ def get_model_and_tokenizer(config):
         model = RobertaForMaskedLM.from_pretrained(config["model_path"])
         if config["operation"] == "mlp":
             # Reinitialize target layer mlps
-            model.roberta.encoder.layer[config["target_layer"]].intermediate.dense.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].intermediate.dense), 
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].intermediate.dense)
-                ))
-            model.roberta.encoder.layer[config["target_layer"]].output.dense.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].output.dense), 
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].output.dense)  
-            ))
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].intermediate.dense.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].intermediate.dense.weight).detach().item(), 
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].intermediate.dense.weight).detach().item()
+                )
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].output.dense.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].output.dense.weight).detach().item(), 
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].output.dense.weight).detach().item() 
+            )
             return model, RobertaTokenizerFast.from_pretrained(
                 config["model_path"], add_prefix_space=True
             )
         elif config["operation"] == "attn":
             # Reinit attn layer
-            model.roberta.encoder.layer[config["target_layer"]].attention.self.query.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.query),
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.query)
-            ))
-            model.roberta.encoder.layer[config["target_layer"]].attention.self.key.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.key),
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.key)
-            ))
-            model.roberta.encoder.layer[config["target_layer"]].attention.self.value.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.value),
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.value)
-            ))
-            model.roberta.encoder.layer[config["target_layer"]].attention.output.dense.apply(init.normal_(
-                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.output.dense),
-                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.output.dense)
-            ))
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].attention.self.query.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.query.weight).detach().item(),
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.query.weight).detach().item()
+            )
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].attention.self.key.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.key.weight).detach().item(),
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.key.weight).detach().item()
+            )
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].attention.self.value.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.self.value.weight).detach().item(),
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.self.value.weight).detach().item()
+            )
+            init.normal_(
+                model.roberta.encoder.layer[config["target_layer"]].attention.output.dense.weight,
+                mean=torch.mean(model.roberta.encoder.layer[config["target_layer"]].attention.output.dense.weight).detach().item(),
+                std=torch.std(model.roberta.encoder.layer[config["target_layer"]].attention.output.dense.weight).detach().item()
+            )
         return model, RobertaTokenizerFast.from_pretrained(
             config["model_path"], add_prefix_space=True
         )
@@ -204,27 +216,31 @@ def get_model_and_tokenizer(config):
             model = GPT2LMHeadModel.from_pretrained(config["model_path"])
             if config["operation"] == "mlp":
                 # Reinitialize target layer mlps
-                model.transformer.h[config["target_layer"]].mlp.c_fc.apply(init.normal_(
-                    mean=torch.mean(model.transformer.h[config["target_layer"]].mlp.c_fc),
-                    std=torch.std(model.transformer.h[config["target_layer"]].mlp.c_fc)
-                ))
-                model.transformer.h[config["target_layer"]].mlp.c_proj.apply(init.normal_(
-                    mean=torch.mean(model.transformer.h[config["target_layer"]].mlp.c_proj),
-                    std=torch.std(model.transformer.h[config["target_layer"]].mlp.c_proj)
-                ))
+                init.normal_(
+                    model.transformer.h[config["target_layer"]].mlp.c_fc.weight,
+                    mean=torch.mean(model.transformer.h[config["target_layer"]].mlp.c_fc.weight).detach().item(),
+                    std=torch.std(model.transformer.h[config["target_layer"]].mlp.c_fc.weight).detach().item()
+                )
+                init.normal_(
+                    model.transformer.h[config["target_layer"]].mlp.c_proj.weight,
+                    mean=torch.mean(model.transformer.h[config["target_layer"]].mlp.c_proj.weight).detach().item(),
+                    std=torch.std(model.transformer.h[config["target_layer"]].mlp.c_proj.weight).detach().item()
+                )
                 return model, GPT2TokenizerFast.from_pretrained(
                     config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
                 )
             elif config["operation"] == "attn":
                 # Reinit attn linear layers
-                model.transformer.h[config["target_layer"]].attn.c_attn.apply(init.normal_(
-                    mean=torch.mean(model.transformer.h[config["target_layer"]].attn.c_attn),
-                    std=torch.std(model.transformer.h[config["target_layer"]].attn.c_attn)
-                ))
-                model.transformer.h[config["target_layer"]].attn.c_proj.apply(init.normal_(
-                    mean=torch.mean(model.transformer.h[config["target_layer"]].attn.c_proj),
-                    std=torch.std(model.transformer.h[config["target_layer"]].attn.c_proj)
-                ))
+                init.normal_(
+                    model.transformer.h[config["target_layer"]].attn.c_attn.weight,
+                    mean=torch.mean(model.transformer.h[config["target_layer"]].attn.c_attn.weight).detach().item(),
+                    std=torch.std(model.transformer.h[config["target_layer"]].attn.c_attn.weight).detach().item()
+                )
+                init.normal_(
+                    model.transformer.h[config["target_layer"]].attn.c_proj.weight,
+                    mean=torch.mean(model.transformer.h[config["target_layer"]].attn.c_proj.weight).detach().item(),
+                    std=torch.std(model.transformer.h[config["target_layer"]].attn.c_proj.weight).detach().item()
+                )
             return model, GPT2TokenizerFast.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
@@ -267,23 +283,27 @@ def get_model_and_tokenizer(config):
             model = GPTNeoXForCausalLM.from_pretrained(config["model_path"], config=conf)
             if config["operation"] == "mlp":
                 # Reinitialize target layer mlps
-                model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h.apply(init.normal_(
-                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h),
-                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h)
-                ))
-                model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h.apply(init.normal_(
-                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h),
-                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h)
-                ))
+                init.normal_(
+                    model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h.weight,
+                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h.weight).detach().item(),
+                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].mlp.dense_h_to_4h.weight).detach().item()
+                )
+                init.normal_(
+                    model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h.weight,
+                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h.weight).detach().item(),
+                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].mlp.dense_4h_to_h.weight).detach().item()
+                )
             elif config["operation"] == "attn":
-                model.gpt_neox.layers[config["target_layer"]].attention.query_key_value.apply(init.normal_(
-                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].attention.query_key_value),
-                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].attention.query_key_value)
-                ))
-                model.gpt_neox.layers[config["target_layer"]].attention.dense.apply(init.normal_(
-                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].attention.dense),
-                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].attention.dense)
-                ))
+                init.normal_(
+                    model.gpt_neox.layers[config["target_layer"]].attention.query_key_value.weight,
+                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].attention.query_key_value.weight).detach().item(),
+                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].attention.query_key_value.weight).detach().item()
+                )
+                init.normal_(
+                    model.gpt_neox.layers[config["target_layer"]].attention.dense.weight,
+                    mean=torch.mean(model.gpt_neox.layers[config["target_layer"]].attention.dense.weight).detach().item(),
+                    std=torch.std(model.gpt_neox.layers[config["target_layer"]].attention.dense.weight).detach().item()
+                )
             tokenizer = AutoTokenizer.from_pretrained(
                 config["model_path"], pad_token="<|endoftext|>", add_prefix_space=True
             )
@@ -348,7 +368,7 @@ def create_circuit_probe(config, model, tokenizer):
         mask_hparams={
             "ablation": "none",
             "mask_unit": config["mask_unit"],
-            "mask_bias": config["mask_bias"],
+            "mask_bias": False,
             "mask_init_value": config["mask_init_value"],
         },
         target_layers=target_layers,
