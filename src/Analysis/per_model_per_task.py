@@ -30,13 +30,15 @@ if __name__ == "__main__":
     trained_random_results = pd.read_csv(os.path.join(args.dir, f'rand-{suffix}', 'results.csv'))
     embeds_results = pd.read_csv(os.path.join(args.dir, f'rand-embeds-{suffix}', 'results.csv'))
     froze_random_results = pd.read_csv(os.path.join(args.dir, f'rand-froz-{suffix}', 'results.csv'))
+    layer_results = pd.read_csv(os.path.join(args.dir, f'rand-layer-{suffix}', 'results.csv'))
 
     results = {
         "probe": probe_results,
         "frozen": froze_model_results,
         "trained_random": trained_random_results,
         "embeddings": embeds_results,
-        "frozen_random": froze_random_results
+        "frozen_random": froze_random_results,
+        "layer": layer_results
     }
 
     # Set up directory
@@ -53,16 +55,18 @@ if __name__ == "__main__":
     x_labels = list(range(n_layers))
     
     plt.bar(base_xs, results["probe"]["knn dev acc"], width=.5, color="blue", edgecolor="black", label="Probe-Dev")
-    plt.bar(base_xs + .5, results["frozen"]["knn dev acc"], width=.5, color="blue", hatch="/", edgecolor="black", label="Frozen-Dev")
-    plt.bar(base_xs + 1, results["embeddings"]["knn dev acc"], width=.5, color="blue", hatch="x", edgecolor="black", label="Embeddings-Dev")
-    plt.bar(base_xs + 1.5, results["trained_random"]["knn dev acc"], width=.5, color="blue", hatch="*", edgecolor="black", label="Trained-Random-Dev")
-    plt.bar(base_xs + 2, results["frozen_random"]["knn dev acc"], width=.5, color="blue", hatch="o", edgecolor="black", label="Frozen-Random-Dev")
+    plt.bar(base_xs + .5, results["layer"]["knn dev acc"], width=.5, color="blue", hatch="O", edgecolor="black", label="Layer-Dev")
+    plt.bar(base_xs + 1, results["frozen"]["knn dev acc"], width=.5, color="blue", hatch="/", edgecolor="black", label="Frozen-Dev")
+    plt.bar(base_xs + 1.5, results["embeddings"]["knn dev acc"], width=.5, color="blue", hatch="x", edgecolor="black", label="Embeddings-Dev")
+    plt.bar(base_xs + 2, results["trained_random"]["knn dev acc"], width=.5, color="blue", hatch="*", edgecolor="black", label="Trained-Random-Dev")
+    plt.bar(base_xs + 2.5, results["frozen_random"]["knn dev acc"], width=.5, color="blue", hatch="o", edgecolor="black", label="Frozen-Random-Dev")
 
-    plt.bar(base_xs + 2.5, results["probe"]["knn test acc"], width=.5, color="red", edgecolor="black", label="Probe-Test")
-    plt.bar(base_xs + 3, results["frozen"]["knn test acc"], width=.5, color="red", hatch="/", edgecolor="black", label="Frozen-Test")
-    plt.bar(base_xs + 3.5, results["embeddings"]["knn test acc"], width=.5, color="red", hatch="x", edgecolor="black", label="Embeddings-Test")
-    plt.bar(base_xs + 4, results["trained_random"]["knn test acc"], width=.5, color="red", hatch="*", edgecolor="black", label="Trained-Random-Test")
-    plt.bar(base_xs + 4.5, results["frozen_random"]["knn test acc"], width=.5, color="red", hatch="o", edgecolor="black", label="Frozen-Random-Test")
+    plt.bar(base_xs + 3, results["probe"]["knn test acc"], width=.5, color="red", edgecolor="black", label="Probe-Test")
+    plt.bar(base_xs + 3.5, results["layer"]["knn test acc"], width=.5, color="red", hatch="O", edgecolor="black", label="Probe-Test")
+    plt.bar(base_xs + 4, results["frozen"]["knn test acc"], width=.5, color="red", hatch="/", edgecolor="black", label="Frozen-Test")
+    plt.bar(base_xs + 4.5, results["embeddings"]["knn test acc"], width=.5, color="red", hatch="x", edgecolor="black", label="Embeddings-Test")
+    plt.bar(base_xs + 5, results["trained_random"]["knn test acc"], width=.5, color="red", hatch="*", edgecolor="black", label="Trained-Random-Test")
+    plt.bar(base_xs + 5.5, results["frozen_random"]["knn test acc"], width=.5, color="red", hatch="o", edgecolor="black", label="Frozen-Random-Test")
 
     plt.axhline(y=results["probe"]["dev majority acc"].iloc[0].item(), color="b", linestyle="--")
     plt.axhline(y=results["probe"]["test majority acc"].iloc[0].item(), color="r", linestyle="--")
@@ -81,7 +85,7 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(30, 20))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(30, 10))
+        fig, axs = plt.subplots(2, figsize=(30, 20))
 
     fig.suptitle(title, fontsize=35)
     n_layers = len(results["probe"]["model_id"])
@@ -127,7 +131,7 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(30, 20))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(30, 10))
+        fig, axs = plt.subplots(2, figsize=(30, 20))
 
     fig.suptitle(title, fontsize=35)
     n_layers = len(results["probe"]["model_id"])
@@ -169,30 +173,30 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(5, 10))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(5, 5))
+        fig, axs = plt.subplots(2, figsize=(5, 10))
 
     fig.suptitle(title, fontsize=14)
 
     probe_diffs = results["probe"]["vanilla acc"] - results["probe"]["ablated acc"]
-    probe_test_accs = results["probe"]["knn test acc"]
+    probe_test_accs = results["probe"]["knn test acc"] - results["layer"]["knn test acc"]
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_test_accs)
 
     axs[0].scatter(probe_diffs, probe_test_accs)
     axs[0].set_title("Language Modeling", size=10)
     axs[0].set_xlabel("LM Accuracy Difference After Ablating Probe Subnetwork")
-    axs[0].set_ylabel("Test Accuracy of Probe")
+    axs[0].set_ylabel("Test Accuracy of Probe - Random Layer")
     axs[0].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
     axs[0].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
     axs[0].legend()
 
     if incl_mlm:
         probe_diffs = results["probe"]["mlm vanilla acc"] - results["probe"]["mlm ablated acc"]
-        probe_test_accs = results["probe"]["knn test acc"]
+        probe_test_accs = results["probe"]["knn test acc"] - results["layer"]["knn test acc"]
         slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_test_accs)
         axs[1].scatter(probe_diffs, probe_test_accs)
         axs[1].set_title("Masked Language Modeling", size=10)
         axs[1].set_xlabel("MLM Accuracy Difference After Ablating Probe Subnetwork")
-        axs[1].set_ylabel("Test Accuracy of Probe")
+        axs[1].set_ylabel("Test Accuracy of Probe - Random Layer")
         axs[1].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
         axs[1].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
         axs[1].legend()
@@ -206,30 +210,30 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(5, 10))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(5, 5))
+        fig, axs = plt.subplots(2, figsize=(5, 10))
 
     fig.suptitle(title, fontsize=14)
 
     probe_diffs = results["probe"]["kl"]
-    probe_test_accs = results["probe"]["knn test acc"]
+    probe_test_accs = results["probe"]["knn test acc"] - results["layer"]["knn test acc"]
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_test_accs)
 
     axs[0].scatter(probe_diffs, probe_test_accs)
     axs[0].set_title("Language Modeling", size=10)
     axs[0].set_xlabel("LM KL After Ablating Probe Subnetwork")
-    axs[0].set_ylabel("Test Accuracy of Probe")
+    axs[0].set_ylabel("Test Accuracy of Probe - Test Acc of Random Layer")
     axs[0].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
     axs[0].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
     axs[0].legend()
 
     if incl_mlm:
         probe_diffs = results["probe"]["mlm kl"]
-        probe_test_accs = results["probe"]["knn test acc"]
+        probe_test_accs = results["probe"]["knn test acc"] - results["layer"]["knn test acc"]
         slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_test_accs)
         axs[1].scatter(probe_diffs, probe_test_accs)
         axs[1].set_title("Masked Language Modeling", size=10)
         axs[1].set_xlabel("MLM KL After Ablating Probe Subnetwork")
-        axs[1].set_ylabel("Test Accuracy of Probe")
+        axs[1].set_ylabel("Test Accuracy of Probe - Test Acc of Random Layer")
         axs[1].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
         axs[1].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
         axs[1].legend()
@@ -243,12 +247,12 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(5, 10))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(5, 5))
+        fig, axs = plt.subplots(2, figsize=(5, 10))
 
     fig.suptitle(title, fontsize=14)
 
     probe_diffs = results["probe"]["vanilla acc"] - results["probe"]["ablated acc"]
-    probe_loss = results["probe"]["dev loss"]
+    probe_loss = results["probe"]["dev loss"] - results["layer"]["dev loss"]
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_loss)
 
     axs[0].scatter(probe_diffs, probe_loss)
@@ -261,12 +265,12 @@ if __name__ == "__main__":
 
     if incl_mlm:
         probe_diffs = results["probe"]["mlm vanilla acc"] - results["probe"]["mlm ablated acc"]
-        probe_loss = results["probe"]["dev loss"]
+        probe_loss = results["probe"]["dev loss"]  - results["layer"]["dev loss"]
         slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_loss)
         axs[1].scatter(probe_diffs, probe_loss)
         axs[1].set_title("Masked Language Modeling", size=10)
         axs[1].set_xlabel("MLM Accuracy Difference After Ablating Probe Subnetwork")
-        axs[1].set_ylabel("Dev Loss of Probe")
+        axs[1].set_ylabel("Dev Loss of Probe - Dev Loss of Random Layer")
         axs[1].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
         axs[1].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
         axs[1].legend()
@@ -280,30 +284,30 @@ if __name__ == "__main__":
         fig, axs = plt.subplots(2, figsize=(5, 10))
     else:
         incl_mlm = False
-        fig, axs = plt.subplots(1, figsize=(5, 5))
+        fig, axs = plt.subplots(2, figsize=(5, 10))
 
     fig.suptitle(title, fontsize=14)
 
     probe_diffs = results["probe"]["kl"]
-    probe_loss = results["probe"]["dev loss"]
+    probe_loss = results["probe"]["dev loss"] - results["layer"]["dev loss"]
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_loss)
 
     axs[0].scatter(probe_diffs, probe_loss)
     axs[0].set_title("Language Modeling", size=10)
     axs[0].set_xlabel("LM KL After Ablating Probe Subnetwork")
-    axs[0].set_ylabel("Dev Loss of Probe")
+    axs[0].set_ylabel("Dev Loss of Probe - Random Loss")
     axs[0].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
     axs[0].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
     axs[0].legend()
 
     if incl_mlm:
         probe_diffs = results["probe"]["mlm kl"]
-        probe_loss = results["probe"]["dev loss"]
+        probe_loss = results["probe"]["dev loss"] - results["layer"]["dev loss"]
         slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(probe_diffs, probe_loss)
         axs[1].scatter(probe_diffs, probe_loss)
         axs[1].set_title("Masked Language Modeling", size=10)
         axs[1].set_xlabel("MLM KL After Ablating Probe Subnetwork")
-        axs[1].set_ylabel("Dev Loss of Probe")
+        axs[1].set_ylabel("Dev Loss of Probe - Random Loss")
         axs[1].plot([], [], ' ', label=f'R2: {round(r_value, 3)}')
         axs[1].plot([], [], ' ', label=f'P: {round(p_value, 3)}')
         axs[1].legend()

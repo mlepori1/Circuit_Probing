@@ -3,8 +3,9 @@ model_type: "roberta"
 model_path: "roberta-base"
 random_init: True
 reinit_embeddings: True
+layer_reinit: False
 target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-mask_unit: "neuron"
+mask_unit: "weight"
 mask_bias: False
 mask_init_list: [0.0]
 max_temp: 200
@@ -28,5 +29,5 @@ lm_eval: True
 
 # Output
 model_dir: "../Models/rand-pos"
-results_dir: "../Results/Neuron/RoBERTa/Pos/rand-pos"
+results_dir: "../Results/RoBERTa/Pos/rand-pos"
 save_models: False
