@@ -6,7 +6,6 @@ layer_reinit: False
 target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 operation_list: ["attn", "mlp"]
 mask_unit: "weight"
-mask_bias: False
 mask_init_list: [0.0]
 max_temp: 200
 
@@ -23,11 +22,14 @@ lm_size: 100
 num_epochs: 90
 lr_list: [0.001]
 batch_size_list: [16]
-seed: 0
+data_seed: 0
+model_seed_list: [0]
 l0_lambda: 0.0000001
+
+num_random_ablations: 10
 lm_eval: True
 
 # Output
-model_dir: "../Models/tag"
-results_dir: "../Results/Weight/RoBERTa2/Tag/tag"
+model_dir: "../Models/"
+results_dir: "../Results/Weight/RoBERTa/Tag/tag"
 save_models: False

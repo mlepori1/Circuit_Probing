@@ -86,7 +86,7 @@ if __name__ == "__main__":
     tok = BertTokenizerFast.from_pretrained("bert-base-uncased")
     dataset = ProbeDataset(
         "../data/ud-treebanks-conll2017/UD_English/en-ud-train.conllu",
-        "tag",
+        "dep",
         tok,
         seed=0,
     )

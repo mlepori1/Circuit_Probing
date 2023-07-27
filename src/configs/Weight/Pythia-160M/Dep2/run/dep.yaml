@@ -1,33 +1,35 @@
 # Model
-model_type: "roberta"
-model_path: "roberta-base"
-random_init: True
-reinit_embeddings: True
+model_type: "gpt_neox"
+model_path: "EleutherAI/pythia-160m"
+random_init: False
 layer_reinit: False
-target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+target_layer_list: [6, 7, 8, 9, 10, 11]
+operation_list: ["attn", "mlp"]
 mask_unit: "weight"
-mask_bias: False
-mask_init_list: [1.0]
+mask_init_list: [0.0]
 max_temp: 200
 
 # Data
 train_data_path: "../data/ud-treebanks-conll2017/UD_English/en-ud-train.conllu"
 lm_data_path: "../data/ud-treebanks-conll2017/UD_English/en-ud-dev.conllu"
-label: "pos"
+label: "dep"
 train_size: 1000
 dev_size: 100
 test_size: 1000
 lm_size: 100
 
 # Training
-num_epochs: 0
+num_epochs: 90
 lr_list: [0.001]
 batch_size_list: [16]
-seed: 0
+data_seed: 0
+model_seed_list: [0]
 l0_lambda: 0.0000001
+
+num_random_ablations: 10
 lm_eval: True
 
 # Output
-model_dir: "../Models/rand-froz-pos"
-results_dir: "../Results/RoBERTa/Pos/rand-froz-pos"
+model_dir: "../Models/"
+results_dir: "../Results/Weight/Pythia160M/Dep2/dep"
 save_models: False

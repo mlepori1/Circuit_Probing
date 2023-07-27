@@ -1,5 +1,5 @@
 export PROJECT_DIR=/users/mlepori/data/mlepori/projects/Circuit_Probing/
-export CONFIG_DIR=configs/Weight/Pythia-70M/Dep/run/
+export CONFIG_DIR=configs/Weight/BERT/Tag/run/
 for file in ${CONFIG_DIR}/*;
 do
     echo "$file"

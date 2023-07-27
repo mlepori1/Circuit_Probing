@@ -32,7 +32,8 @@ from NeuroSurgeon.src.Models.model_configs import (
     CircuitConfig
     )
 from NeuroSurgeon.src.Probing.circuit_probe import CircuitProbe
-from NeuroSurgeon.src.Probing.probe_configs import CircuitProbeConfig, ResidualUpdateModelConfig
+from NeuroSurgeon.src.Probing.subnetwork_probe import SubnetworkProbe
+from NeuroSurgeon.src.Probing.probe_configs import CircuitProbeConfig, SubnetworkProbeConfig, ResidualUpdateModelConfig
 import torch
 from torch.nn import init
 from torch.utils.data import random_split, DataLoader
@@ -388,13 +389,15 @@ def create_circuit_probe(config, model, tokenizer):
         resid_config = ResidualUpdateModelConfig(
             res_type,
             target_layers=[config["target_layer"]],
+            updates=config["updates"],
+            residual=config["residual"],
             mlp=True,
             attn=False,
             circuit=True,
             base=False,
         )
         circuit_probe_config = CircuitProbeConfig(
-            probe_updates=f'mlp_{config["target_layer"]}',
+            probe_activations=f'mlp_{config["target_layer"]}',
             circuit_config=circuit_config,
             resid_config=resid_config,
         )
@@ -402,13 +405,15 @@ def create_circuit_probe(config, model, tokenizer):
         resid_config = ResidualUpdateModelConfig(
             res_type,
             target_layers=[config["target_layer"]],
+            updates=config["updates"],
+            residual=config["residual"],
             mlp=False,
             attn=True,
             circuit=True,
             base=False,
         )
         circuit_probe_config = CircuitProbeConfig(
-            probe_updates=f'attn_{config["target_layer"]}',
+            probe_activations=f'attn_{config["target_layer"]}',
             circuit_config=circuit_config,
             resid_config=resid_config,
         )
@@ -417,6 +422,71 @@ def create_circuit_probe(config, model, tokenizer):
 
     return CircuitProbe(circuit_probe_config, model, tokenizer)
 
+
+def create_subnetwork_probe(config, model, tokenizer):
+   
+   # Create a null circuit config
+    circuit_config = CircuitConfig(
+        mask_method="continuous_sparsification",
+        mask_hparams={
+            "ablation": "none",
+            "mask_unit": "weight",
+            "mask_bias": False,
+            "mask_init_value": -1,
+        },
+        target_layers=[],
+        freeze_base=True,
+        add_l0=False,
+        l0_lambda=0.0,
+    )
+
+    if config["model_type"] in ["bert",  "roberta"]:
+        res_type = "bert"
+    elif config["model_type"] == "gpt2":
+        res_type = "gpt"
+    elif config["model_type"] == "gpt_neox":
+        res_type = "gpt_neox"
+
+    if config["operation"] == "mlp":
+        resid_config = ResidualUpdateModelConfig(
+            res_type,
+            target_layers=[config["target_layer"]],
+            updates=config["updates"],
+            residual=config["residual"],
+            mlp=True,
+            attn=False,
+            circuit=True,
+            base=False,
+        )
+        subnet_probe_config = SubnetworkProbeConfig(
+            probe_activations=f'mlp_{config["target_layer"]}',
+            intermediate_size=config["intermediate_size"],
+            n_classes=config["n_classes"],
+            circuit_config=circuit_config,
+            resid_config=resid_config,
+        )
+    elif config["operation"] == "attn":
+        resid_config = ResidualUpdateModelConfig(
+            res_type,
+            target_layers=[config["target_layer"]],
+            updates=config["updates"],
+            residual=config["residual"],
+            mlp=False,
+            attn=True,
+            circuit=True,
+            base=False,
+        )
+        subnet_probe_config = SubnetworkProbeConfig(
+            probe_activations=f'attn_{config["target_layer"]}',
+            intermediate_size=config["intermediate_size"],
+            n_classes=config["n_classes"],
+            circuit_config=circuit_config,
+            resid_config=resid_config,
+        )
+    else:
+        raise ValueError("operation must be either mlp or attn")
+
+    return SubnetworkProbe(subnet_probe_config, model, tokenizer)
 
 def create_datasets(config, tokenizer):
     dataset = ProbeDataset(
