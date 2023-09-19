@@ -1,0 +1,34 @@
+# Model
+model_path: "gpt2"
+random_init: False
+layer_reinit: False
+target_layer_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+operation_list: ["attn", "mlp"]
+mask_init_list: [0.0]
+max_temp: 200
+probe_index_list: [-1]
+
+# Data
+data_path: "../data/SV_Agr/SV_Agr.csv"
+gen_path: "../data/SV_Agr/SV_Agr_gen.csv"
+train_size: 2000
+test_size: 1000
+multitask: False
+agreement: True
+
+# Training
+num_epochs: 90
+lr_list: [0.001]
+batch_size_list: [500]
+data_seed: 0
+l0_lambda: 0.0000001
+model_seed_list: [0]
+
+num_random_ablations: 5
+lm_eval: True
+
+# Output
+model_dir: "../Model/Probes/SV_Agr/small/"
+results_dir: "../Results/Probes/SV_Agr/small/"
+save_models: False
+gif: False

@@ -1,0 +1,38 @@
+agreement: false
+batch_size_list:
+- 500
+data_seed: 0
+gif: true
+gif_interval: 10
+l0_lambda: 1.0e-06
+layer_reinit: false
+lm_eval: true
+lr_list:
+- 0.001
+mask_init_list:
+- 0.0
+max_temp: 200
+model_dir: ../Model/Probes/Disambiguation/a2_minus_b2/Mask/a_plus_b/
+model_path: ../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f6c7629b-046c-4eae-9f70-4ee6bfc6c08c_final
+model_seed_list:
+- 0
+multitask: false
+num_epochs: 90
+num_random_ablations: 0
+operation_list:
+- attn
+- mlp
+probe_index_list:
+- 2
+random_init: false
+results_dir: ../Results/Probes/Disambiguation/a2_minus_b2/Mask/a_plus_b/
+save_models: false
+target_layer_list:
+- 0
+test_data_path: ../data/Disambiguation/a2_minus_b2/test.csv
+train_data_path: ../data/Disambiguation/a2_minus_b2/train.csv
+train_size: 2500
+variable: aux_0
+
+# GIF
+gif: false

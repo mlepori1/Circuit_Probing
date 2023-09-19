@@ -1,0 +1,35 @@
+agreement: false
+batch_size_list:
+- 500
+data_seed: 0
+gif: true
+gif_interval: 10
+l0_lambda: 1.0e-06
+layer_reinit: false
+lm_eval: true
+lr_list:
+- 0.001
+mask_init_list:
+- 0.0
+max_temp: 200
+model_dir: ../Model/Probes/Grokking/a4_b/Mask/299
+model_path: ../Model/Algorithmic_Train/Grokking/a4_b/7a471893-ce32-49a9-96d7-6dab38522e33_299
+model_seed_list:
+- 0
+multitask: false
+num_epochs: 90
+num_random_ablations: 0
+operation_list:
+- attn
+- mlp
+probe_index_list:
+- 2
+random_init: false
+results_dir: ../Results/Probes/Grokking/a4_b/Mask/299
+save_models: false
+target_layer_list:
+- 0
+test_data_path: ../data/Grokking/a4_b/test.csv
+train_data_path: ../data/Grokking/a4_b/train.csv
+train_size: 2500
+variable: var_0

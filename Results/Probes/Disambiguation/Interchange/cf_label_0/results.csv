@@ -1,0 +1,13 @@
+,model_id,data_seed,target_layer,target_position,residual_location,model path,counterfactual accuracy,original model accuracy,logit diff
+0,4666205e-4cb2-45a2-ba00-1ca4afa56157,0,0,0,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,0.9867049599838146
+1,b7b70c86-6fc6-4957-abad-c23269312611,0,0,0,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,0.9867049599838146
+2,0c54f76b-8d2f-409f-a3be-9c850e6595a4,0,0,1,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,0.9848391191852028
+3,20990bfc-1e91-4f2b-8204-05c4655f84ed,0,0,1,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,0.9848391191852028
+4,63039374-1472-4ecd-848e-e6cb9755f089,0,0,2,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,91,5108,-0.008510202039766934
+5,8a66529f-ab0f-410c-98c7-876cca543fb6,0,0,2,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,91,5108,-0.008510202039766934
+6,61f9075b-c488-49ad-971a-7a22407940dc,0,1,0,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,1.0
+7,3cdef521-a6d5-4231-80a7-f4624d34c553,0,1,0,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,1.0
+8,09e34124-c1da-4ea5-aada-266dd01ecc29,0,1,1,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,1.0
+9,cf910df6-7445-4b95-82e0-8f2cdf7d205e,0,1,1,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,81,5108,1.0
+10,c669e2a6-7b5f-4af8-9430-d5fc81d5f3a0,0,1,2,resid_mid,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,91,5108,-0.00960538396186735
+11,2f85d095-ba14-4c6e-8680-60653c89a887,0,1,2,resid_post,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final,91,5108,-0.00960538396186735

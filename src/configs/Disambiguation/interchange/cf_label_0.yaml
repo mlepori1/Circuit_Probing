@@ -1,0 +1,12 @@
+# Data
+counterfactual_label: ["CF_Label_0"]
+model_path: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2/f4b23396-e41a-460f-9122-65e0daa565ef_final"
+
+data_seed: 0
+target_layer_list: [0, 1]
+target_position_list: [0, 1, 2]
+residual_location_list: ["resid_mid", "resid_post"]
+
+# Output
+data_path: "../data/Disambiguation/a2_minus_b2/test.csv"
+results_dir: "../Results/Probes/Disambiguation/Interchange/cf_label_0"

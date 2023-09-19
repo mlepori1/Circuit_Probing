@@ -1,7 +1,8 @@
-from transformers import BertTokenizerFast
 import torch
-from ..ProbeDataset import ProbeDataset
+from transformers import BertTokenizerFast
+
 from ..LMEvalDataset import MLMEvalDataset
+from ..ProbeDataset import ProbeDataset
 
 
 def test_probe_dataset_conll_parsing():

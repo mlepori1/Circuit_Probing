@@ -1,141 +1,157 @@
-import torch
-import torch.nn.functional as F
 import numpy as np
-from LMEvalDataset import LMEvalDataset, MLMEvalDataset
-from torch.utils.data import random_split, DataLoader
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import DataLoader, random_split
+
+from Datasets import LMEvalDataset
 
 
-def get_lm_eval_data(config, tokenizer):
+def get_lm_eval_data(config, data_path):
     # Gets data for running behavioral lm evals
-    lm_dataset = LMEvalDataset(config["lm_data_path"], tokenizer, seed=config["data_seed"])
-    mlm_dataset = MLMEvalDataset(config["lm_data_path"], tokenizer, seed=config["data_seed"])
-
-    remainder = len(lm_dataset) - config["lm_size"]
-
-    torch.manual_seed(config["data_seed"])
-    lm_dataset, _ = random_split(lm_dataset, [config["lm_size"], remainder])
-    mlm_dataset, _ = random_split(mlm_dataset, [config["lm_size"], remainder])
-
-    lm_loader = DataLoader(lm_dataset, batch_size=config["batch_size"])
-    mlm_loader = DataLoader(mlm_dataset, batch_size=1)  # Batch size MUST be 1 for this
-    return lm_loader, mlm_loader
+    lm_dataset = LMEvalDataset(data_path)
+    lm_loader = DataLoader(
+        lm_dataset, config["batch_size"], shuffle=False, drop_last=False
+    )
+    return lm_loader
 
 
-def lm_eval(config, model, tokenizer, dataloader):
-    # Runs eval for MLM with no masked entries
-    kl_divs = []
+def lm_eval(config, model, dataloader, ablate_set=None):
     abl_correct = []
     vanilla_correct = []
     for batch in dataloader:
         batch = {k: v.to(config["device"]) for k, v in batch.items()}
-        abl_outputs = model(**batch).logits
-        abl_outputs = abl_outputs.reshape(
-            -1, abl_outputs.shape[-1]
-        )  # Reshape outputs into [# Tokens, Vocab Size]
 
+        # Get full model accuracy
         model.use_masks(False)
-        vanilla_outputs = model(**batch).logits
-        vanilla_outputs = vanilla_outputs.reshape(-1, abl_outputs.shape[-1])
-        model.use_masks(True)
+        vanilla_outputs = model(input_ids=batch["input_ids"]).logits
+        vanilla_outputs = vanilla_outputs[:, -1]
+        vanilla_outputs = vanilla_outputs.to(torch.float64)
 
-        # Compute Accuracies
-        labels = batch["input_ids"].reshape(-1)
-        not_special_tokens = ~torch.tensor(
-            tokenizer.get_special_tokens_mask(labels, already_has_special_tokens=True)
-        ).bool()
-        print(not_special_tokens)
+        # Get ablated model accuracy
+        model.use_masks(True, ablate_set)
+        abl_outputs = model(input_ids=batch["input_ids"]).logits
+        abl_outputs = abl_outputs[:, -1]
+        abl_outputs = abl_outputs.to(torch.float64)
 
-        if config["model_type"] == "gpt2" or config["model_type"] == "gpt_neox":
-            # Shift labels right one place
-            label_mask = (
-                torch.cat((torch.tensor([0]), not_special_tokens[:-1]))
-                .reshape(-1)
-                .bool()
-            )
-        else:
-            label_mask = not_special_tokens
-
-        labels = labels[label_mask]
-
-        # Only account for non-special tokens
-        abl_outputs = abl_outputs[not_special_tokens]
-        vanilla_outputs = vanilla_outputs[not_special_tokens]
-
+        # Compute accuracy
         abl_preds = torch.argmax(abl_outputs, dim=-1)
         van_preds = torch.argmax(vanilla_outputs, dim=-1)
 
-        abl_correct += list((abl_preds == labels).cpu())
-        vanilla_correct += list((van_preds == labels).cpu())
+        abl_correct += list((abl_preds == batch["labels"]).cpu())
+        vanilla_correct += list((van_preds == batch["labels"]).cpu())
 
-        # Compute KL Div
-        kl_divs += list(
-            F.kl_div(
-                F.log_softmax(abl_outputs, dim=-1),
-                F.log_softmax(vanilla_outputs, dim=-1),
-                log_target=True,
-                reduction="none",
-            )
-            .sum(dim=-1)
-            .cpu()
-        )
+    model.use_masks(True)
 
     return {
         "vanilla_acc": np.sum(vanilla_correct) / len(vanilla_correct),
         "ablated_acc": np.sum(abl_correct) / len(abl_correct),
-        "kl": np.sum(kl_divs) / len(kl_divs),
     }
 
 
-def masked_lm_eval(config, model, tokenizer, dataloader):
-    # Runs LM eval for mlm with 1 masked token per datapoint
-    if config["model_type"] == "gpt2" or config["model_type"] == "gpt_neox":
-        return {"mlm_vanilla_acc": -1, "mlm_ablated_acc": -1, "mlm_kl": -1}
-
-    kl_divs = []
+def agreement_eval(config, model, dataloader, sing_id, plur_id, ablate_set=None):
     abl_correct = []
     vanilla_correct = []
     for batch in dataloader:
         batch = {k: v.to(config["device"]) for k, v in batch.items()}
-        input_ids = batch["input_ids"][0]  # Batching happens within dataset
-        abl_outputs = model(input_ids=input_ids).logits
-        abl_outputs = abl_outputs.reshape(
-            -1, abl_outputs.shape[-1]
-        )  # Reshape outputs into [# Tokens, Vocab Size]
 
+        # Get full model accuracy
         model.use_masks(False)
-        vanilla_outputs = model(input_ids=input_ids).logits
-        vanilla_outputs = vanilla_outputs.reshape(-1, abl_outputs.shape[-1])
-        model.use_masks(True)
+        vanilla_outputs = model(input_ids=batch["input_ids"]).logits
+        vanilla_outputs = vanilla_outputs[batch["token_mask"]]
+        vanilla_outputs = vanilla_outputs.to(torch.float64)
 
-        # Compute Accuracies
-        labels = batch["labels"].reshape(-1)
-        masked_ids = (input_ids == tokenizer.mask_token_id).reshape(-1)
+        # Get ablated model accuracy
+        model.use_masks(True, ablate_set)
+        abl_outputs = model(input_ids=batch["input_ids"]).logits
+        abl_outputs = abl_outputs[batch["token_mask"]]
+        abl_outputs = abl_outputs.to(torch.float64)
 
-        # Only account for masked tokens
-        abl_outputs = abl_outputs[masked_ids]
-        vanilla_outputs = vanilla_outputs[masked_ids]
-        labels = labels[masked_ids]
+        # Compute singular vs. plural
+        # 0 corresponds to singular, 1 to plural
+        abl_preds = abl_outputs[:, plur_id] > abl_outputs[:, sing_id]
+        van_preds = vanilla_outputs[:, plur_id] > vanilla_outputs[:, sing_id]
 
-        abl_preds = torch.argmax(abl_outputs, dim=-1)
-        van_preds = torch.argmax(vanilla_outputs, dim=-1)
+        abl_correct += list((abl_preds == batch["labels"]).cpu())
+        vanilla_correct += list((van_preds == batch["labels"]).cpu())
 
-        abl_correct += list((abl_preds == labels).cpu())
-        vanilla_correct += list((van_preds == labels).cpu())
-
-        # Compute KL Div
-        kl_divs += list(
-            F.kl_div(
-                F.log_softmax(abl_outputs, dim=-1),
-                F.log_softmax(vanilla_outputs, dim=-1),
-                log_target=True,
-                reduction="none",
-            )
-            .sum(dim=-1)
-            .cpu()
-        )
+    model.use_masks(True)
 
     return {
-        "mlm_vanilla_acc": np.sum(vanilla_correct) / len(vanilla_correct),
-        "mlm_ablated_acc": np.sum(abl_correct) / len(abl_correct),
-        "mlm_kl": np.sum(kl_divs) / len(kl_divs),
+        "vanilla_acc": np.sum(vanilla_correct) / len(vanilla_correct),
+        "ablated_acc": np.sum(abl_correct) / len(abl_correct),
+    }
+
+def reflexive_eval(config, model, dataloader, ablate_set=None):
+    abl_correct = []
+    vanilla_correct = []
+
+    loss = nn.CrossEntropyLoss(reduce=False)
+    for batch in dataloader:
+        batch = {k: v.to(config["device"]) for k, v in batch.items()}
+
+        # Get full model accuracy
+        model.use_masks(False)
+        gram_outputs = model(input_ids=batch["input_ids"])
+
+        # Get logits predicting pronoun
+        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
+        logits = gram_outputs.logits[logit_mask]
+        # Get labels for the pronoun
+        label_mask = torch.roll(logit_mask, 1, -1)
+        labels = batch["input_ids"][label_mask]
+  
+        # Flatten the tokens
+        gram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
+        gram_loss = torch.sum(gram_loss.reshape(-1, 2), -1)
+
+        ungram_outputs = model(input_ids=batch["ungrammatical"])
+        # Get logits predicting pronoun
+        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
+        logits = ungram_outputs.logits[logit_mask]
+
+        # Get labels for the pronoun
+        label_mask = torch.roll(logit_mask, 1, -1)
+        labels = batch["ungrammatical"][label_mask]
+
+        # Flatten the tokens
+        ungram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
+        ungram_loss = torch.sum(ungram_loss.reshape(-1, 2), -1)
+
+        vanilla_correct += list((ungram_loss > gram_loss).cpu())
+
+        # Get ablated model accuracy
+        model.use_masks(True, ablate_set)
+        gram_outputs = model(input_ids=batch["input_ids"])
+        
+        # Get logits predicting pronoun
+        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
+        logits = gram_outputs.logits[logit_mask]
+        # Get labels for the pronoun
+        label_mask = torch.roll(logit_mask, 1, -1)
+        labels = batch["input_ids"][label_mask]
+  
+        # Flatten the tokens
+        gram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
+        gram_loss = torch.sum(gram_loss.reshape(-1, 2), -1)
+
+        ungram_outputs = model(input_ids=batch["ungrammatical"])
+        # Get logits predicting pronoun
+        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
+        logits = ungram_outputs.logits[logit_mask]
+
+        # Get labels for the pronoun
+        label_mask = torch.roll(logit_mask, 1, -1)
+        labels = batch["ungrammatical"][label_mask]
+
+        # Flatten the tokens
+        ungram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
+        ungram_loss = torch.sum(ungram_loss.reshape(-1, 2), -1)
+        abl_correct += list((ungram_loss > gram_loss).cpu())
+
+    model.use_masks(True)
+
+    return {
+        "vanilla_acc": np.sum(vanilla_correct) / len(vanilla_correct),
+        "ablated_acc": np.sum(abl_correct) / len(abl_correct),
     }

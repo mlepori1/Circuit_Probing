@@ -1,5 +1,5 @@
 from ..lm_eval import get_lm_eval_data, lm_eval, masked_lm_eval
-from ..utils import get_model_and_tokenizer, create_circuit_probe
+from ..utils import create_circuit_probe, get_model_and_tokenizer
 
 
 def test_same_lm_when_not_ablating_bert():

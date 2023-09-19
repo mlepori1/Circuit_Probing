@@ -1,0 +1,2 @@
+,model_id,train length,test length,lr,data_seed,model_seed,train loss,test loss,train acc,test acc,model_dir
+0,b2793434-2414-488c-bf83-33afed4b7df0,3192,9577,0.001,0,0,1.7737577452245226e-07,3.439507167778664e-07,1.0,1.0,../Model/Algorithmic_Train/Two_Nodes/amod29_bmod31

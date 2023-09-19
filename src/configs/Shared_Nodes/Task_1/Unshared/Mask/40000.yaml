@@ -1,0 +1,36 @@
+batch_size_list:
+- 500
+data_seed: 0
+gif: true
+gif_interval: 10
+l0_lambda: 1.0e-06
+layer_reinit: false
+lm_different_task_path: ../data/Shared_Nodes/Task_2/test.csv
+lm_eval: true
+lm_same_task_path: ../data/Shared_Nodes/Task_1/test.csv
+lr_list:
+- 0.001
+mask_init_list:
+- 0.0
+max_temp: 200
+model_dir: ../Model/Probes/Shared_Nodes/Task_1/Unshared/40000
+model_path: ../Model/Algorithmic_Train/Shared_Nodes/af7c3c7a-f3c7-492d-9242-146d702e5703_40000
+model_seed_list:
+- 0
+num_epochs: 90
+num_random_ablations: 0
+operation_list:
+- attn
+- mlp
+probe_index_list:
+- 3
+random_init: false
+results_dir: ../Results/Probes/Shared_Nodes/Task_1/Unshared/40000
+save_models: true
+target_layer_list:
+- 0
+task: multitask
+test_data_path: ../data/Shared_Nodes/Task_1/test.csv
+train_data_path: ../data/Shared_Nodes/Task_1/train.csv
+train_size: 3000
+variable: var_1

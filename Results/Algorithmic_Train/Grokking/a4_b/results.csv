@@ -1,0 +1,2 @@
+,model_id,train length,test length,lr,data_seed,model_seed,train loss,test loss,train acc,test acc,model_dir
+0,7a471893-ce32-49a9-96d7-6dab38522e33,2553,10216,0.002,0,0,0.00023103318846362937,0.00029576366096365034,1.0,1.0,../Model/Algorithmic_Train/Grokking/a4_b
