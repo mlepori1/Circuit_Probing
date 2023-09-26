@@ -1,2 +1,0 @@
-,model_id,train length,test length,lr,data_seed,model_seed,train loss,test loss,train acc,test acc,model_dir
-0,f4b23396-e41a-460f-9122-65e0daa565ef,7661,5108,0.001,0,0,0.020385821875450946,0.02478909112404226,1.0,1.0,../Model/Algorithmic_Train/Disambiguation/a2_minus_b2

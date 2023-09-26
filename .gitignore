@@ -1,4 +1,5 @@
 data/*
+Model/*
 */__pycache__
 *.pyc
 src/err/*

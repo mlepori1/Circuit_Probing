@@ -1,2 +1,2 @@
 ,model_id,train length,test length,lr,data_seed,model_seed,train loss,test loss,train acc,test acc,model_dir
-0,af7c3c7a-f3c7-492d-9242-146d702e5703,12768,12770,0.001,0,0,6.578290615907833e-06,9.193001114139832e-06,1.0,1.0,../Model/Algorithmic_Train/Shared_Nodes
+0,model_LR_0.001_Seed_0,15322,10216,0.001,0,0,4.963733733587437e-05,5.0878714349590294e-05,1.0,1.0,../Model/Algorithmic_Train/Shared_Nodes
