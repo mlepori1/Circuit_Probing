@@ -1,0 +1,16 @@
+# Data
+counterfactual_label: ["CF_Label_1"]
+model_path: "../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000"
+n_train: 2500
+n_val: 1000
+
+# Intervention
+epochs: 250
+location_list: ["attn", "mlp"]
+token_range: "4_5"
+
+# Output
+train_path: "../data/Shared_Nodes/Task_2/train.csv"
+test_path: "../data/Shared_Nodes/Task_2/test.csv"
+
+results_dir: "../Results/Probes/Shared_Nodes/Task_2/DAS/shared"

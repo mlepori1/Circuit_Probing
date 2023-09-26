@@ -5,30 +5,19 @@ import pandas as pd
 import torch
 
 
-def generate_variable_function_results(variable_function, dataset, task_id, mod):
+def generate_variable_function_results(variable_function, dataset, a_idx, b_idx, mod):
         # Pass in the right tokens as function args
-        if task_id is not None:
             # If modulo is set for a function, don't pass it in (i.e. for mod N functions)
-            if (
-                hasattr(variable_function, "keywords")
-                and variable_function.keywords["p"] is not None
-            ):
-                intermediate_output = variable_function(dataset[:, 1], dataset[:, 2])
-            else:
-                intermediate_output = variable_function(
-                    dataset[:, 1], dataset[:, 2], mod
-                )
-
+        if (
+            hasattr(variable_function, "keywords")
+            and variable_function.keywords["p"] is not None
+        ):
+            intermediate_output = variable_function(dataset[:,a_idx], dataset[:, b_idx])
         else:
-            if (
-                hasattr(variable_function, "keywords")
-                and variable_function.keywords["p"] is not None
-            ):
-                intermediate_output = variable_function(dataset[:, 0], dataset[:, 1])
-            else:
-                intermediate_output = variable_function(
-                    dataset[:, 0], dataset[:, 1], mod
-                )
+            intermediate_output = variable_function(
+                dataset[:, a_idx], dataset[:, b_idx], mod
+            )
+
         return intermediate_output
 
 def join_data(data, counterfactual_data, labels, intermediate_variables, counterfactual_intermediate_variables, auxiliary_variables, counterfactual_auxiliary_variables, indices):
@@ -74,7 +63,7 @@ def join_data(data, counterfactual_data, labels, intermediate_variables, counter
 
     return df, data, labels
 
-def add_counterfactual_labels(df, counterfactual_label_functions, mod):
+def add_cf_labels(df, label_functions, mod):
     """_summary_
 
     :param df: dataframe with all intermediate variables, auxiliary variables, and counterfactual variables
@@ -83,8 +72,8 @@ def add_counterfactual_labels(df, counterfactual_label_functions, mod):
         to be included in the dataframe
     :type counterfactual_label_functions: List[List[Str]]
     """
-    for i in range(len(counterfactual_label_functions)):
-        label_function = counterfactual_label_functions[i]
+    for i in range(len(label_functions)):
+        label_function = label_functions[i]
         var1 = df[label_function[0]]
         var2 = df[label_function[1]]
         if label_function[2] == "+":
@@ -93,16 +82,18 @@ def add_counterfactual_labels(df, counterfactual_label_functions, mod):
             label = (var1 * var2) % mod
         df["CF_Label_" + str(i)] = label
         df["CF_FN_" + str(i)] = " ".join(label_function)
+   
     return df
         
 def generate_data(
     intermediate_variable_functions,
     mod=113,
     train_frac=0.25,
-    data_seed=0,
     device="cuda",
     data_path="/data/",
     task_id=None,
+    insert_random_tokens=None,
+    label_function=["var_0", "var_1", "+"],
     auxiliary_variable_functions=[],
     counterfactual_label_functions=[],
 ):
@@ -118,34 +109,47 @@ def generate_data(
     else:
         dataset = torch.stack([a_vector, b_vector, equals_vector], dim=1)
 
-    torch.manual_seed(data_seed)
+    # Add random vector, if that is necessary (i.e. during multitask training)
+    if insert_random_tokens is not None:
+        random_vector = einops.repeat(torch.randperm(mod), "j -> (i j)", i=mod)
+        dataset = torch.cat([dataset[:, :insert_random_tokens], random_vector.reshape(-1, 1), dataset[:, insert_random_tokens:]], dim=1)
+
     indices = torch.randperm(mod * mod)
-    # assert no datapoint is paired with itself
-    assert torch.all(torch.tensor(list(range(len(dataset)))) != indices)
+
+    # Resample counterfactuals until all counterfactuals are different from the samples
+    while not torch.all(torch.arange(len(dataset)) != indices):
+        indices = torch.randperm(mod * mod)
+
     counterfactual_dataset = dataset[indices]
 
     # Functions always take the form F1(A, B, mod) + F2(A, B, mod) + ... % mod
     intermediate_variables = []
     intermediate_counterfactual_variables = []
-    for variable_function in intermediate_variable_functions:
-        intermediate_variables.append(generate_variable_function_results(variable_function, dataset, task_id, mod))
-        intermediate_counterfactual_variables.append(generate_variable_function_results(variable_function, counterfactual_dataset, task_id, mod))
+    for fn_tuple in intermediate_variable_functions:
+        variable_function = fn_tuple[0]
+        a_idx = fn_tuple[1]
+        b_idx = fn_tuple[2]
+        intermediate_variables.append(generate_variable_function_results(variable_function, dataset, a_idx, b_idx, mod))
+        intermediate_counterfactual_variables.append(generate_variable_function_results(variable_function, counterfactual_dataset, a_idx, b_idx, mod))
 
     auxiliary_variables = []
     auxiliary_counterfactual_variables = []
-    for variable_function in auxiliary_variable_functions:
-        auxiliary_variables.append(generate_variable_function_results(variable_function, dataset, task_id, mod))
-        auxiliary_counterfactual_variables.append(generate_variable_function_results(variable_function, counterfactual_dataset, task_id, mod))
+    for fn_tuple in auxiliary_variable_functions:
+        variable_function = fn_tuple[0]
+        a_idx = fn_tuple[1]
+        b_idx = fn_tuple[2]
+        auxiliary_variables.append(generate_variable_function_results(variable_function, dataset, a_idx, b_idx, mod))
+        auxiliary_counterfactual_variables.append(generate_variable_function_results(variable_function, counterfactual_dataset, a_idx, b_idx, mod))
 
     intermediate_variables = torch.stack(intermediate_variables)
     intermediate_counterfactual_variables = torch.stack(intermediate_counterfactual_variables)
-    auxiliary_variables = torch.stack(auxiliary_variables)
-    auxiliary_counterfactual_variables = torch.stack(auxiliary_counterfactual_variables)
+    if auxiliary_variables != []:
+        auxiliary_variables = torch.stack(auxiliary_variables)
+        auxiliary_counterfactual_variables = torch.stack(auxiliary_counterfactual_variables)
 
     # Labels are always summations over intermediate variables, mod P
     labels = intermediate_variables.sum(0) % mod
 
-    torch.manual_seed(data_seed)
     indices = torch.randperm(mod * mod)
     cutoff = int(mod * mod * train_frac)
     train_indices = indices[:cutoff]
@@ -155,8 +159,9 @@ def generate_data(
     train_df, train_data, train_labels = join_data(dataset, counterfactual_dataset, labels, intermediate_variables, intermediate_counterfactual_variables, auxiliary_variables, auxiliary_counterfactual_variables, train_indices)
     test_df, test_data, test_labels = join_data(dataset, counterfactual_dataset, labels, intermediate_variables, intermediate_counterfactual_variables, auxiliary_variables, auxiliary_counterfactual_variables, test_indices)
 
-    train_df = add_counterfactual_labels(train_df, counterfactual_label_functions, mod)
-    test_df = add_counterfactual_labels(test_df, counterfactual_label_functions, mod)
+    train_df = add_cf_labels(train_df, counterfactual_label_functions, mod)
+    test_df = add_cf_labels(test_df, counterfactual_label_functions, mod)
+
 
     train_df.to_csv(os.path.join(data_path, "train.csv"))
     test_df.to_csv(os.path.join(data_path, "test.csv"))
@@ -174,34 +179,34 @@ def generate_multitask_data(
     task_2_functions,
     mod=113,
     train_frac=0.25,
-    data_seed=0,
     device="cuda",
-    save_data=True,
     data_path="/data/",
     task_1_aux_functions=[],
     task_2_aux_functions=[],
+    task_1_counterfactual_label_functions=[],
+    task_2_counterfactual_label_functions=[]
 ):
     train_x_1, train_y_1, test_x_1, test_y_1 = generate_data(
         task_1_functions,
         mod=mod,
+        insert_random_tokens=2,
         train_frac=train_frac,
-        data_seed=data_seed,
         device=device,
-        save_data=save_data,
         data_path=os.path.join(data_path, "Task_1"),
         task_id=mod + 1,
         auxiliary_variable_functions=task_1_aux_functions,
+        counterfactual_label_functions=task_1_counterfactual_label_functions,
     )
     train_x_2, train_y_2, test_x_2, test_y_2 = generate_data(
         task_2_functions,
         mod=mod,
+        insert_random_tokens=3,
         train_frac=train_frac,
-        data_seed=data_seed,
         device=device,
-        save_data=save_data,
         data_path=os.path.join(data_path, "Task_2"),
         task_id=mod + 2,
         auxiliary_variable_functions=task_2_aux_functions,
+        counterfactual_label_functions=task_2_counterfactual_label_functions,
     )
 
     train_data = torch.cat([train_x_1, train_x_2])

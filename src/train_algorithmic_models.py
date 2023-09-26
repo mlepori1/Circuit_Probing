@@ -1,9 +1,9 @@
 import copy
 import os
 import shutil
-import uuid
 from functools import partial
 
+import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -33,13 +33,14 @@ def compute_acc(logits, labels):
 
 def convert_strings_to_functions(string_fns):
     intermediate_functions = []
-    for fn in string_fns:
+    for fn_def in string_fns:
+        fn = fn_def[0]
         if "mod" in fn:
             modulo = int(fn.split("_")[-1])
             fn = "_".join(fn.split("_")[:-1])
-            intermediate_functions.append(partial(STR_2_FN[fn], p=modulo))
+            intermediate_functions.append((partial(STR_2_FN[fn], p=modulo), fn_def[1], fn_def[2]))
         else:
-            intermediate_functions.append(STR_2_FN[fn])
+            intermediate_functions.append((STR_2_FN[fn], fn_def[1], fn_def[2]))
     return intermediate_functions
 
 
@@ -140,15 +141,20 @@ def main():
         else:
             auxiliary_functions = []
 
+        if "counterfactual_label_functions" in config.keys():
+            counterfactual_label_functions = config["counterfactual_label_functions"]
+        else:
+            counterfactual_label_functions = []
+
+        torch.manual_seed(config["data_seed"])
         train_x, train_y, test_x, test_y = data_utils.generate_data(
             intermediate_functions,
             config["mod"],
             train_frac=config["train_frac"],
-            data_seed=config["data_seed"],
             device=config["device"],
             data_path=config["data_dir"],
             auxiliary_variable_functions=auxiliary_functions,
-            counterfactual_label_functions=config["counterfactual_label_functions"],
+            counterfactual_label_functions=counterfactual_label_functions,
         )
     else:
         intermediate_functions_1 = convert_strings_to_functions(
@@ -158,23 +164,39 @@ def main():
             config["intermediate_functions_2"]
         )
 
+        if "task_1_auxiliary_functions" in config.keys():
+            task_1_auxiliary_functions = convert_strings_to_functions(
+                config["task_1_auxiliary_functions"]
+            )
+        else:
+            task_1_auxiliary_functions = []
+
+        if "task_2_auxiliary_functions" in config.keys():
+            task_2_auxiliary_functions = convert_strings_to_functions(
+                config["task_2_auxiliary_functions"]
+            )
+        else:
+            task_2_auxiliary_functions = []
+
+        torch.manual_seed(config["data_seed"])
         train_x, train_y, test_x, test_y = data_utils.generate_multitask_data(
             intermediate_functions_1,
             intermediate_functions_2,
             config["mod"],
             train_frac=config["train_frac"],
-            data_seed=config["data_seed"],
             device=config["device"],
-            save_data=True,
             data_path=config["data_dir"],
+            task_1_aux_functions=task_1_auxiliary_functions,
+            task_2_aux_functions=task_2_auxiliary_functions,
+            task_1_counterfactual_label_functions=config["task_1_counterfactual_label_functions"],
+            task_2_counterfactual_label_functions=config["task_2_counterfactual_label_functions"],
         )
 
     # Iterate through all training hyperparameters
     for lr in config["lr_list"]:
         for model_seed in config["model_seed_list"]:
             # Create a new model_id
-            model_id = str(uuid.uuid4())
-
+            model_id = "model_LR_" + str(lr) + "_Seed_" + str(model_seed)
             config["lr"] = lr
 
             # Set Model seed
@@ -253,71 +275,63 @@ def main():
             # Save the loss plot for train and test
             indices = np.array(range(0, len(train_losses) + 1, config["checkpoint_every"])) - 1
             indices[0] = 0
-            plt.plot(
-                np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
-                train_losses[indices],
-                label="train loss",
-            )
-            plt.plot(
-                np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
-                test_losses,
-                label="test loss",
-            )
-            plt.title(str(model_id))
-            plt.xlabel("Epochs")
-            plt.ylabel("Loss")
-            if config["transfer"]:
-                transfer_indices = np.array(range(0, len(transfer_train_losses) + 1, config["checkpoint_every"])) - 1
-                transfer_indices[0] = 0
-                plt.plot(
-                    np.arange(
-                        0, len(transfer_train_losses) + 1, config["checkpoint_every"]
-                    ),
-                    transfer_train_losses[indices],
-                    label="transfer train loss",
-                )
-                plt.plot(
-                    np.arange(
-                        0, len(transfer_train_losses) + 1, config["checkpoint_every"]
-                    ),
-                    transfer_test_losses,
-                    label="transfer test loss",
-                )
-                plt.title("Transfer Loss and Reinitialized Loss")
-            plt.legend()
-            plt.savefig(
-                os.path.join(config["results_dir"], str(model_id) + "_loss.png")
-            )
+
+            plt.figure()
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
+            lineplot_loss_df = pd.DataFrame({
+                'Epochs': np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
+                'Train Loss': train_losses[indices],
+                'Test Loss': test_losses
+            })
+            ax = sns.lineplot(
+                x="Epochs", y="Loss", hue="Dataset", data=pd.melt(lineplot_loss_df, ['Epochs'], value_name="Loss", var_name="Dataset")
+                ).set(title=config["figtitle"] + " Loss")
+            plt.savefig(os.path.join(config["results_dir"], "Loss.pdf"), format="pdf", bbox_inches="tight")
 
             # Save the accuracy plot for train and test
             plt.figure()
-            plt.plot(
-                np.arange(0, len(train_accs) + 1, config["checkpoint_every"]),
-                train_accs[indices],
-                label="train acc",
-            )
-            plt.plot(
-                np.arange(0, len(train_accs) + 1, config["checkpoint_every"]),
-                test_accs,
-                label="test acc",
-            )
-            plt.title(str(model_id))
-            plt.xlabel("Epochs")
-            plt.ylabel("Accuracy")
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
+            lineplot_acc_df = pd.DataFrame({
+                'Epochs': np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
+                'Train Acc': train_accs[indices],
+                'Test Acc': test_accs
+            })
+            ax = sns.lineplot(
+                x="Epochs", y="Accuracy", hue="Dataset", data=pd.melt(lineplot_acc_df, ['Epochs'], value_name="Accuracy", var_name="Dataset")
+                ).set(title=config["figtitle"] + " Accuracy")
+            plt.savefig(os.path.join(config["results_dir"], "Acc.pdf"), format="pdf", bbox_inches="tight")
+
+            # Transfer vs. Reinitialized Plots
             if config["transfer"]:
-                plt.plot(
-                    np.arange(0, len(transfer_train_accs) + 1, config["checkpoint_every"]),
-                    transfer_train_accs[transfer_indices],
-                    label="transfer train acc",
-                )
-                plt.plot(
-                    np.arange(0, len(transfer_train_accs) + 1, config["checkpoint_every"]),
-                    transfer_test_accs,
-                    label="transfer test acc",
-                )
-                plt.title("Transfer Acc and Reinitialized Acc")
-            plt.legend()
-            plt.savefig(os.path.join(config["results_dir"], str(model_id) + "_acc.png"))
+
+                plt.figure()
+                sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
+                lineplot_loss_df = pd.DataFrame({
+                    'Epochs': np.arange(0, len(transfer_train_losses) + 1, config["checkpoint_every"]),
+                    'Transfer Train Loss': transfer_train_losses[indices],
+                    'Transfer Test Loss': transfer_test_losses,
+                    'Reinit Train Loss': train_losses[indices],
+                    'Reinit Test Loss': test_losses
+                })
+                ax = sns.lineplot(
+                    x="Epochs", y="Loss", hue="Dataset", data=pd.melt(lineplot_loss_df, ['Epochs'], value_name="Loss", var_name="Dataset")
+                    ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Loss")
+                plt.savefig(os.path.join(config["results_dir"], "Transfer_Loss.pdf"), format="pdf", bbox_inches="tight")
+
+                plt.figure()
+                sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
+                lineplot_acc_df = pd.DataFrame({
+                    'Epochs': np.arange(0, len(transfer_train_losses) + 1, config["checkpoint_every"]),
+                    'Transfer Train Acc': transfer_train_accs[indices],
+                    'Transfer Test Acc': transfer_test_accs,
+                    'Reinit Train Acc': train_accs[indices],
+                    'Reinit Test Acc': test_accs
+                })
+                ax = sns.lineplot(
+                    x="Epochs", y="Accuracy", hue="Dataset", data=pd.melt(lineplot_acc_df, ['Epochs'], value_name="Accuracy", var_name="Dataset")
+                    ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Accuracy")
+                plt.savefig(os.path.join(config["results_dir"], "Transfer_Acc.pdf"), format="pdf", bbox_inches="tight")
+
 
             if config["save_models"]:
                 # Save off the earliest model that achieves perfect accuracy on train

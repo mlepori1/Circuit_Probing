@@ -20,6 +20,7 @@ from Datasets import ProbingDataset, CounterfactualEmbeddingsDataset
 
 
 def create_probe(config):
+    # Probe takes input from TransformerLens Hooked Transformer, maps to output space using a small nn.module
     hf_model = GPT2LMHeadModel.from_pretrained(config["model_path"]).to(config["device"])
     for param in hf_model.parameters():
         param.requires_grad = False
@@ -137,11 +138,10 @@ def get_counterfactual_dataset(config):
     return CounterfactualEmbeddingsDataset(config["test_data_path"], config["counterfactual_label"], config["counterfactual_variable"], config["device"])
 
 def train_counterfactual_embedding(config, counterfactual_embedding, probe, sample):
+    # For each sample, update the embedding such that it produces a counterfactual answer in the probe
     loss_fn = nn.CrossEntropyLoss()
     optimizer = AdamW([counterfactual_embedding], lr=config["lr"])
-    num_training_steps = config["cf_num_epochs"]
-    progress_bar = tqdm(range(num_training_steps))
-    og_cf = torch.clone(counterfactual_embedding).detach()
+    pre_state_dict = probe.state_dict()
     probe.train(False)
     for _ in range(config["num_epochs"]):
         train_loss = []
@@ -151,12 +151,11 @@ def train_counterfactual_embedding(config, counterfactual_embedding, probe, samp
         train_loss.append(loss.detach().item())
         optimizer.step()
         optimizer.zero_grad()
-        progress_bar.update(1)
-        progress_bar.set_postfix(
-            {
-                "Train Loss": round(train_loss[-1], 4),
-            }
-        )
+
+    # assert that probe did not change during embedding training
+    post_state_dict = probe.state_dict()
+    for k in pre_state_dict.keys():
+        assert torch.all(pre_state_dict[k] == post_state_dict[k])
     out = probe(counterfactual_embedding)
     success = torch.argmax(out, dim=-1)[0] == sample["counterfactual_variables"]
     return counterfactual_embedding, success
@@ -167,45 +166,79 @@ def residual_stream_patching_hook(
     position,
     counterfactual_embedding,
 ):
-    # Each HookPoint has a name attribute giving the name of the hook.
+    # Patches in counterfactual embedding into the model
     resid_state[:, position, :] = counterfactual_embedding
     return resid_state
 
+def compute_logit_difference(
+        patched_logits,
+        untouched_logits,
+        sample
+):
+    patched_diff = (patched_logits[0, -1, sample["counterfactual_labels"]] - patched_logits[0, -1, sample["original_labels"]]).cpu().item()
+    untouched_diff = (untouched_logits[0, -1, sample["counterfactual_labels"]] - untouched_logits[0, -1, sample["original_labels"]]).cpu().item()
+    return patched_diff/untouched_diff
+
 def counterfactual_lm_eval(config, hooked_transformer, counterfactual_embedding, sample):
+    # If the counterfactual embedding works, then it should produce counterfactual behavior in the overall model
+    # Test whether this happens
     hook_fn = partial(residual_stream_patching_hook, position=config["target_position"], counterfactual_embedding=counterfactual_embedding)
     patched_logits = hooked_transformer.run_with_hooks(sample["input_ids"], fwd_hooks=[
         (lens_utils.get_act_name(config["residual_location"], config["target_layer"]), hook_fn)
     ])
+    untouched_logits = hooked_transformer(sample["input_ids"])
+    logit_diff = compute_logit_difference(patched_logits, untouched_logits, sample)
     prediction = torch.argmax(patched_logits[0, -1])
     predicts_counterfactual = prediction == sample["counterfactual_labels"]
-    predicts_original = prediction == sample["labels"]
-    return predicts_counterfactual, predicts_original
+    predicts_original = prediction == sample["original_labels"]
+    return predicts_counterfactual, predicts_original, logit_diff
 
+def patching_test(config, hooked_transformer, original_embedding, sample):
+    # If the counterfactual embedding works, then it should produce counterfactual behavior in the overall model
+    # Test whether this happens
+    hook_fn = partial(residual_stream_patching_hook, position=config["target_position"], counterfactual_embedding=original_embedding)
+    patched_logits = hooked_transformer.run_with_hooks(sample["input_ids"], fwd_hooks=[
+        (lens_utils.get_act_name(config["residual_location"], config["target_layer"]), hook_fn)
+    ])
+    untouched_logits = hooked_transformer(sample["input_ids"])
+    assert torch.all(patched_logits == untouched_logits)
+    prediction = torch.argmax(patched_logits[0, -1])
+    assert prediction == sample["original_labels"]
 
 def counterfactual_embedding_eval(config, hooked_transformer, probe, dataset):
-    print("TODO: ENSURE THAT PROBE PARAMETERS ARE UNTOUCHED BY COUNTERFACTUAL OPTIMIZATION, ADD COMMENTS")
-    quit()
+    # Counterfactual embedding evaluation trains a counterfactual embedding for all samples,
+    # verifies that this embedding changes probe behavior, and then analyzes its impact on downstream model behavior
+    # Train embedding to make probe predict counterfactual_variable. Investigate whether full model (with CF embed patched)
+    # predicts the counterfactual_label, also record when it still predicts the original_label, and also record the normalized logit difference
     hooked_transformer.train(False)
     probe.train(False)
+    for parameter in probe.parameters():
+        parameter.requires_grad = False
     counterfactual_embed_success = []
     counterfactual_lm_cf_label = []
     counterfactual_lm_original_label = []
-    for sample in dataset:
-        _, cache = hooked_transformer.run_with_cache(sample["input_ids"])
-        counterfactual_embedding = nn.Parameter(cache[lens_utils.get_act_name(config["residual_location"], config["target_layer"])][:, config["target_position"], :])
-        counterfactual_embedding, success = train_counterfactual_embedding(config, counterfactual_embedding, probe, sample)
-        counterfactual_embed_success.append(success.cpu())
-        predicts_counterfactual, predicts_original = counterfactual_lm_eval(config, hooked_transformer, counterfactual_embedding, sample)
-        counterfactual_lm_cf_label.append(predicts_counterfactual.cpu())
-        print("Success, CF label, OG label")
-        print(np.sum(counterfactual_embed_success)/len(counterfactual_embed_success))
-        print(np.sum(counterfactual_lm_cf_label)/len(counterfactual_lm_cf_label))
-        counterfactual_lm_original_label.append(predicts_original.cpu())
-        print(np.sum(counterfactual_lm_original_label)/len(counterfactual_lm_original_label))
+    logit_diffs = []
+    total_examples = 0
+    
+    progress_bar = tqdm(range(len(dataset)))
+    for idx, sample in enumerate(dataset):
+        # Run this evaluation if the counterfactual produces a different label
+        if sample["original_labels"] != sample["counterfactual_labels"]:                
+            _, cache = hooked_transformer.run_with_cache(sample["input_ids"])
+            counterfactual_embedding = nn.Parameter(cache[lens_utils.get_act_name(config["residual_location"], config["target_layer"])][:, config["target_position"], :])
+            # Verify that patching is working as intended
+            if idx == 0:
+                patching_test(config, hooked_transformer, counterfactual_embedding, sample)
+            counterfactual_embedding, success = train_counterfactual_embedding(config, counterfactual_embedding, probe, sample)
+            counterfactual_embed_success.append(success.cpu())
+            predicts_counterfactual, predicts_original, logit_diff = counterfactual_lm_eval(config, hooked_transformer, counterfactual_embedding, sample)
+            counterfactual_lm_cf_label.append(predicts_counterfactual.cpu())
+            counterfactual_lm_original_label.append(predicts_original.cpu())
+            logit_diffs.append(logit_diff)
+            total_examples += 1
+        progress_bar.update(1)
 
-    return np.sum(counterfactual_embed_success)/len(counterfactual_embed_success), np.sum(counterfactual_lm_cf_label)/len(counterfactual_lm_cf_label), np.sum(counterfactual_lm_original_label)/len(counterfactual_lm_original_label)
-
-
+    return np.sum(counterfactual_embed_success)/len(counterfactual_embed_success), np.sum(counterfactual_lm_cf_label)/len(counterfactual_lm_cf_label), np.sum(counterfactual_lm_original_label)/len(counterfactual_lm_original_label), np.mean(logit_diffs), total_examples
 
 def get_dataset_length(dataloader):
     length = 0
@@ -292,10 +325,12 @@ def main():
 
                             if config["counterfactual_embeddings"]:
                                 testset = get_counterfactual_dataset(config)
-                                embed_success, predicts_cf, predicts_original = counterfactual_embedding_eval(config, hooked_transformer, probe, testset)
-                                output_dict["counterfactual embedding success"] = embed_success
-                                output_dict["counterfactual predicts CF label"] = predicts_cf
-                                output_dict["counterfactual predicts original label"] = predicts_original
+                                embed_success, predicts_cf, predicts_original, logit_diffs, total_examples = counterfactual_embedding_eval(config, hooked_transformer, probe, testset)
+                                output_dict["counterfactual embedding success"] = [embed_success]
+                                output_dict["counterfactual predicts CF label"] = [predicts_cf]
+                                output_dict["counterfactual predicts original label"] = [predicts_original]
+                                output_dict["counterfactual average logit diff"] = [logit_diffs]
+                                output_dict["counterfactual dataset size"] = [total_examples]
 
                             df = pd.concat(
                                 [df, pd.DataFrame.from_dict(output_dict)],

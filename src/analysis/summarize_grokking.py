@@ -1,94 +1,71 @@
 import os
 
 import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
 
-
-def create_probe_chart(
-    indir, figtitle, outdir, outfile, operation, position
+### Create Line plot with both linear probe and circuit probe performance
+def create_line_plot(
+    cp_dir, linear_dir, figtitle, outdir, outfile, operation, sparsity=False
 ):
     os.makedirs(outdir, exist_ok=True)
-    checkpoints = os.listdir(indir)
+    checkpoints = os.listdir(cp_dir)
 
-    dev_y = []
-    test_y = []
-    x = [int(ch) for ch in checkpoints]
-    x.sort()
-
-    for ch in x:
-        data = pd.read_csv(os.path.join(indir, str(ch), "results.csv"))
-        data = data[data["operation"] == operation]
-        data = data[data["probe index"] == position]
-        dev_y.append(data["train acc"][0])
-        test_y.append(data["test acc"][0])
-
-    # Save the loss plot for train and test
-    plt.figure()
-    plt.plot(x, dev_y, label="Train set Probe Acc")
-    plt.plot(x, test_y, label="Test set Probe Acc")
-    plt.ylim(0, 1.05)
-    plt.title(figtitle)
-    plt.xlabel("Epochs")
-    plt.ylabel("Accuracy")
-    plt.legend()
-
-    plt.savefig(os.path.join(outdir, outfile))
-
-def create_knn_chart(
-    indir, figtitle, outdir, outfile, operation, position, sparsity=False
-):
-    os.makedirs(outdir, exist_ok=True)
-    checkpoints = os.listdir(indir)
-
-    dev_y = []
-    test_y = []
+    cp_y = []
+    linear_y = []
     sparsity = []
     x = [int(ch) for ch in checkpoints]
     x.sort()
 
     for ch in x:
-        data = pd.read_csv(os.path.join(indir, str(ch), "results.csv"))
+        data = pd.read_csv(os.path.join(cp_dir, str(ch), "results.csv"))
         data = data[data["operation"] == operation]
-        data = data[data["probe index"] == position]
-        dev_y.append(data["knn dev acc"][0])
-        test_y.append(data["knn test acc"][0])
-        sparsity.append(data["L0 Norm"][0] / data["L0 Max"][0])
+        cp_y.append(data["knn test acc"].values[0])
+        sparsity.append(data["L0 Norm"].values[0] / data["L0 Max"].values[0])
 
-    # Save the loss plot for train and test
+        data = pd.read_csv(os.path.join(linear_dir, str(ch), "results.csv"))
+        if operation == "attn":
+            resid = "resid_mid"
+        else:
+            resid = "resid_post"
+        data = data[data["residual_location"] == resid]
+        linear_y.append(data["test acc"].values[0])
+
+    y = cp_y + linear_y
+    method = ["Circuit Probe"] * len(cp_y) + ["Linear Probe"] * len(linear_y)
+    x = x + x
+
+
+    data = pd.DataFrame.from_dict(
+        {
+            "Epochs": x,
+            "Accuracy": y,
+            "Method": method
+        }
+    )
     plt.figure()
-    plt.plot(x, dev_y, label="Train set KNN Acc")
-    plt.plot(x, test_y, label="Test set KNN Acc")
-    if sparsity:
-        plt.plot(x, sparsity, label="Sparsity")
-    plt.title(figtitle)
-    plt.ylim(0, 1.05)
-    plt.xlabel("Epochs")
-    plt.ylabel("Accuracy/% Neurons")
-    plt.legend()
-
-    plt.savefig(os.path.join(outdir, outfile))
+    sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
+    sns.lineplot(data=data, x="Epochs", y="Accuracy", hue="Method").set(title=figtitle)
+    plt.savefig(os.path.join(outdir, outfile), format="pdf", bbox_inches="tight")
 
 
-indir = "../../Results/Probes/Grokking/a2_b/Mask/a2"
-figtitle = "Attn Layer 0 - A2"
-outdir = "./Grokking/a2_b/"
-outfile = "a2_knn.png"
-create_knn_chart(indir, figtitle, outdir, outfile, "attn", 2, sparsity=True)
+cp_dir = "../../Results/Probes/Grokking/a2_b/circuit_probing/a2"
+linear_dir = "../../Results/Probes/Grokking/a2_b/Probing/Linear/a2"
 
-indir = "../../Results/Probes/Grokking/a2_b/Mask/b2"
-figtitle = "Attn Layer 0 - B2"
-outdir = "./Grokking/a2_b/"
-outfile = "b2_knn.png"
-create_knn_chart(indir, figtitle, outdir, outfile, "attn", 2, sparsity=True)
+figtitle = "Probe Accuracy During Training: Attention"
+outdir = "./Grokking/"
+outfile = "Attention_Probe_Acc.pdf"
+create_line_plot(cp_dir, linear_dir, figtitle, outdir, outfile, "attn", sparsity=True)
 
-indir = "../../Results/Probes/Grokking/a2_b/Probe/a2"
-figtitle = "Probing: Attn Layer 0 - A2"
-outdir = "./Grokking/a2_b/"
-outfile = "a2_probe.png"
-create_probe_chart(indir, figtitle, outdir, outfile, "attn", 2)
+figtitle = "Probe Accuracy During Training: MLP"
+outdir = "./Grokking/"
+outfile = "MLP_Probe_Acc.pdf"
+create_line_plot(cp_dir, linear_dir, figtitle, outdir, outfile, "mlp", sparsity=True)
 
-indir = "../../Results/Probes/Grokking/a2_b/Probe/b2"
-figtitle = "Probing: Attn Layer 0 - B2"
-outdir = "./Grokking/a2_b/"
-outfile = "b2_probe.png"
-create_probe_chart(indir, figtitle, outdir, outfile, "attn", 2)
+cp_dir = "../../Results/Probes/Grokking/a2_b/circuit_probing/b2"
+linear_dir = "../../Results/Probes/Grokking/a2_b/Probing/Linear/b2"
+
+figtitle = "Probe Selectivity Analysis"
+outdir = "./Grokking/"
+outfile = "Attention_Probe_Selectivity.pdf"
+create_line_plot(cp_dir, linear_dir, figtitle, outdir, outfile, "attn", sparsity=True)

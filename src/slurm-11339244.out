@@ -1,0 +1,8 @@
+module: loading 'python/3.7.4'
+module: loading 'gcc/10.2'
+module: gcc: "Note: loading the gcc module overrides the gcc version on the system.  If you want to revert to the version of gcc provided by the OS, unload the gcc module."
+module: loading 'cuda/11.1.1'
+module: cuda: To use: module load gcc/10.2
+module: loading 'cudnn/8.2.0'
+module: cudnn: To use: module load cuda/11.1.1 gcc/10.2
+python: can't open file '/src/circuit_probing.py': [Errno 2] No such file or directory

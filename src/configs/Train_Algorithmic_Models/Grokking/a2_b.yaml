@@ -1,8 +1,8 @@
 # Data
-intermediate_functions: ["a2", "b_identity"]
-auxiliary_functions: ["b2"]
+intermediate_functions: [["a2", 0, 1], ["b_identity", 0, 1]]
+auxiliary_functions: [["b2", 0, 1]]
 mod: 113
-train_frac: .35
+train_frac: .333
 data_seed: 0
 multitask: False
 n_positions: 3
@@ -18,9 +18,9 @@ lr_list: [.001]
 model_seed_list: [0]
 wd: 1.
 betas: [0.9, 0.98]
-num_epochs: 10000
+num_epochs: 20000
 checkpoint_every: 100
-save_checkpoints: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+save_checkpoints: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 12500, 15000, 17500, 20000]
 transfer: false
 
 # Output
@@ -28,3 +28,4 @@ data_dir: "../data/Grokking/a2_b"
 save_models: True
 model_dir: "../Model/Algorithmic_Train/Grokking/a2_b"
 results_dir: "../Results/Algorithmic_Train/Grokking/a2_b"
+figtitle: "(a2 + b)(mod 113) Training"

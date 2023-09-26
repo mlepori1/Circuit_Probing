@@ -12,7 +12,7 @@ from transformers import GPT2Tokenizer
 import gif_eval
 import utils
 from knn_eval import knn_evaluation
-from lm_eval import agreement_eval, reflexive_eval, get_lm_eval_data, lm_eval
+from lm_eval import agreement_eval, reflexive_eval, get_lm_eval_data, lm_eval, agreement_qualitative_eval
 
 
 class TemperatureCallback:
@@ -146,7 +146,9 @@ def main():
                                     (
                                         trainloader,
                                         testloader,
-                                        genloader,
+                                        male_genloader,
+                                        female_testloader,
+                                        female_genloader
                                     ) = utils.create_reflexive_datasets(config, tokenizer)
                                 else:
                                     trainloader, testloader = utils.create_datasets(
@@ -261,8 +263,8 @@ def main():
                                         plur_id = tokenizer("are")["input_ids"][0]
                                         ablate_sets = [None]
                                     elif config["task"] == "reflexive":
-                                        lm_loaders = [testloader, genloader]
-                                        lm_loader_labels = ["IID", "Gen"]
+                                        lm_loaders = [testloader, male_genloader, female_testloader, female_genloader]
+                                        lm_loader_labels = ["Male IID", "Male Gen", "Female IID", "Female Gen"]
                                         ablate_sets = [None]           
                                     else:
                                         lm_loader_labels = ["Test"]
@@ -286,6 +288,10 @@ def main():
                                                     plur_id,
                                                     ablate_set,
                                                 )
+                                                if lm_loader_labels[idx] == "IID":
+                                                    os.makedirs(os.path.join(config["results_dir"], "Qualitative"), exist_ok=True)
+                                                    agreement_qualitative_eval(config, os.path.join(config["results_dir"], "Qualitative", f"{str(target_layer)}_{operation}.txt"), model, tokenizer, lm_loader, ablate_set)
+                                            
                                             elif config["task"] == "reflexive":
                                                 lm_results = reflexive_eval(
                                                     config,
@@ -322,35 +328,45 @@ def main():
                                                         "complement_sampled",
                                                         force_resample=True,
                                                     )
-                                                    if config["task"] == "agreement":
-                                                        random_ablate_lm_results = (
-                                                            agreement_eval(
-                                                                config,
-                                                                model,
-                                                                lm_loader,
-                                                                sing_id,
-                                                                plur_id,
-                                                                ablate_set,
+
+                                                    try:
+                                                        # Try to run complement_sampled ablation
+                                                        # If discovered mask doesn't allow for this,
+                                                        # consider it a failure and return -1
+                                                        if config["task"] == "agreement":
+                                                            random_ablate_lm_results = (
+                                                                agreement_eval(
+                                                                    config,
+                                                                    model,
+                                                                    lm_loader,
+                                                                    sing_id,
+                                                                    plur_id,
+                                                                    ablate_set,
+                                                                )
                                                             )
-                                                        )
-                                                    elif config["task"] == "reflexive":
-                                                        random_ablate_lm_results = (
-                                                            reflexive_eval(
-                                                                config,
-                                                                model,
-                                                                lm_loader,
-                                                                ablate_set,
+                                                        elif config["task"] == "reflexive":
+                                                            random_ablate_lm_results = (
+                                                                reflexive_eval(
+                                                                    config,
+                                                                    model,
+                                                                    lm_loader,
+                                                                    ablate_set,
+                                                                )
                                                             )
-                                                        )
-                                                    else:
-                                                        random_ablate_lm_results = (
-                                                            lm_eval(
-                                                                config,
-                                                                model,
-                                                                lm_loader,
-                                                                ablate_set,
+                                                        else:
+                                                            random_ablate_lm_results = (
+                                                                lm_eval(
+                                                                    config,
+                                                                    model,
+                                                                    lm_loader,
+                                                                    ablate_set,
+                                                                )
                                                             )
-                                                        )
+                                                    except:
+                                                        random_ablate_lm_results = {
+                                                            "ablated_acc": [-1]
+                                                        }
+
                                                     random_ablated_accs.append(
                                                         random_ablate_lm_results[
                                                             "ablated_acc"

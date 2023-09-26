@@ -274,26 +274,49 @@ def create_sv_datasets(config, tokenizer):
 
 
 def create_reflexive_datasets(config, tokenizer):
-    dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=config["gender"])
+    male_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=0)
 
-    remainder = len(dataset) - (config["train_size"] + config["test_size"])
+    remainder = len(male_dataset) - (config["train_size"] + config["test_size"])
 
     torch.manual_seed(config["data_seed"])
     generator = torch.Generator().manual_seed(config["data_seed"])
-    train_data, test_data, _ = random_split(
-        dataset,
+    male_train_data, male_test_data, _ = random_split(
+        male_dataset,
         [config["train_size"], config["test_size"], remainder],
         generator=generator,
     )
-    trainloader = DataLoader(
-        train_data, batch_size=config["batch_size"], shuffle=True, drop_last=True
+    male_trainloader = DataLoader(
+        male_train_data, batch_size=config["batch_size"], shuffle=True, drop_last=True
     )
-    testloader = DataLoader(
-        test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
+    male_testloader = DataLoader(
+        male_test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
     )
 
-    genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=config["gender"])
+    male_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=0)
 
-    genloader = DataLoader(genset, batch_size=10, shuffle=False, drop_last=False)
+    male_genloader = DataLoader(male_genset, batch_size=10, shuffle=False, drop_last=False)
 
-    return trainloader, testloader, genloader
+    female_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=1)
+
+    remainder = len(female_dataset) - (config["train_size"] + config["test_size"])
+
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    _, female_test_data, _ = random_split(
+        female_dataset,
+        [config["train_size"], config["test_size"], remainder],
+        generator=generator,
+    )
+
+    # Assert that the same data partitions are used in male and female data
+    assert female_test_data.indices == male_test_data.indices
+
+    female_testloader = DataLoader(
+        female_test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
+    )
+
+    female_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=1)
+
+    female_genloader = DataLoader(female_genset, batch_size=10, shuffle=False, drop_last=False)
+
+    return male_trainloader, male_testloader, male_genloader, female_testloader, female_genloader

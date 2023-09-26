@@ -1,0 +1,12 @@
+# Data
+counterfactual_label: ["CF_Label_0"]
+model_path: "../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000"
+
+data_seed: 0
+target_layer_list: [0]
+target_position_list: [4]
+residual_location_list: ["resid_mid", "resid_post"]
+
+# Output
+data_path: "../data/Shared_Nodes/Task_2/test.csv"
+results_dir: "../Results/Probes/Shared_Nodes/Task_2/interchange/free/"

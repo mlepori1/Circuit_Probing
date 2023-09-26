@@ -13,15 +13,15 @@ data_path: "../data/SV_Agr/SV_Agr.csv"
 gen_path: "../data/SV_Agr/SV_Agr_gen.csv"
 train_size: 2000
 test_size: 1000
-multitask: False
-agreement: True
+task: "agreement"
+
 
 # Training
 num_epochs: 90
 lr_list: [0.001]
 batch_size_list: [500]
 data_seed: 0
-l0_lambda: 0.0000001
+l0_lambda: 1.0e-07
 model_seed_list: [0]
 
 num_random_ablations: 5

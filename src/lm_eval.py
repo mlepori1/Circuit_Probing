@@ -82,6 +82,33 @@ def agreement_eval(config, model, dataloader, sing_id, plur_id, ablate_set=None)
         "ablated_acc": np.sum(abl_correct) / len(abl_correct),
     }
 
+def agreement_qualitative_eval(config, outpath, model, tokenizer, dataloader, ablate_set=None):
+    batch = next(iter(dataloader))
+    batch = {k: v.to(config["device"]) for k, v in batch.items()}
+
+    model.use_masks(False)
+    vanilla_outputs = model(input_ids=batch["input_ids"]).logits
+    vanilla_outputs = vanilla_outputs[batch["token_mask"]]
+    _, vanilla_indices = torch.topk(vanilla_outputs, k=50, dim=-1)
+
+    model.use_masks(True, ablate_set)
+    abl_outputs = model(input_ids=batch["input_ids"]).logits
+    abl_outputs = abl_outputs[batch["token_mask"]]
+    _, abl_indices = torch.topk(abl_outputs, k=50, dim=-1)
+
+    inputs = tokenizer.batch_decode(batch["input_ids"])
+
+    lines = []
+    for i in range(len(inputs)):
+        ipt = inputs[i]
+        vanilla_pred = "\n".join(tokenizer.convert_ids_to_tokens(vanilla_indices[i]))
+        abl_pred = "\n".join(tokenizer.convert_ids_to_tokens(abl_indices[i]))
+        lines.append(f"Input: {ipt}\nTop 50 Model Predictions:\n****************\n{vanilla_pred}\nTop 50 Ablated Model Predictions:\n*****************\n{abl_pred}")
+    lines = "\n".join(lines)
+    file = open(outpath, "w")
+    file.write(lines)
+    file.close()
+
 def reflexive_eval(config, model, dataloader, ablate_set=None):
     abl_correct = []
     vanilla_correct = []

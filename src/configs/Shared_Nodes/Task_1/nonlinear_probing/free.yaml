@@ -1,0 +1,25 @@
+batch_size_list:
+- 500
+data_seed: 0
+layer_reinit: false
+lr_list:
+- 0.1
+model_path: "../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000"
+model_seed_list:
+- 0
+num_epochs: 100
+intermediate_size: 256
+residual_location_list: ["resid_mid", "resid_post"]
+target_position_list: [4]
+random_init: false
+results_dir: "../Results/Probes/Shared_Nodes/Task_1/Probing/Nonlinear/free/"
+target_layer_list: [0]
+train_data_path: "../data/Shared_Nodes/Task_1/train.csv"
+test_data_path: "../data/Shared_Nodes/Task_1/test.csv"
+variable: var_1
+n_classes: 113
+
+counterfactual_embeddings: true
+counterfactual_label: CF_Label_0
+counterfactual_variable: counter_var_1
+cf_num_epochs: 10

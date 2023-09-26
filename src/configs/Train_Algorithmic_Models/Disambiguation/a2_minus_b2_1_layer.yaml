@@ -1,0 +1,39 @@
+# Data
+intermediate_functions: [["a2", 0, 1], ["minus_b2", 0, 1]]
+auxiliary_functions: [["a_plus_b", 0, 1], ["a_minus_b", 0, 1], ["a_plus_b_no_prime", 0, 1], ["a_minus_b_no_prime", 0, 1]]
+counterfactual_label_functions: [
+  ["var_0", "counter_var_1", "+"],
+  ["counter_var_0", "var_1", "+"],
+  ["aux_0", "counter_aux_1", "*"],
+  ["counter_aux_0", "aux_1", "*"],
+  ["aux_2", "counter_aux_3", "*"],
+  ["counter_aux_2", "aux_3", "*"]
+]
+mod: 113
+train_frac: .6
+data_seed: 0
+multitask: False
+n_positions: 3
+
+# Model
+n_layer: 1
+n_head: 4
+n_embd: 128
+n_inner: 512
+
+# Training
+lr_list: [.001]
+model_seed_list: [0]
+wd: 1.
+betas: [0.9, 0.98]
+num_epochs: 10000
+checkpoint_every: 500
+save_checkpoints: [10000]
+transfer: false
+
+# Output
+data_dir: "../data/Disambiguation/a2_minus_b2_1_layer"
+save_models: True
+model_dir: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer"
+results_dir: "../Results/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer"
+figtitle: "a2 - b2"

@@ -215,45 +215,6 @@ class ReflexivesDataset(Dataset):
         }
         return sample
 
-class InterchangeInterventionDataset(Dataset):
-    def __init__(self, file, counterfactual_label, device):
-        """A Dataset to evaluate models using Interchange Intervention 
-
-        Args:
-            file: Path to dataset
-            counterfactual_label: Which counterfactual label we expect to recover after intervention
-        """
-        datafile = pd.read_csv(file)
-        xs = []
-        for data in datafile["data"]:
-            x = data.split(" ")
-            x = [int(number) for number in x]
-            xs.append(torch.tensor(x).reshape(1, -1))
-
-        cfs = []
-        for data in datafile["counterfactual_data"]:
-            cf = data.split(" ")
-            cf = [int(number) for number in cf]
-            cfs.append(torch.tensor(cf).reshape(1, -1))
-
-        self.x = torch.cat(xs, dim=0).to(device)
-        self.cf = torch.cat(cfs, dim=0).to(device)
-        self.cf_y = torch.tensor(datafile[counterfactual_label].values).to(device)
-        self.y = torch.tensor(datafile["labels"]).to(device)
-
-
-    def __len__(self):
-        return len(self.x)
-
-    def __getitem__(self, idx):
-        sample = {
-            "original_ids": self.x[idx],
-            "original_label": self.y[idx],
-            "counterfactual_ids": self.cf[idx],
-            "counterfactual_label": self.cf_y[idx],
-        }
-        return sample
-
 class ProbingDataset(Dataset):
     def __init__(self, file, probe_variable, device):
         """A Dataset to evaluate models using Interchange Intervention 
@@ -313,9 +274,50 @@ class CounterfactualEmbeddingsDataset(Dataset):
     def __getitem__(self, idx):
         sample = {
             "input_ids": self.x[idx],
-            "labels": self.y[idx],
+            "original_labels": self.y[idx],
             "counterfactual_variables": self.cf_var[idx],
             "counterfactual_labels": self.cf_label[idx],
+        }
+        return sample
+    
+class DASDataset(Dataset):
+    def __init__(self, data, counterfactual_label, token_range, device="cuda"):
+        self.token_range = tuple(token_range)
+
+        input_ids = []
+        for input in data["data"]:
+            x = input.split(" ")
+            x = [int(number) for number in x]
+            input_ids.append(torch.tensor(x).reshape(1, -1))
+
+        source_ids = []
+        for input in data["counterfactual_data"]:
+            cf = input.split(" ")
+            cf = [int(number) for number in cf]
+            source_ids.append(torch.tensor(cf).reshape(1, -1))
+
+        self.source_input_ids = torch.cat(source_ids, dim=0).to(device)
+        self.source_attention_mask = torch.ones(size=self.source_input_ids.shape).to(device)
+        self.input_ids = torch.cat(input_ids, dim=0).to(device)
+        self.attention_mask = torch.ones(size=self.input_ids.shape).to(device)
+
+        self.labels = torch.ones(self.source_input_ids.shape) * -100
+        self.labels[:, -1] = torch.tensor(data[counterfactual_label].values).reshape(-1)
+        self.labels = self.labels.long().to(device)
+
+    def __len__(self):
+        return len(self.input_ids)
+
+    def __getitem__(self, idx):
+        sample = {
+            "input_ids": self.input_ids[idx],
+            "attention_mask": self.attention_mask[idx],
+            "source_input_ids": self.source_input_ids[idx],
+            "source_attention_mask": self.source_attention_mask[idx],
+            "labels": self.labels[idx],
+            "token_range": self.token_range,
+            "source_token_range": self.token_range,
+            "intervention_ids": 0
         }
         return sample
     

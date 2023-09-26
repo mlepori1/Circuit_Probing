@@ -1,0 +1,38 @@
+# Model
+model_path: "../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000"
+random_init: False
+layer_reinit: False
+target_layer_list: [0]
+operation_list: ["attn", "mlp"]
+mask_init_list: [0.0]
+max_temp: 200
+
+# Data
+train_data_path: "../data/Shared_Nodes/Task_1/train.csv"
+test_data_path: "../data/Shared_Nodes/Task_1/test.csv"
+lm_same_task_path: ../data/Shared_Nodes/Task_1/test.csv
+lm_different_task_path: ../data/Shared_Nodes/Task_2/test.csv
+variable: "aux_0"
+probe_index_list: [4]
+train_size: 3000
+task: multitask
+
+# Training
+num_epochs: 90
+lr_list: [0.001]
+batch_size_list: [500]
+data_seed: 0
+model_seed_list: [0]
+l0_lambda: 0.000001
+
+num_random_ablations: 0
+lm_eval: True
+
+# Output
+model_dir: "../Model/Probes/Shared_Nodes/Task_1/circuit_probing/aux/"
+results_dir: "../Results/Probes/Shared_Nodes/Task_1/circuit_probing/aux/"
+save_models: True
+
+# GIF
+gif: True
+gif_interval: 10
