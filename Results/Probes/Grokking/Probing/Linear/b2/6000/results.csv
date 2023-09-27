@@ -1,0 +1,3 @@
+,model_id,train length,test length,batch_size,lr,data_seed,model_seed,target_layer,residual_location,target_position,model path,train loss,test loss,train acc,test acc
+0,779b0669-c668-4286-a0b2-6968528720c3,4000,8517,500,0.1,0,0,0,resid_mid,2,../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_6000,0.31556830555200577,0.3527496010065079,0.9990000128746033,0.994246780872345
+1,1b13ff03-9e87-4841-a1f3-566692f6d36e,4000,8517,500,0.1,0,0,0,resid_post,2,../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_6000,2.98252472281456,3.135357764032152,0.2759999930858612,0.23153692483901978

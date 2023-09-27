@@ -9,8 +9,8 @@ lr_list:
 mask_init_list:
 - 0.0
 max_temp: 200
-model_dir: ../Model/Probes/Disambiguation/a2_minus_b2_1_layer/circuit_probing/minus_b2/
-model_path: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer/model_LR_0.001_Seed_0_final"
+model_dir: ../Model/Probes/Disambiguation/circuit_probing/minus_b2/
+model_path: "../Model/Algorithmic_Train/Disambiguation/model_LR_0.001_Seed_0_final"
 model_seed_list:
 - 0
 num_epochs: 90
@@ -21,12 +21,12 @@ operation_list:
 probe_index_list:
 - 2
 random_init: false
-results_dir: ../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/minus_b2/
+results_dir: ../Results/Probes/Disambiguation/circuit_probing/minus_b2/
 save_models: false
 target_layer_list:
 - 0
-test_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/test.csv
-train_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/train.csv
+test_data_path: ../data/Disambiguation/test.csv
+train_data_path: ../data/Disambiguation/train.csv
 train_size: 2500
 variable: var_1
 task: disambiguation

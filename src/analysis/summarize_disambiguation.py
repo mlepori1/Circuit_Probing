@@ -7,20 +7,20 @@ import numpy as np
 import pandas as pd
 import torch
 
-cp_a2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/a2/results.csv")
-cp_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/minus_b2/results.csv")
-cp_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/a_plus_b/results.csv")
-cp_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/a_minus_b/results.csv")
+cp_a2 = pd.read_csv("../../Results/Probes/Disambiguation/circuit_probing/a2/results.csv")
+cp_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/circuit_probing/minus_b2/results.csv")
+cp_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/circuit_probing/a_plus_b/results.csv")
+cp_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/circuit_probing/a_minus_b/results.csv")
 
-linear_a2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Linear/1_Layer/a2/results.csv")
-linear_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Linear/1_Layer/minus_b2/results.csv")
-linear_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Linear/1_Layer/a_plus_b/results.csv")
-linear_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Linear/1_Layer/a_minus_b/results.csv")
+linear_a2 = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Linear/a2/results.csv")
+linear_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Linear/minus_b2/results.csv")
+linear_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Linear/a_plus_b/results.csv")
+linear_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Linear/a_minus_b/results.csv")
 
-nonlinear_a2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Nonlinear/1_Layer/a2/results.csv")
-nonlinear_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Nonlinear/1_Layer/minus_b2/results.csv")
-nonlinear_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Nonlinear/1_Layer/a_plus_b/results.csv")
-nonlinear_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/a2_minus_b2/Probing/Nonlinear/1_Layer/a_minus_b/results.csv")
+nonlinear_a2 = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Nonlinear/a2/results.csv")
+nonlinear_minus_b2 = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Nonlinear/minus_b2/results.csv")
+nonlinear_a_plus_b = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Nonlinear/a_plus_b/results.csv")
+nonlinear_a_minus_b = pd.read_csv("../../Results/Probes/Disambiguation/Probing/Nonlinear/a_minus_b/results.csv")
 
 
 ### Create Bar Graph

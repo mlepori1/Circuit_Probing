@@ -24,8 +24,8 @@ save_checkpoints: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000
 transfer: false
 
 # Output
-data_dir: "../data/Grokking/a2_b"
+data_dir: "../data/Grokking/"
 save_models: True
-model_dir: "../Model/Algorithmic_Train/Grokking/a2_b"
-results_dir: "../Results/Algorithmic_Train/Grokking/a2_b"
+model_dir: "../Model/Algorithmic_Train/Grokking/"
+results_dir: "../Results/Algorithmic_Train/Grokking/"
 figtitle: "(a2 + b)(mod 113) Training"

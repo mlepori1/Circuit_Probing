@@ -1,3 +1,0 @@
-,model_id,train length,test length,batch_size,lr,data_seed,model_seed,target_layer,operation,probe index,model path,train loss,test loss,train acc,test acc
-0,eed7d4e2-c8f8-4f0d-899d-8c4370a8f193,4000,8300,500,0.1,0,0,0,attn,2,../Model/Algorithmic_Train/Grokking/a2_b/568e7cac-54d6-4f6e-a4fc-2065f0a8debe_699,0.04790585767477751,0.06550141489681076,1.0,0.9997590184211731
-1,a3de1f74-f956-44c5-abc3-fbe31db58ff9,4000,8300,500,0.1,0,0,0,mlp,2,../Model/Algorithmic_Train/Grokking/a2_b/568e7cac-54d6-4f6e-a4fc-2065f0a8debe_699,2.3944749236106873,2.598159172955681,0.4284999966621399,0.34144577383995056

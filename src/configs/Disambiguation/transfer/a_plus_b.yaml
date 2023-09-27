@@ -11,7 +11,7 @@ n_layer: 1
 n_head: 4
 n_embd: 128
 n_inner: 512
-model_path: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer/model_LR_0.001_Seed_0_final"
+model_path: "../Model/Algorithmic_Train/Disambiguation/model_LR_0.001_Seed_0_final"
 
 # Training
 transfer: true
@@ -24,8 +24,8 @@ checkpoint_every: 1
 save_checkpoints: [450]
 
 # Output
-data_dir: "../data/Disambiguation/Transfer/a_plus_b_1_layer"
+data_dir: "../data/Disambiguation/Transfer/a_plus_b"
 save_models: False
-model_dir: "../Model/Algorithmic_Train/Disambiguation/Transfer/1_layer/a_plus_b"
-results_dir: "../Results/Algorithmic_Train/Disambiguation/Transfer/1_layer/a_plus_b"
+model_dir: "../Model/Algorithmic_Train/Disambiguation/Transfer/a_plus_b"
+results_dir: "../Results/Algorithmic_Train/Disambiguation/Transfer/a_plus_b"
 figtitle: "a + b"

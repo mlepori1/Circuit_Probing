@@ -174,26 +174,28 @@ def plot_everything(df, gender, figtitle, filetitle):
         "Rand. : Gen": df[f"random ablate acc mean {gender} Gen"],
     } )
 
-    errorbars = []
-    errorbars += [0] * len(df["Component"])
-    errorbars += list(df[f"random ablate acc std {gender} IID"].values)
-    errorbars += [0] * len(df["Component"])
-    errorbars += list(df[f"random ablate acc std {gender} Gen"].values)
+    for i in range(0, len(plot_df), 12):
+        curr_df = plot_df.iloc[i:i+12]
+        errorbars = []
+        errorbars += [0] * len(curr_df["Component"])
+        errorbars += list(df[f"random ablate acc std {gender} IID"].values[i:i+12])
+        errorbars += [0] * len(curr_df["Component"])
+        errorbars += list(df[f"random ablate acc std {gender} Gen"].values[i:i+12])
 
-    sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
-    ax = sns.catplot(data=pd.melt(plot_df, id_vars="Component", var_name="Condition", value_name="Ablated Accuracy"), kind="bar", x="Component", y="Ablated Accuracy", hue="Condition", height=5, aspect=6)
-    x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax.axes[0,0].patches]
-    xmin = ax.axes[0,0].patches[0].get_x()
-    xmax = ax.axes[0,0].patches[-1].get_x() + ax.axes[0,0].patches[-1].get_width()
-    y_coords = [p.get_height() for p in ax.axes[0,0].patches]
-    ax.axes[0,0].errorbar(x=x_coords, y=y_coords, yerr=errorbars, fmt="none", c="k")
-    plt.xticks(rotation=30)
-    plt.title(f"GPT2-{figtitle} {gender} Reflexives Ablation")
-    line1 = plt.hlines(.5, xmin=xmin, xmax=xmax, color="red", linestyles="dotted", label="Chance")
-    line2 = plt.hlines(df[f" vanilla acc {gender} IID"].values[0], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="IID Acc.")
-    line3 = plt.hlines(df[f" vanilla acc {gender} Gen"].values[0], xmin=xmin, xmax=xmax, color="blue", linestyles="dashed", label="Gen. Acc.")
-    plt.legend((line1, line2, line3), ("Chance", "IID Acc.", "Gen. Acc."), loc="lower right")
-    plt.savefig(f"./Reflexive_An/{filetitle}.pdf", format="pdf", bbox_inches="tight")
+        sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+        ax = sns.catplot(data=pd.melt(curr_df, id_vars="Component", var_name="Condition", value_name="Ablated Accuracy"), kind="bar", x="Component", y="Ablated Accuracy", hue="Condition", height=5, aspect=6)
+        x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax.axes[0,0].patches]
+        xmin = ax.axes[0,0].patches[0].get_x()
+        xmax = ax.axes[0,0].patches[-1].get_x() + ax.axes[0,0].patches[-1].get_width()
+        y_coords = [p.get_height() for p in ax.axes[0,0].patches]
+        ax.axes[0,0].errorbar(x=x_coords, y=y_coords, yerr=errorbars, fmt="none", c="k")
+        plt.xticks(rotation=30)
+        plt.title(f"GPT2-{figtitle} {gender} Reflexives Ablation")
+        line1 = plt.hlines(.5, xmin=xmin, xmax=xmax, color="red", linestyles="dotted", label="Chance")
+        line2 = plt.hlines(df[f" vanilla acc {gender} IID"].values[0], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="IID Acc.")
+        line3 = plt.hlines(df[f" vanilla acc {gender} Gen"].values[0], xmin=xmin, xmax=xmax, color="blue", linestyles="dashed", label="Gen. Acc.")
+        plt.legend((line1, line2, line3), ("Chance", "IID Acc.", "Gen. Acc."), loc="lower right")
+        plt.savefig(f"./Reflexive_An/{filetitle}_{str(i)}.pdf", format="pdf", bbox_inches="tight")
 
 
 def plot_knn(df, figtitle, filetitle):

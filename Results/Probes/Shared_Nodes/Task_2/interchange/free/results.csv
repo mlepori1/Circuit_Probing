@@ -1,3 +1,0 @@
-,model_id,data_seed,target_layer,target_position,residual_location,model path,counterfactual accuracy,original model accuracy,logit diff,% Samples with Diff Counterfactual label
-0,2d499384-954d-4096-80f6-8274d8fda1ed,0,0,4,resid_mid,../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000,0.031519185591229446,1.0,-0.00036531650059332745,0.9539937353171496
-1,9845333c-d1bc-4ec5-a298-341802e1ada4,0,0,4,resid_post,../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000,0.031519185591229446,1.0,-0.00036531650059332745,0.9539937353171496

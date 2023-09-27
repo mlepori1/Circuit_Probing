@@ -32,8 +32,8 @@ save_checkpoints: [10000]
 transfer: false
 
 # Output
-data_dir: "../data/Disambiguation/a2_minus_b2_1_layer"
+data_dir: "../data/Disambiguation/"
 save_models: True
-model_dir: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer"
-results_dir: "../Results/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer"
+model_dir: "../Model/Algorithmic_Train/Disambiguation/"
+results_dir: "../Results/Algorithmic_Train/Disambiguation/"
 figtitle: "a2 - b2"

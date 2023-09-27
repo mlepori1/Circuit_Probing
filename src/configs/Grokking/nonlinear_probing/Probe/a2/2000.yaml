@@ -6,7 +6,7 @@ intermediate_size: 256
 layer_reinit: false
 lr_list:
 - 0.1
-model_path: ../Model/Algorithmic_Train/Grokking/a2_b/model_LR_0.001_Seed_0_2000
+model_path: ../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_2000
 model_seed_list:
 - 0
 n_classes: 113
@@ -15,11 +15,11 @@ random_init: false
 residual_location_list:
 - resid_mid
 - resid_post
-results_dir: ../Results/Probes/Grokking/a2_b/Probing/Nonlinear/a2/2000
+results_dir: ../Results/Probes/Grokking/Probing/Nonlinear/a2/2000
 target_layer_list:
 - 0
 target_position_list:
 - 2
-test_data_path: ../data/Grokking/a2_b/test.csv
-train_data_path: ../data/Grokking/a2_b/train.csv
+test_data_path: ../data/Grokking/test.csv
+train_data_path: ../data/Grokking/train.csv
 variable: var_0

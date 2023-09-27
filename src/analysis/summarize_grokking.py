@@ -49,8 +49,8 @@ def create_line_plot(
     plt.savefig(os.path.join(outdir, outfile), format="pdf", bbox_inches="tight")
 
 
-cp_dir = "../../Results/Probes/Grokking/a2_b/circuit_probing/a2"
-linear_dir = "../../Results/Probes/Grokking/a2_b/Probing/Linear/a2"
+cp_dir = "../../Results/Probes/Grokking/circuit_probing/a2"
+linear_dir = "../../Results/Probes/Grokking/Probing/Linear/a2"
 
 figtitle = "Probe Accuracy During Training: Attention"
 outdir = "./Grokking/"
@@ -62,8 +62,8 @@ outdir = "./Grokking/"
 outfile = "MLP_Probe_Acc.pdf"
 create_line_plot(cp_dir, linear_dir, figtitle, outdir, outfile, "mlp", sparsity=True)
 
-cp_dir = "../../Results/Probes/Grokking/a2_b/circuit_probing/b2"
-linear_dir = "../../Results/Probes/Grokking/a2_b/Probing/Linear/b2"
+cp_dir = "../../Results/Probes/Grokking/circuit_probing/b2"
+linear_dir = "../../Results/Probes/Grokking/Probing/Linear/b2"
 
 figtitle = "Probe Selectivity Analysis"
 outdir = "./Grokking/"
