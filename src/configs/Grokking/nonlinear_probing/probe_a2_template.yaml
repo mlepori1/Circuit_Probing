@@ -1,0 +1,22 @@
+batch_size_list:
+- 500
+data_seed: 0
+layer_reinit: false
+lr_list:
+- 0.1
+model_path: "../Model/Algorithmic_Train/Grokking/a2_b/model_LR_0.001_Seed_0"
+model_seed_list:
+- 0
+num_epochs: 100
+intermediate_size: 256
+residual_location_list: ["resid_mid", "resid_post"]
+target_position_list: [2]
+random_init: false
+results_dir: "../Results/Probes/Grokking/a2_b/Probing/Nonlinear/a2/"
+target_layer_list: [0]
+train_data_path: "../data/Grokking/a2_b/train.csv"
+test_data_path: "../data/Grokking/a2_b/test.csv"
+variable: var_0
+n_classes: 113
+
+counterfactual_embeddings: false

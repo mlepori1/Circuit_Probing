@@ -10,6 +10,8 @@ from transformers import GPT2Config
 from utils import create_circuit_probe, get_model
 from NeuroSurgeon.NeuroSurgeon.Visualization.visualizer import Visualizer, VisualizerConfig
 
+# Analysis functions that load in pretrained circuitmodels and use NeuroSurgeon's visualizer to 
+# plot the overlap between particular circuits
 def create_agreement_overlap_graph():
 
     gpt2_cfg = GPT2Config.from_pretrained("gpt2-medium")
@@ -45,7 +47,7 @@ def create_agreement_overlap_graph():
         figsize=(18, 11),
         format="pdf",
         outfile="analysis/Agreement/Medium_Agreement_Subnetwork_Overlap_Tensor.pdf",
-        title="GPT2-Medium Agreement Subnetwork Overlap",
+        title="GPT2-Medium Agreement Circuit Overlap",
         legend=True,
         title_fontsize=30,
         label_fontsize=30
@@ -86,7 +88,7 @@ def create_agreement_overlap_graph():
         figsize=(18, 11),
         format="pdf",
         outfile="analysis/Agreement/Small_Agreement_Subnetwork_Overlap_Tensor.pdf",
-        title="GPT2-Small Agreement Subnetwork Overlap",
+        title="GPT2-Small Agreement Circuit Overlap",
         legend=True,
         title_fontsize=30,
         label_fontsize=30
@@ -128,7 +130,7 @@ def create_shared_nodes_overlap_graph():
         figsize=(18, 11),
         format="pdf",
         outfile="analysis/Shared_Node/Task_Subnetwork_Overlap_Blocks.pdf",
-        title="Free Variable Subnetwork Overlap: Blocks",
+        title="Free Variable Circuit Overlap: Blocks",
         legend=True,
         title_fontsize=30,
         label_fontsize=30
@@ -149,7 +151,7 @@ def create_shared_nodes_overlap_graph():
         figsize=(18, 11),
         format="pdf",
         outfile="analysis/Shared_Node/Task_Subnetwork_Overlap_Tensor.pdf",
-        title="Free Variable Subnetwork Overlap",
+        title="Free Variable Circuit Overlap",
         legend=True,
         title_fontsize=30,
         label_fontsize=30

@@ -17,6 +17,7 @@ def get_lm_eval_data(config, data_path):
 
 
 def lm_eval(config, model, dataloader, ablate_set=None):
+    # Get accuracy of model before and after ablation
     abl_correct = []
     vanilla_correct = []
     for batch in dataloader:
@@ -50,6 +51,8 @@ def lm_eval(config, model, dataloader, ablate_set=None):
 
 
 def agreement_eval(config, model, dataloader, sing_id, plur_id, ablate_set=None):
+    # Run model evaluation with SV-Agreement data. Check whether logit for 
+    # "is" > logit for "are" to see whether model distinguishes syntactic number of subject 
     abl_correct = []
     vanilla_correct = []
     for batch in dataloader:
@@ -83,6 +86,7 @@ def agreement_eval(config, model, dataloader, sing_id, plur_id, ablate_set=None)
     }
 
 def agreement_qualitative_eval(config, outpath, model, tokenizer, dataloader, ablate_set=None):
+    # Record the top 50 next word predictions for a batch of data before and after ablation
     batch = next(iter(dataloader))
     batch = {k: v.to(config["device"]) for k, v in batch.items()}
 
@@ -110,6 +114,7 @@ def agreement_qualitative_eval(config, outpath, model, tokenizer, dataloader, ab
     file.close()
 
 def reflexive_eval(config, model, dataloader, ablate_set=None):
+    # Model evaluation before and after ablating reflexives subnetwork
     abl_correct = []
     vanilla_correct = []
 

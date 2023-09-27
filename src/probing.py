@@ -20,6 +20,7 @@ from Datasets import ProbingDataset, CounterfactualEmbeddingsDataset
 
 
 def create_probe(config):
+    # Converts pretrained HF GPT2 to Transformer lens  hooked transformer, and builds probe
     # Probe takes input from TransformerLens Hooked Transformer, maps to output space using a small nn.module
     hf_model = GPT2LMHeadModel.from_pretrained(config["model_path"]).to(config["device"])
     for param in hf_model.parameters():
@@ -100,7 +101,8 @@ def eval_probe(config, hooked_transformer, probe, dataloader):
 
 
 def train_probe(config, hooked_transformer, probe, trainloader):
-    # Implements a simple training loop that optimizes binary masks over networks
+    # Implements a simple training loop that optimizes probes over networks
+    # Probes intermediate representations using the TransformerLens library
     
     loss_fn = nn.CrossEntropyLoss()
     optimizer = AdamW(probe.parameters(), lr=config["lr"])

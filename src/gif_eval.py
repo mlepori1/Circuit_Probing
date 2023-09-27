@@ -38,7 +38,7 @@ def eval_model(config, probe, dataloader, gif_vectors, key):
 
 
 def create_gif(outpath, gif_vectors):
-    "Constructs a gif of scatter plots of PCA updates through training"
+    "Constructs a gif of scatter plots of PCA updates through mask training"
 
     colors = [
         "black",

@@ -43,6 +43,7 @@ def get_config():
 
 
 def get_model(config):
+    # Get model and handle initialization
     if config["random_init"] == False and config["layer_reinit"] == False:
         return GPT2LMHeadModel.from_pretrained(config["model_path"])
     elif config["random_init"] == True:
@@ -116,61 +117,8 @@ def get_model(config):
         raise ValueError(f'{config["model_type"]} is not supported')
 
 
-def create_linear_probe(config, model):
-    # Create a null CircuitModel to just do linear probing
-    circuit_config = CircuitConfig(
-        mask_method="continuous_sparsification",
-        mask_hparams={
-            "ablation": "none",
-            "mask_unit": "neuron",
-            "mask_bias": False,
-            "mask_init_value": 0.0,
-        },
-        target_layers=[],
-        freeze_base=True,
-        add_l0=False,
-        l0_lambda=0.0,
-    )
-
-    if config["operation"] == "mlp":
-        resid_config = ResidualUpdateModelConfig(
-            "gpt",
-            target_layers=[config["target_layer"]],
-            updates=False,
-            stream=True,  # Looking at residual stream for normal probing
-            mlp=True,
-            attn=False,
-        )
-        probe_config = SubnetworkProbeConfig(
-            n_classes=config["n_classes"],
-            probe_vectors=f'mlp_stream_{config["target_layer"]}',
-            circuit_config=circuit_config,
-            resid_config=resid_config,
-            intermediate_size=-1
-        )
-    elif config["operation"] == "attn":
-        resid_config = ResidualUpdateModelConfig(
-            "gpt",
-            target_layers=[config["target_layer"]],
-            updates=False,
-            stream=True,  # Looking at residual stream for normal probing
-            mlp=False,
-            attn=True,
-        )
-        probe_config = SubnetworkProbeConfig(
-            n_classes=config["n_classes"],
-            probe_vectors=f'attn_stream_{config["target_layer"]}',
-            circuit_config=circuit_config,
-            resid_config=resid_config,
-            intermediate_size=-1
-        )
-    else:
-        raise ValueError("operation must be either mlp or attn")
-
-    return SubnetworkProbe(probe_config, model)
-
-
 def create_circuit_probe(config, model):
+    # Create a circuit probe according to the config specifications
     if config["operation"] == "mlp":
         target_layers = [
             f'transformer.h.{config["target_layer"]}.mlp.c_fc',
@@ -229,7 +177,7 @@ def create_circuit_probe(config, model):
 
     return CircuitProbe(circuit_probe_config, model)
 
-
+## Dataset creation and splitting code
 def create_datasets(config):
     train_dataset = AlgorithmicProbeDataset(
         config["train_data_path"], config["variable"], config["probe_index"]

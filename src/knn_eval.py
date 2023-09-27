@@ -41,6 +41,7 @@ def knn_evaluation(
     # Can either randomly sample N KNN examples or sample N per class
     assert num_knn_examples or per_class
 
+    # Use cosine distance because that is what we train our mask with
     knn_clf = knn(metric="cosine", n_neighbors=1)
 
     probe.train(False)

@@ -93,10 +93,10 @@ def generate_data(
     data_path="/data/",
     task_id=None,
     insert_random_tokens=None,
-    label_function=["var_0", "var_1", "+"],
     auxiliary_variable_functions=[],
     counterfactual_label_functions=[],
 ):
+    # Generate data for arithmetic tasks
     os.makedirs(data_path, exist_ok=True)
     # Input format is A B =
     # Code snippet inspired by Neel Nanda's Grokking Demo ipynb
@@ -186,6 +186,7 @@ def generate_multitask_data(
     task_1_counterfactual_label_functions=[],
     task_2_counterfactual_label_functions=[]
 ):
+    # Generate data for multitask arithmetic task
     train_x_1, train_y_1, test_x_1, test_y_1 = generate_data(
         task_1_functions,
         mod=mod,
@@ -221,7 +222,7 @@ def generate_multitask_data(
         test_labels.to(device),
     )
 
-
+### Functions for generating intermediate variables
 def a_identity(a, b, p):
     return a % p
 

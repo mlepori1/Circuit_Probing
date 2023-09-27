@@ -1,0 +1,35 @@
+batch_size_list:
+- 500
+data_seed: 0
+l0_lambda: 1.0e-06
+layer_reinit: false
+lm_eval: true
+lr_list:
+- 0.001
+mask_init_list:
+- 0.0
+max_temp: 200
+model_dir: ../Model/Probes/Disambiguation/a2_minus_b2_1_layer/circuit_probing/a_plus_b/
+model_path: "../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer/model_LR_0.001_Seed_0_final"
+model_seed_list:
+- 0
+num_epochs: 90
+num_random_ablations: 0
+operation_list:
+- attn
+- mlp
+probe_index_list:
+- 2
+random_init: false
+results_dir: ../Results/Probes/Disambiguation/a2_minus_b2/circuit_probing/1_Layer/a_plus_b/
+save_models: false
+target_layer_list:
+- 0
+test_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/test.csv
+train_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/train.csv
+train_size: 2500
+variable: aux_0
+task: disambiguation
+
+# GIF
+gif: false

@@ -15,7 +15,8 @@ from transformers import GPT2Config, GPT2LMHeadModel
 import data_utils
 import utils
 
-
+# A script that generates arithmetic data and saves it
+# then trains a small GPT2 style transformer on that dataset
 def loss_fn(logits, labels):
     logits = logits[:, -1]
     logits = logits.to(torch.float64)
@@ -45,6 +46,7 @@ def convert_strings_to_functions(string_fns):
 
 
 def train_loop(model, train_x, train_y, test_x, test_y, lr, config):
+    # A simple train loop
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=lr, weight_decay=config["wd"], betas=config["betas"]
     )
@@ -126,7 +128,7 @@ def main():
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     config["device"] = device
 
-    # Create Datasets
+    # Create Datasets using helper functions
     shutil.rmtree(config["data_dir"], ignore_errors=True)
     os.makedirs(config["data_dir"], exist_ok=True)
 
@@ -234,6 +236,7 @@ def main():
                 shutil.rmtree(config["model_dir"], ignore_errors=True)
                 os.makedirs(os.path.join(config["model_dir"], model_id), exist_ok=True)
 
+            # If we are doing transfer learning, then load the model state from a saved state_dict
             if config["transfer"]:
                 transfer_model = GPT2LMHeadModel.from_pretrained(
                     config["model_path"]

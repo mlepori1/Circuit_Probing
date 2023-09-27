@@ -194,6 +194,7 @@ def main():
                                 )
                                 final_eval_loss = eval_probe(config, probe, testloader)
 
+                                # Run KNN subnetwork evaluation
                                 knn_results = knn_evaluation(
                                     config, probe, trainloader, testloader, per_class=1
                                 )
@@ -233,6 +234,7 @@ def main():
                                 }
 
                                 if config["lm_eval"] == True:
+                                    # Run language modeling evaluation to see the effect of ablating subnetworks
                                     # Extract underlying LM Model
                                     probe.train(False)
                                     model = probe.wrapped_model.wrapped_model
@@ -275,6 +277,7 @@ def main():
                                         )
                                         ablate_sets = [None]
 
+                                    # Ablate subnetworks and rerun knn evaluation 
                                     for ablate_set in ablate_sets:
                                         for idx, lm_loader in enumerate(lm_loaders):
                                             model.set_ablate_mode("zero_ablate")

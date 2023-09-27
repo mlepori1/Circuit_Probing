@@ -1,0 +1,25 @@
+batch_size_list:
+- 500
+data_seed: 0
+layer_reinit: false
+lr_list:
+- 0.1
+model_path: ../Model/Algorithmic_Train/Disambiguation/a2_minus_b2_1_layer/model_LR_0.001_Seed_0_final
+model_seed_list:
+- 0
+num_epochs: 100
+intermediate_size: -1
+residual_location_list: ["resid_mid", "resid_post"]
+target_position_list: [2]
+random_init: false
+results_dir: ../Results/Probes/Disambiguation/a2_minus_b2/Probing/Linear/1_Layer/a_minus_b/
+target_layer_list: [0]
+test_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/test.csv
+train_data_path: ../data/Disambiguation/a2_minus_b2_1_layer/train.csv
+variable: aux_1
+n_classes: 113
+
+counterfactual_embeddings: true
+counterfactual_label: CF_Label_2
+counterfactual_variable: counter_aux_1
+cf_num_epochs: 10
