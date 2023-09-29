@@ -1,5 +1,5 @@
 export PROJECT_DIR=/users/mlepori/data/mlepori/projects/Circuit_Probing/
-export CONFIG_DIR=configs/Grokking/nonlinear_probing/Probe/a2/
+export CONFIG_DIR=configs/SV_Agreement/mixed-more-l0-save/
 for file in ${CONFIG_DIR}/*;
 do
     echo "$file"

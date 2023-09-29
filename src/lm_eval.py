@@ -1,8 +1,6 @@
 import numpy as np
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import DataLoader, random_split
+from torch.utils.data import DataLoader
 
 from Datasets import LMEvalDataset
 
@@ -118,68 +116,38 @@ def reflexive_eval(config, model, dataloader, ablate_set=None):
     abl_correct = []
     vanilla_correct = []
 
-    loss = nn.CrossEntropyLoss(reduce=False)
     for batch in dataloader:
         batch = {k: v.to(config["device"]) for k, v in batch.items()}
 
-        # Get full model accuracy
+        ### Get full model accuracy
         model.use_masks(False)
-        gram_outputs = model(input_ids=batch["input_ids"])
+        outputs = model(input_ids=batch["input_ids"]).logits
+        outputs = outputs[batch["token_mask"]] # Get logits from token preceeding pronoun
+        # Get labels for the grammatical pronoun
+        gram_label_mask = torch.roll(batch["token_mask"], 1, -1) # Shift token_mask to get label
+        gram_labels = batch["input_ids"][gram_label_mask].reshape(-1, 1)
+        gram_outputs = outputs.gather(1, gram_labels).reshape(-1) # Get the logit value the grammatical label
 
-        # Get logits predicting pronoun
-        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
-        logits = gram_outputs.logits[logit_mask]
-        # Get labels for the pronoun
-        label_mask = torch.roll(logit_mask, 1, -1)
-        labels = batch["input_ids"][label_mask]
-  
-        # Flatten the tokens
-        gram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
-        gram_loss = torch.sum(gram_loss.reshape(-1, 2), -1)
+        # Get labels for the ungrammatical pronoun
+        ungram_label_mask = torch.roll(batch["token_mask"], 1, -1)
+        ungram_labels = batch["ungrammatical"][ungram_label_mask].reshape(-1, 1)
+        ungram_outputs = outputs.gather(1, ungram_labels).reshape(-1)
+        vanilla_correct += list((gram_outputs > ungram_outputs).cpu())
 
-        ungram_outputs = model(input_ids=batch["ungrammatical"])
-        # Get logits predicting pronoun
-        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
-        logits = ungram_outputs.logits[logit_mask]
-
-        # Get labels for the pronoun
-        label_mask = torch.roll(logit_mask, 1, -1)
-        labels = batch["ungrammatical"][label_mask]
-
-        # Flatten the tokens
-        ungram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
-        ungram_loss = torch.sum(ungram_loss.reshape(-1, 2), -1)
-
-        vanilla_correct += list((ungram_loss > gram_loss).cpu())
-
-        # Get ablated model accuracy
+        ### Get ablated model accuracy
         model.use_masks(True, ablate_set)
-        gram_outputs = model(input_ids=batch["input_ids"])
-        
-        # Get logits predicting pronoun
-        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
-        logits = gram_outputs.logits[logit_mask]
-        # Get labels for the pronoun
-        label_mask = torch.roll(logit_mask, 1, -1)
-        labels = batch["input_ids"][label_mask]
-  
-        # Flatten the tokens
-        gram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
-        gram_loss = torch.sum(gram_loss.reshape(-1, 2), -1)
+        outputs = model(input_ids=batch["input_ids"]).logits
+        outputs = outputs[batch["token_mask"]] # Get logits from token preceeding pronoun
+        # Get labels for the grammatical pronoun
+        gram_label_mask = torch.roll(batch["token_mask"], 1, -1) # Shift token_mask to get label
+        gram_labels = batch["input_ids"][gram_label_mask].reshape(-1, 1)
+        gram_outputs = outputs.gather(1, gram_labels).reshape(-1) # Get the logit value the grammatical label
 
-        ungram_outputs = model(input_ids=batch["ungrammatical"])
-        # Get logits predicting pronoun
-        logit_mask = batch["token_mask"] + torch.roll(batch["token_mask"], 1, -1)
-        logits = ungram_outputs.logits[logit_mask]
-
-        # Get labels for the pronoun
-        label_mask = torch.roll(logit_mask, 1, -1)
-        labels = batch["ungrammatical"][label_mask]
-
-        # Flatten the tokens
-        ungram_loss = loss(logits.view(-1, logits.size(-1)), labels.view(-1))
-        ungram_loss = torch.sum(ungram_loss.reshape(-1, 2), -1)
-        abl_correct += list((ungram_loss > gram_loss).cpu())
+        # Get labels for the ungrammatical pronoun
+        ungram_label_mask = torch.roll(batch["token_mask"], 1, -1)
+        ungram_labels = batch["ungrammatical"][ungram_label_mask].reshape(-1, 1)
+        ungram_outputs = outputs.gather(1, ungram_labels).reshape(-1)
+        abl_correct += list((gram_outputs > ungram_outputs).cpu())
 
     model.use_masks(True)
 

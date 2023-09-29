@@ -184,10 +184,10 @@ class ReflexivesDataset(Dataset):
             tokenized = tokenizer(sent)
             tok_len = len(tokenized["input_ids"])
             pad_len = pad_max - tok_len
-            probe_targets.append(tok_len - 3) # Probe the token right before the pronoun
+            probe_targets.append(tok_len - 2) # Probe the token right before the pronoun, pronoun is one token
             input_ids = tokenized["input_ids"] + ([tokenizer.eos_token_id] * pad_len)
             xs.append(torch.tensor(input_ids).reshape(1, -1))
-
+        
         ungrammatical = []
         for sent in datafile["ungrammatical"]:
             tokenized = tokenizer(sent)

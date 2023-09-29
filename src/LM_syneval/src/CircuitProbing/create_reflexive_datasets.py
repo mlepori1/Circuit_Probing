@@ -3,7 +3,7 @@ import pickle as pkl
 
 import pandas as pd
 
-outdir = "../../../../data/Reflexive_An/"
+outdir = "../../../../data/Reflexive_An_Mixed/"
 os.makedirs(outdir, exist_ok=True)
 
 sing_subject = []
@@ -19,25 +19,29 @@ datasets = [
 
 for dataset in datasets:
     d = pkl.load(open(dataset, "rb"))
+    sing_keys = []
+    plur_keys = []
     for k in list(d.keys()):
-        if k.startswith("sing") and "plur" in k:
-            sing_key = k
-        if k.startswith("plur") and "sing" in k:
-            plur_key = k
-    for pair in d[sing_key]:
-        sing_subject.append(pair[0])
-        sing_ungrammatical.append(pair[1])
-        if "herself" in pair[0] or "herself" in pair[1]:
-            gender.append(1)
-        else:
-            gender.append(0)
-    for pair in d[plur_key]:
-        plur_subject.append(pair[0])
-        plur_ungrammatical.append(pair[1])
-        if "herself" in pair[0] or "herself" in pair[1]:
-            gender.append(1)
-        else:
-            gender.append(0)
+        if k.startswith("sing"):
+            sing_keys.append(k)
+        if k.startswith("plur"):
+            plur_keys.append(k)
+    for sing_key in sing_keys:
+        for pair in d[sing_key]:
+            sing_subject.append(pair[0])
+            sing_ungrammatical.append(pair[1])
+            if "herself" in pair[0] or "herself" in pair[1]:
+                gender.append(1)
+            else:
+                gender.append(0)
+    for plur_key in plur_keys:
+        for pair in d[plur_key]:
+            plur_subject.append(pair[0])
+            plur_ungrammatical.append(pair[1])
+            if "herself" in pair[0] or "herself" in pair[1]:
+                gender.append(1)
+            else:
+                gender.append(0)
 
 sentences = list(sing_subject) + list(plur_subject)
 ungrammatical_sentences = sing_ungrammatical + plur_ungrammatical

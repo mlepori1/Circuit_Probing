@@ -14,7 +14,7 @@ lm_same_task_path: ../data/Shared_Nodes/Task_1/test.csv
 lm_different_task_path: ../data/Shared_Nodes/Task_2/test.csv
 variable: "var_0"
 probe_index_list: [4]
-train_size: 3000
+train_size: 2500
 task: multitask
 
 # Training

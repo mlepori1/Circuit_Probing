@@ -13,7 +13,7 @@ def extract_pre_verb(sentence):
     return sentence
 
 
-outdir = "../../../../data/SV_Agr/"
+outdir = "../../../../data/SV_Agr_Mixed/"
 os.makedirs(outdir, exist_ok=True)
 
 sing_subject = set()
@@ -28,15 +28,20 @@ datasets = [
 
 for dataset in datasets:
     d = pkl.load(open(dataset, "rb"))
+    sing_keys = []
+    plur_keys = []
     for k in list(d.keys()):
-        if k.startswith("sing") and "plur" in k:
-            sing_key = k
-        if k.startswith("plur") and "sing" in k:
-            plur_key = k
-    for pair in d[sing_key]:
-        sing_subject.add(extract_pre_verb(pair[0]))
-    for pair in d[plur_key]:
-        plur_subject.add(extract_pre_verb(pair[0]))
+        if k.startswith("sing"):
+            sing_keys.append(k)
+        if k.startswith("plur"):
+            plur_keys.append(k)
+
+    for sing_key in sing_keys:
+        for pair in d[sing_key]:
+            sing_subject.add(extract_pre_verb(pair[0]))
+    for plur_key in plur_keys:
+        for pair in d[plur_key]:
+            plur_subject.add(extract_pre_verb(pair[0]))
 
 sentences = list(sing_subject) + list(plur_subject)
 labels = [0] * len(sing_subject) + [1] * len(plur_subject)

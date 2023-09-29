@@ -27,7 +27,6 @@ target_layer_list:
 - 0
 test_data_path: ../data/Disambiguation/test.csv
 train_data_path: ../data/Disambiguation/train.csv
-train_size: 2500
 variable: aux_0
 task: disambiguation
 

@@ -261,8 +261,8 @@ def main():
                                     elif config["task"] == "agreement":
                                         lm_loaders = [testloader, genloader]
                                         lm_loader_labels = ["IID", "Gen"]
-                                        sing_id = tokenizer("is")["input_ids"][0]
-                                        plur_id = tokenizer("are")["input_ids"][0]
+                                        sing_id = tokenizer(" is")["input_ids"][0] # Preprend space bc of GPT2 Tokenizer
+                                        plur_id = tokenizer(" are")["input_ids"][0]
                                         ablate_sets = [None]
                                     elif config["task"] == "reflexive":
                                         lm_loaders = [testloader, male_genloader, female_testloader, female_genloader]

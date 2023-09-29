@@ -1,0 +1,21 @@
+sentence,labels
+the author,0
+the pilot,0
+the farmer,0
+the officer,0
+the senator,0
+the consultant,0
+the surgeon,0
+the customer,0
+the teacher,0
+the manager,0
+the farmers,1
+the pilots,1
+the consultants,1
+the authors,1
+the customers,1
+the senators,1
+the teachers,1
+the managers,1
+the officers,1
+the surgeons,1

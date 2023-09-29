@@ -46,6 +46,7 @@ def create_line_plot(
     plt.figure()
     sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
     sns.lineplot(data=data, x="Epochs", y="Accuracy", hue="Method").set(title=figtitle)
+    plt.ylim(0, 1.05)
     plt.savefig(os.path.join(outdir, outfile), format="pdf", bbox_inches="tight")
 
 
