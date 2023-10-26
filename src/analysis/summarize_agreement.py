@@ -72,53 +72,33 @@ def plot_zoomed_in(small):#, medium):
     f = plt.figure(figsize=(5, 3))
     #gs = f.add_gridspec(1, 2)
     small_df_iid = pd.DataFrame.from_dict({
-        "Ablated Accuracy": [small[" ablated acc IID"].values[0], small["random ablate acc mean IID"].values[0]],
-        "Condition": ["Abl. Circuit", "Abl. Random"],
-        "error": [0, small["random ablate acc std IID"].values[0]]
+        "Accuracy": [small[" ablated acc IID"].values[0], small["random ablate acc mean IID"].values[0], small[" vanilla acc IID"].values[0]],
+        "Dataset": ["IID", "IID", "IID"],
+        "error": [0, small["random ablate acc std IID"].values[0], 0],
+        "Condition": ["Ablate Subnetwork", "Ablate Random", "Full Model"]
     } )
 
-    #small_df_gen = pd.DataFrame.from_dict({
-    #    "Ablated Accuracy": [small[" ablated acc Gen"].values[0], small["random ablate acc mean Gen"].values[0]],
-    #    "Condition": ["Abl. Circuit", "Abl. Random"],
-    #    "error": [0,  small["random ablate acc std Gen"].values[0]]
-    #} )
+    small_df_gen = pd.DataFrame.from_dict({
+        "Accuracy": [small[" ablated acc Gen"].values[0], small["random ablate acc mean Gen"].values[0], small[" vanilla acc Gen"].values[0]],
+        "Dataset": ["OOD", "OOD", "OOD"],
+        "error": [0, small["random ablate acc std Gen"].values[0], 0],
+        "Condition": ["Ablate Subnetwork", "Ablate Random", "Full Model"]
+    } )
+
+    small_df = pd.concat([small_df_iid, small_df_gen])
 
     sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
     with sns.axes_style("darkgrid"):
-        ax0 = sns.barplot(data=small_df_iid, x="Condition", y="Ablated Accuracy")
+        g = sns.catplot(data=small_df, kind="bar", x="Dataset", y="Accuracy", hue="Condition").set(title="Subject-Verb Agreement", ylim=(0.5, 1.0))
+        for ax in g.axes.flat:         
+            x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax.patches]
+            y_coords = [p.get_height() for p in ax.patches]
+            x_coords, y_coords = zip(*sorted(zip(x_coords, y_coords)))
+            print(x_coords)
+            print(y_coords)
+            ax.errorbar(x=x_coords, y=y_coords, yerr=small_df["error"], fmt="none", c="k")
 
-        x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax0.patches]
-        xmin = ax0.patches[0].get_x()
-        xmax = ax0.patches[-1].get_x() + ax0.patches[-1].get_width()
-        y_coords = [p.get_height() for p in ax0.patches]
-        ax0.errorbar(x=x_coords, y=y_coords, yerr=small_df_iid["error"], fmt="none", c="k")
-        ax0.hlines(small[" vanilla acc IID"], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="Full Model Acc.")
 
-        #sns.set(style="darkgrid", palette="Dark2", font_scale=1)
-        #ax1 = f.add_subplot(gs[0, 1])
-        #sns.barplot(ax=ax1, data=small_df_gen, x="Condition", y="Ablated Accuracy")
-        #x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax1.patches]
-        #xmin = ax1.patches[0].get_x()
-        #xmax = ax1.patches[-1].get_x() + ax1.patches[-1].get_width()
-        #y_coords = [p.get_height() for p in ax1.patches]
-        #ax1.errorbar(x=x_coords, y=y_coords, yerr=small_df_iid["error"], fmt="none", c="k")
-        #ax1.title.set_text('0-Distractors')
-        #ax1.hlines(.5, xmin=xmin, xmax=xmax, color="red", linestyles="dotted", label="Chance")
-        #ax1.hlines(small[" vanilla acc Gen"], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="Full Model Acc.")
-
-        ax0.tick_params(axis='x',labelrotation=30, labelsize=15)
-        ax0.set_ylim(0.5, 1.0)
-        ax0.set_ylabel(ylabel="Ablated Accuracy", fontsize=15)
-        ax0.set_xlabel(xlabel="Condition", fontsize=15)
-
-        #ax1.tick_params(axis='x',labelrotation=30, labelsize=13)
-        #ax1.set_ylim(0, 1.05)
-        #ax1.get_yaxis().set_ticklabels([])
-        #ax1.set_ylabel(ylabel="", fontsize=15)
-        #ax1.set_xlabel(xlabel="Condition", fontsize=15)
-
-    f.suptitle("GPT2 SV: Attn-6")
-    plt.legend(loc="lower right")
     f.set_size_inches(3, 5)
     plt.savefig("./Agreement/small_sv_agreement.pdf", format="pdf", bbox_inches="tight")
 
@@ -175,8 +155,8 @@ def plot_knn(df, figtitle, filetitle):
     plt.savefig(f"./Agreement/{filetitle}_SV.pdf", format="pdf", bbox_inches="tight")
 
 if __name__ == "__main__":
-    medium = pd.read_csv("../../Results/Probes/SV_Agr_Mixed/medium/results.csv")
-    small = pd.read_csv("../../Results/Probes/SV_Agr_Mixed/small/results.csv")
+    medium = pd.read_csv("../../Results/Probes/SV_Agr/medium/results.csv")
+    small = pd.read_csv("../../Results/Probes/SV_Agr/small/results.csv")
     plot_zoomed_in(small)
     plot_everything(small, "small", "all_small")
     plot_knn(small, "small", "small_knn")

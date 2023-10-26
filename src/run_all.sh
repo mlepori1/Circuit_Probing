@@ -1,5 +1,5 @@
 export PROJECT_DIR=/users/mlepori/data/mlepori/projects/Circuit_Probing/
-export CONFIG_DIR=configs/SV_Agreement/mixed-more-l0-save/
+export CONFIG_DIR=configs/Syntactic_Number/
 for file in ${CONFIG_DIR}/*;
 do
     echo "$file"

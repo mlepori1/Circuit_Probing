@@ -26,12 +26,12 @@ def create_agreement_overlap_graph():
     }
     gpt2_model = get_model(config)
     sv_model = create_circuit_probe(config, gpt2_model)
-    SV_WEIGHTS = "../Model/Probes/SV_Agr_Mixed/small-save/8834b5af-63bb-45bf-b968-ceedaf760a70.pt"
+    SV_WEIGHTS = "../Model/Probes/SV_Agr/small-save/de4ce015-5b7c-4b79-acd4-54d3c004dc94.pt"
     sv_model.load_state_dict(torch.load(SV_WEIGHTS))
 
     gpt2_model = get_model(config)
     reflexive_model = create_circuit_probe(config, gpt2_model)
-    REFLEXIVE_WEIGHTS = "../Model/Probes/Reflexive_An_Mixed/small-save/0dee8864-9321-4729-b158-c374e651945b.pt"
+    REFLEXIVE_WEIGHTS = "../Model/Probes/Reflexive_An/small-save/f00e4c6a-54d7-4277-a2ec-3c85ce18dbca.pt"
     reflexive_model.load_state_dict(torch.load(REFLEXIVE_WEIGHTS))
 
     viz_config = VisualizerConfig(

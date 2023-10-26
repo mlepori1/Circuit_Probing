@@ -1,0 +1,3121 @@
+sentence,labels,object labels
+the song by the dancer,0,0
+the teacher near the guard,0,0
+the consultant in front of the taxi driver,0,0
+the author next to the chef,0,0
+the consultant across from the chef,0,0
+the senator near the assistant,0,0
+the teacher near the minister,0,0
+the author behind the minister,0,0
+the manager across from the executive,0,0
+the farmer next to the parent,0,0
+the officer to the side of the minister,0,0
+the manager behind the taxi driver,0,0
+the painting by the dancer,0,0
+the poem from the chef,0,0
+the author to the side of the taxi driver,0,0
+the consultant behind the taxi driver,0,0
+the surgeon in front of the minister,0,0
+the surgeon near the executive,0,0
+the manager in front of the architect,0,0
+the author near the architect,0,0
+the officer behind the taxi driver,0,0
+the poem by the chef,0,0
+the teacher behind the minister,0,0
+the senator in front of the guard,0,0
+the teacher to the side of the chef,0,0
+the consultant next to the executive,0,0
+the officer to the side of the architect,0,0
+the surgeon behind the parent,0,0
+the customer near the architect,0,0
+the consultant near the assistant,0,0
+the senator to the side of the parent,0,0
+the author near the parent,0,0
+the senator across from the executive,0,0
+the book from the chef,0,0
+the game by the minister,0,0
+the pilot behind the guard,0,0
+the officer near the guard,0,0
+the farmer in front of the architect,0,0
+the consultant in front of the chef,0,0
+the manager across from the taxi driver,0,0
+the author in front of the assistant,0,0
+the customer near the taxi driver,0,0
+the senator across from the parent,0,0
+the consultant near the skater,0,0
+the manager in front of the parent,0,0
+the senator in front of the dancer,0,0
+the senator behind the taxi driver,0,0
+the author behind the parent,0,0
+the manager in front of the assistant,0,0
+the author to the side of the assistant,0,0
+the surgeon next to the skater,0,0
+the manager near the dancer,0,0
+the officer behind the dancer,0,0
+the pilot across from the dancer,0,0
+the farmer near the architect,0,0
+the officer behind the chef,0,0
+the officer next to the skater,0,0
+the author behind the guard,0,0
+the consultant in front of the skater,0,0
+the picture from the dancer,0,0
+the picture by the chef,0,0
+the consultant behind the dancer,0,0
+the picture from the minister,0,0
+the manager across from the dancer,0,0
+the manager to the side of the skater,0,0
+the teacher behind the chef,0,0
+the teacher across from the guard,0,0
+the teacher across from the minister,0,0
+the senator behind the architect,0,0
+the officer near the architect,0,0
+the surgeon to the side of the taxi driver,0,0
+the pilot next to the parent,0,0
+the officer next to the guard,0,0
+the surgeon across from the minister,0,0
+the painting from the parent,0,0
+the author next to the skater,0,0
+the movie by the taxi driver,0,0
+the officer behind the parent,0,0
+the movie from the taxi driver,0,0
+the farmer to the side of the chef,0,0
+the movie from the parent,0,0
+the show from the chef,0,0
+the author next to the assistant,0,0
+the farmer in front of the guard,0,0
+the teacher in front of the assistant,0,0
+the pilot near the guard,0,0
+the poem by the taxi driver,0,0
+the surgeon next to the parent,0,0
+the officer to the side of the skater,0,0
+the surgeon across from the dancer,0,0
+the movie from the skater,0,0
+the author behind the architect,0,0
+the movie from the chef,0,0
+the novel from the taxi driver,0,0
+the manager next to the guard,0,0
+the surgeon near the guard,0,0
+the senator behind the parent,0,0
+the customer to the side of the executive,0,0
+the manager next to the parent,0,0
+the surgeon in front of the taxi driver,0,0
+the farmer near the skater,0,0
+the surgeon across from the parent,0,0
+the manager in front of the dancer,0,0
+the manager near the architect,0,0
+the customer to the side of the guard,0,0
+the movie by the parent,0,0
+the teacher across from the architect,0,0
+the senator next to the executive,0,0
+the consultant behind the skater,0,0
+the author near the executive,0,0
+the officer across from the architect,0,0
+the teacher behind the skater,0,0
+the officer next to the parent,0,0
+the movie from the assistant,0,0
+the show from the executive,0,0
+the consultant in front of the guard,0,0
+the officer next to the executive,0,0
+the farmer next to the architect,0,0
+the picture by the taxi driver,0,0
+the senator to the side of the architect,0,0
+the customer behind the architect,0,0
+the senator across from the minister,0,0
+the surgeon in front of the parent,0,0
+the manager next to the architect,0,0
+the manager to the side of the chef,0,0
+the book by the dancer,0,0
+the movie by the assistant,0,0
+the manager near the executive,0,0
+the farmer across from the guard,0,0
+the pilot next to the architect,0,0
+the pilot to the side of the parent,0,0
+the book by the skater,0,0
+the manager in front of the taxi driver,0,0
+the movie by the executive,0,0
+the teacher next to the assistant,0,0
+the author in front of the parent,0,0
+the officer behind the assistant,0,0
+the farmer in front of the chef,0,0
+the customer to the side of the assistant,0,0
+the author in front of the taxi driver,0,0
+the picture from the taxi driver,0,0
+the book by the assistant,0,0
+the consultant near the taxi driver,0,0
+the consultant to the side of the guard,0,0
+the author to the side of the architect,0,0
+the consultant behind the parent,0,0
+the consultant behind the executive,0,0
+the novel by the taxi driver,0,0
+the book from the architect,0,0
+the consultant behind the minister,0,0
+the song by the minister,0,0
+the customer next to the taxi driver,0,0
+the painting from the taxi driver,0,0
+the teacher in front of the guard,0,0
+the show by the taxi driver,0,0
+the farmer across from the parent,0,0
+the farmer next to the chef,0,0
+the teacher next to the taxi driver,0,0
+the senator to the side of the guard,0,0
+the consultant to the side of the architect,0,0
+the farmer behind the chef,0,0
+the customer next to the assistant,0,0
+the teacher next to the executive,0,0
+the consultant to the side of the skater,0,0
+the painting from the executive,0,0
+the author across from the skater,0,0
+the customer near the minister,0,0
+the teacher near the skater,0,0
+the farmer in front of the taxi driver,0,0
+the pilot near the executive,0,0
+the painting by the assistant,0,0
+the show by the chef,0,0
+the manager to the side of the taxi driver,0,0
+the consultant to the side of the chef,0,0
+the senator next to the minister,0,0
+the picture by the architect,0,0
+the painting by the skater,0,0
+the pilot in front of the guard,0,0
+the customer behind the executive,0,0
+the manager behind the assistant,0,0
+the surgeon behind the dancer,0,0
+the pilot in front of the assistant,0,0
+the officer behind the architect,0,0
+the teacher behind the guard,0,0
+the author behind the taxi driver,0,0
+the manager to the side of the architect,0,0
+the song from the dancer,0,0
+the customer across from the dancer,0,0
+the show from the assistant,0,0
+the manager next to the minister,0,0
+the author across from the chef,0,0
+the author near the dancer,0,0
+the surgeon near the minister,0,0
+the manager to the side of the parent,0,0
+the author behind the dancer,0,0
+the customer near the skater,0,0
+the officer to the side of the assistant,0,0
+the picture by the guard,0,0
+the senator near the minister,0,0
+the game from the skater,0,0
+the manager across from the assistant,0,0
+the poem by the parent,0,0
+the surgeon in front of the chef,0,0
+the officer near the minister,0,0
+the officer across from the assistant,0,0
+the officer next to the taxi driver,0,0
+the teacher in front of the chef,0,0
+the pilot to the side of the architect,0,0
+the officer in front of the parent,0,0
+the movie by the architect,0,0
+the customer across from the guard,0,0
+the picture from the assistant,0,0
+the consultant across from the dancer,0,0
+the author next to the parent,0,0
+the pilot across from the guard,0,0
+the book by the guard,0,0
+the surgeon to the side of the architect,0,0
+the manager to the side of the minister,0,0
+the show by the executive,0,0
+the officer in front of the architect,0,0
+the teacher across from the taxi driver,0,0
+the customer next to the skater,0,0
+the author across from the dancer,0,0
+the pilot near the assistant,0,0
+the picture from the chef,0,0
+the manager in front of the guard,0,0
+the consultant near the executive,0,0
+the song from the taxi driver,0,0
+the surgeon next to the assistant,0,0
+the manager behind the architect,0,0
+the customer behind the dancer,0,0
+the senator to the side of the skater,0,0
+the novel by the skater,0,0
+the manager behind the parent,0,0
+the officer behind the skater,0,0
+the officer to the side of the executive,0,0
+the song from the parent,0,0
+the farmer next to the skater,0,0
+the painting from the architect,0,0
+the farmer next to the executive,0,0
+the farmer across from the executive,0,0
+the teacher next to the minister,0,0
+the show from the architect,0,0
+the senator in front of the executive,0,0
+the surgeon near the chef,0,0
+the author in front of the minister,0,0
+the farmer near the chef,0,0
+the senator in front of the skater,0,0
+the show from the dancer,0,0
+the teacher in front of the executive,0,0
+the surgeon behind the chef,0,0
+the movie from the guard,0,0
+the song from the minister,0,0
+the manager next to the chef,0,0
+the customer in front of the taxi driver,0,0
+the teacher in front of the parent,0,0
+the consultant next to the assistant,0,0
+the poem from the architect,0,0
+the surgeon across from the architect,0,0
+the poem from the taxi driver,0,0
+the pilot next to the guard,0,0
+the senator near the architect,0,0
+the pilot across from the architect,0,0
+the manager across from the parent,0,0
+the pilot behind the minister,0,0
+the author next to the taxi driver,0,0
+the pilot across from the minister,0,0
+the consultant across from the taxi driver,0,0
+the teacher next to the chef,0,0
+the teacher behind the dancer,0,0
+the farmer near the executive,0,0
+the novel by the assistant,0,0
+the manager near the chef,0,0
+the pilot in front of the architect,0,0
+the song from the chef,0,0
+the surgeon next to the dancer,0,0
+the farmer to the side of the taxi driver,0,0
+the author across from the architect,0,0
+the pilot to the side of the executive,0,0
+the officer across from the minister,0,0
+the surgeon next to the chef,0,0
+the farmer near the guard,0,0
+the author to the side of the skater,0,0
+the pilot across from the assistant,0,0
+the movie by the minister,0,0
+the senator next to the architect,0,0
+the senator to the side of the executive,0,0
+the game by the chef,0,0
+the customer in front of the assistant,0,0
+the farmer behind the minister,0,0
+the farmer across from the taxi driver,0,0
+the pilot to the side of the dancer,0,0
+the manager behind the dancer,0,0
+the manager behind the executive,0,0
+the author in front of the chef,0,0
+the teacher to the side of the taxi driver,0,0
+the consultant next to the parent,0,0
+the picture from the guard,0,0
+the song from the architect,0,0
+the consultant in front of the executive,0,0
+the author across from the executive,0,0
+the movie by the guard,0,0
+the surgeon in front of the assistant,0,0
+the farmer to the side of the guard,0,0
+the novel by the parent,0,0
+the manager behind the skater,0,0
+the officer across from the guard,0,0
+the officer across from the dancer,0,0
+the teacher across from the chef,0,0
+the customer next to the parent,0,0
+the surgeon next to the taxi driver,0,0
+the manager across from the minister,0,0
+the senator next to the taxi driver,0,0
+the customer near the chef,0,0
+the consultant across from the minister,0,0
+the consultant next to the dancer,0,0
+the customer to the side of the minister,0,0
+the surgeon across from the taxi driver,0,0
+the officer across from the skater,0,0
+the song by the parent,0,0
+the officer in front of the skater,0,0
+the teacher to the side of the skater,0,0
+the consultant behind the guard,0,0
+the poem from the assistant,0,0
+the pilot behind the skater,0,0
+the painting by the architect,0,0
+the teacher to the side of the minister,0,0
+the manager across from the architect,0,0
+the surgeon behind the taxi driver,0,0
+the pilot near the taxi driver,0,0
+the customer across from the architect,0,0
+the pilot next to the taxi driver,0,0
+the customer behind the parent,0,0
+the officer next to the minister,0,0
+the senator to the side of the assistant,0,0
+the pilot in front of the parent,0,0
+the officer in front of the dancer,0,0
+the senator near the chef,0,0
+the surgeon in front of the skater,0,0
+the officer across from the taxi driver,0,0
+the surgeon behind the skater,0,0
+the song by the taxi driver,0,0
+the game by the executive,0,0
+the farmer near the assistant,0,0
+the pilot near the architect,0,0
+the senator in front of the assistant,0,0
+the novel by the dancer,0,0
+the customer in front of the chef,0,0
+the game from the taxi driver,0,0
+the farmer across from the assistant,0,0
+the novel from the skater,0,0
+the poem by the guard,0,0
+the senator across from the guard,0,0
+the picture by the parent,0,0
+the senator to the side of the dancer,0,0
+the author to the side of the chef,0,0
+the author near the minister,0,0
+the teacher near the dancer,0,0
+the teacher behind the assistant,0,0
+the consultant in front of the assistant,0,0
+the book from the dancer,0,0
+the song by the skater,0,0
+the painting from the guard,0,0
+the movie by the chef,0,0
+the officer to the side of the dancer,0,0
+the pilot next to the skater,0,0
+the manager next to the skater,0,0
+the author next to the executive,0,0
+the surgeon to the side of the assistant,0,0
+the farmer to the side of the architect,0,0
+the poem by the executive,0,0
+the poem from the skater,0,0
+the surgeon to the side of the executive,0,0
+the teacher next to the parent,0,0
+the pilot near the dancer,0,0
+the book from the minister,0,0
+the senator in front of the taxi driver,0,0
+the manager in front of the minister,0,0
+the poem from the executive,0,0
+the novel from the architect,0,0
+the song by the chef,0,0
+the show by the dancer,0,0
+the customer in front of the executive,0,0
+the novel by the minister,0,0
+the officer in front of the taxi driver,0,0
+the customer to the side of the dancer,0,0
+the consultant near the architect,0,0
+the pilot behind the taxi driver,0,0
+the teacher near the taxi driver,0,0
+the book from the assistant,0,0
+the customer to the side of the architect,0,0
+the surgeon across from the assistant,0,0
+the picture from the parent,0,0
+the consultant to the side of the taxi driver,0,0
+the author behind the skater,0,0
+the manager across from the guard,0,0
+the pilot in front of the taxi driver,0,0
+the consultant to the side of the assistant,0,0
+the surgeon to the side of the skater,0,0
+the officer in front of the assistant,0,0
+the senator behind the dancer,0,0
+the author near the guard,0,0
+the picture from the architect,0,0
+the author across from the parent,0,0
+the farmer behind the architect,0,0
+the author to the side of the dancer,0,0
+the customer across from the executive,0,0
+the farmer next to the dancer,0,0
+the game from the architect,0,0
+the consultant in front of the parent,0,0
+the painting by the guard,0,0
+the pilot behind the parent,0,0
+the game by the dancer,0,0
+the consultant next to the architect,0,0
+the pilot next to the minister,0,0
+the customer behind the skater,0,0
+the painting by the taxi driver,0,0
+the consultant near the guard,0,0
+the teacher near the assistant,0,0
+the book from the guard,0,0
+the customer across from the assistant,0,0
+the officer near the skater,0,0
+the movie from the executive,0,0
+the teacher near the parent,0,0
+the farmer behind the guard,0,0
+the pilot near the chef,0,0
+the farmer in front of the minister,0,0
+the customer near the assistant,0,0
+the customer near the guard,0,0
+the consultant next to the chef,0,0
+the novel by the guard,0,0
+the pilot near the skater,0,0
+the manager near the taxi driver,0,0
+the teacher across from the executive,0,0
+the surgeon to the side of the chef,0,0
+the farmer in front of the parent,0,0
+the consultant to the side of the parent,0,0
+the senator to the side of the chef,0,0
+the manager near the skater,0,0
+the officer next to the chef,0,0
+the surgeon across from the executive,0,0
+the senator behind the minister,0,0
+the manager next to the executive,0,0
+the teacher to the side of the assistant,0,0
+the picture by the minister,0,0
+the author across from the guard,0,0
+the senator across from the dancer,0,0
+the song by the executive,0,0
+the farmer in front of the executive,0,0
+the senator next to the dancer,0,0
+the painting by the chef,0,0
+the teacher near the executive,0,0
+the customer behind the minister,0,0
+the customer to the side of the chef,0,0
+the farmer next to the guard,0,0
+the senator next to the assistant,0,0
+the officer behind the guard,0,0
+the customer behind the taxi driver,0,0
+the consultant next to the minister,0,0
+the book from the parent,0,0
+the book by the taxi driver,0,0
+the surgeon behind the guard,0,0
+the officer across from the parent,0,0
+the novel by the chef,0,0
+the farmer to the side of the minister,0,0
+the consultant behind the chef,0,0
+the officer near the executive,0,0
+the author in front of the dancer,0,0
+the painting from the dancer,0,0
+the manager to the side of the assistant,0,0
+the farmer behind the parent,0,0
+the pilot in front of the dancer,0,0
+the customer near the parent,0,0
+the author behind the chef,0,0
+the pilot next to the chef,0,0
+the manager near the parent,0,0
+the surgeon across from the skater,0,0
+the teacher behind the parent,0,0
+the senator across from the assistant,0,0
+the book by the minister,0,0
+the manager near the assistant,0,0
+the pilot next to the dancer,0,0
+the author near the skater,0,0
+the song by the architect,0,0
+the picture by the assistant,0,0
+the consultant in front of the dancer,0,0
+the senator behind the assistant,0,0
+the teacher behind the executive,0,0
+the senator across from the chef,0,0
+the consultant to the side of the dancer,0,0
+the pilot in front of the skater,0,0
+the consultant across from the parent,0,0
+the pilot near the parent,0,0
+the pilot across from the executive,0,0
+the pilot behind the executive,0,0
+the game from the executive,0,0
+the pilot behind the dancer,0,0
+the surgeon to the side of the minister,0,0
+the officer near the dancer,0,0
+the pilot to the side of the taxi driver,0,0
+the teacher in front of the minister,0,0
+the manager near the minister,0,0
+the customer next to the chef,0,0
+the teacher behind the taxi driver,0,0
+the manager in front of the executive,0,0
+the book by the parent,0,0
+the manager near the guard,0,0
+the pilot near the minister,0,0
+the manager in front of the skater,0,0
+the surgeon to the side of the guard,0,0
+the customer across from the taxi driver,0,0
+the pilot across from the chef,0,0
+the consultant to the side of the minister,0,0
+the author near the chef,0,0
+the manager to the side of the dancer,0,0
+the officer in front of the chef,0,0
+the teacher next to the dancer,0,0
+the teacher near the architect,0,0
+the movie by the dancer,0,0
+the pilot across from the taxi driver,0,0
+the pilot in front of the executive,0,0
+the customer across from the minister,0,0
+the teacher to the side of the dancer,0,0
+the teacher to the side of the guard,0,0
+the teacher in front of the architect,0,0
+the picture by the dancer,0,0
+the consultant near the parent,0,0
+the pilot in front of the chef,0,0
+the surgeon next to the minister,0,0
+the surgeon near the skater,0,0
+the senator in front of the parent,0,0
+the senator behind the executive,0,0
+the senator across from the skater,0,0
+the customer to the side of the skater,0,0
+the farmer next to the assistant,0,0
+the teacher near the chef,0,0
+the consultant across from the executive,0,0
+the customer in front of the parent,0,0
+the farmer behind the skater,0,0
+the farmer behind the executive,0,0
+the officer next to the architect,0,0
+the farmer near the minister,0,0
+the officer next to the assistant,0,0
+the customer behind the assistant,0,0
+the novel from the guard,0,0
+the pilot behind the architect,0,0
+the novel by the architect,0,0
+the customer next to the architect,0,0
+the senator to the side of the minister,0,0
+the farmer next to the taxi driver,0,0
+the farmer to the side of the executive,0,0
+the novel from the dancer,0,0
+the surgeon near the architect,0,0
+the farmer behind the dancer,0,0
+the farmer in front of the dancer,0,0
+the book from the skater,0,0
+the senator next to the parent,0,0
+the game from the parent,0,0
+the manager next to the dancer,0,0
+the surgeon behind the architect,0,0
+the author in front of the architect,0,0
+the teacher next to the guard,0,0
+the officer to the side of the parent,0,0
+the novel from the assistant,0,0
+the show from the minister,0,0
+the teacher in front of the taxi driver,0,0
+the author to the side of the executive,0,0
+the song from the skater,0,0
+the poem from the guard,0,0
+the officer near the taxi driver,0,0
+the customer in front of the dancer,0,0
+the game by the skater,0,0
+the senator next to the skater,0,0
+the novel from the parent,0,0
+the senator in front of the minister,0,0
+the senator to the side of the taxi driver,0,0
+the pilot to the side of the chef,0,0
+the customer behind the chef,0,0
+the surgeon near the parent,0,0
+the show by the parent,0,0
+the customer across from the chef,0,0
+the surgeon behind the assistant,0,0
+the movie from the dancer,0,0
+the game by the guard,0,0
+the book from the taxi driver,0,0
+the officer in front of the minister,0,0
+the officer near the assistant,0,0
+the farmer to the side of the assistant,0,0
+the senator near the parent,0,0
+the customer in front of the architect,0,0
+the game from the assistant,0,0
+the surgeon to the side of the parent,0,0
+the game by the taxi driver,0,0
+the farmer across from the dancer,0,0
+the farmer to the side of the dancer,0,0
+the game from the guard,0,0
+the song by the assistant,0,0
+the picture from the skater,0,0
+the officer behind the executive,0,0
+the author behind the executive,0,0
+the manager behind the minister,0,0
+the surgeon in front of the executive,0,0
+the pilot behind the assistant,0,0
+the pilot to the side of the guard,0,0
+the surgeon near the taxi driver,0,0
+the pilot to the side of the minister,0,0
+the surgeon in front of the dancer,0,0
+the author next to the guard,0,0
+the game from the dancer,0,0
+the teacher across from the parent,0,0
+the manager behind the chef,0,0
+the manager across from the skater,0,0
+the farmer across from the minister,0,0
+the consultant across from the architect,0,0
+the picture from the executive,0,0
+the officer in front of the executive,0,0
+the surgeon near the dancer,0,0
+the teacher across from the assistant,0,0
+the author next to the architect,0,0
+the surgeon next to the guard,0,0
+the author in front of the skater,0,0
+the poem by the minister,0,0
+the consultant near the chef,0,0
+the officer to the side of the guard,0,0
+the painting by the parent,0,0
+the farmer next to the minister,0,0
+the manager in front of the chef,0,0
+the farmer across from the skater,0,0
+the surgeon next to the architect,0,0
+the song from the executive,0,0
+the farmer in front of the assistant,0,0
+the author near the taxi driver,0,0
+the farmer across from the architect,0,0
+the senator behind the chef,0,0
+the manager to the side of the executive,0,0
+the author to the side of the guard,0,0
+the poem from the dancer,0,0
+the show by the architect,0,0
+the author across from the minister,0,0
+the customer behind the guard,0,0
+the author across from the assistant,0,0
+the picture by the skater,0,0
+the surgeon across from the chef,0,0
+the author to the side of the minister,0,0
+the officer near the chef,0,0
+the farmer behind the taxi driver,0,0
+the song from the assistant,0,0
+the game by the parent,0,0
+the surgeon behind the minister,0,0
+the consultant next to the taxi driver,0,0
+the manager to the side of the guard,0,0
+the pilot next to the executive,0,0
+the senator behind the skater,0,0
+the movie from the architect,0,0
+the customer near the executive,0,0
+the surgeon near the assistant,0,0
+the pilot across from the parent,0,0
+the teacher in front of the dancer,0,0
+the painting by the minister,0,0
+the show from the parent,0,0
+the author next to the minister,0,0
+the officer near the parent,0,0
+the book by the executive,0,0
+the surgeon across from the guard,0,0
+the novel from the minister,0,0
+the pilot in front of the minister,0,0
+the manager across from the chef,0,0
+the teacher across from the dancer,0,0
+the customer next to the guard,0,0
+the surgeon behind the executive,0,0
+the senator in front of the chef,0,0
+the movie from the minister,0,0
+the show by the skater,0,0
+the senator behind the guard,0,0
+the painting from the assistant,0,0
+the painting by the executive,0,0
+the song by the guard,0,0
+the consultant across from the assistant,0,0
+the picture by the executive,0,0
+the senator next to the guard,0,0
+the consultant next to the guard,0,0
+the author near the assistant,0,0
+the senator in front of the architect,0,0
+the manager behind the guard,0,0
+the farmer to the side of the skater,0,0
+the show from the taxi driver,0,0
+the senator near the guard,0,0
+the farmer behind the assistant,0,0
+the officer behind the minister,0,0
+the book by the chef,0,0
+the poem by the assistant,0,0
+the farmer across from the chef,0,0
+the author next to the dancer,0,0
+the farmer near the taxi driver,0,0
+the game by the assistant,0,0
+the consultant in front of the architect,0,0
+the pilot behind the chef,0,0
+the officer next to the dancer,0,0
+the customer next to the executive,0,0
+the officer to the side of the taxi driver,0,0
+the song from the guard,0,0
+the surgeon to the side of the dancer,0,0
+the author in front of the guard,0,0
+the customer in front of the minister,0,0
+the farmer to the side of the parent,0,0
+the consultant across from the skater,0,0
+the poem by the dancer,0,0
+the author in front of the executive,0,0
+the show by the minister,0,0
+the customer next to the minister,0,0
+the game from the chef,0,0
+the senator near the dancer,0,0
+the senator across from the architect,0,0
+the pilot across from the skater,0,0
+the teacher in front of the skater,0,0
+the teacher next to the skater,0,0
+the customer in front of the guard,0,0
+the teacher to the side of the parent,0,0
+the teacher across from the skater,0,0
+the pilot to the side of the skater,0,0
+the surgeon next to the executive,0,0
+the consultant near the dancer,0,0
+the movie by the skater,0,0
+the senator near the skater,0,0
+the pilot to the side of the assistant,0,0
+the show from the guard,0,0
+the poem by the architect,0,0
+the surgeon in front of the architect,0,0
+the farmer near the dancer,0,0
+the poem from the parent,0,0
+the author behind the assistant,0,0
+the farmer in front of the skater,0,0
+the consultant behind the assistant,0,0
+the teacher next to the architect,0,0
+the teacher to the side of the executive,0,0
+the painting from the chef,0,0
+the senator near the executive,0,0
+the manager next to the taxi driver,0,0
+the officer to the side of the chef,0,0
+the book from the executive,0,0
+the senator near the taxi driver,0,0
+the game by the architect,0,0
+the customer in front of the skater,0,0
+the teacher to the side of the architect,0,0
+the novel from the chef,0,0
+the show from the skater,0,0
+the book by the architect,0,0
+the author across from the taxi driver,0,0
+the farmer near the parent,0,0
+the consultant next to the skater,0,0
+the teacher behind the architect,0,0
+the show by the assistant,0,0
+the officer across from the executive,0,0
+the customer across from the parent,0,0
+the senator next to the chef,0,0
+the game from the minister,0,0
+the poem from the minister,0,0
+the customer to the side of the taxi driver,0,0
+the novel from the executive,0,0
+the novel by the executive,0,0
+the customer across from the skater,0,0
+the senator across from the taxi driver,0,0
+the consultant behind the architect,0,0
+the customer near the dancer,0,0
+the consultant in front of the minister,0,0
+the consultant across from the guard,0,0
+the customer next to the dancer,0,0
+the surgeon in front of the guard,0,0
+the consultant to the side of the executive,0,0
+the pilot next to the assistant,0,0
+the customer to the side of the parent,0,0
+the consultant near the minister,0,0
+the show by the guard,0,0
+the poem by the skater,0,0
+the painting from the minister,0,0
+the officer in front of the guard,0,0
+the manager next to the assistant,0,0
+the author to the side of the parent,0,0
+the painting from the skater,0,0
+the officer across from the chef,0,0
+the pilot to the side of the taxi drivers,0,1
+the author near the assistants,0,1
+the customer near the architects,0,1
+the officer near the taxi drivers,0,1
+the senator near the ministers,0,1
+the consultant in front of the dancers,0,1
+the novel by the executives,0,1
+the teacher near the executives,0,1
+the farmer behind the chefs,0,1
+the customer in front of the dancers,0,1
+the movie from the assistants,0,1
+the consultant to the side of the guards,0,1
+the surgeon across from the assistants,0,1
+the manager to the side of the parents,0,1
+the surgeon to the side of the chefs,0,1
+the picture from the ministers,0,1
+the pilot behind the assistants,0,1
+the pilot near the skaters,0,1
+the customer to the side of the parents,0,1
+the pilot in front of the parents,0,1
+the teacher across from the parents,0,1
+the consultant to the side of the chefs,0,1
+the author in front of the dancers,0,1
+the author to the side of the dancers,0,1
+the manager in front of the ministers,0,1
+the pilot in front of the architects,0,1
+the farmer near the architects,0,1
+the officer near the assistants,0,1
+the teacher across from the chefs,0,1
+the surgeon in front of the architects,0,1
+the surgeon behind the executives,0,1
+the senator next to the guards,0,1
+the senator behind the parents,0,1
+the customer next to the assistants,0,1
+the consultant in front of the taxi drivers,0,1
+the farmer in front of the architects,0,1
+the farmer across from the executives,0,1
+the painting from the assistants,0,1
+the manager behind the dancers,0,1
+the movie from the executives,0,1
+the consultant across from the chefs,0,1
+the song from the architects,0,1
+the senator behind the dancers,0,1
+the surgeon across from the guards,0,1
+the customer next to the executives,0,1
+the book by the ministers,0,1
+the senator behind the guards,0,1
+the picture from the taxi drivers,0,1
+the officer behind the chefs,0,1
+the pilot in front of the chefs,0,1
+the pilot behind the executives,0,1
+the manager in front of the assistants,0,1
+the officer to the side of the parents,0,1
+the painting by the executives,0,1
+the officer across from the architects,0,1
+the officer near the guards,0,1
+the pilot in front of the taxi drivers,0,1
+the officer next to the chefs,0,1
+the consultant behind the taxi drivers,0,1
+the customer behind the executives,0,1
+the show by the assistants,0,1
+the surgeon next to the chefs,0,1
+the teacher in front of the ministers,0,1
+the manager next to the parents,0,1
+the consultant behind the executives,0,1
+the farmer behind the dancers,0,1
+the manager to the side of the dancers,0,1
+the teacher next to the parents,0,1
+the consultant near the taxi drivers,0,1
+the consultant to the side of the skaters,0,1
+the author next to the assistants,0,1
+the manager across from the dancers,0,1
+the song by the parents,0,1
+the teacher near the skaters,0,1
+the poem from the executives,0,1
+the song from the guards,0,1
+the farmer next to the assistants,0,1
+the farmer to the side of the executives,0,1
+the show from the executives,0,1
+the author near the chefs,0,1
+the surgeon in front of the guards,0,1
+the teacher behind the chefs,0,1
+the consultant to the side of the dancers,0,1
+the song by the chefs,0,1
+the manager behind the taxi drivers,0,1
+the officer in front of the skaters,0,1
+the surgeon next to the architects,0,1
+the manager across from the chefs,0,1
+the book from the assistants,0,1
+the manager across from the architects,0,1
+the author next to the dancers,0,1
+the song by the skaters,0,1
+the officer to the side of the architects,0,1
+the show from the taxi drivers,0,1
+the officer behind the executives,0,1
+the customer across from the taxi drivers,0,1
+the consultant across from the assistants,0,1
+the painting from the ministers,0,1
+the manager in front of the skaters,0,1
+the pilot next to the chefs,0,1
+the officer across from the ministers,0,1
+the senator next to the taxi drivers,0,1
+the pilot next to the parents,0,1
+the senator near the guards,0,1
+the show from the parents,0,1
+the book from the executives,0,1
+the consultant behind the guards,0,1
+the teacher across from the assistants,0,1
+the author across from the taxi drivers,0,1
+the farmer next to the parents,0,1
+the consultant behind the chefs,0,1
+the show by the executives,0,1
+the game from the architects,0,1
+the farmer near the skaters,0,1
+the author across from the chefs,0,1
+the consultant next to the guards,0,1
+the author behind the ministers,0,1
+the senator across from the parents,0,1
+the customer next to the parents,0,1
+the song from the skaters,0,1
+the picture by the skaters,0,1
+the poem from the guards,0,1
+the officer next to the architects,0,1
+the customer in front of the taxi drivers,0,1
+the surgeon to the side of the skaters,0,1
+the novel from the executives,0,1
+the farmer to the side of the chefs,0,1
+the consultant behind the assistants,0,1
+the manager behind the chefs,0,1
+the manager to the side of the executives,0,1
+the pilot across from the ministers,0,1
+the senator to the side of the ministers,0,1
+the poem from the dancers,0,1
+the customer next to the architects,0,1
+the author behind the skaters,0,1
+the teacher next to the guards,0,1
+the novel by the ministers,0,1
+the officer behind the assistants,0,1
+the surgeon next to the executives,0,1
+the author across from the guards,0,1
+the teacher across from the guards,0,1
+the consultant next to the parents,0,1
+the author next to the ministers,0,1
+the movie from the dancers,0,1
+the customer near the assistants,0,1
+the consultant across from the architects,0,1
+the novel from the guards,0,1
+the senator across from the architects,0,1
+the farmer in front of the taxi drivers,0,1
+the customer behind the ministers,0,1
+the officer across from the chefs,0,1
+the officer across from the parents,0,1
+the consultant behind the parents,0,1
+the consultant near the ministers,0,1
+the painting from the executives,0,1
+the teacher next to the architects,0,1
+the pilot in front of the guards,0,1
+the pilot in front of the assistants,0,1
+the surgeon near the executives,0,1
+the senator to the side of the chefs,0,1
+the teacher behind the parents,0,1
+the manager near the dancers,0,1
+the novel by the guards,0,1
+the senator behind the executives,0,1
+the movie by the taxi drivers,0,1
+the author to the side of the architects,0,1
+the officer in front of the assistants,0,1
+the author near the dancers,0,1
+the manager behind the parents,0,1
+the consultant across from the guards,0,1
+the novel by the assistants,0,1
+the teacher next to the assistants,0,1
+the painting by the parents,0,1
+the surgeon to the side of the executives,0,1
+the farmer to the side of the ministers,0,1
+the officer in front of the guards,0,1
+the author in front of the ministers,0,1
+the farmer across from the taxi drivers,0,1
+the surgeon in front of the ministers,0,1
+the customer near the taxi drivers,0,1
+the officer next to the taxi drivers,0,1
+the author behind the chefs,0,1
+the movie from the taxi drivers,0,1
+the senator near the taxi drivers,0,1
+the author in front of the guards,0,1
+the author behind the executives,0,1
+the officer in front of the architects,0,1
+the surgeon across from the chefs,0,1
+the pilot to the side of the chefs,0,1
+the senator behind the chefs,0,1
+the pilot near the parents,0,1
+the picture from the guards,0,1
+the senator in front of the guards,0,1
+the game by the guards,0,1
+the pilot across from the assistants,0,1
+the farmer across from the dancers,0,1
+the pilot behind the parents,0,1
+the song by the dancers,0,1
+the movie by the dancers,0,1
+the farmer near the parents,0,1
+the senator to the side of the skaters,0,1
+the author in front of the executives,0,1
+the surgeon next to the taxi drivers,0,1
+the customer next to the taxi drivers,0,1
+the officer near the ministers,0,1
+the teacher to the side of the chefs,0,1
+the manager next to the ministers,0,1
+the author near the parents,0,1
+the author to the side of the assistants,0,1
+the show from the ministers,0,1
+the manager behind the ministers,0,1
+the customer near the ministers,0,1
+the senator near the dancers,0,1
+the senator in front of the parents,0,1
+the senator near the architects,0,1
+the movie by the executives,0,1
+the officer next to the skaters,0,1
+the officer near the executives,0,1
+the officer behind the taxi drivers,0,1
+the surgeon near the ministers,0,1
+the customer behind the dancers,0,1
+the senator next to the ministers,0,1
+the consultant near the parents,0,1
+the game from the dancers,0,1
+the book by the assistants,0,1
+the book by the parents,0,1
+the pilot next to the architects,0,1
+the poem from the parents,0,1
+the customer to the side of the skaters,0,1
+the officer to the side of the chefs,0,1
+the poem by the taxi drivers,0,1
+the manager in front of the taxi drivers,0,1
+the pilot next to the skaters,0,1
+the customer across from the dancers,0,1
+the surgeon near the dancers,0,1
+the surgeon near the skaters,0,1
+the officer behind the parents,0,1
+the show by the skaters,0,1
+the customer near the skaters,0,1
+the pilot across from the guards,0,1
+the officer across from the guards,0,1
+the officer behind the dancers,0,1
+the farmer behind the assistants,0,1
+the consultant next to the chefs,0,1
+the customer across from the guards,0,1
+the customer behind the chefs,0,1
+the customer next to the ministers,0,1
+the pilot in front of the dancers,0,1
+the senator behind the skaters,0,1
+the surgeon in front of the dancers,0,1
+the book from the architects,0,1
+the officer across from the executives,0,1
+the show from the chefs,0,1
+the manager in front of the dancers,0,1
+the teacher in front of the guards,0,1
+the customer in front of the executives,0,1
+the author in front of the chefs,0,1
+the surgeon across from the architects,0,1
+the officer next to the ministers,0,1
+the teacher to the side of the assistants,0,1
+the pilot across from the architects,0,1
+the teacher across from the dancers,0,1
+the teacher near the dancers,0,1
+the book from the guards,0,1
+the picture from the skaters,0,1
+the senator near the parents,0,1
+the senator behind the assistants,0,1
+the song from the chefs,0,1
+the manager to the side of the architects,0,1
+the pilot to the side of the guards,0,1
+the officer behind the architects,0,1
+the consultant in front of the architects,0,1
+the author in front of the assistants,0,1
+the officer near the chefs,0,1
+the pilot next to the assistants,0,1
+the officer next to the assistants,0,1
+the senator behind the taxi drivers,0,1
+the game from the assistants,0,1
+the show by the architects,0,1
+the poem from the architects,0,1
+the customer near the executives,0,1
+the teacher across from the architects,0,1
+the teacher next to the dancers,0,1
+the manager to the side of the assistants,0,1
+the book by the guards,0,1
+the author in front of the taxi drivers,0,1
+the teacher behind the taxi drivers,0,1
+the teacher across from the executives,0,1
+the picture by the guards,0,1
+the consultant next to the assistants,0,1
+the farmer to the side of the taxi drivers,0,1
+the consultant next to the ministers,0,1
+the novel by the architects,0,1
+the manager behind the assistants,0,1
+the pilot near the chefs,0,1
+the manager in front of the executives,0,1
+the movie by the assistants,0,1
+the poem by the guards,0,1
+the manager near the executives,0,1
+the poem from the ministers,0,1
+the senator to the side of the assistants,0,1
+the book from the parents,0,1
+the game from the ministers,0,1
+the poem by the executives,0,1
+the manager next to the skaters,0,1
+the pilot to the side of the skaters,0,1
+the manager behind the skaters,0,1
+the picture by the parents,0,1
+the surgeon next to the skaters,0,1
+the author across from the dancers,0,1
+the surgeon near the parents,0,1
+the surgeon in front of the taxi drivers,0,1
+the author across from the assistants,0,1
+the novel from the ministers,0,1
+the customer next to the dancers,0,1
+the novel from the skaters,0,1
+the customer across from the architects,0,1
+the senator near the skaters,0,1
+the surgeon next to the parents,0,1
+the farmer in front of the guards,0,1
+the teacher to the side of the skaters,0,1
+the surgeon next to the ministers,0,1
+the game by the parents,0,1
+the farmer near the executives,0,1
+the surgeon to the side of the parents,0,1
+the teacher near the taxi drivers,0,1
+the farmer next to the skaters,0,1
+the pilot near the ministers,0,1
+the farmer next to the architects,0,1
+the pilot in front of the executives,0,1
+the manager next to the taxi drivers,0,1
+the farmer across from the guards,0,1
+the consultant near the skaters,0,1
+the teacher in front of the dancers,0,1
+the consultant behind the architects,0,1
+the novel by the chefs,0,1
+the officer behind the guards,0,1
+the author next to the guards,0,1
+the picture from the assistants,0,1
+the officer near the parents,0,1
+the officer behind the ministers,0,1
+the teacher next to the ministers,0,1
+the farmer across from the ministers,0,1
+the pilot to the side of the parents,0,1
+the teacher to the side of the architects,0,1
+the officer next to the guards,0,1
+the manager next to the chefs,0,1
+the consultant next to the taxi drivers,0,1
+the movie by the skaters,0,1
+the pilot behind the chefs,0,1
+the author next to the parents,0,1
+the pilot behind the guards,0,1
+the movie by the guards,0,1
+the movie by the parents,0,1
+the teacher across from the skaters,0,1
+the show by the ministers,0,1
+the author behind the guards,0,1
+the author next to the executives,0,1
+the book by the skaters,0,1
+the pilot across from the chefs,0,1
+the surgeon in front of the skaters,0,1
+the teacher behind the executives,0,1
+the farmer behind the parents,0,1
+the manager behind the guards,0,1
+the game from the executives,0,1
+the movie by the architects,0,1
+the book from the skaters,0,1
+the consultant to the side of the architects,0,1
+the consultant in front of the parents,0,1
+the officer next to the dancers,0,1
+the picture from the executives,0,1
+the song from the parents,0,1
+the author next to the taxi drivers,0,1
+the surgeon to the side of the assistants,0,1
+the officer in front of the ministers,0,1
+the book by the architects,0,1
+the farmer to the side of the architects,0,1
+the song from the executives,0,1
+the novel from the taxi drivers,0,1
+the customer to the side of the guards,0,1
+the customer behind the assistants,0,1
+the farmer in front of the assistants,0,1
+the picture by the ministers,0,1
+the painting by the assistants,0,1
+the consultant near the chefs,0,1
+the poem by the dancers,0,1
+the author across from the architects,0,1
+the surgeon near the taxi drivers,0,1
+the farmer next to the guards,0,1
+the manager next to the guards,0,1
+the farmer to the side of the assistants,0,1
+the book from the ministers,0,1
+the pilot next to the guards,0,1
+the teacher behind the ministers,0,1
+the senator next to the dancers,0,1
+the farmer next to the taxi drivers,0,1
+the manager in front of the parents,0,1
+the manager near the guards,0,1
+the author near the taxi drivers,0,1
+the picture from the dancers,0,1
+the manager next to the executives,0,1
+the senator in front of the dancers,0,1
+the show from the dancers,0,1
+the surgeon in front of the executives,0,1
+the book by the chefs,0,1
+the pilot near the guards,0,1
+the consultant to the side of the taxi drivers,0,1
+the customer to the side of the assistants,0,1
+the teacher in front of the parents,0,1
+the surgeon near the assistants,0,1
+the novel from the dancers,0,1
+the show by the taxi drivers,0,1
+the consultant in front of the guards,0,1
+the officer in front of the chefs,0,1
+the consultant across from the executives,0,1
+the picture from the chefs,0,1
+the poem by the assistants,0,1
+the farmer across from the skaters,0,1
+the teacher across from the taxi drivers,0,1
+the farmer to the side of the skaters,0,1
+the poem from the chefs,0,1
+the surgeon near the chefs,0,1
+the teacher to the side of the guards,0,1
+the game by the taxi drivers,0,1
+the pilot next to the taxi drivers,0,1
+the pilot behind the architects,0,1
+the senator next to the executives,0,1
+the book from the dancers,0,1
+the farmer across from the parents,0,1
+the customer behind the guards,0,1
+the customer behind the taxi drivers,0,1
+the author in front of the parents,0,1
+the author to the side of the chefs,0,1
+the farmer near the assistants,0,1
+the officer in front of the dancers,0,1
+the teacher next to the executives,0,1
+the consultant across from the skaters,0,1
+the consultant next to the dancers,0,1
+the surgeon to the side of the guards,0,1
+the officer in front of the parents,0,1
+the song by the guards,0,1
+the customer to the side of the ministers,0,1
+the manager next to the dancers,0,1
+the surgeon behind the dancers,0,1
+the manager behind the architects,0,1
+the book by the dancers,0,1
+the show by the chefs,0,1
+the game from the skaters,0,1
+the surgeon across from the dancers,0,1
+the surgeon near the architects,0,1
+the customer across from the skaters,0,1
+the senator to the side of the taxi drivers,0,1
+the senator across from the executives,0,1
+the book from the taxi drivers,0,1
+the movie by the chefs,0,1
+the pilot in front of the skaters,0,1
+the show by the parents,0,1
+the surgeon near the guards,0,1
+the surgeon in front of the assistants,0,1
+the customer near the parents,0,1
+the manager in front of the architects,0,1
+the teacher near the architects,0,1
+the farmer next to the executives,0,1
+the farmer behind the skaters,0,1
+the officer near the skaters,0,1
+the pilot near the executives,0,1
+the senator near the assistants,0,1
+the song from the ministers,0,1
+the customer across from the ministers,0,1
+the novel from the parents,0,1
+the customer in front of the parents,0,1
+the officer to the side of the ministers,0,1
+the consultant across from the taxi drivers,0,1
+the farmer across from the chefs,0,1
+the pilot near the architects,0,1
+the pilot in front of the ministers,0,1
+the author near the skaters,0,1
+the novel by the dancers,0,1
+the poem by the chefs,0,1
+the author near the guards,0,1
+the poem by the ministers,0,1
+the poem by the parents,0,1
+the manager across from the parents,0,1
+the officer to the side of the dancers,0,1
+the senator next to the skaters,0,1
+the game from the taxi drivers,0,1
+the game from the chefs,0,1
+the author across from the executives,0,1
+the farmer in front of the skaters,0,1
+the teacher to the side of the executives,0,1
+the painting from the dancers,0,1
+the show by the dancers,0,1
+the consultant in front of the chefs,0,1
+the pilot next to the dancers,0,1
+the movie from the parents,0,1
+the picture from the architects,0,1
+the pilot to the side of the dancers,0,1
+the author to the side of the taxi drivers,0,1
+the consultant across from the dancers,0,1
+the painting from the skaters,0,1
+the manager near the chefs,0,1
+the manager behind the executives,0,1
+the senator to the side of the dancers,0,1
+the senator to the side of the guards,0,1
+the author near the architects,0,1
+the picture by the executives,0,1
+the manager near the parents,0,1
+the farmer near the guards,0,1
+the teacher behind the architects,0,1
+the painting from the guards,0,1
+the manager near the ministers,0,1
+the author to the side of the parents,0,1
+the game from the guards,0,1
+the consultant behind the ministers,0,1
+the consultant in front of the ministers,0,1
+the consultant to the side of the assistants,0,1
+the surgeon to the side of the architects,0,1
+the consultant behind the skaters,0,1
+the movie from the ministers,0,1
+the teacher near the chefs,0,1
+the farmer behind the guards,0,1
+the farmer next to the ministers,0,1
+the farmer next to the dancers,0,1
+the officer in front of the taxi drivers,0,1
+the senator near the executives,0,1
+the officer across from the assistants,0,1
+the teacher near the parents,0,1
+the senator across from the dancers,0,1
+the show from the guards,0,1
+the senator across from the skaters,0,1
+the customer to the side of the dancers,0,1
+the senator across from the assistants,0,1
+the farmer behind the executives,0,1
+the surgeon across from the executives,0,1
+the customer to the side of the chefs,0,1
+the officer to the side of the guards,0,1
+the pilot next to the executives,0,1
+the game by the chefs,0,1
+the teacher in front of the assistants,0,1
+the officer next to the parents,0,1
+the poem from the assistants,0,1
+the picture by the taxi drivers,0,1
+the officer across from the skaters,0,1
+the game by the assistants,0,1
+the novel by the taxi drivers,0,1
+the farmer next to the chefs,0,1
+the author across from the skaters,0,1
+the customer across from the assistants,0,1
+the surgeon in front of the chefs,0,1
+the manager near the architects,0,1
+the consultant to the side of the parents,0,1
+the author to the side of the guards,0,1
+the pilot across from the executives,0,1
+the picture by the assistants,0,1
+the customer behind the architects,0,1
+the officer next to the executives,0,1
+the manager across from the guards,0,1
+the teacher to the side of the taxi drivers,0,1
+the customer to the side of the architects,0,1
+the novel by the skaters,0,1
+the farmer behind the architects,0,1
+the senator behind the ministers,0,1
+the pilot near the taxi drivers,0,1
+the manager next to the assistants,0,1
+the author behind the parents,0,1
+the manager to the side of the chefs,0,1
+the novel from the architects,0,1
+the consultant to the side of the ministers,0,1
+the senator across from the guards,0,1
+the pilot across from the skaters,0,1
+the customer near the guards,0,1
+the surgeon next to the guards,0,1
+the book by the executives,0,1
+the surgeon behind the assistants,0,1
+the surgeon across from the ministers,0,1
+the book from the chefs,0,1
+the customer in front of the guards,0,1
+the show from the assistants,0,1
+the pilot near the assistants,0,1
+the teacher behind the dancers,0,1
+the teacher to the side of the parents,0,1
+the customer in front of the ministers,0,1
+the pilot to the side of the executives,0,1
+the farmer behind the ministers,0,1
+the customer next to the guards,0,1
+the manager across from the executives,0,1
+the consultant in front of the executives,0,1
+the picture by the architects,0,1
+the customer near the dancers,0,1
+the teacher next to the taxi drivers,0,1
+the author to the side of the ministers,0,1
+the officer across from the dancers,0,1
+the show from the skaters,0,1
+the consultant to the side of the executives,0,1
+the song by the ministers,0,1
+the author to the side of the executives,0,1
+the author in front of the architects,0,1
+the teacher in front of the skaters,0,1
+the author across from the ministers,0,1
+the customer across from the executives,0,1
+the teacher across from the ministers,0,1
+the consultant in front of the assistants,0,1
+the officer across from the taxi drivers,0,1
+the movie from the architects,0,1
+the officer to the side of the executives,0,1
+the consultant across from the ministers,0,1
+the surgeon behind the parents,0,1
+the consultant in front of the skaters,0,1
+the customer in front of the skaters,0,1
+the senator across from the chefs,0,1
+the senator across from the taxi drivers,0,1
+the pilot to the side of the assistants,0,1
+the teacher in front of the taxi drivers,0,1
+the manager in front of the guards,0,1
+the teacher next to the skaters,0,1
+the consultant near the guards,0,1
+the author behind the dancers,0,1
+the surgeon across from the parents,0,1
+the teacher behind the assistants,0,1
+the song by the architects,0,1
+the consultant next to the executives,0,1
+the movie from the guards,0,1
+the surgeon to the side of the dancers,0,1
+the officer to the side of the taxi drivers,0,1
+the senator in front of the taxi drivers,0,1
+the senator to the side of the parents,0,1
+the pilot near the dancers,0,1
+the manager near the assistants,0,1
+the manager to the side of the ministers,0,1
+the farmer in front of the ministers,0,1
+the author near the executives,0,1
+the farmer in front of the executives,0,1
+the manager next to the architects,0,1
+the officer near the architects,0,1
+the surgeon behind the ministers,0,1
+the customer near the chefs,0,1
+the farmer in front of the chefs,0,1
+the manager to the side of the guards,0,1
+the teacher behind the skaters,0,1
+the painting by the ministers,0,1
+the customer in front of the architects,0,1
+the senator next to the parents,0,1
+the customer behind the skaters,0,1
+the author next to the skaters,0,1
+the teacher behind the guards,0,1
+the painting by the chefs,0,1
+the manager across from the taxi drivers,0,1
+the senator across from the ministers,0,1
+the surgeon across from the skaters,0,1
+the farmer near the taxi drivers,0,1
+the song from the taxi drivers,0,1
+the painting by the guards,0,1
+the manager to the side of the taxi drivers,0,1
+the surgeon behind the guards,0,1
+the customer across from the chefs,0,1
+the farmer in front of the parents,0,1
+the consultant behind the dancers,0,1
+the movie by the ministers,0,1
+the manager across from the skaters,0,1
+the farmer in front of the dancers,0,1
+the author next to the architects,0,1
+the pilot behind the ministers,0,1
+the surgeon across from the taxi drivers,0,1
+the customer next to the skaters,0,1
+the painting from the architects,0,1
+the senator next to the chefs,0,1
+the senator in front of the chefs,0,1
+the farmer across from the architects,0,1
+the manager near the skaters,0,1
+the farmer near the dancers,0,1
+the show from the architects,0,1
+the game by the dancers,0,1
+the teacher near the assistants,0,1
+the book by the taxi drivers,0,1
+the song by the executives,0,1
+the picture from the parents,0,1
+the painting from the chefs,0,1
+the pilot behind the taxi drivers,0,1
+the farmer near the chefs,0,1
+the painting by the dancers,0,1
+the surgeon in front of the parents,0,1
+the teacher in front of the chefs,0,1
+the farmer behind the taxi drivers,0,1
+the teacher in front of the architects,0,1
+the farmer to the side of the parents,0,1
+the pilot to the side of the ministers,0,1
+the customer to the side of the taxi drivers,0,1
+the manager near the taxi drivers,0,1
+the senator behind the architects,0,1
+the manager in front of the chefs,0,1
+the painting from the parents,0,1
+the novel by the parents,0,1
+the surgeon to the side of the taxi drivers,0,1
+the song from the dancers,0,1
+the manager to the side of the skaters,0,1
+the surgeon to the side of the ministers,0,1
+the poem from the taxi drivers,0,1
+the consultant near the architects,0,1
+the officer behind the skaters,0,1
+the consultant next to the architects,0,1
+the poem from the skaters,0,1
+the senator to the side of the executives,0,1
+the senator to the side of the architects,0,1
+the movie from the chefs,0,1
+the author in front of the skaters,0,1
+the customer in front of the chefs,0,1
+the pilot across from the parents,0,1
+the game by the executives,0,1
+the picture by the chefs,0,1
+the teacher next to the chefs,0,1
+the farmer to the side of the guards,0,1
+the game by the ministers,0,1
+the surgeon behind the architects,0,1
+the song from the assistants,0,1
+the manager across from the assistants,0,1
+the senator in front of the assistants,0,1
+the author behind the taxi drivers,0,1
+the surgeon behind the taxi drivers,0,1
+the teacher near the ministers,0,1
+the game by the skaters,0,1
+the farmer to the side of the dancers,0,1
+the poem by the architects,0,1
+the show by the guards,0,1
+the senator in front of the skaters,0,1
+the author across from the parents,0,1
+the game from the parents,0,1
+the author behind the assistants,0,1
+the teacher to the side of the dancers,0,1
+the officer in front of the executives,0,1
+the poem by the skaters,0,1
+the pilot behind the dancers,0,1
+the author near the ministers,0,1
+the senator next to the assistants,0,1
+the senator near the chefs,0,1
+the surgeon behind the chefs,0,1
+the song by the assistants,0,1
+the customer behind the parents,0,1
+the officer near the dancers,0,1
+the pilot across from the dancers,0,1
+the senator next to the architects,0,1
+the customer across from the parents,0,1
+the pilot across from the taxi drivers,0,1
+the customer to the side of the executives,0,1
+the pilot next to the ministers,0,1
+the consultant near the executives,0,1
+the surgeon behind the skaters,0,1
+the painting by the taxi drivers,0,1
+the senator in front of the architects,0,1
+the painting by the architects,0,1
+the song by the taxi drivers,0,1
+the farmer across from the assistants,0,1
+the author next to the chefs,0,1
+the game by the architects,0,1
+the consultant across from the parents,0,1
+the pilot behind the skaters,0,1
+the customer in front of the assistants,0,1
+the novel from the assistants,0,1
+the surgeon next to the assistants,0,1
+the author behind the architects,0,1
+the pilot to the side of the architects,0,1
+the officer to the side of the skaters,0,1
+the manager across from the ministers,0,1
+the officer to the side of the assistants,0,1
+the painting from the taxi drivers,0,1
+the teacher to the side of the ministers,0,1
+the surgeon next to the dancers,0,1
+the consultant near the dancers,0,1
+the consultant near the assistants,0,1
+the farmer near the ministers,0,1
+the customer next to the chefs,0,1
+the teacher near the guards,0,1
+the picture by the dancers,0,1
+the novel from the chefs,0,1
+the teacher in front of the executives,0,1
+the senator in front of the ministers,0,1
+the author to the side of the skaters,0,1
+the movie from the skaters,0,1
+the painting by the skaters,0,1
+the consultant next to the skaters,0,1
+the senator in front of the executives,0,1
+the consultants to the side of the dancer,1,0
+the teachers across from the assistant,1,0
+the farmers behind the parent,1,0
+the managers across from the architect,1,0
+the consultants to the side of the executive,1,0
+the pilots in front of the skater,1,0
+the customers behind the executive,1,0
+the authors in front of the assistant,1,0
+the customers across from the dancer,1,0
+the consultants next to the architect,1,0
+the poems from the chef,1,0
+the customers in front of the minister,1,0
+the surgeons behind the executive,1,0
+the authors to the side of the guard,1,0
+the teachers to the side of the parent,1,0
+the consultants next to the skater,1,0
+the novels by the skater,1,0
+the pilots across from the minister,1,0
+the teachers near the skater,1,0
+the movies from the guard,1,0
+the farmers across from the architect,1,0
+the consultants near the executive,1,0
+the novels from the taxi driver,1,0
+the books by the taxi driver,1,0
+the managers next to the guard,1,0
+the books from the guard,1,0
+the authors next to the minister,1,0
+the novels from the minister,1,0
+the farmers across from the guard,1,0
+the farmers near the minister,1,0
+the surgeons near the architect,1,0
+the officers near the parent,1,0
+the managers next to the minister,1,0
+the senators in front of the skater,1,0
+the movies from the executive,1,0
+the authors to the side of the skater,1,0
+the senators in front of the chef,1,0
+the officers to the side of the chef,1,0
+the novels from the dancer,1,0
+the poems by the taxi driver,1,0
+the surgeons to the side of the assistant,1,0
+the pilots behind the skater,1,0
+the officers in front of the chef,1,0
+the authors near the dancer,1,0
+the surgeons to the side of the parent,1,0
+the movies from the minister,1,0
+the pilots next to the taxi driver,1,0
+the farmers next to the guard,1,0
+the senators in front of the guard,1,0
+the officers in front of the guard,1,0
+the consultants across from the skater,1,0
+the consultants near the chef,1,0
+the customers across from the chef,1,0
+the poems by the parent,1,0
+the managers in front of the executive,1,0
+the officers in front of the skater,1,0
+the pilots to the side of the minister,1,0
+the surgeons across from the dancer,1,0
+the teachers in front of the architect,1,0
+the managers near the guard,1,0
+the farmers near the architect,1,0
+the authors behind the architect,1,0
+the farmers in front of the chef,1,0
+the managers behind the dancer,1,0
+the managers next to the dancer,1,0
+the teachers behind the skater,1,0
+the senators near the chef,1,0
+the farmers behind the executive,1,0
+the books from the taxi driver,1,0
+the managers next to the parent,1,0
+the pilots behind the guard,1,0
+the pilots across from the chef,1,0
+the paintings by the executive,1,0
+the books by the assistant,1,0
+the books by the parent,1,0
+the surgeons to the side of the architect,1,0
+the customers behind the assistant,1,0
+the teachers behind the executive,1,0
+the senators next to the executive,1,0
+the customers in front of the chef,1,0
+the paintings from the guard,1,0
+the books by the skater,1,0
+the managers near the dancer,1,0
+the managers to the side of the minister,1,0
+the officers next to the architect,1,0
+the consultants near the taxi driver,1,0
+the senators to the side of the architect,1,0
+the customers across from the skater,1,0
+the teachers next to the chef,1,0
+the pictures by the architect,1,0
+the senators in front of the assistant,1,0
+the songs by the architect,1,0
+the pictures from the minister,1,0
+the officers to the side of the guard,1,0
+the surgeons in front of the parent,1,0
+the consultants next to the chef,1,0
+the officers to the side of the skater,1,0
+the farmers next to the minister,1,0
+the shows from the guard,1,0
+the teachers to the side of the guard,1,0
+the authors behind the guard,1,0
+the authors next to the executive,1,0
+the officers next to the executive,1,0
+the officers near the taxi driver,1,0
+the consultants near the assistant,1,0
+the senators behind the guard,1,0
+the poems by the guard,1,0
+the farmers in front of the skater,1,0
+the customers behind the taxi driver,1,0
+the customers across from the architect,1,0
+the authors near the parent,1,0
+the consultants near the parent,1,0
+the pilots near the guard,1,0
+the managers near the chef,1,0
+the teachers next to the guard,1,0
+the consultants in front of the skater,1,0
+the consultants to the side of the architect,1,0
+the novels from the architect,1,0
+the officers behind the assistant,1,0
+the officers near the chef,1,0
+the farmers across from the minister,1,0
+the paintings by the assistant,1,0
+the movies from the parent,1,0
+the surgeons next to the assistant,1,0
+the authors to the side of the minister,1,0
+the officers to the side of the taxi driver,1,0
+the pictures by the assistant,1,0
+the consultants in front of the parent,1,0
+the customers across from the taxi driver,1,0
+the pictures by the parent,1,0
+the shows from the parent,1,0
+the farmers across from the skater,1,0
+the pilots behind the architect,1,0
+the surgeons across from the assistant,1,0
+the movies from the architect,1,0
+the paintings from the skater,1,0
+the books by the executive,1,0
+the customers in front of the guard,1,0
+the teachers next to the dancer,1,0
+the pilots near the chef,1,0
+the farmers next to the assistant,1,0
+the movies by the skater,1,0
+the teachers across from the dancer,1,0
+the senators across from the taxi driver,1,0
+the paintings by the guard,1,0
+the teachers to the side of the taxi driver,1,0
+the farmers to the side of the chef,1,0
+the authors in front of the skater,1,0
+the customers to the side of the dancer,1,0
+the consultants behind the dancer,1,0
+the managers in front of the chef,1,0
+the senators behind the minister,1,0
+the surgeons in front of the executive,1,0
+the managers next to the taxi driver,1,0
+the senators behind the chef,1,0
+the managers to the side of the skater,1,0
+the authors next to the parent,1,0
+the pictures by the dancer,1,0
+the pilots in front of the minister,1,0
+the consultants across from the executive,1,0
+the pilots next to the skater,1,0
+the surgeons in front of the guard,1,0
+the teachers near the chef,1,0
+the pilots to the side of the guard,1,0
+the paintings from the taxi driver,1,0
+the games by the skater,1,0
+the shows by the executive,1,0
+the authors to the side of the chef,1,0
+the authors behind the minister,1,0
+the songs from the skater,1,0
+the pictures by the taxi driver,1,0
+the surgeons behind the architect,1,0
+the pilots across from the architect,1,0
+the managers behind the assistant,1,0
+the poems by the executive,1,0
+the teachers in front of the chef,1,0
+the surgeons in front of the assistant,1,0
+the officers behind the executive,1,0
+the poems from the taxi driver,1,0
+the senators near the dancer,1,0
+the surgeons in front of the skater,1,0
+the surgeons near the skater,1,0
+the paintings from the architect,1,0
+the pictures from the executive,1,0
+the surgeons behind the chef,1,0
+the games from the taxi driver,1,0
+the poems by the assistant,1,0
+the pilots to the side of the architect,1,0
+the consultants in front of the dancer,1,0
+the books by the dancer,1,0
+the consultants to the side of the chef,1,0
+the pictures by the skater,1,0
+the teachers in front of the guard,1,0
+the surgeons near the taxi driver,1,0
+the teachers behind the taxi driver,1,0
+the games from the guard,1,0
+the surgeons across from the chef,1,0
+the surgeons across from the architect,1,0
+the farmers near the assistant,1,0
+the senators behind the dancer,1,0
+the customers next to the guard,1,0
+the managers next to the skater,1,0
+the consultants in front of the assistant,1,0
+the managers in front of the taxi driver,1,0
+the surgeons near the minister,1,0
+the farmers behind the assistant,1,0
+the pilots to the side of the skater,1,0
+the books from the assistant,1,0
+the pictures from the guard,1,0
+the pictures by the minister,1,0
+the consultants to the side of the minister,1,0
+the managers behind the chef,1,0
+the novels from the parent,1,0
+the teachers near the minister,1,0
+the authors next to the assistant,1,0
+the shows from the chef,1,0
+the customers near the executive,1,0
+the consultants behind the architect,1,0
+the consultants in front of the minister,1,0
+the customers behind the guard,1,0
+the games from the dancer,1,0
+the surgeons next to the executive,1,0
+the teachers next to the architect,1,0
+the authors near the executive,1,0
+the farmers to the side of the minister,1,0
+the managers near the executive,1,0
+the authors in front of the minister,1,0
+the officers to the side of the parent,1,0
+the songs by the parent,1,0
+the teachers to the side of the chef,1,0
+the movies by the parent,1,0
+the officers next to the taxi driver,1,0
+the consultants behind the executive,1,0
+the senators across from the chef,1,0
+the officers across from the dancer,1,0
+the games from the assistant,1,0
+the pilots next to the chef,1,0
+the farmers near the guard,1,0
+the games by the parent,1,0
+the teachers behind the minister,1,0
+the farmers across from the chef,1,0
+the customers near the parent,1,0
+the officers in front of the parent,1,0
+the officers across from the guard,1,0
+the officers near the minister,1,0
+the surgeons across from the taxi driver,1,0
+the consultants across from the architect,1,0
+the songs by the dancer,1,0
+the managers behind the architect,1,0
+the novels from the skater,1,0
+the pictures by the guard,1,0
+the poems from the minister,1,0
+the pilots near the minister,1,0
+the managers to the side of the architect,1,0
+the poems by the minister,1,0
+the officers next to the assistant,1,0
+the surgeons to the side of the minister,1,0
+the senators to the side of the minister,1,0
+the farmers next to the parent,1,0
+the movies from the taxi driver,1,0
+the novels by the parent,1,0
+the managers to the side of the assistant,1,0
+the novels by the chef,1,0
+the pilots near the assistant,1,0
+the senators across from the architect,1,0
+the customers next to the parent,1,0
+the farmers behind the dancer,1,0
+the farmers across from the dancer,1,0
+the consultants near the architect,1,0
+the authors across from the dancer,1,0
+the shows by the minister,1,0
+the customers in front of the architect,1,0
+the managers next to the architect,1,0
+the surgeons next to the architect,1,0
+the farmers in front of the dancer,1,0
+the movies by the guard,1,0
+the senators to the side of the parent,1,0
+the surgeons to the side of the executive,1,0
+the songs by the chef,1,0
+the pictures by the executive,1,0
+the customers next to the dancer,1,0
+the managers behind the taxi driver,1,0
+the teachers to the side of the skater,1,0
+the teachers behind the assistant,1,0
+the customers behind the skater,1,0
+the farmers behind the chef,1,0
+the pictures from the parent,1,0
+the pilots behind the executive,1,0
+the customers to the side of the skater,1,0
+the consultants next to the taxi driver,1,0
+the managers across from the executive,1,0
+the teachers in front of the taxi driver,1,0
+the consultants across from the guard,1,0
+the poems by the skater,1,0
+the managers across from the assistant,1,0
+the senators behind the executive,1,0
+the shows from the executive,1,0
+the pilots to the side of the executive,1,0
+the teachers to the side of the assistant,1,0
+the authors in front of the architect,1,0
+the consultants behind the skater,1,0
+the poems from the guard,1,0
+the shows by the guard,1,0
+the authors next to the dancer,1,0
+the teachers next to the executive,1,0
+the senators next to the assistant,1,0
+the officers in front of the executive,1,0
+the consultants next to the minister,1,0
+the books by the guard,1,0
+the pilots behind the assistant,1,0
+the officers behind the minister,1,0
+the teachers behind the parent,1,0
+the teachers across from the architect,1,0
+the teachers next to the taxi driver,1,0
+the authors in front of the dancer,1,0
+the authors near the architect,1,0
+the customers to the side of the taxi driver,1,0
+the senators in front of the parent,1,0
+the senators near the minister,1,0
+the novels by the dancer,1,0
+the managers across from the skater,1,0
+the consultants behind the guard,1,0
+the consultants across from the parent,1,0
+the authors to the side of the assistant,1,0
+the books from the chef,1,0
+the managers near the assistant,1,0
+the surgeons behind the assistant,1,0
+the farmers behind the skater,1,0
+the authors across from the assistant,1,0
+the consultants across from the assistant,1,0
+the customers near the guard,1,0
+the authors across from the guard,1,0
+the pilots in front of the assistant,1,0
+the novels by the assistant,1,0
+the managers in front of the skater,1,0
+the pilots in front of the chef,1,0
+the officers to the side of the dancer,1,0
+the surgeons next to the chef,1,0
+the pilots near the architect,1,0
+the farmers next to the executive,1,0
+the customers next to the skater,1,0
+the shows by the chef,1,0
+the teachers in front of the dancer,1,0
+the senators near the assistant,1,0
+the poems from the parent,1,0
+the senators next to the dancer,1,0
+the farmers in front of the guard,1,0
+the songs from the parent,1,0
+the farmers across from the parent,1,0
+the consultants next to the dancer,1,0
+the teachers in front of the minister,1,0
+the customers next to the assistant,1,0
+the teachers across from the taxi driver,1,0
+the officers across from the taxi driver,1,0
+the customers in front of the parent,1,0
+the customers to the side of the chef,1,0
+the senators across from the executive,1,0
+the pilots to the side of the assistant,1,0
+the customers across from the minister,1,0
+the customers in front of the taxi driver,1,0
+the authors across from the taxi driver,1,0
+the novels from the executive,1,0
+the pilots next to the assistant,1,0
+the consultants to the side of the parent,1,0
+the songs by the skater,1,0
+the surgeons next to the parent,1,0
+the pictures from the assistant,1,0
+the officers to the side of the minister,1,0
+the surgeons to the side of the taxi driver,1,0
+the farmers in front of the assistant,1,0
+the consultants to the side of the taxi driver,1,0
+the surgeons behind the taxi driver,1,0
+the officers across from the minister,1,0
+the officers across from the architect,1,0
+the poems from the skater,1,0
+the authors to the side of the parent,1,0
+the surgeons next to the skater,1,0
+the teachers across from the parent,1,0
+the officers near the skater,1,0
+the surgeons behind the minister,1,0
+the consultants near the dancer,1,0
+the pilots near the dancer,1,0
+the pictures by the chef,1,0
+the teachers across from the guard,1,0
+the movies from the dancer,1,0
+the customers next to the taxi driver,1,0
+the surgeons to the side of the dancer,1,0
+the farmers behind the taxi driver,1,0
+the authors next to the guard,1,0
+the pilots next to the architect,1,0
+the teachers near the parent,1,0
+the senators in front of the dancer,1,0
+the senators near the executive,1,0
+the officers near the guard,1,0
+the managers near the skater,1,0
+the farmers to the side of the parent,1,0
+the pictures from the chef,1,0
+the senators next to the taxi driver,1,0
+the shows by the dancer,1,0
+the surgeons next to the minister,1,0
+the songs from the guard,1,0
+the pilots near the executive,1,0
+the officers behind the parent,1,0
+the pilots behind the taxi driver,1,0
+the senators to the side of the chef,1,0
+the farmers to the side of the guard,1,0
+the pilots next to the dancer,1,0
+the authors across from the executive,1,0
+the surgeons next to the taxi driver,1,0
+the teachers near the dancer,1,0
+the officers in front of the taxi driver,1,0
+the teachers behind the chef,1,0
+the officers across from the assistant,1,0
+the senators near the taxi driver,1,0
+the poems by the chef,1,0
+the songs from the executive,1,0
+the movies by the assistant,1,0
+the games by the architect,1,0
+the customers near the minister,1,0
+the authors in front of the chef,1,0
+the pilots next to the minister,1,0
+the songs from the taxi driver,1,0
+the games from the minister,1,0
+the officers in front of the dancer,1,0
+the authors near the chef,1,0
+the consultants in front of the guard,1,0
+the paintings by the taxi driver,1,0
+the consultants in front of the chef,1,0
+the movies by the dancer,1,0
+the senators next to the minister,1,0
+the poems by the architect,1,0
+the books by the architect,1,0
+the games from the skater,1,0
+the authors behind the parent,1,0
+the authors near the minister,1,0
+the officers across from the parent,1,0
+the books from the dancer,1,0
+the pictures from the dancer,1,0
+the officers in front of the minister,1,0
+the customers near the assistant,1,0
+the customers to the side of the architect,1,0
+the customers across from the executive,1,0
+the senators behind the taxi driver,1,0
+the paintings by the chef,1,0
+the pilots to the side of the chef,1,0
+the customers next to the minister,1,0
+the senators to the side of the taxi driver,1,0
+the pilots in front of the architect,1,0
+the authors behind the taxi driver,1,0
+the consultants behind the minister,1,0
+the managers behind the parent,1,0
+the pilots across from the dancer,1,0
+the consultants to the side of the guard,1,0
+the managers near the minister,1,0
+the farmers next to the architect,1,0
+the pilots across from the guard,1,0
+the teachers across from the skater,1,0
+the songs by the guard,1,0
+the managers in front of the minister,1,0
+the officers next to the parent,1,0
+the officers behind the chef,1,0
+the novels by the taxi driver,1,0
+the pilots behind the dancer,1,0
+the surgeons in front of the taxi driver,1,0
+the surgeons near the dancer,1,0
+the authors to the side of the dancer,1,0
+the pilots in front of the taxi driver,1,0
+the surgeons to the side of the skater,1,0
+the teachers to the side of the dancer,1,0
+the senators behind the assistant,1,0
+the consultants near the minister,1,0
+the authors in front of the guard,1,0
+the games from the executive,1,0
+the consultants next to the assistant,1,0
+the teachers near the executive,1,0
+the consultants across from the minister,1,0
+the novels by the executive,1,0
+the senators behind the architect,1,0
+the novels from the assistant,1,0
+the pilots across from the executive,1,0
+the senators next to the architect,1,0
+the customers behind the architect,1,0
+the authors behind the skater,1,0
+the books by the minister,1,0
+the teachers to the side of the executive,1,0
+the songs from the chef,1,0
+the farmers behind the guard,1,0
+the senators near the guard,1,0
+the authors next to the architect,1,0
+the farmers to the side of the assistant,1,0
+the games by the executive,1,0
+the farmers near the parent,1,0
+the consultants in front of the architect,1,0
+the authors to the side of the taxi driver,1,0
+the authors near the assistant,1,0
+the officers next to the guard,1,0
+the books from the architect,1,0
+the consultants next to the guard,1,0
+the movies from the skater,1,0
+the officers next to the dancer,1,0
+the managers across from the minister,1,0
+the farmers in front of the parent,1,0
+the paintings from the assistant,1,0
+the customers near the taxi driver,1,0
+the senators behind the skater,1,0
+the consultants across from the chef,1,0
+the senators next to the chef,1,0
+the authors next to the skater,1,0
+the customers next to the architect,1,0
+the pilots near the parent,1,0
+the customers to the side of the assistant,1,0
+the authors to the side of the architect,1,0
+the teachers to the side of the minister,1,0
+the consultants near the skater,1,0
+the games from the architect,1,0
+the pilots behind the parent,1,0
+the shows by the assistant,1,0
+the books from the minister,1,0
+the shows by the parent,1,0
+the farmers near the chef,1,0
+the pictures from the taxi driver,1,0
+the songs from the dancer,1,0
+the paintings from the chef,1,0
+the authors in front of the parent,1,0
+the novels from the chef,1,0
+the authors in front of the taxi driver,1,0
+the surgeons behind the guard,1,0
+the pictures from the skater,1,0
+the customers near the chef,1,0
+the poems from the architect,1,0
+the managers in front of the parent,1,0
+the farmers behind the minister,1,0
+the customers near the architect,1,0
+the surgeons near the assistant,1,0
+the consultants to the side of the assistant,1,0
+the teachers in front of the parent,1,0
+the pilots behind the minister,1,0
+the managers behind the executive,1,0
+the songs by the minister,1,0
+the paintings by the minister,1,0
+the movies from the assistant,1,0
+the customers in front of the skater,1,0
+the customers behind the parent,1,0
+the customers across from the parent,1,0
+the shows by the architect,1,0
+the games by the chef,1,0
+the authors across from the minister,1,0
+the games by the dancer,1,0
+the poems from the dancer,1,0
+the officers next to the minister,1,0
+the customers across from the guard,1,0
+the surgeons across from the executive,1,0
+the authors across from the skater,1,0
+the surgeons near the parent,1,0
+the managers in front of the architect,1,0
+the shows from the dancer,1,0
+the senators next to the parent,1,0
+the customers in front of the executive,1,0
+the farmers next to the skater,1,0
+the shows from the assistant,1,0
+the senators in front of the taxi driver,1,0
+the authors behind the assistant,1,0
+the officers near the dancer,1,0
+the consultants next to the parent,1,0
+the novels by the architect,1,0
+the senators near the architect,1,0
+the authors near the guard,1,0
+the senators in front of the architect,1,0
+the officers across from the chef,1,0
+the consultants behind the chef,1,0
+the customers near the dancer,1,0
+the games by the assistant,1,0
+the movies by the chef,1,0
+the officers near the assistant,1,0
+the teachers next to the minister,1,0
+the consultants behind the parent,1,0
+the managers across from the parent,1,0
+the farmers next to the taxi driver,1,0
+the pilots next to the executive,1,0
+the pilots in front of the dancer,1,0
+the customers in front of the dancer,1,0
+the officers near the executive,1,0
+the customers to the side of the parent,1,0
+the movies by the minister,1,0
+the movies from the chef,1,0
+the customers behind the dancer,1,0
+the pilots to the side of the taxi driver,1,0
+the senators next to the guard,1,0
+the senators across from the parent,1,0
+the managers behind the minister,1,0
+the authors across from the chef,1,0
+the pilots in front of the executive,1,0
+the pilots behind the chef,1,0
+the movies by the taxi driver,1,0
+the teachers behind the guard,1,0
+the officers in front of the architect,1,0
+the managers to the side of the dancer,1,0
+the paintings by the architect,1,0
+the managers next to the chef,1,0
+the teachers behind the architect,1,0
+the surgeons across from the guard,1,0
+the farmers to the side of the taxi driver,1,0
+the pilots across from the parent,1,0
+the shows from the taxi driver,1,0
+the surgeons across from the minister,1,0
+the customers next to the chef,1,0
+the poems from the assistant,1,0
+the managers to the side of the guard,1,0
+the farmers near the skater,1,0
+the consultants behind the taxi driver,1,0
+the paintings from the parent,1,0
+the books from the parent,1,0
+the authors behind the executive,1,0
+the senators across from the minister,1,0
+the pilots near the skater,1,0
+the pilots across from the assistant,1,0
+the consultants in front of the taxi driver,1,0
+the senators across from the assistant,1,0
+the novels by the guard,1,0
+the games from the parent,1,0
+the farmers next to the chef,1,0
+the books from the executive,1,0
+the managers in front of the dancer,1,0
+the officers to the side of the architect,1,0
+the senators to the side of the executive,1,0
+the customers in front of the assistant,1,0
+the senators near the skater,1,0
+the surgeons in front of the dancer,1,0
+the songs from the assistant,1,0
+the surgeons to the side of the guard,1,0
+the officers behind the guard,1,0
+the songs from the architect,1,0
+the managers across from the taxi driver,1,0
+the managers behind the guard,1,0
+the consultants across from the taxi driver,1,0
+the teachers near the guard,1,0
+the teachers next to the skater,1,0
+the teachers next to the assistant,1,0
+the farmers across from the assistant,1,0
+the farmers behind the architect,1,0
+the managers to the side of the executive,1,0
+the movies by the executive,1,0
+the shows from the skater,1,0
+the officers across from the skater,1,0
+the senators to the side of the assistant,1,0
+the shows from the minister,1,0
+the farmers to the side of the architect,1,0
+the pilots to the side of the parent,1,0
+the pilots across from the skater,1,0
+the surgeons near the executive,1,0
+the senators in front of the executive,1,0
+the pilots to the side of the dancer,1,0
+the customers to the side of the executive,1,0
+the managers to the side of the parent,1,0
+the customers behind the chef,1,0
+the consultants near the guard,1,0
+the managers to the side of the taxi driver,1,0
+the consultants behind the assistant,1,0
+the officers behind the taxi driver,1,0
+the teachers next to the parent,1,0
+the paintings from the minister,1,0
+the farmers to the side of the dancer,1,0
+the teachers in front of the skater,1,0
+the paintings by the parent,1,0
+the songs by the assistant,1,0
+the surgeons near the guard,1,0
+the surgeons near the chef,1,0
+the officers to the side of the executive,1,0
+the authors behind the chef,1,0
+the customers next to the executive,1,0
+the authors across from the parent,1,0
+the managers to the side of the chef,1,0
+the surgeons next to the guard,1,0
+the managers near the parent,1,0
+the teachers to the side of the architect,1,0
+the managers in front of the assistant,1,0
+the songs by the executive,1,0
+the farmers in front of the minister,1,0
+the novels from the guard,1,0
+the teachers near the architect,1,0
+the authors near the skater,1,0
+the teachers near the taxi driver,1,0
+the authors near the taxi driver,1,0
+the teachers across from the minister,1,0
+the officers to the side of the assistant,1,0
+the surgeons next to the dancer,1,0
+the officers in front of the assistant,1,0
+the farmers to the side of the executive,1,0
+the pilots next to the parent,1,0
+the authors across from the architect,1,0
+the teachers across from the executive,1,0
+the games by the guard,1,0
+the games by the minister,1,0
+the customers behind the minister,1,0
+the officers behind the architect,1,0
+the teachers behind the dancer,1,0
+the movies by the architect,1,0
+the games from the chef,1,0
+the paintings by the skater,1,0
+the pilots in front of the parent,1,0
+the senators behind the parent,1,0
+the managers near the architect,1,0
+the authors in front of the executive,1,0
+the poems by the dancer,1,0
+the paintings from the dancer,1,0
+the pictures from the architect,1,0
+the surgeons to the side of the chef,1,0
+the authors to the side of the executive,1,0
+the songs from the minister,1,0
+the managers next to the executive,1,0
+the officers next to the skater,1,0
+the consultants next to the executive,1,0
+the farmers in front of the executive,1,0
+the games by the taxi driver,1,0
+the farmers across from the taxi driver,1,0
+the officers behind the skater,1,0
+the surgeons across from the skater,1,0
+the managers near the taxi driver,1,0
+the authors next to the taxi driver,1,0
+the surgeons across from the parent,1,0
+the teachers in front of the assistant,1,0
+the senators to the side of the dancer,1,0
+the farmers near the executive,1,0
+the shows by the skater,1,0
+the farmers in front of the architect,1,0
+the consultants to the side of the skater,1,0
+the senators in front of the minister,1,0
+the farmers across from the executive,1,0
+the officers next to the chef,1,0
+the senators near the parent,1,0
+the officers near the architect,1,0
+the senators to the side of the guard,1,0
+the managers across from the chef,1,0
+the customers near the skater,1,0
+the senators across from the guard,1,0
+the novels by the minister,1,0
+the senators across from the skater,1,0
+the paintings by the dancer,1,0
+the surgeons behind the dancer,1,0
+the consultants across from the dancer,1,0
+the farmers next to the dancer,1,0
+the managers across from the guard,1,0
+the surgeons in front of the minister,1,0
+the pilots next to the guard,1,0
+the managers next to the assistant,1,0
+the farmers near the dancer,1,0
+the books by the chef,1,0
+the senators next to the skater,1,0
+the paintings from the executive,1,0
+the teachers in front of the executive,1,0
+the shows from the architect,1,0
+the pilots in front of the guard,1,0
+the books from the skater,1,0
+the consultants in front of the executive,1,0
+the authors behind the dancer,1,0
+the pilots across from the taxi driver,1,0
+the surgeons behind the parent,1,0
+the managers behind the skater,1,0
+the customers to the side of the guard,1,0
+the customers across from the assistant,1,0
+the farmers to the side of the skater,1,0
+the senators to the side of the skater,1,0
+the poems from the executive,1,0
+the songs by the taxi driver,1,0
+the officers behind the dancer,1,0
+the managers across from the dancer,1,0
+the shows by the taxi driver,1,0
+the pilots near the taxi driver,1,0
+the officers across from the executive,1,0
+the teachers near the assistant,1,0
+the customers to the side of the minister,1,0
+the senators across from the dancer,1,0
+the surgeons in front of the chef,1,0
+the farmers in front of the taxi driver,1,0
+the surgeons in front of the architect,1,0
+the surgeons behind the skater,1,0
+the managers in front of the guard,1,0
+the farmers near the taxi driver,1,0
+the teachers across from the chef,1,0
+the authors next to the chef,1,0
+the managers to the side of the skaters,1,1
+the customers near the taxi drivers,1,1
+the books by the parents,1,1
+the shows by the executives,1,1
+the shows from the dancers,1,1
+the customers in front of the dancers,1,1
+the managers near the ministers,1,1
+the customers behind the architects,1,1
+the officers to the side of the skaters,1,1
+the managers behind the ministers,1,1
+the officers in front of the assistants,1,1
+the books by the assistants,1,1
+the pilots across from the taxi drivers,1,1
+the novels by the guards,1,1
+the customers near the ministers,1,1
+the customers behind the executives,1,1
+the senators next to the ministers,1,1
+the shows by the ministers,1,1
+the consultants across from the assistants,1,1
+the consultants in front of the chefs,1,1
+the paintings from the architects,1,1
+the novels from the dancers,1,1
+the authors near the ministers,1,1
+the surgeons to the side of the ministers,1,1
+the songs from the skaters,1,1
+the managers near the taxi drivers,1,1
+the pilots near the assistants,1,1
+the surgeons to the side of the guards,1,1
+the managers in front of the skaters,1,1
+the consultants behind the ministers,1,1
+the surgeons behind the executives,1,1
+the managers behind the dancers,1,1
+the officers across from the guards,1,1
+the pilots near the dancers,1,1
+the managers next to the assistants,1,1
+the surgeons to the side of the dancers,1,1
+the officers in front of the skaters,1,1
+the pilots behind the assistants,1,1
+the authors near the skaters,1,1
+the managers to the side of the architects,1,1
+the paintings from the skaters,1,1
+the senators near the assistants,1,1
+the senators behind the guards,1,1
+the consultants next to the executives,1,1
+the customers in front of the architects,1,1
+the poems from the guards,1,1
+the managers near the guards,1,1
+the authors across from the architects,1,1
+the farmers across from the architects,1,1
+the pilots near the architects,1,1
+the managers across from the parents,1,1
+the officers in front of the taxi drivers,1,1
+the paintings by the guards,1,1
+the teachers next to the chefs,1,1
+the pictures by the ministers,1,1
+the surgeons next to the parents,1,1
+the farmers to the side of the architects,1,1
+the teachers across from the assistants,1,1
+the senators near the guards,1,1
+the pilots across from the parents,1,1
+the farmers across from the guards,1,1
+the authors to the side of the chefs,1,1
+the authors next to the dancers,1,1
+the novels by the architects,1,1
+the farmers in front of the chefs,1,1
+the senators in front of the executives,1,1
+the pilots behind the executives,1,1
+the consultants behind the guards,1,1
+the movies by the architects,1,1
+the managers in front of the taxi drivers,1,1
+the songs by the architects,1,1
+the authors in front of the guards,1,1
+the pictures from the chefs,1,1
+the senators near the chefs,1,1
+the managers behind the skaters,1,1
+the songs by the assistants,1,1
+the teachers behind the ministers,1,1
+the consultants to the side of the architects,1,1
+the songs by the chefs,1,1
+the pilots in front of the dancers,1,1
+the authors to the side of the taxi drivers,1,1
+the customers near the parents,1,1
+the novels from the architects,1,1
+the authors across from the executives,1,1
+the officers across from the skaters,1,1
+the authors in front of the architects,1,1
+the teachers next to the executives,1,1
+the consultants near the parents,1,1
+the authors to the side of the dancers,1,1
+the movies from the dancers,1,1
+the books from the chefs,1,1
+the consultants across from the executives,1,1
+the authors behind the guards,1,1
+the officers next to the dancers,1,1
+the pictures from the taxi drivers,1,1
+the customers across from the guards,1,1
+the pictures from the architects,1,1
+the managers in front of the parents,1,1
+the senators near the parents,1,1
+the songs by the executives,1,1
+the books from the executives,1,1
+the customers across from the taxi drivers,1,1
+the senators across from the taxi drivers,1,1
+the senators across from the executives,1,1
+the games by the chefs,1,1
+the shows from the assistants,1,1
+the shows by the assistants,1,1
+the managers in front of the ministers,1,1
+the pilots across from the chefs,1,1
+the teachers behind the skaters,1,1
+the pictures by the architects,1,1
+the pictures by the skaters,1,1
+the managers in front of the executives,1,1
+the senators near the ministers,1,1
+the authors near the parents,1,1
+the managers in front of the dancers,1,1
+the pilots to the side of the taxi drivers,1,1
+the customers across from the executives,1,1
+the consultants across from the architects,1,1
+the novels from the executives,1,1
+the customers next to the assistants,1,1
+the surgeons near the ministers,1,1
+the customers in front of the chefs,1,1
+the teachers next to the ministers,1,1
+the pictures by the chefs,1,1
+the teachers next to the architects,1,1
+the songs by the taxi drivers,1,1
+the senators near the executives,1,1
+the pictures by the guards,1,1
+the authors across from the parents,1,1
+the teachers in front of the skaters,1,1
+the teachers behind the taxi drivers,1,1
+the pictures from the assistants,1,1
+the pilots to the side of the executives,1,1
+the senators in front of the skaters,1,1
+the pilots to the side of the skaters,1,1
+the customers behind the ministers,1,1
+the games from the dancers,1,1
+the games from the taxi drivers,1,1
+the shows by the architects,1,1
+the authors next to the assistants,1,1
+the senators next to the architects,1,1
+the farmers to the side of the parents,1,1
+the surgeons behind the assistants,1,1
+the customers behind the assistants,1,1
+the customers across from the dancers,1,1
+the authors to the side of the architects,1,1
+the customers to the side of the assistants,1,1
+the surgeons behind the architects,1,1
+the officers behind the chefs,1,1
+the managers near the skaters,1,1
+the movies by the guards,1,1
+the games by the skaters,1,1
+the games by the executives,1,1
+the authors near the guards,1,1
+the senators behind the skaters,1,1
+the games by the guards,1,1
+the authors in front of the parents,1,1
+the customers in front of the executives,1,1
+the managers across from the assistants,1,1
+the songs by the guards,1,1
+the farmers to the side of the ministers,1,1
+the managers behind the chefs,1,1
+the senators across from the parents,1,1
+the authors in front of the chefs,1,1
+the surgeons next to the assistants,1,1
+the teachers across from the ministers,1,1
+the games by the parents,1,1
+the surgeons in front of the architects,1,1
+the managers behind the architects,1,1
+the surgeons across from the parents,1,1
+the managers next to the parents,1,1
+the customers in front of the parents,1,1
+the surgeons to the side of the architects,1,1
+the paintings from the ministers,1,1
+the games by the dancers,1,1
+the farmers near the executives,1,1
+the pilots in front of the architects,1,1
+the consultants to the side of the chefs,1,1
+the movies from the assistants,1,1
+the movies from the ministers,1,1
+the farmers across from the ministers,1,1
+the books from the parents,1,1
+the pictures by the parents,1,1
+the pictures by the dancers,1,1
+the farmers to the side of the assistants,1,1
+the managers to the side of the parents,1,1
+the officers across from the taxi drivers,1,1
+the teachers to the side of the assistants,1,1
+the farmers next to the executives,1,1
+the pilots behind the architects,1,1
+the customers to the side of the architects,1,1
+the authors next to the parents,1,1
+the farmers to the side of the executives,1,1
+the authors next to the ministers,1,1
+the senators next to the taxi drivers,1,1
+the customers across from the skaters,1,1
+the managers next to the chefs,1,1
+the movies from the chefs,1,1
+the pilots to the side of the guards,1,1
+the games by the taxi drivers,1,1
+the officers behind the executives,1,1
+the farmers across from the dancers,1,1
+the pilots next to the dancers,1,1
+the authors near the assistants,1,1
+the pilots behind the chefs,1,1
+the farmers next to the skaters,1,1
+the senators across from the assistants,1,1
+the games from the chefs,1,1
+the pilots behind the dancers,1,1
+the surgeons across from the skaters,1,1
+the senators behind the parents,1,1
+the songs by the parents,1,1
+the pilots across from the ministers,1,1
+the farmers next to the taxi drivers,1,1
+the managers across from the skaters,1,1
+the officers near the taxi drivers,1,1
+the farmers near the skaters,1,1
+the pictures from the executives,1,1
+the officers next to the parents,1,1
+the teachers next to the guards,1,1
+the officers behind the skaters,1,1
+the officers next to the architects,1,1
+the paintings by the ministers,1,1
+the surgeons next to the chefs,1,1
+the teachers to the side of the chefs,1,1
+the senators next to the assistants,1,1
+the shows from the ministers,1,1
+the authors to the side of the parents,1,1
+the senators behind the architects,1,1
+the customers to the side of the parents,1,1
+the novels from the parents,1,1
+the customers to the side of the skaters,1,1
+the senators to the side of the executives,1,1
+the consultants next to the ministers,1,1
+the customers in front of the assistants,1,1
+the novels by the dancers,1,1
+the surgeons near the chefs,1,1
+the customers across from the parents,1,1
+the books from the ministers,1,1
+the farmers behind the assistants,1,1
+the teachers in front of the ministers,1,1
+the consultants near the assistants,1,1
+the consultants across from the skaters,1,1
+the shows from the executives,1,1
+the consultants near the skaters,1,1
+the customers next to the executives,1,1
+the farmers across from the executives,1,1
+the pilots across from the architects,1,1
+the farmers across from the parents,1,1
+the customers across from the assistants,1,1
+the farmers behind the executives,1,1
+the poems by the ministers,1,1
+the officers to the side of the guards,1,1
+the poems from the dancers,1,1
+the managers to the side of the dancers,1,1
+the teachers next to the dancers,1,1
+the shows from the parents,1,1
+the authors across from the dancers,1,1
+the farmers to the side of the guards,1,1
+the teachers next to the taxi drivers,1,1
+the authors next to the chefs,1,1
+the authors next to the taxi drivers,1,1
+the consultants near the chefs,1,1
+the poems by the executives,1,1
+the senators across from the ministers,1,1
+the officers next to the guards,1,1
+the consultants to the side of the guards,1,1
+the farmers in front of the executives,1,1
+the teachers next to the assistants,1,1
+the novels by the executives,1,1
+the pilots to the side of the ministers,1,1
+the consultants in front of the skaters,1,1
+the officers behind the dancers,1,1
+the managers in front of the guards,1,1
+the novels by the parents,1,1
+the paintings by the executives,1,1
+the managers behind the parents,1,1
+the paintings from the taxi drivers,1,1
+the farmers next to the architects,1,1
+the customers to the side of the ministers,1,1
+the shows by the parents,1,1
+the officers behind the architects,1,1
+the officers next to the chefs,1,1
+the pilots to the side of the chefs,1,1
+the surgeons next to the dancers,1,1
+the consultants to the side of the assistants,1,1
+the pilots in front of the taxi drivers,1,1
+the novels from the ministers,1,1
+the surgeons next to the guards,1,1
+the farmers next to the assistants,1,1
+the shows from the skaters,1,1
+the farmers in front of the parents,1,1
+the surgeons across from the chefs,1,1
+the customers in front of the ministers,1,1
+the customers across from the ministers,1,1
+the authors next to the skaters,1,1
+the teachers near the dancers,1,1
+the managers across from the executives,1,1
+the paintings from the chefs,1,1
+the farmers next to the chefs,1,1
+the officers to the side of the taxi drivers,1,1
+the farmers to the side of the skaters,1,1
+the pilots in front of the skaters,1,1
+the consultants behind the dancers,1,1
+the farmers next to the dancers,1,1
+the teachers to the side of the taxi drivers,1,1
+the pictures from the skaters,1,1
+the novels by the assistants,1,1
+the senators to the side of the dancers,1,1
+the shows from the chefs,1,1
+the senators in front of the ministers,1,1
+the surgeons behind the skaters,1,1
+the authors next to the architects,1,1
+the authors behind the dancers,1,1
+the surgeons next to the skaters,1,1
+the managers near the chefs,1,1
+the customers across from the chefs,1,1
+the authors next to the executives,1,1
+the teachers in front of the architects,1,1
+the farmers behind the chefs,1,1
+the managers next to the ministers,1,1
+the senators next to the dancers,1,1
+the movies by the chefs,1,1
+the officers next to the ministers,1,1
+the officers in front of the parents,1,1
+the authors in front of the skaters,1,1
+the surgeons in front of the ministers,1,1
+the farmers near the parents,1,1
+the managers near the dancers,1,1
+the officers near the chefs,1,1
+the songs by the ministers,1,1
+the authors across from the ministers,1,1
+the poems by the skaters,1,1
+the farmers near the taxi drivers,1,1
+the farmers in front of the assistants,1,1
+the teachers to the side of the ministers,1,1
+the farmers in front of the skaters,1,1
+the authors across from the taxi drivers,1,1
+the surgeons to the side of the executives,1,1
+the officers in front of the executives,1,1
+the senators across from the architects,1,1
+the consultants near the executives,1,1
+the books by the dancers,1,1
+the games by the architects,1,1
+the surgeons to the side of the skaters,1,1
+the officers behind the ministers,1,1
+the officers across from the assistants,1,1
+the pilots across from the guards,1,1
+the managers near the executives,1,1
+the farmers behind the architects,1,1
+the books from the skaters,1,1
+the poems by the parents,1,1
+the authors to the side of the ministers,1,1
+the authors behind the parents,1,1
+the songs by the dancers,1,1
+the authors to the side of the guards,1,1
+the authors to the side of the executives,1,1
+the authors near the taxi drivers,1,1
+the teachers near the guards,1,1
+the authors near the chefs,1,1
+the surgeons near the dancers,1,1
+the officers behind the parents,1,1
+the customers to the side of the dancers,1,1
+the books from the architects,1,1
+the novels from the guards,1,1
+the games from the guards,1,1
+the shows from the taxi drivers,1,1
+the senators behind the executives,1,1
+the teachers near the assistants,1,1
+the teachers in front of the taxi drivers,1,1
+the officers in front of the ministers,1,1
+the books by the ministers,1,1
+the managers near the assistants,1,1
+the senators to the side of the taxi drivers,1,1
+the books from the taxi drivers,1,1
+the senators next to the guards,1,1
+the pilots across from the skaters,1,1
+the pilots across from the executives,1,1
+the teachers in front of the dancers,1,1
+the teachers in front of the assistants,1,1
+the officers behind the taxi drivers,1,1
+the paintings by the architects,1,1
+the consultants near the ministers,1,1
+the consultants across from the dancers,1,1
+the shows by the chefs,1,1
+the pictures by the executives,1,1
+the poems by the assistants,1,1
+the teachers across from the taxi drivers,1,1
+the surgeons behind the chefs,1,1
+the pictures by the assistants,1,1
+the senators to the side of the assistants,1,1
+the managers to the side of the guards,1,1
+the games from the skaters,1,1
+the officers in front of the architects,1,1
+the farmers behind the parents,1,1
+the books by the guards,1,1
+the surgeons near the assistants,1,1
+the pictures from the dancers,1,1
+the surgeons across from the executives,1,1
+the surgeons behind the dancers,1,1
+the paintings from the executives,1,1
+the pilots next to the architects,1,1
+the officers next to the skaters,1,1
+the books by the executives,1,1
+the teachers behind the chefs,1,1
+the farmers near the dancers,1,1
+the pilots near the skaters,1,1
+the managers in front of the chefs,1,1
+the senators across from the chefs,1,1
+the senators across from the skaters,1,1
+the farmers behind the skaters,1,1
+the books by the chefs,1,1
+the surgeons across from the ministers,1,1
+the novels from the assistants,1,1
+the customers next to the architects,1,1
+the authors across from the assistants,1,1
+the surgeons in front of the parents,1,1
+the consultants to the side of the ministers,1,1
+the farmers near the ministers,1,1
+the consultants in front of the dancers,1,1
+the consultants in front of the guards,1,1
+the customers next to the taxi drivers,1,1
+the songs from the chefs,1,1
+the senators behind the taxi drivers,1,1
+the authors to the side of the skaters,1,1
+the pilots next to the ministers,1,1
+the songs from the parents,1,1
+the surgeons in front of the assistants,1,1
+the farmers behind the dancers,1,1
+the poems by the guards,1,1
+the managers behind the taxi drivers,1,1
+the managers behind the guards,1,1
+the pictures from the parents,1,1
+the farmers behind the guards,1,1
+the pilots to the side of the dancers,1,1
+the movies from the skaters,1,1
+the authors to the side of the assistants,1,1
+the surgeons near the skaters,1,1
+the senators to the side of the chefs,1,1
+the officers to the side of the parents,1,1
+the shows by the guards,1,1
+the farmers in front of the architects,1,1
+the consultants across from the ministers,1,1
+the surgeons next to the taxi drivers,1,1
+the pilots next to the chefs,1,1
+the pilots next to the skaters,1,1
+the surgeons to the side of the parents,1,1
+the authors in front of the dancers,1,1
+the customers next to the dancers,1,1
+the farmers near the assistants,1,1
+the customers in front of the taxi drivers,1,1
+the customers behind the guards,1,1
+the senators in front of the chefs,1,1
+the poems from the taxi drivers,1,1
+the teachers across from the architects,1,1
+the songs from the ministers,1,1
+the surgeons near the guards,1,1
+the farmers next to the ministers,1,1
+the movies by the skaters,1,1
+the poems from the architects,1,1
+the shows by the dancers,1,1
+the consultants next to the guards,1,1
+the authors next to the guards,1,1
+the officers across from the executives,1,1
+the officers across from the ministers,1,1
+the books from the dancers,1,1
+the poems from the assistants,1,1
+the officers across from the chefs,1,1
+the consultants near the guards,1,1
+the consultants near the dancers,1,1
+the pilots behind the taxi drivers,1,1
+the customers near the assistants,1,1
+the songs from the executives,1,1
+the customers to the side of the executives,1,1
+the authors near the dancers,1,1
+the authors behind the taxi drivers,1,1
+the surgeons across from the guards,1,1
+the teachers across from the guards,1,1
+the authors behind the chefs,1,1
+the farmers near the architects,1,1
+the farmers behind the ministers,1,1
+the surgeons in front of the dancers,1,1
+the senators to the side of the skaters,1,1
+the consultants in front of the parents,1,1
+the movies by the parents,1,1
+the senators behind the chefs,1,1
+the managers to the side of the executives,1,1
+the consultants behind the parents,1,1
+the managers across from the ministers,1,1
+the novels by the ministers,1,1
+the managers near the parents,1,1
+the pilots in front of the ministers,1,1
+the teachers to the side of the skaters,1,1
+the senators behind the assistants,1,1
+the pilots behind the parents,1,1
+the pilots to the side of the parents,1,1
+the farmers across from the assistants,1,1
+the teachers near the architects,1,1
+the novels by the skaters,1,1
+the poems from the chefs,1,1
+the authors near the architects,1,1
+the movies from the guards,1,1
+the managers next to the taxi drivers,1,1
+the customers next to the ministers,1,1
+the farmers next to the parents,1,1
+the teachers near the skaters,1,1
+the books by the skaters,1,1
+the senators next to the chefs,1,1
+the surgeons next to the executives,1,1
+the songs from the taxi drivers,1,1
+the surgeons behind the ministers,1,1
+the officers behind the guards,1,1
+the teachers across from the skaters,1,1
+the poems from the ministers,1,1
+the consultants behind the executives,1,1
+the surgeons behind the guards,1,1
+the senators to the side of the ministers,1,1
+the teachers near the chefs,1,1
+the games by the assistants,1,1
+the pilots in front of the chefs,1,1
+the consultants behind the taxi drivers,1,1
+the consultants next to the dancers,1,1
+the customers to the side of the taxi drivers,1,1
+the poems by the architects,1,1
+the poems by the chefs,1,1
+the officers next to the taxi drivers,1,1
+the teachers near the parents,1,1
+the pilots near the chefs,1,1
+the pilots near the ministers,1,1
+the teachers near the ministers,1,1
+the teachers near the taxi drivers,1,1
+the customers near the executives,1,1
+the farmers in front of the taxi drivers,1,1
+the managers in front of the architects,1,1
+the teachers across from the parents,1,1
+the managers near the architects,1,1
+the senators in front of the architects,1,1
+the teachers behind the executives,1,1
+the surgeons across from the architects,1,1
+the officers to the side of the dancers,1,1
+the novels from the skaters,1,1
+the managers next to the architects,1,1
+the teachers near the executives,1,1
+the consultants across from the chefs,1,1
+the managers next to the guards,1,1
+the officers across from the architects,1,1
+the customers near the guards,1,1
+the authors behind the ministers,1,1
+the teachers to the side of the parents,1,1
+the surgeons across from the taxi drivers,1,1
+the officers near the architects,1,1
+the managers to the side of the ministers,1,1
+the surgeons across from the assistants,1,1
+the consultants next to the architects,1,1
+the senators near the taxi drivers,1,1
+the senators across from the dancers,1,1
+the managers across from the dancers,1,1
+the senators behind the ministers,1,1
+the books from the guards,1,1
+the shows from the architects,1,1
+the managers across from the guards,1,1
+the consultants in front of the architects,1,1
+the shows by the taxi drivers,1,1
+the books from the assistants,1,1
+the songs from the assistants,1,1
+the paintings by the skaters,1,1
+the customers in front of the guards,1,1
+the surgeons to the side of the assistants,1,1
+the senators next to the skaters,1,1
+the officers across from the dancers,1,1
+the officers to the side of the chefs,1,1
+the authors behind the architects,1,1
+the pilots in front of the guards,1,1
+the games by the ministers,1,1
+the officers next to the assistants,1,1
+the farmers near the chefs,1,1
+the customers near the chefs,1,1
+the customers in front of the skaters,1,1
+the consultants to the side of the executives,1,1
+the paintings by the parents,1,1
+the customers behind the taxi drivers,1,1
+the senators near the architects,1,1
+the officers behind the assistants,1,1
+the surgeons in front of the guards,1,1
+the teachers in front of the parents,1,1
+the pilots near the guards,1,1
+the managers to the side of the taxi drivers,1,1
+the teachers behind the assistants,1,1
+the teachers in front of the guards,1,1
+the managers across from the chefs,1,1
+the consultants near the architects,1,1
+the pilots near the taxi drivers,1,1
+the authors across from the guards,1,1
+the movies from the parents,1,1
+the consultants next to the parents,1,1
+the consultants behind the skaters,1,1
+the surgeons to the side of the taxi drivers,1,1
+the officers to the side of the ministers,1,1
+the consultants to the side of the taxi drivers,1,1
+the paintings from the guards,1,1
+the teachers behind the parents,1,1
+the games from the ministers,1,1
+the officers in front of the chefs,1,1
+the officers near the executives,1,1
+the managers behind the assistants,1,1
+the customers to the side of the guards,1,1
+the authors in front of the assistants,1,1
+the managers in front of the assistants,1,1
+the teachers to the side of the dancers,1,1
+the games from the architects,1,1
+the farmers next to the guards,1,1
+the movies by the taxi drivers,1,1
+the consultants next to the taxi drivers,1,1
+the pictures by the taxi drivers,1,1
+the officers near the ministers,1,1
+the managers next to the skaters,1,1
+the books by the architects,1,1
+the officers near the parents,1,1
+the surgeons near the parents,1,1
+the pilots in front of the parents,1,1
+the senators near the dancers,1,1
+the games from the executives,1,1
+the officers next to the executives,1,1
+the officers in front of the guards,1,1
+the pictures from the ministers,1,1
+the movies by the ministers,1,1
+the pictures from the guards,1,1
+the officers to the side of the architects,1,1
+the customers behind the parents,1,1
+the teachers across from the chefs,1,1
+the customers to the side of the chefs,1,1
+the teachers behind the dancers,1,1
+the movies by the dancers,1,1
+the teachers to the side of the guards,1,1
+the paintings from the dancers,1,1
+the pilots behind the skaters,1,1
+the games from the parents,1,1
+the surgeons next to the ministers,1,1
+the authors behind the executives,1,1
+the surgeons in front of the skaters,1,1
+the senators near the skaters,1,1
+the customers near the dancers,1,1
+the consultants across from the parents,1,1
+the teachers in front of the executives,1,1
+the senators in front of the taxi drivers,1,1
+the movies from the executives,1,1
+the poems by the dancers,1,1
+the shows from the guards,1,1
+the managers across from the architects,1,1
+the authors in front of the taxi drivers,1,1
+the surgeons near the architects,1,1
+the customers next to the parents,1,1
+the officers to the side of the executives,1,1
+the teachers next to the parents,1,1
+the consultants near the taxi drivers,1,1
+the consultants across from the guards,1,1
+the authors across from the chefs,1,1
+the officers in front of the dancers,1,1
+the pilots in front of the assistants,1,1
+the senators in front of the assistants,1,1
+the paintings by the taxi drivers,1,1
+the pilots next to the taxi drivers,1,1
+the novels from the chefs,1,1
+the pilots in front of the executives,1,1
+the farmers in front of the dancers,1,1
+the senators in front of the dancers,1,1
+the consultants to the side of the parents,1,1
+the books by the taxi drivers,1,1
+the consultants in front of the taxi drivers,1,1
+the consultants next to the skaters,1,1
+the teachers next to the skaters,1,1
+the teachers to the side of the executives,1,1
+the consultants to the side of the dancers,1,1
+the customers near the architects,1,1
+the farmers across from the taxi drivers,1,1
+the customers behind the chefs,1,1
+the authors near the executives,1,1
+the pilots across from the assistants,1,1
+the farmers to the side of the dancers,1,1
+the consultants behind the architects,1,1
+the farmers across from the chefs,1,1
+the pilots behind the guards,1,1
+the senators in front of the parents,1,1
+the surgeons in front of the taxi drivers,1,1
+the officers near the assistants,1,1
+the customers behind the skaters,1,1
+the authors in front of the executives,1,1
+the officers near the guards,1,1
+the movies from the taxi drivers,1,1
+the teachers behind the architects,1,1
+the songs from the architects,1,1
+the surgeons in front of the chefs,1,1
+the consultants behind the chefs,1,1
+the consultants next to the assistants,1,1
+the customers near the skaters,1,1
+the customers next to the guards,1,1
+the managers behind the executives,1,1
+the officers to the side of the assistants,1,1
+the officers near the skaters,1,1
+the authors behind the assistants,1,1
+the managers next to the dancers,1,1
+the surgeons behind the taxi drivers,1,1
+the officers across from the parents,1,1
+the songs from the guards,1,1
+the pilots next to the assistants,1,1
+the senators in front of the guards,1,1
+the senators next to the executives,1,1
+the consultants behind the assistants,1,1
+the consultants in front of the ministers,1,1
+the managers to the side of the assistants,1,1
+the consultants across from the taxi drivers,1,1
+the novels by the taxi drivers,1,1
+the surgeons next to the architects,1,1
+the surgeons to the side of the chefs,1,1
+the songs from the dancers,1,1
+the shows by the skaters,1,1
+the poems from the executives,1,1
+the managers to the side of the chefs,1,1
+the farmers in front of the guards,1,1
+the pilots next to the guards,1,1
+the paintings by the dancers,1,1
+the movies by the executives,1,1
+the surgeons across from the dancers,1,1
+the customers next to the skaters,1,1
+the songs by the skaters,1,1
+the pilots across from the dancers,1,1
+the surgeons near the executives,1,1
+the surgeons in front of the executives,1,1
+the paintings from the assistants,1,1
+the customers behind the dancers,1,1
+the teachers across from the executives,1,1
+the poems by the taxi drivers,1,1
+the authors behind the skaters,1,1
+the consultants in front of the executives,1,1
+the senators next to the parents,1,1
+the senators to the side of the guards,1,1
+the teachers behind the guards,1,1
+the pilots behind the ministers,1,1
+the teachers to the side of the architects,1,1
+the movies by the assistants,1,1
+the customers next to the chefs,1,1
+the pilots near the executives,1,1
+the paintings by the assistants,1,1
+the farmers to the side of the taxi drivers,1,1
+the senators to the side of the architects,1,1
+the paintings from the parents,1,1
+the managers across from the taxi drivers,1,1
+the managers next to the executives,1,1
+the paintings by the chefs,1,1
+the senators behind the dancers,1,1
+the farmers near the guards,1,1
+the customers across from the architects,1,1
+the surgeons near the taxi drivers,1,1
+the officers near the dancers,1,1
+the novels from the taxi drivers,1,1
+the novels by the chefs,1,1
+the teachers in front of the chefs,1,1
+the poems from the parents,1,1
+the authors across from the skaters,1,1
+the pilots near the parents,1,1
+the senators across from the guards,1,1
+the consultants next to the chefs,1,1
+the movies from the architects,1,1
+the pilots next to the executives,1,1
+the teachers across from the dancers,1,1
+the farmers to the side of the chefs,1,1
+the pilots to the side of the assistants,1,1
+the poems from the skaters,1,1
+the consultants to the side of the skaters,1,1
+the games from the assistants,1,1
+the consultants in front of the assistants,1,1
+the senators to the side of the parents,1,1
+the surgeons behind the parents,1,1
+the farmers in front of the ministers,1,1
+the pilots next to the parents,1,1
+the authors in front of the ministers,1,1
+the pilots to the side of the architects,1,1
+the farmers across from the skaters,1,1
+the farmers behind the taxi drivers,1,1

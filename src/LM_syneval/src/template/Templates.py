@@ -5,6 +5,10 @@ class AgreementTemplate:
                 ["D", "MS", "C", "D", "ES", "EV", "MV"],
                 {"match": ([1], [6]), "vary": [4, 5]},
             ),
+            "obj_rel_across_anim_2": (
+                ["D", "MS", "C", "D", "ES1", "EV", "AND", "D", "ES2", "EV", "MV"],
+                {"match": ([1], [10]), "vary": [4, 5, 8, 9]},
+            ),
             "obj_rel_within_anim": (
                 ["D", "MS", "C", "D", "ES", "EV", "MV"],
                 {"match": ([4], [5]), "vary": [1, 6]},
@@ -12,6 +16,10 @@ class AgreementTemplate:
             "obj_rel_across_inanim": (
                 ["D", "IS", "IC", "D", "ES", "EV", "IV"],
                 {"match": ([1], [6]), "vary": [4, 5]},
+            ),
+            "obj_rel_across_inanim_2": (
+                ["D", "IS", "IC", "D", "ES1", "EV", "AND", "D", "ES2", "EV", "IV"],
+                {"match": ([1], [10]), "vary": [4, 5, 8, 9]},
             ),
             "obj_rel_within_inanim": (
                 ["D", "IS", "IC", "D", "ES", "EV", "IV"],
@@ -25,9 +33,17 @@ class AgreementTemplate:
                 ["D", "MS", "P", "D", "ES", "MV"],
                 {"match": ([1], [5]), "vary": [4]},
             ),
+            "prep_anim_2": (
+                ["D", "MS", "P", "D", "ES1", "P", "D", "ES2", "MV"],
+                {"match": ([1], [8]), "vary": [4, 7]},
+            ),
             "prep_inanim": (
                 ["D", "IS", "IP", "D", "ES", "IV"],
                 {"match": ([1], [5]), "vary": [4]},
+            ),
+            "prep_inanim_2": (
+                ["D", "IS", "IP", "D", "ES1", "P", "D", "ES2", "IV"],
+                {"match": ([1], [8]), "vary": [4, 7]},
             ),
             "obj_rel_no_comp_across_anim": (
                 ["D", "MS", "D", "ES", "EV", "MV"],
@@ -62,6 +78,10 @@ class AgreementTemplate:
                 ["D", "MS", "C", "D", "ES", "EV", "RMV", "ANPHR"],
                 {"match": ([1], [7]), "vary": [4, 5]},
             ),
+            "reflexives_across_2": (
+                ["D", "MS", "C", "D", "ES1", "EV", "AND", "D", "ES2", "EV", "RMV", "ANPHR"],
+                {"match": ([1], [11]), "vary": [4, 5, 8, 9]},
+            ),
             "simple_reflexives": (
                 ["D", "MS", "RMV", "ANPHR"],
                 {"match": ([1], [3]), "vary": []},
@@ -69,6 +89,10 @@ class AgreementTemplate:
             "reflexive_sent_comp": (
                 ["D", "BS", "BV", "D", "MS", "RMV", "ANPHR"],
                 {"match": ([4], [6]), "vary": [1]},
+            ),
+            "reflexive_sent_comp_2": (
+                ["D", "BS1", "BV", "D", "BS2", "BV", "D", "MS", "RMV", "ANPHR"],
+                {"match": ([7], [9]), "vary": [1, 4]},
             ),
         }
 

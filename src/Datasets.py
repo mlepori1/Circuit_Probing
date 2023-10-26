@@ -167,6 +167,42 @@ class SVAgrDataset(Dataset):
         }
         return sample
 
+class SyntacticNumberDataset(Dataset):
+    def __init__(self, file, label, tokenizer, pad_max=15):
+        """A Dataset to train circuit probes for the syntactic number task
+
+        Args:
+            file: Path to dataset
+        """
+        datafile = pd.read_csv(file)
+        xs = []
+        probe_targets = []
+        for sent in datafile["sentence"]:
+            tokenized = tokenizer(sent)
+            tok_len = len(tokenized["input_ids"])
+            pad_len = pad_max - tok_len
+            probe_targets.append(tok_len - 1)
+            input_ids = tokenized["input_ids"] + ([tokenizer.eos_token_id] * pad_len)
+            xs.append(torch.tensor(input_ids).reshape(1, -1))
+
+        self.x = torch.cat(xs, dim=0)
+        self.y = torch.tensor(datafile[label])
+        self.probe_target = probe_targets
+
+    def __len__(self):
+        return len(self.x)
+
+    def __getitem__(self, idx):
+        token_mask = torch.zeros(self.x[idx].shape)
+        token_mask[self.probe_target[idx]] = 1
+        sample = {
+            "input_ids": self.x[idx],
+            "labels": self.y[idx],
+            "token_mask": token_mask.bool(),
+        }
+        return sample
+
+
 class ReflexivesDataset(Dataset):
     def __init__(self, file, tokenizer, pad_max=15, gender=-1):
         """A Dataset to train circuit probes
@@ -185,6 +221,8 @@ class ReflexivesDataset(Dataset):
             tok_len = len(tokenized["input_ids"])
             pad_len = pad_max - tok_len
             probe_targets.append(tok_len - 2) # Probe the token right before the pronoun, pronoun is one token
+            # Assert that the token after the target is one of the 3 possible pronouns [hardcoded gpt2 token values for himself, herself, themselves]
+            assert tokenized["input_ids"][tok_len - 1] in [2241, 5223, 2405] 
             input_ids = tokenized["input_ids"] + ([tokenizer.eos_token_id] * pad_len)
             xs.append(torch.tensor(input_ids).reshape(1, -1))
         
@@ -193,6 +231,8 @@ class ReflexivesDataset(Dataset):
             tokenized = tokenizer(sent)
             tok_len = len(tokenized["input_ids"])
             pad_len = pad_max - tok_len
+            # Assert that the token after the target is one of the 3 possible pronouns [hardcoded gpt2 token values for himself, herself, themselves]
+            assert tokenized["input_ids"][tok_len - 1] in [2241, 5223, 2405] 
             input_ids = tokenized["input_ids"] + ([tokenizer.eos_token_id] * pad_len)
             ungrammatical.append(torch.tensor(input_ids).reshape(1, -1))
 
@@ -217,7 +257,7 @@ class ReflexivesDataset(Dataset):
 
 class ProbingDataset(Dataset):
     def __init__(self, file, probe_variable, device):
-        """A Dataset to evaluate models using Interchange Intervention 
+        """A Dataset to evaluate models using linear or nonlinear probing
 
         Args:
             file: Path to dataset

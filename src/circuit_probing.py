@@ -127,7 +127,7 @@ def main():
                                 torch.manual_seed(model_seed)
                                 np.random.seed(model_seed)
                                 model = utils.get_model(config)
-                                if config["task"] == "agreement" or config["task"] == "reflexive":
+                                if config["task"] == "agreement" or config["task"] == "reflexive" or config["task"] == "syntactic_number":
                                     tokenizer = GPT2Tokenizer.from_pretrained(
                                         config["model_path"]
                                     )
@@ -150,6 +150,12 @@ def main():
                                         female_testloader,
                                         female_genloader
                                     ) = utils.create_reflexive_datasets(config, tokenizer)
+                                elif config["task"] == "syntactic_number":
+                                    (
+                                        trainloader,
+                                        testloader,
+                                        lm_testloader,
+                                    ) = utils.create_syntactic_number_datasets(config, tokenizer)
                                 else:
                                     trainloader, testloader = utils.create_datasets(
                                         config
@@ -261,13 +267,19 @@ def main():
                                     elif config["task"] == "agreement":
                                         lm_loaders = [testloader, genloader]
                                         lm_loader_labels = ["IID", "Gen"]
-                                        sing_id = tokenizer(" is")["input_ids"][0] # Preprend space bc of GPT2 Tokenizer
+                                        sing_id = tokenizer(" is")["input_ids"][0] # Prepend space bc of GPT2 Tokenizer
                                         plur_id = tokenizer(" are")["input_ids"][0]
                                         ablate_sets = [None]
                                     elif config["task"] == "reflexive":
                                         lm_loaders = [testloader, male_genloader, female_testloader, female_genloader]
                                         lm_loader_labels = ["Male IID", "Male Gen", "Female IID", "Female Gen"]
-                                        ablate_sets = [None]           
+                                        ablate_sets = [None]       
+                                    elif config["task"] == "syntactic_number":
+                                        lm_loaders = [lm_testloader]
+                                        lm_loader_labels = ["IID"]
+                                        sing_id = tokenizer(" is")["input_ids"][0] # Prepend space bc of GPT2 Tokenizer
+                                        plur_id = tokenizer(" are")["input_ids"][0]
+                                        ablate_sets = [None]
                                     else:
                                         lm_loader_labels = ["Test"]
                                         lm_loaders.append(
@@ -282,7 +294,7 @@ def main():
                                         for idx, lm_loader in enumerate(lm_loaders):
                                             model.set_ablate_mode("zero_ablate")
 
-                                            if config["task"] == "agreement":
+                                            if config["task"] == "agreement" or config["task"] == "syntactic_number":
                                                 lm_results = agreement_eval(
                                                     config,
                                                     model,
@@ -336,7 +348,7 @@ def main():
                                                         # Try to run complement_sampled ablation
                                                         # If discovered mask doesn't allow for this,
                                                         # consider it a failure and return -1
-                                                        if config["task"] == "agreement":
+                                                        if config["task"] == "agreement" or config["task"] == "syntactic_number":
                                                             random_ablate_lm_results = (
                                                                 agreement_eval(
                                                                     config,

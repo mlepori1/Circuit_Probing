@@ -8,16 +8,13 @@ from torch.nn import init
 from torch.utils.data import DataLoader, random_split
 from transformers import GPT2Config, GPT2LMHeadModel
 
-from Datasets import AlgorithmicProbeDataset, SVAgrDataset, ReflexivesDataset
+from Datasets import AlgorithmicProbeDataset, SVAgrDataset, ReflexivesDataset, SyntacticNumberDataset
 from NeuroSurgeon.NeuroSurgeon.Models.model_configs import CircuitConfig
 from NeuroSurgeon.NeuroSurgeon.Probing.circuit_probe import CircuitProbe
 from NeuroSurgeon.NeuroSurgeon.Probing.probe_configs import (
     CircuitProbeConfig,
     ResidualUpdateModelConfig,
-    SubnetworkProbeConfig,
 )
-from NeuroSurgeon.NeuroSurgeon.Probing.subnetwork_probe import SubnetworkProbe
-
 
 def get_config():
     # Load config file from command line arg
@@ -196,7 +193,7 @@ def create_datasets(config):
 
 
 def create_sv_datasets(config, tokenizer):
-    dataset = SVAgrDataset(config["data_path"], tokenizer)
+    dataset = SVAgrDataset(config["data_path"], tokenizer, pad_max=15)
 
     remainder = len(dataset) - (config["train_size"] + config["test_size"])
 
@@ -214,15 +211,65 @@ def create_sv_datasets(config, tokenizer):
         test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
     )
 
-    genset = SVAgrDataset(config["gen_path"], tokenizer)
+    genset = SVAgrDataset(config["gen_path"], tokenizer, pad_max=20)
 
-    genloader = DataLoader(genset, batch_size=10, shuffle=False, drop_last=False)
+    remainder = len(genset) - config["test_size"]
+
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    gen_data, _ = random_split(
+        genset,
+        [config["test_size"], remainder],
+        generator=generator,
+    )
+
+    genloader = DataLoader(gen_data, batch_size=config["batch_size"], shuffle=False, drop_last=True)
 
     return trainloader, testloader, genloader
 
+def create_syntactic_number_datasets(config, tokenizer):
+    # Train circuit probing to identify the syntactic number of the object noun
+    dataset = SyntacticNumberDataset(config["data_path"], "object labels", tokenizer)
+    # See if ablating this circuit ruins the ability of the network to identify the 
+    # syntactic number of the subject noun
+    lm_dataset = SyntacticNumberDataset(config["data_path"], "labels", tokenizer)
+
+    remainder = len(dataset) - (config["train_size"] + config["test_size"])
+
+    # Split circuit probe training and test data
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    train_data, test_data, _ = random_split(
+        dataset,
+        [config["train_size"], config["test_size"], remainder],
+        generator=generator,
+    )
+
+    # Split lm eval data, ensuring that the circuit probe test set is the same as the lm test set
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    _, lm_test_data, _ = random_split(
+        lm_dataset,
+        [config["train_size"], config["test_size"], remainder],
+        generator=generator,
+    )
+
+    # Assert that the same data partitions are used in lm eval and circuit probe test data
+    assert test_data.indices == lm_test_data.indices
+
+    trainloader = DataLoader(
+        train_data, batch_size=config["batch_size"], shuffle=True, drop_last=True
+    )
+    testloader = DataLoader(
+        test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
+    )
+
+    lm_testloader = DataLoader(lm_test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True)
+
+    return trainloader, testloader, lm_testloader
 
 def create_reflexive_datasets(config, tokenizer):
-    male_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=0)
+    male_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=0, pad_max=15)
 
     remainder = len(male_dataset) - (config["train_size"] + config["test_size"])
 
@@ -240,11 +287,21 @@ def create_reflexive_datasets(config, tokenizer):
         male_test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
     )
 
-    male_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=0)
+    male_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=0, pad_max=20)
 
-    male_genloader = DataLoader(male_genset, batch_size=10, shuffle=False, drop_last=False)
+    remainder = len(male_genset) - config["test_size"]
 
-    female_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=1)
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    male_gen_data, _ = random_split(
+        male_genset,
+        [config["test_size"], remainder],
+        generator=generator,
+    )
+
+    male_genloader = DataLoader(male_gen_data, batch_size=config["batch_size"], shuffle=False, drop_last=True)
+
+    female_dataset = ReflexivesDataset(config["data_path"], tokenizer, gender=1, pad_max=15)
 
     remainder = len(female_dataset) - (config["train_size"] + config["test_size"])
 
@@ -263,8 +320,18 @@ def create_reflexive_datasets(config, tokenizer):
         female_test_data, batch_size=config["batch_size"], shuffle=False, drop_last=True
     )
 
-    female_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=1)
+    female_genset = ReflexivesDataset(config["gen_path"], tokenizer, gender=1, pad_max=20)
 
-    female_genloader = DataLoader(female_genset, batch_size=10, shuffle=False, drop_last=False)
+    remainder = len(female_genset) - config["test_size"]
+
+    torch.manual_seed(config["data_seed"])
+    generator = torch.Generator().manual_seed(config["data_seed"])
+    female_gen_data, _ = random_split(
+        female_genset,
+        [config["test_size"], remainder],
+        generator=generator,
+    )
+
+    female_genloader = DataLoader(female_gen_data, batch_size=config["batch_size"], shuffle=False, drop_last=True)
 
     return male_trainloader, male_testloader, male_genloader, female_testloader, female_genloader
