@@ -42,36 +42,6 @@ def plot_zoomed_in(df, size, gender, figtitle, layer):
     f.set_size_inches(3, 5)
     plt.savefig(f"./Reflexive_An/{size}_{gender}_reflexives.pdf", format="pdf", bbox_inches="tight")
 
-    """
-    f = plt.figure()
-    df_iid = pd.DataFrame.from_dict({
-        "Ablated Accuracy": [df[f" ablated acc {gender} IID"].values[0], df[f"random ablate acc mean {gender} IID"].values[0]],
-        "Condition": ["Abl. Circuit", "Abl. Random"],
-        "error": [0, df[f"random ablate acc std {gender} IID"].values[0]]
-    } )
-
-    sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
-    with sns.axes_style("darkgrid"):
-        ax0 = sns.barplot(data=df_iid, x="Condition", y="Ablated Accuracy")
-
-        x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax0.patches]
-        xmin = ax0.patches[0].get_x()
-        xmax = ax0.patches[-1].get_x() + ax0.patches[-1].get_width()
-        y_coords = [p.get_height() for p in ax0.patches]
-        ax0.errorbar(x=x_coords, y=y_coords, yerr=df_iid["error"], fmt="none", c="k")
-        ax0.hlines(df[f" vanilla acc {gender} IID"], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="Full Model Acc.")
-
-        ax0.tick_params(axis='x',labelrotation=30, labelsize=15)
-        ax0.set_ylim(0.5, 1.0)
-        ax0.set_ylabel(ylabel="Ablated Accuracy", fontsize=15)
-        ax0.set_xlabel(xlabel="Condition", fontsize=15)
-
-        f.suptitle(f"GPT2 {figtitle} RA: Attn-{str(layer)}")
-        f.set_size_inches(3, 5)
-        plt.legend(loc="lower right")
-        plt.savefig(f"./Reflexive_An/{size}_{gender}_reflexives.pdf", format="pdf", bbox_inches="tight")
-    """
-
 def plot_everything(df, gender, figtitle, filetitle):
     # Get rid of data points whose subnetworks comprise > 50% of any tensor
     df = df[df[f"random ablate acc mean {gender} IID"] != -1]

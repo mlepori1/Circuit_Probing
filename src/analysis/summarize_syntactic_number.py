@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 
-def plot_zoomed_in(df, size, layer):#, medium):
+def plot_zoomed_in(df, size, layer):
     df = df[(df["operation"] == "mlp") & (df["target_layer"] == layer)]
 
     f = plt.figure(figsize=(5, 3))

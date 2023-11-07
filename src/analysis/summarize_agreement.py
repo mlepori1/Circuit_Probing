@@ -8,69 +8,9 @@ import pandas as pd
 import torch
 
 
-def plot_zoomed_in(small):#, medium):
-    #medium = medium[(medium["operation"] == "mlp") & (medium["target_layer"] == 0)]
+def plot_zoomed_in(small):
     small = small[(small["operation"] == "attn") & (small["target_layer"] == 6)]
-
-    """
-    f = plt.figure()
-    gs = f.add_gridspec(1, 2)
-    medium_df_iid = pd.DataFrame.from_dict({
-        "Ablated Accuracy": [medium[" ablated acc IID"].values[0], medium["random ablate acc mean IID"].values[0]],
-        "Condition": ["Abl. Circuit", "Abl. Random"],
-        "error": [0, medium["random ablate acc std IID"].values[0]]
-    } )
-
-    medium_df_gen = pd.DataFrame.from_dict({
-        "Ablated Accuracy": [medium[" ablated acc Gen"].values[0], medium["random ablate acc mean Gen"].values[0]],
-        "Condition": ["Abl. Circuit", "Abl. Random"],
-        "error": [0,  medium["random ablate acc std Gen"].values[0]]
-    } )
-
-    sns.set(style="darkgrid", palette="Dark2", font_scale=1)
-    with sns.axes_style("darkgrid"):
-        ax0 = f.add_subplot(gs[0, 0])
-        sns.barplot(ax=ax0, data=medium_df_iid, x="Condition", y="Ablated Accuracy")
-
-        x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax0.patches]
-        xmin = ax0.patches[0].get_x()
-        xmax = ax0.patches[-1].get_x() + ax0.patches[-1].get_width()
-        y_coords = [p.get_height() for p in ax0.patches]
-        ax0.errorbar(x=x_coords, y=y_coords, yerr=medium_df_iid["error"], fmt="none", c="k")
-        ax0.title.set_text('1-Distractor')
-        ax0.hlines(.5, xmin=xmin, xmax=xmax, color="red", linestyles="dotted", label="Chance")
-        ax0.hlines(medium[" vanilla acc IID"], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="Full Model Acc.")
-
-        sns.set(style="darkgrid", palette="Dark2", font_scale=1)
-        ax1 = f.add_subplot(gs[0, 1])
-        sns.barplot(ax=ax1, data=medium_df_gen, x="Condition", y="Ablated Accuracy")
-        x_coords = [p.get_x() + 0.5 * p.get_width() for p in ax1.patches]
-        xmin = ax1.patches[0].get_x()
-        xmax = ax1.patches[-1].get_x() + ax1.patches[-1].get_width()
-        y_coords = [p.get_height() for p in ax1.patches]
-        ax1.errorbar(x=x_coords, y=y_coords, yerr=medium_df_iid["error"], fmt="none", c="k")
-        ax1.title.set_text('0-Distractors')
-        ax1.hlines(.5, xmin=xmin, xmax=xmax, color="red", linestyles="dotted", label="Chance")
-        ax1.hlines(medium[" vanilla acc Gen"], xmin=xmin, xmax=xmax, color="green", linestyles="dashed", label="Full Model Acc.")
-
-        ax0.tick_params(axis='x',labelrotation=30, labelsize=13)
-        ax0.set_ylim(0, 1.05)
-        ax0.set_ylabel(ylabel="Ablated Accuracy", fontsize=15)
-        ax0.set_xlabel(xlabel="Condition", fontsize=15)
-
-        ax1.tick_params(axis='x',labelrotation=30, labelsize=13)
-        ax1.set_ylim(0, 1.05)
-        ax1.get_yaxis().set_ticklabels([])
-        ax1.set_ylabel(ylabel="", fontsize=15)
-        ax1.set_xlabel(xlabel="Condition", fontsize=15)
-
-        f.suptitle("GPT2-Medium SV-Agreement Ablation: Layer 0 MLP")
-        plt.legend(loc="lower right")
-        plt.savefig("./Agreement/medium_sv_agreement.pdf", format="pdf", bbox_inches="tight")
-
-    """
     f = plt.figure(figsize=(5, 3))
-    #gs = f.add_gridspec(1, 2)
     small_df_iid = pd.DataFrame.from_dict({
         "Accuracy": [small[" ablated acc IID"].values[0], small["random ablate acc mean IID"].values[0], small[" vanilla acc IID"].values[0]],
         "Dataset": ["IID", "IID", "IID"],
@@ -112,8 +52,6 @@ def plot_everything(df, figtitle, filetitle):
         "Component": df["Component"],
         "Circuit": df[" ablated acc IID"],
         "Random": df["random ablate acc mean IID"],
-        #"Sub.: Gen:": df[" ablated acc Gen"],
-        #"Rand. : Gen": df["random ablate acc mean Gen"],
     } )
 
     for i in range(0, len(plot_df), 12):
