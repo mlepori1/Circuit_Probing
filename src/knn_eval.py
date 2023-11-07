@@ -26,7 +26,7 @@ def get_knn_data(config, probe, dataloader):
 
         x.append(
             outputs["hidden_states"].detach()
-        )  # These are the residual stream updates used to calculate loss
+        )  # For CircuitProbe models, these are the residual stream updates used to calculate loss
         y.append(outputs.labels)
 
     x = torch.cat(x).cpu().numpy()

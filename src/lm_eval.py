@@ -126,13 +126,22 @@ def reflexive_eval(config, model, dataloader, ablate_set=None):
         # Get labels for the grammatical pronoun
         gram_label_mask = torch.roll(batch["token_mask"], 1, -1) # Shift token_mask to get label
         gram_labels = batch["input_ids"][gram_label_mask].reshape(-1, 1)
-        gram_outputs = outputs.gather(1, gram_labels).reshape(-1) # Get the logit value the grammatical label
-
+        gram_outputs = outputs.gather(1, gram_labels).reshape(-1) # Get the logit value of the grammatical label
         # Get labels for the ungrammatical pronoun
         ungram_label_mask = torch.roll(batch["token_mask"], 1, -1)
         ungram_labels = batch["ungrammatical"][ungram_label_mask].reshape(-1, 1)
         ungram_outputs = outputs.gather(1, ungram_labels).reshape(-1)
         vanilla_correct += list((gram_outputs > ungram_outputs).cpu())
+
+        # Assert that labels are either "himself", "herself", or "themselves" 
+        plur_gram_labels = gram_labels == 2405
+        sing_gram_labels_m = gram_labels == 2241
+        sing_gram_labels_f = gram_labels == 5223
+        assert torch.sum(plur_gram_labels) + torch.sum(sing_gram_labels_m) + torch.sum(sing_gram_labels_f) == len(gram_labels)
+
+        # Assert that gram and ungram labels are the opposite syntactic number
+        plur_ungram_labels = ungram_labels == 2405
+        assert torch.sum(torch.logical_and(plur_gram_labels, plur_ungram_labels)) == 0
 
         ### Get ablated model accuracy
         model.use_masks(True, ablate_set)

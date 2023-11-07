@@ -289,7 +289,10 @@ def main():
                                         )
                                         ablate_sets = [None]
 
-                                    # Ablate subnetworks and rerun knn evaluation 
+                                    # Ablate subnetworks and run lm evaluation
+                                    # Ablate sets are sets of masks to ablate. 
+                                    # **Note on counterintuitive naming** None means that all available masks will be ablated, 
+                                    # i.e. you are not passing in an ablate set
                                     for ablate_set in ablate_sets:
                                         for idx, lm_loader in enumerate(lm_loaders):
                                             model.set_ablate_mode("zero_ablate")
@@ -331,10 +334,12 @@ def main():
                                                 f"{prefix} ablated acc {lm_loader_labels[idx]}"
                                             ] = [lm_results["ablated_acc"]]
 
+                                            # Ablate random subnetworks and rerun LM evaluation
                                             if (
                                                 config["num_epochs"] != 0
                                                 and config["num_random_ablations"] != 0
                                             ):
+                                                # Can configure N random samples/reruns
                                                 random_ablated_accs = []
                                                 for _ in range(
                                                     config["num_random_ablations"]
@@ -348,6 +353,8 @@ def main():
                                                         # Try to run complement_sampled ablation
                                                         # If discovered mask doesn't allow for this,
                                                         # consider it a failure and return -1
+                                                        # Complement sampled ablations are samples 
+                                                        # from the complement of the discovered mask
                                                         if config["task"] == "agreement" or config["task"] == "syntactic_number":
                                                             random_ablate_lm_results = (
                                                                 agreement_eval(
