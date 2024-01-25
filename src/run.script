@@ -3,7 +3,7 @@
 #SBATCH -N 1-1 -n 1 
 #SBATCH -p gpu --gres=gpu:1
 #SBATCH --mem=60gb
-#SBATCH -t 12:00:00
+#SBATCH -t 3:00
 
 
 
@@ -14,5 +14,5 @@ module load cudnn/8.2.0
 
 source /gpfs/data/epavlick/mlepori/miniconda3/etc/profile.d/conda.sh
 
-conda activate CircuitProbing
-python $PROJECT_DIR/src/circuit_probing.py --config $CONFIG
+conda activate Circuit_Probing_LEACE
+python $PROJECT_DIR/src/amnesic_probing.py --config $CONFIG

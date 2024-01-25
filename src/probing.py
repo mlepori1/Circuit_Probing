@@ -20,7 +20,7 @@ from Datasets import ProbingDataset, CounterfactualEmbeddingsDataset
 
 
 def create_probe(config):
-    # Converts pretrained HF GPT2 to Transformer lens  hooked transformer, and builds probe
+    # Converts pretrained HF GPT2 to Transformer lens hooked transformer, and builds probe
     # Probe takes input from TransformerLens Hooked Transformer, maps to output space using a small nn.module
     hf_model = GPT2LMHeadModel.from_pretrained(config["model_path"]).to(config["device"])
     for param in hf_model.parameters():
@@ -196,8 +196,7 @@ def counterfactual_lm_eval(config, hooked_transformer, counterfactual_embedding,
     return predicts_counterfactual, predicts_original, logit_diff
 
 def patching_test(config, hooked_transformer, original_embedding, sample):
-    # If the counterfactual embedding works, then it should produce counterfactual behavior in the overall model
-    # Test whether this happens
+    # Test whether the residual stream patching hook works as intended
     hook_fn = partial(residual_stream_patching_hook, position=config["target_position"], counterfactual_embedding=original_embedding)
     patched_logits = hooked_transformer.run_with_hooks(sample["input_ids"], fwd_hooks=[
         (lens_utils.get_act_name(config["residual_location"], config["target_layer"]), hook_fn)

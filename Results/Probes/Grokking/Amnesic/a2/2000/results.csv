@@ -1,0 +1,3 @@
+,model_id,data_seed,model_seed,target_layer,residual_location,target_position,model path,Train Pre Erasure Probe Acc,Train Post Erasure Probe Acc,Test Pre Erasure Probe Acc,Test Post Erasure Probe Acc,train acc,test acc
+0,93b074a6-904c-4d92-b05b-ca21c73f53e9,0,0,0,resid_mid,2,../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_2000,0.9343838,0.023283161,0.92426914,0.019842668,0.07079022,0.006575085
+1,7aeed374-3eaf-4a9f-a8d4-e1f418edd45a,0,0,0,resid_post,2,../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_2000,0.2554092,0.030573847,0.30914643,0.025595868,0.976952,0.042738054

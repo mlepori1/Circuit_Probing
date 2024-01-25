@@ -1,0 +1,3 @@
+,model_id,data_seed,model_seed,target_layer,residual_location,target_position,model path,Same Train Pre Erasure Probe Acc,Same Train Post Erasure Probe Acc,Same Test Pre Erasure Probe Acc,Same Test Post Erasure Probe Acc,Same train acc,Same test acc,Diff train acc,Diff test acc
+0,4cbbb10f-236e-4525-8a13-efe160fb77f8,0,0,0,resid_mid,4,../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000,0.9973894,0.041639473,0.9954973,0.041895065,0.033416003,0.026624903,0.03419919,0.024471417
+1,549b15ae-c4f3-478d-92f7-c5d8ebd12c25,0,0,0,resid_post,4,../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000,0.14919724,0.07570813,0.16405638,0.06382146,0.8605926,0.88038373,0.87534267,0.87392324

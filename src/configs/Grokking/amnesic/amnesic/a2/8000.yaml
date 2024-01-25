@@ -1,0 +1,18 @@
+data_seed: 0
+layer_reinit: false
+model_path: ../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0_8000
+model_seed_list:
+- 0
+n_classes: 113
+random_init: false
+residual_location_list:
+- resid_mid
+- resid_post
+results_dir: ../Results/Probes/Grokking/Amnesic/a2/8000
+target_layer_list:
+- 0
+target_position_list:
+- 2
+test_data_path: ../data/Grokking/test.csv
+train_data_path: ../data/Grokking/train.csv
+variable: var_0

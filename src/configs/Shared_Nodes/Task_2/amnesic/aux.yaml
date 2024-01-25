@@ -1,0 +1,17 @@
+data_seed: 0
+layer_reinit: false
+model_path: "../Model/Algorithmic_Train/Shared_Nodes/model_LR_0.001_Seed_0_10000"
+model_seed_list:
+- 0
+residual_location_list: ["resid_mid", "resid_post"]
+target_position_list: [4]
+random_init: false
+results_dir: "../Results/Probes/Shared_Nodes/Task_2/Amnesic/aux/"
+target_layer_list: [0]
+train_data_path: "../data/Shared_Nodes/Task_2/train.csv"
+test_data_path: "../data/Shared_Nodes/Task_2/test.csv"
+t2_train_data_path: "../data/Shared_Nodes/Task_1/train.csv"
+t2_test_data_path: "../data/Shared_Nodes/Task_1/test.csv"
+multitask: True
+variable: aux_0
+n_classes: 113
