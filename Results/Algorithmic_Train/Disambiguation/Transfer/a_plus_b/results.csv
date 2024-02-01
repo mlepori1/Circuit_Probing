@@ -1,2 +1,2 @@
 ,model_id,train length,test length,lr,data_seed,model_seed,train loss,test loss,train acc,test acc,model_dir
-0,model_LR_0.001_Seed_0,7661,5108,0.001,0,0,0.004695056240374597,0.005361710149579747,1.0,1.0,../Model/Algorithmic_Train/Disambiguation/Transfer/a_plus_b
+0,model_LR_0.001_Seed_0,7661,5108,0.001,0,0,0.005553060207923556,0.006283194798076818,1.0,1.0,../Model/Algorithmic_Train/Disambiguation/Transfer/a_plus_b

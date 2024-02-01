@@ -290,7 +290,7 @@ def main():
             indices[0] = 0
 
             plt.figure()
-            sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.75)
             lineplot_loss_df = pd.DataFrame(
                 {
                     "Epochs": np.arange(
@@ -316,7 +316,7 @@ def main():
 
             # Save the accuracy plot for train and test
             plt.figure()
-            sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.75)
             lineplot_acc_df = pd.DataFrame(
                 {
                     "Epochs": np.arange(

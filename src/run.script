@@ -15,4 +15,4 @@ module load cudnn/8.2.0
 source /gpfs/data/epavlick/mlepori/miniconda3/etc/profile.d/conda.sh
 
 conda activate CircuitProbing
-python $PROJECT_DIR/src/DAS.py --config $CONFIG
+python $PROJECT_DIR/src/circuit_probing.py --config $CONFIG

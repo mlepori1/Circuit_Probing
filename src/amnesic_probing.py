@@ -16,7 +16,6 @@ from transformer_lens import (
     loading_from_pretrained,
 )
 from sklearn.datasets import make_classification
-from sklearn.linear_model import LogisticRegression
 import transformer_lens.utils as lens_utils
 
 from concept_erasure import LeaceEraser
