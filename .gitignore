@@ -3,3 +3,4 @@ Model/*
 *.pyc
 src/err/*
 src/out/*
+*.bin

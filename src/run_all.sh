@@ -1,5 +1,5 @@
 export PROJECT_DIR=/users/mlepori/data/mlepori/projects/Circuit_Probing/
-export CONFIG_DIR=configs/Shared_Nodes/Task_1/amnesic
+export CONFIG_DIR=configs/Grokking/DAS/DAS/b2
 for file in ${CONFIG_DIR}/*;
 do
     echo "$file"

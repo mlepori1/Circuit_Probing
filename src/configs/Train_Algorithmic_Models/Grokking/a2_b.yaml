@@ -1,6 +1,10 @@
 # Data
 intermediate_functions: [["a2", 0, 1], ["b_identity", 0, 1]]
 auxiliary_functions: [["b2", 0, 1]]
+counterfactual_label_functions: [
+  ["counter_var_0", "var_1", "+"],
+  ["var_0", "counter_aux_0", "+"],
+]
 mod: 113
 train_frac: .333
 data_seed: 0

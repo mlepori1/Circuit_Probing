@@ -1,0 +1,16 @@
+# Data
+counterfactual_label: "CF_Label_1"
+model_path: "../Model/Algorithmic_Train/Grokking/model_LR_0.001_Seed_0"
+n_train: 2500
+n_val: 1000
+
+# Intervention
+epochs: 250
+location_list: ["attn", "mlp"]
+token_range: "2_3"
+
+# Output
+train_path: "../data/Grokking/train.csv"
+test_path: "../data/Grokking/test.csv"
+
+results_dir: "../Results/Probes/Grokking/DAS/b2/"

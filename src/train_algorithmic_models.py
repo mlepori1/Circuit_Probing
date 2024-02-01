@@ -15,6 +15,7 @@ from transformers import GPT2Config, GPT2LMHeadModel
 import data_utils
 import utils
 
+
 # A script that generates arithmetic data and saves it
 # then trains a small GPT2 style transformer on that dataset
 def loss_fn(logits, labels):
@@ -39,7 +40,9 @@ def convert_strings_to_functions(string_fns):
         if "mod" in fn:
             modulo = int(fn.split("_")[-1])
             fn = "_".join(fn.split("_")[:-1])
-            intermediate_functions.append((partial(STR_2_FN[fn], p=modulo), fn_def[1], fn_def[2]))
+            intermediate_functions.append(
+                (partial(STR_2_FN[fn], p=modulo), fn_def[1], fn_def[2])
+            )
         else:
             intermediate_functions.append((STR_2_FN[fn], fn_def[1], fn_def[2]))
     return intermediate_functions
@@ -190,8 +193,12 @@ def main():
             data_path=config["data_dir"],
             task_1_aux_functions=task_1_auxiliary_functions,
             task_2_aux_functions=task_2_auxiliary_functions,
-            task_1_counterfactual_label_functions=config["task_1_counterfactual_label_functions"],
-            task_2_counterfactual_label_functions=config["task_2_counterfactual_label_functions"],
+            task_1_counterfactual_label_functions=config[
+                "task_1_counterfactual_label_functions"
+            ],
+            task_2_counterfactual_label_functions=config[
+                "task_2_counterfactual_label_functions"
+            ],
         )
 
     # Iterate through all training hyperparameters
@@ -276,65 +283,131 @@ def main():
             df.to_csv(os.path.join(config["results_dir"], "results.csv"))
 
             # Save the loss plot for train and test
-            indices = np.array(range(0, len(train_losses) + 1, config["checkpoint_every"])) - 1
+            indices = (
+                np.array(range(0, len(train_losses) + 1, config["checkpoint_every"]))
+                - 1
+            )
             indices[0] = 0
 
             plt.figure()
-            sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
-            lineplot_loss_df = pd.DataFrame({
-                'Epochs': np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
-                'Train Loss': train_losses[indices],
-                'Test Loss': test_losses
-            })
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+            lineplot_loss_df = pd.DataFrame(
+                {
+                    "Epochs": np.arange(
+                        0, len(train_losses) + 1, config["checkpoint_every"]
+                    ),
+                    "Train Loss": train_losses[indices],
+                    "Test Loss": test_losses,
+                }
+            )
             ax = sns.lineplot(
-                x="Epochs", y="Loss", hue="Dataset", data=pd.melt(lineplot_loss_df, ['Epochs'], value_name="Loss", var_name="Dataset")
-                ).set(title=config["figtitle"] + " Loss")
-            plt.savefig(os.path.join(config["results_dir"], "Loss.pdf"), format="pdf", bbox_inches="tight")
+                x="Epochs",
+                y="Loss",
+                hue="Dataset",
+                data=pd.melt(
+                    lineplot_loss_df, ["Epochs"], value_name="Loss", var_name="Dataset"
+                ),
+            ).set(title=config["figtitle"] + " Loss")
+            plt.savefig(
+                os.path.join(config["results_dir"], "Loss.pdf"),
+                format="pdf",
+                bbox_inches="tight",
+            )
 
             # Save the accuracy plot for train and test
             plt.figure()
-            sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
-            lineplot_acc_df = pd.DataFrame({
-                'Epochs': np.arange(0, len(train_losses) + 1, config["checkpoint_every"]),
-                'Train Acc': train_accs[indices],
-                'Test Acc': test_accs
-            })
+            sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+            lineplot_acc_df = pd.DataFrame(
+                {
+                    "Epochs": np.arange(
+                        0, len(train_losses) + 1, config["checkpoint_every"]
+                    ),
+                    "Train Acc": train_accs[indices],
+                    "Test Acc": test_accs,
+                }
+            )
             ax = sns.lineplot(
-                x="Epochs", y="Accuracy", hue="Dataset", data=pd.melt(lineplot_acc_df, ['Epochs'], value_name="Accuracy", var_name="Dataset")
-                ).set(title=config["figtitle"] + " Accuracy")
-            plt.savefig(os.path.join(config["results_dir"], "Acc.pdf"), format="pdf", bbox_inches="tight")
+                x="Epochs",
+                y="Accuracy",
+                hue="Dataset",
+                data=pd.melt(
+                    lineplot_acc_df,
+                    ["Epochs"],
+                    value_name="Accuracy",
+                    var_name="Dataset",
+                ),
+            ).set(title=config["figtitle"] + " Accuracy")
+            plt.savefig(
+                os.path.join(config["results_dir"], "Acc.pdf"),
+                format="pdf",
+                bbox_inches="tight",
+            )
 
             # Transfer vs. Reinitialized Plots
             if config["transfer"]:
+                plt.figure()
+                sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+                lineplot_loss_df = pd.DataFrame(
+                    {
+                        "Epochs": np.arange(
+                            0,
+                            len(transfer_train_losses) + 1,
+                            config["checkpoint_every"],
+                        ),
+                        "Transfer Train Loss": transfer_train_losses[indices],
+                        "Transfer Test Loss": transfer_test_losses,
+                        "Reinit Train Loss": train_losses[indices],
+                        "Reinit Test Loss": test_losses,
+                    }
+                )
+                ax = sns.lineplot(
+                    x="Epochs",
+                    y="Loss",
+                    hue="Dataset",
+                    data=pd.melt(
+                        lineplot_loss_df,
+                        ["Epochs"],
+                        value_name="Loss",
+                        var_name="Dataset",
+                    ),
+                ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Loss")
+                plt.savefig(
+                    os.path.join(config["results_dir"], "Transfer_Loss.pdf"),
+                    format="pdf",
+                    bbox_inches="tight",
+                )
 
                 plt.figure()
-                sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
-                lineplot_loss_df = pd.DataFrame({
-                    'Epochs': np.arange(0, len(transfer_train_losses) + 1, config["checkpoint_every"]),
-                    'Transfer Train Loss': transfer_train_losses[indices],
-                    'Transfer Test Loss': transfer_test_losses,
-                    'Reinit Train Loss': train_losses[indices],
-                    'Reinit Test Loss': test_losses
-                })
+                sns.set(style="darkgrid", palette="Dark2", font_scale=1.5)
+                lineplot_acc_df = pd.DataFrame(
+                    {
+                        "Epochs": np.arange(
+                            0,
+                            len(transfer_train_losses) + 1,
+                            config["checkpoint_every"],
+                        ),
+                        "Transfer Train Acc": transfer_train_accs[indices],
+                        "Transfer Test Acc": transfer_test_accs,
+                        "Reinit Train Acc": train_accs[indices],
+                        "Reinit Test Acc": test_accs,
+                    }
+                )
                 ax = sns.lineplot(
-                    x="Epochs", y="Loss", hue="Dataset", data=pd.melt(lineplot_loss_df, ['Epochs'], value_name="Loss", var_name="Dataset")
-                    ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Loss")
-                plt.savefig(os.path.join(config["results_dir"], "Transfer_Loss.pdf"), format="pdf", bbox_inches="tight")
-
-                plt.figure()
-                sns.set(style="darkgrid", palette="Dark2", font_scale=1.25)
-                lineplot_acc_df = pd.DataFrame({
-                    'Epochs': np.arange(0, len(transfer_train_losses) + 1, config["checkpoint_every"]),
-                    'Transfer Train Acc': transfer_train_accs[indices],
-                    'Transfer Test Acc': transfer_test_accs,
-                    'Reinit Train Acc': train_accs[indices],
-                    'Reinit Test Acc': test_accs
-                })
-                ax = sns.lineplot(
-                    x="Epochs", y="Accuracy", hue="Dataset", data=pd.melt(lineplot_acc_df, ['Epochs'], value_name="Accuracy", var_name="Dataset")
-                    ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Accuracy")
-                plt.savefig(os.path.join(config["results_dir"], "Transfer_Acc.pdf"), format="pdf", bbox_inches="tight")
-
+                    x="Epochs",
+                    y="Accuracy",
+                    hue="Dataset",
+                    data=pd.melt(
+                        lineplot_acc_df,
+                        ["Epochs"],
+                        value_name="Accuracy",
+                        var_name="Dataset",
+                    ),
+                ).set(title=config["figtitle"] + " Transfer vs. Reinitialized Accuracy")
+                plt.savefig(
+                    os.path.join(config["results_dir"], "Transfer_Acc.pdf"),
+                    format="pdf",
+                    bbox_inches="tight",
+                )
 
             if config["save_models"]:
                 # Save off the earliest model that achieves perfect accuracy on train
